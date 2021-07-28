@@ -1,15 +1,19 @@
 import React, { Fragment } from 'react'
 import Provider from '../context/provider/Provider'
 import { Helmet } from 'react-helmet'
+
 import Navi from './constants/Navi'
 import Home from './sections/Home'
 import Services from './sections/Services';
 import About from './sections/About';
+import Gallery from './sections/galleries/Gallery'
+
 import { Container } from 'react-bootstrap';
 import '../assets/dist/css/style.css'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 
 const App = () => {
   AOS.init();
@@ -25,6 +29,9 @@ const App = () => {
           <Services />
         </Container>
         <About />
+        <Container className="main">
+          <Gallery />
+        </Container>
       </Fragment>
     </Provider>
   );

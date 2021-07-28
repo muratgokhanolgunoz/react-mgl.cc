@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import Titles from "./Titles/Titles"
+import Titles from "./titles/Titles"
 import { Row, Col } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCube, faCubes, faShip, faTruck } from "@fortawesome/free-solid-svg-icons"
@@ -16,7 +16,7 @@ const Services = () => {
                         textAlign="text-center"
                     />
                 </Row>
-                <Row className="section">
+                <Row>
                     <Col md={6}>
                         <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                             <div className="services-box">

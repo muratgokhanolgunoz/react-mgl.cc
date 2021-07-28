@@ -16,7 +16,7 @@ const Navi = () => {
                         <Nav className="me-auto navi">
                             <Nav.Link href="#services">Servislerimiz</Nav.Link>
                             <Nav.Link className="navi-link" href="#about">Hakkımızda</Nav.Link>
-                            <Nav.Link href="#galley">Galeri</Nav.Link>
+                            <Nav.Link href="#gallery">Galeri</Nav.Link>
                             <Nav.Link href="#booking">Gemi Programı</Nav.Link>
                             <Nav.Link href="#">e-Navlun</Nav.Link>
                             <Nav.Link href="#">e-Takip</Nav.Link>
