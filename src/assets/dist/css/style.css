@@ -28,12 +28,38 @@ body {
   padding: 3em 0;
 }
 
+.pin-to-right {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.pin-to-left {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
 /* ========== NAVI STYLES ========== */
 
 .navi {
   text-transform: uppercase;
   font-size: 0.8em;
   color: #000;
+}
+
+/* ========== HOME SECTION STYLES ========== */
+
+.home {
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    height: 450px;
+  }
 }
 
 /* ========== HOME SECTION STYLES ========== */
@@ -83,47 +109,57 @@ body {
   /* background-image: url('C:\Users\murat\Desktop\Midas Global Logistic\react-midas-global-logistic\src\assets\images\about\background_1.png'); */
 }
 
-/* ========== PHOTO GALLERY STYLES ========== */
-
-.photos-body {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-}
-
-.photos-body-icon {
-  font-size: 2em;
-}
-
-.photos-body-gallery {
-  color: #fff;
-}
-
 /* ========== VIDEO GALLERY STYLES ========== */
 
-.videos-body {
-  overflow: hidden;
-}
-
-.videos-body-items {
-  padding: 2px;
-  position: relative;
-}
-
 .videos-body-items:hover .videos-body-images-overlay {
-  height: 97%;
+  height: 100%;
   width: 99%;
+}
+
+.videos-body-carousel-button {
+  margin-top: 40px;
+}
+
+.videos-body-carousel-settings .slick-center {
+  transform: scale(1.5);
+}
+
+.videos-body-carousel-button button {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 5px 21px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 0px 5px 21px 0px rgba(138, 138, 138, 1);
+  box-shadow: 0px 5px 21px 0px rgba(138, 138, 138, 1);
+  background-color: var(--template-color-orange);
+  transition: background-color 0.5s;
+}
+
+.videos-body-carousel-button button:hover {
+  background-color: var(--templete-color-blue);
+  transition: background-color 0.5s;
 }
 
 .videos-body-images {
   display: block;
   width: 100%;
+  padding: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .videos-body-images {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .videos-body-carousel-settings .slick-center {
+    transform: scale(1);
+  }
 }
 
 .videos-body-images-overlay {
   position: absolute;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
   top: 2px;
   width: 0;
   height: 0;
@@ -143,8 +179,14 @@ body {
   text-align: center;
 }
 
+/* ----- MODAL VIDEOS STYLES ----- */
+
 .modal-content {
-  background: transparent !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 0px 21px 7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 21px 7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 21px 7px rgba(0, 0, 0, 0.75);
 }
 
 .modal-content,
@@ -152,13 +194,36 @@ body {
   border: none;
 }
 
-.modal-header button {
+.modal-videos-buttons {
+  width: 150px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
   color: #000;
-  background: #FFF;
-  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.modal-videos-close-button:hover {
+  background-color: red;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.modal-videos-navigation-buttons:hover {
+  background-color: var(--templete-color-blue);
+  color: #fff;
+  transition: all 0.5s;
 }
 
 .modal-videos-body-iframe {
   width: 100%;
-  height: 550px;
+  height: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-videos-body-iframe {
+    height: 350px;
+  }
 }
