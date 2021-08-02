@@ -1,12 +1,13 @@
-import React from 'react'
-import { Fragment } from 'react'
+import React, {Component, Fragment} from "react";
 
-const Titles = (props) => {
-    return (
-        <Fragment>
-            <h2 className={props.textAlign}>{props.title}</h2>
-            <p className={props.textAlign}>{props.description}</p>
-        </Fragment>
-    )
+class Titles extends Component {
+    render() {
+        return (
+            <Fragment>
+                <h2 className={`${this.props.textAlign} ${this.props.color}`} data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">{this.props.title}</h2>
+                <p className={this.props.textAlign} data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">{this.props.description}</p>
+            </Fragment>
+        );
+    }
 }
-export default Titles
+export default Titles;

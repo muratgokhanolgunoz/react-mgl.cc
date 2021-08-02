@@ -1,15 +1,16 @@
 import React, { Component, Fragment } from "react";
 import queryString from "query-string";
 import Slider from "react-slick";
-import Iframe from "react-iframe";
 import Titles from "../titles/Titles";
 import videosJson from "./videos.js";
-import { Container, Row, Col, Image, Modal, Button } from "react-bootstrap";
-import { VscSearch, VscArrowRight, VscArrowLeft, VscChromeClose, } from "react-icons/vsc";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { VscSearch, VscArrowRight, VscArrowLeft } from "react-icons/vsc";
+import GalleryPopup from "./GalleryPopup";
+import Context from "../../../context/Context";
 
 let urlParams;
 
-class VideoGallery extends Component {
+class Gallery extends Component {
     constructor(props) {
         super(props);
 
@@ -17,10 +18,7 @@ class VideoGallery extends Component {
             previousButtonValue: undefined,
             currentVideo: undefined,
             nextButtonValue: undefined,
-            show: false,
         };
-
-        this.handleShow = this.handleShow.bind(this);
     }
 
     componentDidMount() {
@@ -34,17 +32,6 @@ class VideoGallery extends Component {
             this.showVideo(parseInt(urlParams.video));
         }
     };
-
-    /* Videos modal control functions */
-    handleClose = () => {
-        this.setState(() => ({
-            previousButtonValue: undefined,
-            currentVideo: undefined,
-            nextButtonValue: undefined,
-            show: false,
-        }));
-    };
-    handleShow = () => this.setState({ show: true });
 
     showVideo = (videoId) => {
         var temp = videoId;
@@ -62,7 +49,7 @@ class VideoGallery extends Component {
         }
 
         this.forceUpdate();
-        this.handleShow();
+        this.context.videosModalToggle(true)
     };
 
     navigationVideo = (videoId) => {
@@ -71,20 +58,20 @@ class VideoGallery extends Component {
 
     slickNext = () => {
         this.slider.slickNext();
-    }
+    };
 
     slickPrevious = () => {
         this.slider.slickPrev();
-    }
+    };
 
     render() {
         const settings = {
-            className: "videos-body-carousel-settings",
+            className: "videos-body-carousel",
             centerMode: true,
             infinite: true,
             slidesToShow: 3,
             speed: 100,
-            centerPadding: "30px",
+            centerPadding: "27px",
             dots: false,
             adaptiveHeight: true,
             responsive: [
@@ -93,93 +80,60 @@ class VideoGallery extends Component {
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
-                        infinite: true
-                    }
+                        infinite: true,
+                    },
                 },
                 {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        initialSlide: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
+                    breakpoint: 900,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
         };
 
         return (
-            <Fragment>
-                <div id="gallery" className="section-padding">
-                    <Container fluid>
-                        <Row>
-                            <Titles title="Galeri" subtitle="" description="" textAlign="text-center" />
-                        </Row>
-                        <Row className="videos-body">
-                            <Slider className="videos-body-carousel" ref={c => (this.slider = c)} {...settings}>
-                                {
-                                    videosJson.map(video => (
-                                        <Col key={video.id} className="videos-body-items">
-                                            <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
-                                            <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
-                                                <VscSearch className="videos-body-images-icon" />
-                                            </div>
-                                        </Col>
-                                    ))
-                                }
-                            </Slider>
-                            <br />
-                            <div className="videos-body-carousel-button text-center">
-                                <Button className="m-2" variant="dark" onClick={this.slickPrevious}>
-                                    <VscArrowLeft />
-                                </Button>
-                                <Button className="m-2" variant="dark" onClick={this.slickNext}>
-                                    <VscArrowRight />
-                                </Button>
-                            </div>
-                        </Row>
-                    </Container>
-
-                    <Modal show={this.state.show} onHide={this.handleClose} animation={false} size="lg" centered
-                    >
-                        <Modal.Header>
-                            <Button className="modal-videos-buttons modal-videos-close-button pin-to-right text-center" onClick={() => this.handleClose()}>
-                                <VscChromeClose className="modal-videos-close-button-icon" />{" "}CLOSE
-                            </Button>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <Iframe className="modal-videos-body-iframe" url={this.state.currentVideo !== undefined ? videosJson[this.state.currentVideo].src : ""} allowFullScreen={true} />
-                            <br />
-                            <div>
-                                <Row>
-                                    <Col>
-                                        {this.state.previousButtonValue !== undefined ? (
-                                            <Button className="modal-videos-buttons modal-videos-navigation-buttons pin-to-left text-center" variant="light" onClick={() => this.navigationVideo(this.state.previousButtonValue)} >
-                                                <VscArrowLeft /> PREVIOUS
+            <Context.Consumer>
+                {(context) => {
+                    return (
+                        <Fragment>
+                            <div id="gallery" className="section-padding">
+                                <Container fluid>
+                                    <Row>
+                                        <Titles title="Galeri" subtitle="" description="" textAlign="text-center" color="text-dark" />
+                                    </Row>
+                                    <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                                        <Slider ref={(c) => (this.slider = c)} {...settings} >
+                                            {videosJson.map((video) => (
+                                                <Col key={video.id} className="videos-body-items">
+                                                    <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
+                                                    <div className="videos-body-images-overlay" onClick={() => { this.showVideo(video.id); context.videosModalToggle(true); }}>
+                                                        <VscSearch className="videos-body-images-icon" />
+                                                    </div>
+                                                </Col>
+                                            ))}
+                                        </Slider>
+                                        <br />
+                                        <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                                            <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
+                                                <VscArrowLeft />{' '}PREVIOUS
                                             </Button>
-                                        ) : null}
-                                    </Col>
-
-                                    <Col>
-                                        {this.state.nextButtonValue !== undefined ? (
-                                            <Button className="modal-videos-buttons modal-videos-navigation-buttons pin-to-right text-center" variant="light" onClick={() => this.navigationVideo(this.state.nextButtonValue)} >
-                                                NEXT {"  "} <VscArrowRight />
+                                            <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
+                                                NEXT{' '}<VscArrowRight />
                                             </Button>
-                                        ) : null}
-                                    </Col>
-                                </Row>
+                                        </div>
+                                    </Row>
+                                </Container>
+
+                                <GalleryPopup propsVideosJson={videosJson} propsPreviousButtonValue={this.state.previousButtonValue} propsNextButtonValue={this.state.nextButtonValue} propsCurrentVideo={this.state.currentVideo} propsNaviationVideo={this.navigationVideo} />
                             </div>
-                        </Modal.Body>
-                    </Modal>
-                </div>
-            </Fragment>
+                        </Fragment>
+                    );
+                }}
+            </Context.Consumer>
         );
     }
 }
-export default VideoGallery;
+Gallery.contextType = Context
+export default Gallery;

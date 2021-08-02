@@ -2,7 +2,7 @@
 
 :root {
   --template-color-orange: #fa6f2a;
-  --templete-color-blue: #002f78;
+  --template-color-blue: #002f78;
   --template-font-family: "Rubik", sans-serif;
 }
 
@@ -18,10 +18,22 @@ body {
   overflow-x: hidden;
 }
 
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: none;
+  border-width: 0;
+}
+
 /* ========== MAIN STYLES ========== */
 
 .main {
   padding: 0 5em;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0 2em;
+  }
 }
 
 .section-padding {
@@ -38,6 +50,69 @@ body {
   display: block;
   margin-left: 0;
   margin-right: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.template-button {
+  width: 150px;
+  height: 40px;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.5s;  
+}
+
+.template-button-danger {
+  background-color: red;
+  transition: all 0.5s;
+}
+
+.template-button-danger:hover {
+  background-color: red;
+  transition: all 0.5s;
+}
+
+.template-button-primary-1 {
+  background-color: var(--template-color-orange);
+  transition: all 0.5s;
+}
+
+.template-button-primary-1:hover {
+  background-color: var(--template-color-blue);
+  transition: all 0.5s;
+}
+
+.template-button-primary-1:focus {
+  background-color: var(--template-color-orange);
+  outline: 0 !important;
+}
+
+.template-button-primary-1:focus:hover {
+  background-color: var(--template-color-blue);
+}
+
+.template-button-primary-2 {
+  background-color: var(--template-color-blue);
+  transition: all 0.5s;
+}
+
+.template-button-primary-2:hover {
+  background-color: var(--template-color-orange);
+  transition: all 0.5s;
+}
+
+.template-button-primary-2:focus {
+  background-color: var(--template-color-blue);
+  outline: 0 !important;
+}
+
+.template-button-primary-2:focus:hover {
+  background-color: var(--template-color-orange);
 }
 
 /* ========== NAVI STYLES ========== */
@@ -106,10 +181,13 @@ body {
 
 .about {
   background-color: #f9f9f9;
-  /* background-image: url('C:\Users\murat\Desktop\Midas Global Logistic\react-midas-global-logistic\src\assets\images\about\background_1.png'); */
 }
 
 /* ========== VIDEO GALLERY STYLES ========== */
+
+.videos-body-items {
+  padding: 45px;
+}
 
 .videos-body-items:hover .videos-body-images-overlay {
   height: 100%;
@@ -120,40 +198,21 @@ body {
   margin-top: 40px;
 }
 
-.videos-body-carousel-settings .slick-center {
-  transform: scale(1.5);
-}
-
-.videos-body-carousel-button button {
-  border: none;
-  border-radius: 0;
-  -webkit-box-shadow: 0px 5px 21px 0px rgba(138, 138, 138, 1);
-  -moz-box-shadow: 0px 5px 21px 0px rgba(138, 138, 138, 1);
-  box-shadow: 0px 5px 21px 0px rgba(138, 138, 138, 1);
-  background-color: var(--template-color-orange);
-  transition: background-color 0.5s;
-}
-
-.videos-body-carousel-button button:hover {
-  background-color: var(--templete-color-blue);
-  transition: background-color 0.5s;
+.videos-body-carousel .slick-center {
+  transform: scale(1.15);
 }
 
 .videos-body-images {
   display: block;
-  width: 100%;
-  padding: 40px;
+  width: 100%;  
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+  box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
 }
 
 @media screen and (max-width: 1200px) {
-  .videos-body-images {
-    display: block;
-    width: 100%;
-    padding: 0;
-  }
-
-  .videos-body-carousel-settings .slick-center {
-    transform: scale(1);
+  .videos-body-carousel .slick-center {
+    transform: scale(1.2);
   }
 }
 
@@ -194,29 +253,6 @@ body {
   border: none;
 }
 
-.modal-videos-buttons {
-  width: 150px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 0;
-  border: none;
-  color: #000;
-  font-weight: 400;
-  transition: all 0.5s;
-}
-
-.modal-videos-close-button:hover {
-  background-color: red;
-  color: #fff;
-  transition: all 0.5s;
-}
-
-.modal-videos-navigation-buttons:hover {
-  background-color: var(--templete-color-blue);
-  color: #fff;
-  transition: all 0.5s;
-}
-
 .modal-videos-body-iframe {
   width: 100%;
   height: 500px;
@@ -226,4 +262,38 @@ body {
   .modal-videos-body-iframe {
     height: 350px;
   }
+}
+
+/* ========== SCHEDULE SECTION STYLES ========== */
+
+.table-schedule {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+.table-schedule thead {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
+}
+
+.table-schedule tbody tr {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.table-schedule thead tr,
+.table-schedule tbody tr {
+  height: 70px;
+  line-height: 50px;
+  text-align: center;
+  border-color: transparent;
+  color: #fff;
+}
+
+.table-schedule tbody tr:hover {
+  color: #fff;
+}
+
+.schedule-null-message {
+  font-size: 1.3em;
+  padding-top: 15px;
 }

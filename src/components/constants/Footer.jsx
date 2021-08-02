@@ -1,10 +1,6 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react"
 
 const Footer = () => {
-    return (
-       <Fragment>
-           
-       </Fragment>
-    )
-}
+    return <Fragment></Fragment>
+};
 export default Footer
