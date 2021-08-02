@@ -18,7 +18,12 @@ body {
   overflow-x: hidden;
 }
 
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
   border-color: inherit;
   border-style: none;
   border-width: 0;
@@ -28,6 +33,10 @@ tbody, td, tfoot, th, thead, tr {
 
 .main {
   padding: 0 5em;
+}
+
+.margin-top--100 {
+  margin-top: -100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,7 +73,7 @@ tbody, td, tfoot, th, thead, tr {
   color: #fff;
   font-weight: 400;
   text-align: center;
-  transition: all 0.5s;  
+  transition: all 0.5s;
 }
 
 .template-button-danger {
@@ -137,7 +146,25 @@ tbody, td, tfoot, th, thead, tr {
   }
 }
 
-/* ========== HOME SECTION STYLES ========== */
+/* ========== HOME WIDGET SECTION STYLES ========== */
+
+.home-widget-item {
+  background-color: #fff;
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-widget-item-image {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* ========== SERVICES SECTION STYLES ========== */
 
 .services-item {
   transition: margin-top 0.5s;
@@ -186,12 +213,11 @@ tbody, td, tfoot, th, thead, tr {
 /* ========== VIDEO GALLERY STYLES ========== */
 
 .videos-body-items {
-  padding: 45px;
+  padding: 18px;
 }
 
 .videos-body-items:hover .videos-body-images-overlay {
-  height: 100%;
-  width: 99%;
+  display: block;
 }
 
 .videos-body-carousel-button {
@@ -204,10 +230,7 @@ tbody, td, tfoot, th, thead, tr {
 
 .videos-body-images {
   display: block;
-  width: 100%;  
-  -webkit-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
-  -moz-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
-  box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+  width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -219,11 +242,14 @@ tbody, td, tfoot, th, thead, tr {
 .videos-body-images-overlay {
   position: absolute;
   overflow: hidden;
-  top: 2px;
+  top: 0;
   width: 0;
   height: 0;
-  z-index: 1;
   cursor: pointer;
+  width: 75%;
+  height: 100%;
+  z-index: 1;
+  display: none;
 }
 
 .videos-body-images-icon {
@@ -293,7 +319,28 @@ tbody, td, tfoot, th, thead, tr {
   color: #fff;
 }
 
+.table-schedule-row {
+  display: block;
+  white-space: nowrap;
+}
+
 .schedule-null-message {
   font-size: 1.3em;
   padding-top: 15px;
+}
+
+/* ========== MODAL SCEHEDULE STYLES ========== */
+
+.schedule-form {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.schedule-form-rows {
+  padding: 0 30px;
+}
+
+.schedule-form-inputs {
+  width: 100% !important;
+  margin-top: 15px !important;
 }

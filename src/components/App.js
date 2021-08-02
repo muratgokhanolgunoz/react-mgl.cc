@@ -5,12 +5,14 @@ import Navi from "./constants/Navi"
 import Home from "./sections/Home"
 import Services from "./sections/Services"
 import About from "./sections/About"
-import Gallery from "./sections/gallery/Gallery"
+import Gallery from "./sections/Gallery"
+import Schedule from "./sections/Schedule"
 import AOS from "aos"
+
 import "../assets/dist/css/style.css"
 import "aos/dist/aos.css"
 import { Container } from "react-bootstrap"
-import Schedule from "./sections/Schedule"
+
 
 const App = () => {
   AOS.init();

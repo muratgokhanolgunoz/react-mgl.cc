@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import Context from "../../../context/Context.js";
 import Iframe from "react-iframe";
-import { Row, Col, Modal, Button } from "react-bootstrap";
+import Button from '@material-ui/core/Button';
+import { Row, Col, Modal } from "react-bootstrap";
 import { VscArrowRight, VscArrowLeft, VscChromeClose } from "react-icons/vsc";
 
 class GalleryPopup extends Component {
@@ -11,11 +12,11 @@ class GalleryPopup extends Component {
         {(context) => {
           return (
             <Fragment>
-              <Modal show={context.state.videosModalShow} onHide={() => context.videosModalToggle(false)} animation={false} size="lg" centered>
+              <Modal show={context.state.videosPopupShowStatus} onHide={() => context.videosPopupShowStatusToggle(false)} animation={false} size="lg" centered>
                 <Modal.Header>
                   <p className="text-light"> {" "} {this.props.propsCurrentVideo + 1} / {" "} {this.props.propsVideosJson.length}{" "} </p>
-                  <Button className="template-button template-button-danger pin-to-right" onClick={() => context.videosModalToggle(false)}>
-                    <VscChromeClose className="modal-videos-close-button-icon" /> {" "} CLOSE
+                  <Button className="template-button pin-to-right" variant="contained" color="secondary" onClick={() => context.videosPopupShowStatusToggle(false)}>
+                    <VscChromeClose className="modal-videos-close-button-icon" />&emsp;KAPAT
                   </Button>
                 </Modal.Header>
                 <Modal.Body>
@@ -25,16 +26,16 @@ class GalleryPopup extends Component {
                     <Row>
                       <Col>
                         {this.props.propsPreviousButtonValue !== undefined ? (
-                          <Button className="template-button template-button-primary-2 pin-to-left" onClick={() => this.props.propsNaviationVideo(this.props.propsPreviousButtonValue)}>
-                            <VscArrowLeft /> PREVIOUS
+                          <Button className="template-button pin-to-left" variant="contained" color="default" onClick={() => this.props.propsNaviationVideo(this.props.propsPreviousButtonValue)}>
+                            <VscArrowLeft />&emsp;GERİ
                           </Button>
                         ) : null}
                       </Col>
 
                       <Col>
                         {this.props.propsNextButtonValue !== undefined ? (
-                          <Button className="template-button template-button-primary-2 pin-to-right" onClick={() => this.props.propsNaviationVideo(this.props.propsNextButtonValue)}>
-                            NEXT {"  "} <VscArrowRight />
+                          <Button className="template-button pin-to-right" variant="contained" color="default" onClick={() => this.props.propsNaviationVideo(this.props.propsNextButtonValue)}>
+                            İLERİ&emsp;<VscArrowRight />
                           </Button>
                         ) : null}
                       </Col>

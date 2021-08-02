@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from "react";
 import queryString from "query-string";
 import Slider from "react-slick";
-import Titles from "../titles/Titles";
-import videosJson from "./videos.js";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import Titles from "./titles/Titles";
+import videosJson from "../../tools/videos/videos.js";
+import Button from '@material-ui/core/Button';
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { VscSearch, VscArrowRight, VscArrowLeft } from "react-icons/vsc";
-import GalleryPopup from "./GalleryPopup";
-import Context from "../../../context/Context";
+import GalleryPopup from "./popups/GalleryPopup";
+import Context from "../../context/Context";
 
 let urlParams;
 
@@ -49,7 +50,6 @@ class Gallery extends Component {
         }
 
         this.forceUpdate();
-        this.context.videosModalToggle(true)
     };
 
     navigationVideo = (videoId) => {
@@ -71,7 +71,6 @@ class Gallery extends Component {
             infinite: true,
             slidesToShow: 3,
             speed: 100,
-            centerPadding: "27px",
             dots: false,
             adaptiveHeight: true,
             responsive: [
@@ -108,7 +107,7 @@ class Gallery extends Component {
                                             {videosJson.map((video) => (
                                                 <Col key={video.id} className="videos-body-items">
                                                     <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
-                                                    <div className="videos-body-images-overlay" onClick={() => { this.showVideo(video.id); context.videosModalToggle(true); }}>
+                                                    <div className="videos-body-images-overlay" onClick={() => { this.showVideo(video.id); context.videosPopupShowStatusToggle(true); }}>
                                                         <VscSearch className="videos-body-images-icon" />
                                                     </div>
                                                 </Col>
@@ -116,11 +115,11 @@ class Gallery extends Component {
                                         </Slider>
                                         <br />
                                         <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                                            <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
-                                                <VscArrowLeft />{' '}PREVIOUS
+                                            <Button className="m-2 template-button"  variant="contained" onClick={this.slickPrevious}>
+                                                <VscArrowLeft />&emsp;GERİ
                                             </Button>
-                                            <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
-                                                NEXT{' '}<VscArrowRight />
+                                            <Button className="m-2 template-button" variant="contained" onClick={this.slickNext}>
+                                                İLERİ&emsp;<VscArrowRight />
                                             </Button>
                                         </div>
                                     </Row>

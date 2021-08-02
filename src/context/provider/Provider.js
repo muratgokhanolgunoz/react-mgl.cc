@@ -3,7 +3,9 @@ import Context from "../Context"
 
 class Provider extends Component {
     state = {
-        videosModalShow: false,
+        videosPopupShowStatus: false,
+        schedulePopupShowStatus: false,
+        language: "TR"
     };
 
     render() {
@@ -11,9 +13,15 @@ class Provider extends Component {
             <Context.Provider
                 value={{
                     state: this.state,
-                    videosModalToggle: (modalStatus) => {
-                        this.setState({ videosModalShow: modalStatus })
+                    videosPopupShowStatusToggle: (modalShowStatus) => {
+                        this.setState({ videosPopupShowStatus: modalShowStatus })
                     },
+                    schedulePopupShowStatusToggle: (modalShowStatus) => {
+                        this.setState({ schedulePopupShowStatus: modalShowStatus })
+                    },
+                    setLanguage: (language) => {
+                        this.setState({ language: language })
+                    }
                 }}
             >
                 {this.props.children}
