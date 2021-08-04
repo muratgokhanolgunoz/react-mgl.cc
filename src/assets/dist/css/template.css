@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: none;
+  border-width: 0;
+}
+
+/* ========== LAYOUT STYLES ========== */
+
+.main {
+  padding: 0 5em;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+      padding: 0 2em;
+    }
+  }
+
+.margin-top--100 {
+  margin-top: -100px;
+}
+
+.section-padding {
+  padding: 3em 0;
+}
+
+.pin-to-right {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.pin-to-left {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* ========== BUTTON STYLES ========== */
+
+.template-button {
+  width: 170px;
+  height: 40px;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+  font-size: .9em;
+  white-space: nowrap;
+}
+
+.template-button-danger {
+  background-color: red;
+  transition: all 0.5s;
+}
+
+.template-button-danger:hover {
+  background-color: red;
+  transition: all 0.5s;
+}
+
+.template-button-primary-1 {
+  background-color: var(--template-color-orange);
+  transition: all 0.5s;
+}
+
+.template-button-primary-1:hover {
+  background-color: var(--template-color-blue);
+  transition: all 0.5s;
+}
+
+.template-button-primary-1:focus {
+  background-color: var(--template-color-orange);
+  outline: 0 !important;
+}
+
+.template-button-primary-1:focus:hover {
+  background-color: var(--template-color-blue);
+}
+
+.template-button-primary-2 {
+  background-color: var(--template-color-blue);
+  transition: all 0.5s;
+}
+
+.template-button-primary-2:hover {
+  background-color: var(--template-color-orange);
+  transition: all 0.5s;
+}
+
+.template-button-primary-2:focus {
+  background-color: var(--template-color-blue);
+  outline: 0 !important;
+}
+
+.template-button-primary-2:focus:hover {
+  background-color: var(--template-color-orange);
+}
+
+/* ========== OTHER STYLES ========== */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.section-title-description-font-size {
+  font-size: 1.1em;
+}
+
+.iframe {
+  width: 100% !important;
+  height: 650px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .iframe {
+    height: 450px !important;
+  }
+}

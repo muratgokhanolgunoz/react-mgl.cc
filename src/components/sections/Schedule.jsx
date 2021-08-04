@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react";
-import Context from "../../context/Context";
 import Titles from "./titles/Titles";
-import SchedulePopup from './popups/SchedulePopup'
 import ScheduleServices from "../../services/ScheduleServices";
 
 import { Container, Row, Table } from "react-bootstrap";
@@ -19,6 +17,27 @@ class Schedule extends Component {
       .catch(() => console.log("A problem was encountered when obtaining the ship schedule list"));
   }
 
+  copyOfShipInformations = (shipInfo) => {
+    let copyText = "",
+        input
+    copyText += "Destination : " + shipInfo.destination_name.toUpperCase() + "\n"
+    copyText += "Ship Name : " + shipInfo.ship_name.toUpperCase() + "\n"
+    copyText += "Load Place : " + shipInfo.load_place.toUpperCase() + "\n"
+    copyText += "Load Date : " + shipInfo.loading_date.toUpperCase() + "\n"
+    copyText += "Console Cutoff : " + shipInfo.cut_off_date.toUpperCase() + "\n"
+    copyText += "Estimated Ship Arrival : " + shipInfo.eta_date.toUpperCase() + "\n"
+    copyText += "Agency : " + shipInfo.lan_name.toUpperCase() + "\n"
+    copyText += "Last Update : " + shipInfo.last_updated.toUpperCase()
+
+    document.getElementById("clipboard-area").value = copyText
+    input = document.querySelector('#clipboard-area')
+    input.select()
+    input.setSelectionRange(0, 99999)
+    document.execCommand("copy")
+
+    alert("Ship informations copied to clipboard")
+  }
+
   render() {
     const scheduleStyles = {
       backgroundImage: `url("${scheduleBackground}")`,
@@ -27,59 +46,52 @@ class Schedule extends Component {
       backgroundAttachment: "fixed",
     };
     return (
-      <Context.Consumer>
-        {(context) => {
-          return (
-            <Fragment>
-              <div id="schedule" className="schedule section-padding" style={scheduleStyles}>
-                <Container className="main" fluid>
-                  <Row>
-                    <Titles title="Gemi Programı" subtitle="" description="" textAlign="text-center" color="text-light" />
-                  </Row>
-                  <Row>
-                    <Table className="table-schedule" hover responsive>
-                      <thead>
-                        <tr>
-                          <th><span className="table-schedule-row">Varış Yeri</span></th>
-                          <th><span className="table-schedule-row">Gemi Adı</span></th>
-                          <th><span className="table-schedule-row">Tahmini Gemi Gelişi</span></th>
-                          <th><span className="table-schedule-row">Beyanname Kapanış</span></th>
-                          <th><span className="table-schedule-row">Yükleme Yeri</span></th>
-                          <th><span className="table-schedule-row">Konsol Kapanış</span></th>
+      <Fragment>
+        <div id="schedule" className="schedule section-padding" style={scheduleStyles}>
+          <Container className="main" fluid>
+            <Row>
+              <Titles title="Gemi Programı" subtitle="" description="" textAlign="text-center" color="text-light" fontSize="section-title-description-font-size" />
+            </Row>
+            <Row>
+                <textarea type="hidden" id="clipboard-area" />
+                <Table className="table-schedule" hover responsive>
+                  <thead>
+                    <tr>
+                      <th><span className="table-schedule-row-span">Varış Yeri</span></th>
+                      <th><span className="table-schedule-row-span">Gemi Adı</span></th>
+                      <th><span className="table-schedule-row-span">Tahmini Gemi Gelişi</span></th>
+                      <th><span className="table-schedule-row-span">Beyanname Kapanış</span></th>
+                      <th><span className="table-schedule-row-span">Yükleme Yeri</span></th>
+                      <th><span className="table-schedule-row-span">Konsol Kapanış</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {this.state.scheduleList.length
+                      ?
+                      this.state.scheduleList.map((schedule, index) => (
+                        <tr className="cursor-pointer" key={index} onClick={() => this.copyOfShipInformations(schedule)}>
+                          <td><span className="table-schedule-row-span"><b>{schedule.destination_name}</b></span></td>
+                          <td><span className="table-schedule-row-span">{schedule.ship_name}</span></td>
+                          <td><span className="table-schedule-row-span">{schedule.eta_date}</span></td>
+                          <td><span className="table-schedule-row-span">{schedule.cut_off_date}</span></td>
+                          <td><span className="table-schedule-row-span">{schedule.load_place}</span></td>
+                          <td><span className="table-schedule-row-span">{schedule.cutoff_date}</span></td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {this.state.scheduleList.length
-                          ?
-                          this.state.scheduleList.map((schedule, index) => (
-                            <tr className="cursor-pointer" key={index} onClick={() => context.schedulePopupShowStatusToggle(true)} data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                              <td><span className="table-schedule-row"><b>{schedule.destination_name}</b></span></td>
-                              <td><span className="table-schedule-row">{schedule.ship_name}</span></td>
-                              <td><span className="table-schedule-row">{schedule.eta_date}</span></td>
-                              <td><span className="table-schedule-row">{schedule.cut_off_date}</span></td>
-                              <td><span className="table-schedule-row">{schedule.load_place}</span></td>
-                              <td><span className="table-schedule-row">{schedule.cutoff_date}</span></td>
-                            </tr>
-                          ))
-                          :
-                          <tr data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                            <td colSpan="6">
-                              <p className="schedule-null-message">We do not have an active ship program</p>
-                            </td>
-                          </tr>
-                        }
-                      </tbody>
-                    </Table>
-                  </Row>
-                </Container>
-
-                <SchedulePopup />
-              </div>
-            </Fragment>
-          )
-        }}
-      </Context.Consumer>
-    );
+                      ))
+                      :
+                      <tr data-aos="fade-right">
+                        <td colSpan="6">
+                          <p className="schedule-null-message">We do not have an active ship program</p>
+                        </td>
+                      </tr>
+                    }
+                  </tbody>
+                </Table>
+            </Row>
+          </Container>
+        </div>
+      </Fragment>
+        );
   }
 }
-export default Schedule;
+        export default Schedule;

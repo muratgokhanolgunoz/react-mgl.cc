@@ -1,13 +1,8 @@
-import React, { Fragment, Component } from "react";
-import Titles from "./titles/Titles";
-import { Row, Col } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faCube,
-    faCubes,
-    faShip,
-    faTruck,
-} from "@fortawesome/free-solid-svg-icons";
+import React, { Fragment, Component } from "react"
+import Titles from "./titles/Titles"
+import { Row, Col } from "react-bootstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCube, faCubes, faShip, faTruck, } from "@fortawesome/free-solid-svg-icons"
 
 class Services extends Component {
     render() {
@@ -15,30 +10,14 @@ class Services extends Component {
             <Fragment>
                 <div id="services" className="services section-padding">
                     <Row>
-                        <Titles
-                            title="Servislerimiz"
-                            subtitle=""
-                            description=""
-                            textAlign="text-center"
-                            color="text-dark"
-                        />
+                        <Titles title="Servislerimiz" subtitle="" description="" textAlign="text-center" color="text-dark" fontSize="section-title-description-font-size" />
                     </Row>
                     <Row>
                         <Col md={6}>
-                            <div
-                                className="services-item"
-                                data-aos="fade-right"
-                                data-aos-offset="200"
-                                data-aos-easing="ease-in-sine"
-                                data-aos-duration="600"
-                            >
+                            <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                                 <div className="services-box">
-                                    <h4>Yükleme</h4>
-                                    <FontAwesomeIcon
-                                        className="services-icon"
-                                        icon={faShip}
-                                        size="3x"
-                                    ></FontAwesomeIcon>
+                                    <h3>Yükleme</h3>
+                                    <FontAwesomeIcon className="services-icon" icon={faShip} size="3x"></FontAwesomeIcon>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and
                                         typesetting industry. Lorem Ipsum has been the industry's
@@ -50,20 +29,10 @@ class Services extends Component {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div
-                                className="services-item"
-                                data-aos="fade-left"
-                                data-aos-offset="200"
-                                data-aos-easing="ease-in-sine"
-                                data-aos-duration="600"
-                            >
+                            <div className="services-item" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                                 <div className="services-box">
-                                    <h4>Parsiyel</h4>
-                                    <FontAwesomeIcon
-                                        className="services-icon"
-                                        icon={faCubes}
-                                        size="3x"
-                                    ></FontAwesomeIcon>
+                                    <h3>Parsiyel</h3>
+                                    <FontAwesomeIcon className="services-icon" icon={faCubes} size="3x"></FontAwesomeIcon>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and
                                         typesetting industry. Lorem Ipsum has been the industry's
@@ -75,20 +44,10 @@ class Services extends Component {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div
-                                className="services-item"
-                                data-aos="fade-right"
-                                data-aos-offset="200"
-                                data-aos-easing="ease-in-sine"
-                                data-aos-duration="600"
-                            >
+                            <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                                 <div className="services-box">
-                                    <h4>Özel Ekipman</h4>
-                                    <FontAwesomeIcon
-                                        className="services-icon"
-                                        icon={faCube}
-                                        size="3x"
-                                    ></FontAwesomeIcon>
+                                    <h3>Özel Ekipman</h3>
+                                    <FontAwesomeIcon className="services-icon" icon={faCube} size="3x"></FontAwesomeIcon>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and
                                         typesetting industry. Lorem Ipsum has been the industry's
@@ -100,20 +59,10 @@ class Services extends Component {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div
-                                className="services-item"
-                                data-aos="fade-left"
-                                data-aos-offset="200"
-                                data-aos-easing="ease-in-sine"
-                                data-aos-duration="600"
-                            >
+                            <div className="services-item" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                                 <div className="services-box">
-                                    <h4>Kapıya Teslim</h4>
-                                    <FontAwesomeIcon
-                                        className="services-icon"
-                                        icon={faTruck}
-                                        size="3x"
-                                    ></FontAwesomeIcon>
+                                    <h3>Kapıya Teslim</h3>
+                                    <FontAwesomeIcon className="services-icon" icon={faTruck} size="3x"></FontAwesomeIcon>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and
                                         typesetting industry. Lorem Ipsum has been the industry's
@@ -130,4 +79,4 @@ class Services extends Component {
         );
     }
 }
-export default Services;
+export default Services

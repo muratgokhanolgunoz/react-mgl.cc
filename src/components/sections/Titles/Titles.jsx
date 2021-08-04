@@ -5,7 +5,7 @@ class Titles extends Component {
         return (
             <Fragment>
                 <h2 className={`${this.props.textAlign} ${this.props.color}`}>{this.props.title}</h2>
-                <p className={this.props.textAlign} data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">{this.props.description}</p>
+                <p className={`${this.props.textAlign} ${this.props.fontSize}`} data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">{this.props.description}</p>
             </Fragment>
         );
     }

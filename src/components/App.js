@@ -1,18 +1,21 @@
 import React, { Fragment } from "react"
 import Provider from "../context/provider/Provider"
-import { Helmet } from "react-helmet"
+
 import Navi from "./constants/Navi"
 import Home from "./sections/Home"
 import Services from "./sections/Services"
 import About from "./sections/About"
 import Gallery from "./sections/Gallery"
 import Schedule from "./sections/Schedule"
+
+import { Helmet } from "react-helmet"
+import { Container } from "react-bootstrap"
 import AOS from "aos"
 
+import "../assets/dist/css/template.css"
 import "../assets/dist/css/style.css"
 import "aos/dist/aos.css"
-import { Container } from "react-bootstrap"
-
+import Blog from "./sections/Blog"
 
 const App = () => {
   AOS.init();
@@ -20,7 +23,7 @@ const App = () => {
     <Provider>
       <Fragment>
         <Helmet>
-          <title>Midas Global Logistic</title>
+          <title>Midas Global Logistik</title>
         </Helmet>
         <Navi />
         <Home />
@@ -32,6 +35,9 @@ const App = () => {
           <Gallery />
         </Container>
         <Schedule />
+        <Container className="main">
+          <Blog />
+        </Container>
       </Fragment>
     </Provider>
   );

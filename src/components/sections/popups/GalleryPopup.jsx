@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Context from "../../../context/Context.js";
 import Iframe from "react-iframe";
-import Button from '@material-ui/core/Button';
-import { Row, Col, Modal } from "react-bootstrap";
+import { Row, Col, Modal, Button } from "react-bootstrap";
 import { VscArrowRight, VscArrowLeft, VscChromeClose } from "react-icons/vsc";
 
 class GalleryPopup extends Component {
@@ -15,9 +14,7 @@ class GalleryPopup extends Component {
               <Modal show={context.state.videosPopupShowStatus} onHide={() => context.videosPopupShowStatusToggle(false)} animation={false} size="lg" centered>
                 <Modal.Header>
                   <p className="text-light"> {" "} {this.props.propsCurrentVideo + 1} / {" "} {this.props.propsVideosJson.length}{" "} </p>
-                  <Button className="template-button pin-to-right" variant="contained" color="secondary" onClick={() => context.videosPopupShowStatusToggle(false)}>
-                    <VscChromeClose className="modal-videos-close-button-icon" />&emsp;KAPAT
-                  </Button>
+                  <Button className="template-button template-button-danger border-0 pin-to-right" onClick={() => context.videosPopupShowStatusToggle(false)}>KAPAT</Button>
                 </Modal.Header>
                 <Modal.Body>
                   <Iframe className="modal-videos-body-iframe" url={this.props.propsCurrentVideo !== undefined ? this.props.propsVideosJson[this.props.propsCurrentVideo].src : ""} allowFullScreen={true} />
@@ -26,16 +23,16 @@ class GalleryPopup extends Component {
                     <Row>
                       <Col>
                         {this.props.propsPreviousButtonValue !== undefined ? (
-                          <Button className="template-button pin-to-left" variant="contained" color="default" onClick={() => this.props.propsNaviationVideo(this.props.propsPreviousButtonValue)}>
-                            <VscArrowLeft />&emsp;GERİ
+                          <Button className="template-button template-button-primary-2 pin-to-left" onClick={() => this.props.propsNaviationVideo(this.props.propsPreviousButtonValue)}>
+                            <VscArrowLeft  size="14px"/>&emsp;GERİ
                           </Button>
                         ) : null}
                       </Col>
 
                       <Col>
                         {this.props.propsNextButtonValue !== undefined ? (
-                          <Button className="template-button pin-to-right" variant="contained" color="default" onClick={() => this.props.propsNaviationVideo(this.props.propsNextButtonValue)}>
-                            İLERİ&emsp;<VscArrowRight />
+                          <Button className="template-button template-button-primary-2 pin-to-right" onClick={() => this.props.propsNaviationVideo(this.props.propsNextButtonValue)}>
+                            İLERİ&emsp;<VscArrowRight size="14px"/>
                           </Button>
                         ) : null}
                       </Col>

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import Context from '../../context/Context'
 import ReactFlagsSelect from 'react-flags-select';
-import { Container, Nav, Navbar, Image } from "react-bootstrap"
+import { Container, Row, Col, Nav, Navbar, Image } from "react-bootstrap"
 import logo from "../../assets/images/logo.png"
 
 const Navi = () => {
@@ -10,7 +10,30 @@ const Navi = () => {
             {(context) => {
                 return (
                     <Fragment>
-                        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                        <div id="navbar-upper" className="navbar-upper">
+                            <Container>
+                                <Row>
+                                    <Col lg={6}></Col>
+                                    <Col className="navbar-upper-box" lg={3} sm={6}>
+                                        e-Mail : {' '}
+                                        <a className="navbar-upper-item" href="mailto:info@mgl.cc">
+                                            info@mgl.cc
+                                        </a>
+                                    </Col>
+                                    <Col className="navbar-upper-box" lg={3} sm={6}>
+                                        Tel : {' '}
+                                        <a className="navbar-upper-item" href="tel:02124381818">
+                                            +90 (212) 438 18 18
+                                        </a>
+                                        {' / '}
+                                        <a className="navbar-upper-item" href="tel:02122174100">
+                                            +90 (212) 217 41 00
+                                        </a>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                        <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
                             <Container>
                                 <Navbar.Brand href="#home">
                                     <Image
@@ -26,7 +49,7 @@ const Navi = () => {
                                         <Nav.Link href="#services">Servİslerİmİz</Nav.Link>
                                         <Nav.Link className="navi-link" href="#about">Hakkımızda</Nav.Link>
                                         <Nav.Link href="#gallery">Galerİ</Nav.Link>
-                                        <Nav.Link href="#schedule">Gemi Programı</Nav.Link>
+                                        <Nav.Link href="#schedule">Gemİ Programı</Nav.Link>
                                         <Nav.Link href="#">Blog</Nav.Link>
                                         <Nav.Link href="#contact">İletİşİm</Nav.Link>
                                         <Nav.Link href="#contact">Karİyer</Nav.Link>
