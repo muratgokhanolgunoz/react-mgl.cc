@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import Titles from "./titles/Titles";
 import videosJson from "../../tools/videos/videos.js";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import { VscSearch, VscArrowRight, VscArrowLeft } from "react-icons/vsc";
+import { VscArrowRight, VscArrowLeft } from "react-icons/vsc";
 import GalleryPopup from "./popups/GalleryPopup";
 import Context from "../../context/Context";
 
@@ -99,7 +99,7 @@ class Gallery extends Component {
                             <div id="gallery" className="section-padding">
                                 <Container fluid>
                                     <Row>
-                                        <Titles title="Galeri" subtitle="" description="" textAlign="text-center" color="text-dark" fontSize="section-title-description-font-size" />
+                                        <Titles title="Video Galerimiz" subtitle="" description="" textAlign="text-center" color="text-dark" fontSize="section-title-description-font-size" />
                                     </Row>
                                     <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                                         <Slider ref={(c) => (this.slider = c)} {...settings} >

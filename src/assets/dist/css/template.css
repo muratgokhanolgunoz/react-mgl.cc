@@ -62,15 +62,16 @@ tr {
   transition: all 0.5s;
   font-size: .9em;
   white-space: nowrap;
+  font-family: 'Rubik', sans-serif;
 }
 
 .template-button-danger {
-  background-color: red;
+  background-color: #544141;
   transition: all 0.5s;
 }
 
 .template-button-danger:hover {
-  background-color: red;
+  background-color: #544141;
   transition: all 0.5s;
 }
 

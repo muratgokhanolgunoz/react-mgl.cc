@@ -15,36 +15,29 @@ body {
 /* ========== NAVI STYLES ========== */
 
 .navbar {
-  top: 45px !important;
+  -webkit-box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
+  -moz-box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
+  box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
 }
 
 .navi {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: .95em;
   color: #000;
 }
 
-.navbar-upper {
-  height: 45px;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid lightgray;
-}
-
-.navbar-upper-box {
-  padding-top: 9px;
-  text-align: right;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar-upper-box {
-    text-align: center;
-  }
-}
-
-.navbar-upper-item {
-  color: gray;
-  font-size: 1.1em;
+.navi-phone a {
   text-decoration: none;
+  color: #000;
+  padding: 0 30px;
+  font-size: 1.1em;
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .navi-phone a {
+    display: none;
+  }
 }
 
 /* ========== HOME SECTION STYLES ========== */
@@ -292,7 +285,7 @@ body {
   margin-bottom: 30px;
 }
 
-.blog-box h5 {
+.blog-box h6 {
   margin-top: 15px;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -301,6 +294,7 @@ body {
 
 .blog-box p {
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .blog-box a {
@@ -314,4 +308,80 @@ body {
   -moz-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
   transition: all 0.5s;
+}
+
+/* ========== MODAL BLOG STYLES ========== */
+
+.modal-blog-preview-body h1,
+.modal-blog-preview-body p {
+  color: #bbb;
+  text-align: justify;
+  margin-top: 30px;
+}
+
+.modal-blog-preview-body p {
+  font-size: 1.2em;
+}
+
+/* ========== CAREER SECTION STYLES ========== */
+
+.career-input {
+  margin: 5px !important;
+}
+
+/* ========== CONTACT SECTION STYLES ========== */
+
+.contact {
+  background-color: #fff;
+}
+
+.contact-left,
+.contact-right {
+  margin-top: 30px;
+}
+
+.contact-iframe {
+  width: 100% !important;
+  height: 350px;
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+  box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
+}
+
+.contact-info {
+  padding: 15px;
+  color: #000;
+}
+
+.contact-info-icon {
+  font-size: 2.5em;
+}
+
+.contact-info-body a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-info-body p {
+  font-size: 1.03em;
+}
+
+/* ========== FOOTER SECTION STYLES ========== */
+
+.footer {
+  background-color: #011627;
+  padding: 30px;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-inner p {
+  color: #fff;
+  font-size: 1.05em;
+  letter-spacing: 1.5px;
+  line-height: 40px;
+  display: block;
+  margin: auto;
 }

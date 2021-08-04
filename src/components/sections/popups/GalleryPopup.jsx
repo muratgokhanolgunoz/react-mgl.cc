@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import Context from "../../../context/Context.js";
 import Iframe from "react-iframe";
 import { Row, Col, Modal, Button } from "react-bootstrap";
-import { VscArrowRight, VscArrowLeft, VscChromeClose } from "react-icons/vsc";
+import { VscArrowRight, VscArrowLeft } from "react-icons/vsc";
 
 class GalleryPopup extends Component {
   render() {

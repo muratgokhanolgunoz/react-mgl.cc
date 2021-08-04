@@ -7,6 +7,9 @@ import Services from "./sections/Services"
 import About from "./sections/About"
 import Gallery from "./sections/Gallery"
 import Schedule from "./sections/Schedule"
+import Blog from "./sections/Blog"
+import Career from "./sections/Career"
+import Footer from './constants/Footer'
 
 import { Helmet } from "react-helmet"
 import { Container } from "react-bootstrap"
@@ -15,7 +18,6 @@ import AOS from "aos"
 import "../assets/dist/css/template.css"
 import "../assets/dist/css/style.css"
 import "aos/dist/aos.css"
-import Blog from "./sections/Blog"
 
 const App = () => {
   AOS.init();
@@ -35,9 +37,11 @@ const App = () => {
           <Gallery />
         </Container>
         <Schedule />
-        <Container className="main">
+        <Container>
           <Blog />
         </Container>
+        <Career />
+        <Footer />
       </Fragment>
     </Provider>
   );
