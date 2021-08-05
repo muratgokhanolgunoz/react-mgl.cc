@@ -63,6 +63,7 @@ tr {
   font-size: .9em;
   white-space: nowrap;
   font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
 }
 
 .template-button-danger {
@@ -120,7 +121,7 @@ tr {
 }
 
 .section-title-description-font-size {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .iframe {

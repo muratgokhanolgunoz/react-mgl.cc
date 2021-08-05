@@ -20,6 +20,7 @@ class Schedule extends Component {
   copyOfShipInformations = (shipInfo) => {
     let copyText = "",
       input
+
     copyText += "Destination : " + shipInfo.destination_name.toUpperCase() + "\n"
     copyText += "Ship Name : " + shipInfo.ship_name.toUpperCase() + "\n"
     copyText += "Load Place : " + shipInfo.load_place.toUpperCase() + "\n"
@@ -50,19 +51,26 @@ class Schedule extends Component {
         <div id="schedule" className="schedule section-padding" style={scheduleStyles}>
           <Container className="main" fluid>
             <Row>
-              <Titles title="Gerçek Zamanlı Gemi Programımız" subtitle="" description="" textAlign="text-center" color="text-light" fontSize="section-title-description-font-size" />
+              <Titles
+                title={this.props.language('schedule.header.SCHEDULE_SECTION_TITLE')}
+                subtitle={this.props.language('schedule.header.SCHEDULE_SECTION_SUBTITLE')}
+                description={this.props.language('schedule.header.SCHEDULE_SECTION_DESCRIPTION')}
+                textAlign="text-center"
+                color="text-light"
+                fontSize="section-title-description-font-size"
+              />
             </Row>
             <Row>
               <textarea type="hidden" id="clipboard-area" />
               <Table className="table-schedule" hover responsive>
                 <thead>
                   <tr>
-                    <th><span className="table-schedule-row-span">Varış Yeri</span></th>
-                    <th><span className="table-schedule-row-span">Gemi Adı</span></th>
-                    <th><span className="table-schedule-row-span">Tahmini Gemi Gelişi</span></th>
-                    <th><span className="table-schedule-row-span">Beyanname Kapanış</span></th>
-                    <th><span className="table-schedule-row-span">Yükleme Yeri</span></th>
-                    <th><span className="table-schedule-row-span">Konsol Kapanış</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CCONSOLE_CUTOFF')}</span></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -79,9 +87,9 @@ class Schedule extends Component {
                       </tr>
                     ))
                     :
-                    <tr data-aos="fade-right">
+                    <tr data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                       <td colSpan="6">
-                        <p className="schedule-null-message">We do not have an active ship program</p>
+                        <p className="schedule-null-message">{this.props.language('schedule.body.SCHEDULE_SECTION_EMPTY_MESSAGE')}</p>
                       </td>
                     </tr>
                   }

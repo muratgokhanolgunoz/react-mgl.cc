@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import Contact from '../sections/Contact'
 import { Container, Row, Col } from 'react-bootstrap'
 
 class Footer extends Component {
@@ -8,12 +7,11 @@ class Footer extends Component {
         let currentDate = new Date()
 
         return (
-            <Fragment>
-                <Contact />
+            <Fragment>                
                 <div id="footer" className="footer">
                     <Container className="footer-inner">
                         <Row>
-                            <Col><p>&copy;{' '}{currentDate.getFullYear()}{' '}Midas Global Logistik. Tüm hakları saklıdır.</p></Col>
+                            <Col><p>&copy;{' '}{currentDate.getFullYear()} {' '} {this.props.language('footer.FOOTER_TEXT')} </p></Col>
                         </Row>
                     </Container>
                 </div>

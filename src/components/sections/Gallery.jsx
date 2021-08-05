@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from "react";
 import queryString from "query-string";
 import Slider from "react-slick";
+
 import Titles from "./titles/Titles";
-import videosJson from "../../tools/videos/videos.js";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import { VscArrowRight, VscArrowLeft } from "react-icons/vsc";
 import GalleryPopup from "./popups/GalleryPopup";
-import Context from "../../context/Context";
+import videosJson from "../../tools/videos/videos.json";
+
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
 let urlParams;
 
@@ -18,6 +18,7 @@ class Gallery extends Component {
             previousButtonValue: undefined,
             currentVideo: undefined,
             nextButtonValue: undefined,
+            popupShow: false
         };
     }
 
@@ -26,6 +27,8 @@ class Gallery extends Component {
         urlParams = queryString.parse(location.search);
         this.showVideoFromUrl();
     }
+
+    handlePopupShow = (_status) => this.setState({ popupShow: _status })
 
     showVideoFromUrl = () => {
         if (Object.keys(urlParams).length !== 0) {
@@ -48,7 +51,7 @@ class Gallery extends Component {
             this.setState(() => ({ previousButtonValue: undefined }));
         }
 
-        this.forceUpdate();
+        this.handlePopupShow(true)
     };
 
     navigationVideo = (videoId) => {
@@ -92,46 +95,55 @@ class Gallery extends Component {
         };
 
         return (
-            <Context.Consumer>
-                {(context) => {
-                    return (
-                        <Fragment>
-                            <div id="gallery" className="section-padding">
-                                <Container fluid>
-                                    <Row>
-                                        <Titles title="Video Galerimiz" subtitle="" description="" textAlign="text-center" color="text-dark" fontSize="section-title-description-font-size" />
-                                    </Row>
-                                    <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                                        <Slider ref={(c) => (this.slider = c)} {...settings} >
-                                            {videosJson.map((video) => (
-                                                <Col key={video.id} className="videos-body-items">
-                                                    <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
-                                                    <div className="videos-body-images-overlay" onClick={() => { this.showVideo(video.id); context.videosPopupShowStatusToggle(true); }}>
-                                                        {/* <VscSearch className="videos-body-images-icon" /> */}
-                                                    </div>
-                                                </Col>
-                                            ))}
-                                        </Slider>
-                                        <br />
-                                        <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-                                            <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
-                                                <VscArrowLeft size="14px"/>&emsp;GERİ
-                                            </Button>
-                                            <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
-                                                İLERİ&emsp;<VscArrowRight size="14px"/>
-                                            </Button>
+            <Fragment>
+                <div id="gallery" className="section-padding">
+                    <Container fluid>
+                        <Row>
+                            <Titles
+                                title={this.props.language('gallery.header.GALLERY_SECTION_TITLE')}
+                                subtitle={this.props.language('gallery.header.GALLERY_SECTION_SUBTITLE')}
+                                description={this.props.language('gallery.header.GALLERY_SECTION_DESCRIPTION')}
+                                textAlign="text-center"
+                                color="text-dark"
+                                fontSize="section-title-description-font-size"
+                            />
+                        </Row>
+                        <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <Slider ref={(c) => (this.slider = c)} {...settings} >
+                                {videosJson.map((video) => (
+                                    <Col key={video.id} className="videos-body-items">
+                                        <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
+                                        <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
+                                            {/* <VscSearch className="videos-body-images-icon" /> */}
                                         </div>
-                                    </Row>
-                                </Container>
-
-                                <GalleryPopup propsVideosJson={videosJson} propsPreviousButtonValue={this.state.previousButtonValue} propsNextButtonValue={this.state.nextButtonValue} propsCurrentVideo={this.state.currentVideo} propsNaviationVideo={this.navigationVideo} />
+                                    </Col>
+                                ))}
+                            </Slider>
+                            <br />
+                            <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                                <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
+                                    {this.props.language('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
+                                </Button>
+                                <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
+                                    {this.props.language('template.buttons.TEMPLATE_NEXT_BUTTON')}
+                                </Button>
                             </div>
-                        </Fragment>
-                    );
-                }}
-            </Context.Consumer>
+                        </Row>
+                    </Container>
+
+                    <GalleryPopup
+                        language={this.props.language}
+                        popupShow={this.state.popupShow}
+                        popupShowToggle={this.handlePopupShow}
+                        propsVideosJson={videosJson}
+                        propsPreviousButtonValue={this.state.previousButtonValue}
+                        propsNextButtonValue={this.state.nextButtonValue}
+                        propsCurrentVideo={this.state.currentVideo}
+                        propsNaviationVideo={this.navigationVideo}
+                    />
+                </div>
+            </Fragment>
         );
     }
 }
-Gallery.contextType = Context
 export default Gallery;

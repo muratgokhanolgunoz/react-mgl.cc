@@ -1,50 +1,50 @@
 {
     "navbar": {
-        "NAVBAR_ITEM_SERVICES": "Our Services",
-        "NAVBAR_ITEM_ABOUT_US": "About Us",
-        "NAVBAR_ITEM_VIDEO_GALLERY": "Our Videos",
-        "NAVBAR_ITEM_SHIP_PROGRAM": "Ship Program",
-        "NAVBAR_ITEM_ARTICLES_FROM_US": "Articles From Us",
-        "NAVBAR_ITEM_CAREER": "Career",
-        "NAVBAR_ITEM_CONTACT": "Contact Us"
+        "NAVBAR_ITEM_SERVICES": "Servİslerİmİz",
+        "NAVBAR_ITEM_ABOUT_US": "Hakkımızda",
+        "NAVBAR_ITEM_VIDEO_GALLERY": "Vİdeolarımız",
+        "NAVBAR_ITEM_SHIP_PROGRAM": "Gemİ Programımız",
+        "NAVBAR_ITEM_ARTICLES_FROM_US": "Bİzden Yazılar",
+        "NAVBAR_ITEM_CAREER": "Karİyer",
+        "NAVBAR_ITEM_CONTACT": "İletİşİn"
     },
     "home": {
         "calendar": {
-            "CALENDAR_WEEK_TEXT": "Week",
+            "CALENDAR_WEEK_TEXT": "Hafta",
             "CALENDAR_MONTH_NAMES": [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"
+                "Ocak",
+                "Şubat",
+                "Mart",
+                "Nisan",
+                "Mayıs",
+                "Haziran",
+                "Temmuz",
+                "Ağustos",
+                "Eylül",
+                "Ekim",
+                "Kasım",
+                "Aralık"
             ],
             "CALENDAR_DAY_NAMES": [
-                "Sunday",
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
+                "Pazar",
+                "Pazartesi",
+                "Salı",
+                "Çarşamba",
+                "Perşembe",
+                "Cuma",
+                "Cumartesi"
             ]
         },
         "widgets": {
             "tracking": {
-                "WIDGETS_TRACKING_TITLE": "e-Tracking",
-                "WIDGETS_TRACKING_BODY": "Track your cargo with your bill of lading, quote or reference number ..",
-                "WIDGETS_TRACKING_INPUT_PLACEHOLDER": "Bill of lading number"
+                "WIDGETS_TRACKING_TITLE": "e-Takip",
+                "WIDGETS_TRACKING_BODY": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.",
+                "WIDGETS_TRACKING_INPUT_PLACEHOLDER": "Konşimento Numaranız"
             },
             "pricing": {
-                "WIDGETS_PRICING_TITLE": "e-Freight",
-                "WIDGETS_PRICING_BODY": "Choose from where to where, decide whether container or partial and see the freight instantly",
-                "WIDGETS_PRICING_BUTTON_TEXT": "Freight Look Up"
+                "WIDGETS_PRICING_TITLE": "e-Navlun",
+                "WIDGETS_PRICING_BODY": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.",
+                "WIDGETS_PRICING_BUTTON_TEXT": "Navlun Al"
             }
         }
     },

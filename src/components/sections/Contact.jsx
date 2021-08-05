@@ -11,7 +11,14 @@ class Contact extends Component {
                 <div id="contact" className="contact section-padding">
                     <Container className="main">
                         <Row>
-                            <Titles title="Bizimle İletişin" subtitle="" description="" textAlign="text-center" color="text-dark" fontSize="section-title-description-font-size" />
+                            <Titles
+                                title={this.props.language('contact.header.CONTACT_SECTION_TITLE')}
+                                subtitle={this.props.language('contact.header.CONTACT_SECTION_SUBTITLE')}
+                                description={this.props.language('contact.header.CONTACT_SECTION_DESCRIPTION')}
+                                textAlign="text-center"
+                                color="text-dark"
+                                fontSize="section-title-description-font-size"
+                            />
                         </Row>
                         <Row>
                             <Col className="contact-left" lg={8}>
@@ -27,8 +34,8 @@ class Contact extends Component {
                                         </Col>
                                         <Col sm={10}>
                                             <div className="contact-info-body">
-                                                <h4>Şişli, İstanbul, Türkiye</h4>
-                                                <p>Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy İş Merkezi</p>
+                                                <h4>{this.props.language('contact.body.address_information.CONTACT_SECTION_ADDRESS_INFORMATION_TITLE')}</h4>
+                                                <p>{this.props.language('contact.body.address_information.CONTACT_SECTION_ADDRESS_INFORMATION_BODY')}</p>
                                             </div>
                                         </Col>
                                     </Row>
@@ -43,8 +50,8 @@ class Contact extends Component {
                                         </Col>
                                         <Col col={10}>
                                             <div className="contact-info-body">
-                                                <h4><a href="tel:02124381818">+90 (212) 438 18 18</a></h4>
-                                                <p>Pazartesi - Cuma / 09:00 - 18:00</p>
+                                                <h4><a href={"tel:" + this.props.language('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_TITLE')}>{this.props.language('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_TITLE')}</a></h4>
+                                                <p>{this.props.language('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_BODY')}</p>
                                             </div>
                                         </Col>
                                     </Row>
@@ -59,8 +66,8 @@ class Contact extends Component {
                                         </Col>
                                         <Col sm={10}>
                                             <div className="contact-info-body">
-                                                <h4><a href="mailto:info@mgl.cc">info@mgl.cc</a></h4>
-                                                <p>Bizimle iletişime geçin</p>
+                                                <h4><a href="mailto:info@mgl.cc">{this.props.language('contact.body.email_information.CONTACT_SECTION_EMAIL_INFORMATION_TITLE')}</a></h4>
+                                                <p>{this.props.language('contact.body.email_information.CONTACT_SECTION_EMAIL_INFORMATION_BODY')}</p>
                                             </div>
                                         </Col>
                                     </Row>

@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from 'react'
+import Titles from './titles/Titles'
 import { withStyles } from "@material-ui/core/styles";
 import { Container, Row, Col, Image, Form } from 'react-bootstrap'
 import TextField from '@material-ui/core/TextField';
 
 import careerBackgroundPhoto from '../../assets/images/career/career_background.jpg'
-import careerPhotoTr from '../../assets/images/career/career_tr.jpg'
-import careerPhotoEn from '../../assets/images/career/career_en.jpg'
 
 import { Button } from 'react-bootstrap';
 import { VscCloudUpload, VscCheck } from "react-icons/vsc";
@@ -32,7 +31,6 @@ const StyledTextField = withStyles({
 
 class Career extends Component {
     render() {
-
         const careerStyles = {
             backgroundImage: `url("${careerBackgroundPhoto}")`,
             backgroundSize: "cover",
@@ -42,38 +40,48 @@ class Career extends Component {
         return (
             <Fragment>
                 <div id="career" className="career section-padding" style={careerStyles}>
-                    <Container className="main">                       
+                    <Container className="main">
+                        <Row>
+                            <Titles
+                                title={this.props.language('career.header.CAREER_SECTION_TITLE')}
+                                subtitle={this.props.language('career.header.CAREER_SECTION_SUBTITLE')}
+                                description={this.props.language('career.header.CAREER_SECTION_DESCRIPTION')}
+                                textAlign="text-center"
+                                color="text-dark"
+                                ontSize="section-title-description-font-size"
+                            />
+                        </Row>
                         <Row>
                             <Col lg={6}>
-                                <Image src={careerPhotoTr} alt="" fluid />
+                                <Image src={this.props.language('career.body.CAREER_SECTION_PHOTO')} alt="" fluid />
                             </Col>
                             <Col lg={6}>
                                 <Form>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label="Adınız" defaultValue="" />
+                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_NAME')} defaultValue="" />
                                         </Col>
 
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label="Soyadınız" defaultValue="" />
+                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_SURNAME')} defaultValue="" />
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label="Eposta Adresiniz" defaultValue="" />
+                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_EMAIL')} defaultValue="" />
                                         </Col>
 
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label="Telefon Numaranız" defaultValue="" />
+                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_PHONE')} defaultValue="" />
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth multiline rows={5} id="standard-required" label="Bize Mesajınız" defaultValue="" />
+                                            <StyledTextField className="career-input" variant="filled" fullWidth multiline rows={5} id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_MESSAGE')} defaultValue="" />
                                         </Col>
                                     </Row>
                                     <Row>
@@ -81,7 +89,7 @@ class Career extends Component {
                                             <input style={{ display: "none" }} accept="image/*" id="contained-button-file" multiple type="file" />
                                             <label htmlFor="contained-button-file">
                                                 <Button className="career-input template-button template-button-primary-2" component="span">
-                                                    <VscCloudUpload size={20} />&emsp;CV Yükle
+                                                    <VscCloudUpload size={20} /> &emsp; {this.props.language('career.body.form.CAREER_SECTION_BUTTON_UPLOAD_FILE')}
                                                 </Button>
                                             </label>
                                         </Col>
@@ -89,7 +97,7 @@ class Career extends Component {
                                     <Row>
                                         <Col lg={12}>
                                             <Button className="career-input template-button template-button-primary-2">
-                                                <VscCheck size={14} />&emsp;Gönder
+                                                <VscCheck size={14} /> &emsp; {this.props.language('career.body.form.CAREER_SECTION_BUTTON_SEND')}
                                             </Button>
                                         </Col>
                                     </Row>

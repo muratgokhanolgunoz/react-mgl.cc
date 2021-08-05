@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap"
 
-import blogImageFirst from '../../../assets/images/blog/blog_2.png'
+import blogImageFirst from '../../../assets/images/blog/1/photo.png'
 
 class BlogPopup extends Component {
 
@@ -10,7 +10,9 @@ class BlogPopup extends Component {
             <Fragment>
                 <Modal show={this.props.popupShow} fullscreen={true} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" centered>
                     <Modal.Header>
-                        <Button className="template-button template-button-danger pin-to-right" onClick={() => this.props.popupShowToggle(false)}>KAPAT</Button>
+                        <Button className="template-button template-button-danger pin-to-right" onClick={() => this.props.popupShowToggle(false)}>
+                            {this.props.language('template.buttons.TEMPLATE_CLOSE_BUTTON')}
+                        </Button>
                     </Modal.Header>
                     <Modal.Body>
                         <Container>

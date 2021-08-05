@@ -22,7 +22,7 @@ body {
 
 .navi {
   text-transform: uppercase;
-  font-size: .95em;
+  font-size: 0.95em;
   color: #000;
 }
 
@@ -52,6 +52,34 @@ body {
   .home {
     height: 450px;
   }
+}
+
+.home-calender {
+  width: 125px;
+  height: 100px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 80px;
+}
+
+.home-calender-item {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.home-calender-item span,
+.home-calender-item h1 {
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home-calender h1 {
+  margin-bottom: -1px;
+  font-size: 38px;
 }
 
 /* ========== HOME WIDGET SECTION STYLES ========== */
