@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 import Titles from "./titles/Titles";
 import GalleryPopup from "./popups/GalleryPopup";
-import videosJson from "../../tools/videos/videos.json";
+import videosJson from "../../../tools/videos/videos.json";
 
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
@@ -47,7 +47,7 @@ class Gallery extends Component {
             this.setState(() => ({ nextButtonValue: undefined }));
         }
 
-        if (temp - 1 <= -1) {
+        if (temp - 1 <= 0) {
             this.setState(() => ({ previousButtonValue: undefined }));
         }
 
@@ -69,6 +69,7 @@ class Gallery extends Component {
     render() {
         const settings = {
             className: "videos-body-carousel",
+            centerPadding: "10px",
             centerMode: true,
             infinite: true,
             slidesToShow: 3,
@@ -111,12 +112,20 @@ class Gallery extends Component {
                         <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
                             <Slider ref={(c) => (this.slider = c)} {...settings} >
                                 {videosJson.map((video) => (
-                                    <Col key={video.id} className="videos-body-items">
-                                        <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
-                                        <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
-                                            {/* <VscSearch className="videos-body-images-icon" /> */}
-                                        </div>
-                                    </Col>
+                                    // Ignoring the empty 0th index from the json file in order to set the video sequence number exactly
+                                    // Please see tools/videos/videos.json file
+                                    video.id !== 0
+                                        ?
+                                        (
+                                            <Col key={video.id} className="videos-body-items">
+                                                <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
+                                                <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
+                                                    {/* <VscSearch className="videos-body-images-icon" /> */}
+                                                </div>
+                                            </Col>
+                                        )
+                                        :
+                                        null
                                 ))}
                             </Slider>
                             <br />

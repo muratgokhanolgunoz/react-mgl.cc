@@ -8,7 +8,7 @@ class GalleryPopup extends Component {
       <Fragment>
         <Modal show={this.props.popupShow} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" centered>
           <Modal.Header>
-            <p className="text-light"> {" "} {this.props.propsCurrentVideo + 1} / {" "} {this.props.propsVideosJson.length}{" "} </p>
+            <p className="text-light"> {" "} {this.props.propsCurrentVideo} / {" "} {this.props.propsVideosJson.length - 1}{" "} </p>
             <Button className="template-button template-button-danger border-0 pin-to-right" onClick={() => this.props.popupShowToggle(false)}>
               {this.props.language('template.buttons.TEMPLATE_CLOSE_BUTTON')}
             </Button>

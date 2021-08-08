@@ -1,41 +1,46 @@
 [
     {
         "id": 0,
+        "src": "",
+        "thumbnail": ""        
+    },
+    {
+        "id": 1,
         "src": "https://mgl.cc/videos/dubai.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/0.png"        
     },
     {
-        "id": 1,
+        "id": 2,
         "src": "https://mgl.cc/videos/dijital.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/1.png"        
     },
     {
-        "id": 2,
+        "id": 3,
         "src": "https://mgl.cc/videos/colombo.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/2.png"        
     },
     {
-        "id": 3,
+        "id": 4,
         "src": "https://mgl.cc/videos/class2label.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/3.png"        
     },
     {
-        "id": 4,
+        "id": 5,
         "src": "https://mgl.cc/videos/konsimento.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/4.png"        
     },
     {
-        "id": 5,
+        "id": 6,
         "src": "https://mgl.cc/videos/opentop.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/5.png"        
     },
     {
-        "id": 6,
+        "id": 7,
         "src": "https://mgl.cc/videos/muhasebe.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/6.png"        
     },
     {
-        "id": 7,
+        "id": 8,
         "src": "https://mgl.cc/videos/tarihce.mp4",
         "thumbnail": "https://mgl.cc/gokhan/uploads/gallery/7.png"        
     }

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Context from "../Context"
+import FrontEndContext from "../FrontEndContext"
 
 class Provider extends Component {
     state = {
@@ -8,14 +8,14 @@ class Provider extends Component {
 
     render() {
         return (
-            <Context.Provider value={{
+            <FrontEndContext.Provider value={{
                 state: this.state,
-                setLanguage: (language) => {
-                    this.setState({ language: language })
+                setLanguage: (_language) => {
+                    this.setState({ language: _language })
                 }
             }}>
                 {this.props.children}
-            </Context.Provider>
+            </FrontEndContext.Provider>
         );
     }
 }

@@ -1,17 +1,16 @@
-import React, { Component, Fragment } from "react"
-import Context from '../../context/Context'
+import React, { Component } from "react"
+import FrontEndContext from '../../../context/FrontEndContext'
 import ReactFlagsSelect from 'react-flags-select'
 import { Container, Nav, Navbar, Image } from "react-bootstrap"
-import logo from "../../assets/images/logo.png"
+import logo from "../../../assets/images/logo.png"
 
 class Navi extends Component {
     render() {
-
         return (
-            <Context.Consumer>
+            <FrontEndContext.Consumer>
                 {(context) => {
                     return (
-                        <Fragment>
+                        <div>
                             <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                                 <Container>
                                     <Navbar.Brand href="#home">
@@ -49,13 +48,10 @@ class Navi extends Component {
                                         </Nav>
                                         <Nav className="navi">
                                             <ReactFlagsSelect
-                                                countries={["TR", "US", "CN", "IR", "SA"]}
+                                                countries={["TR", "US"]}
                                                 customLabels={{
                                                     "TR": "TR",
-                                                    "US": "EN",
-                                                    "CN": "ZH",
-                                                    "IR": "FA",
-                                                    "SA": "AR"
+                                                    "US": "EN"
                                                 }}
                                                 selected={context.state.language}
                                                 onSelect={code => { context.setLanguage(code); this.props.languageLibrary.changeLanguage(code.toLowerCase().toString()) }}
@@ -66,10 +62,10 @@ class Navi extends Component {
                                     </Navbar.Collapse>
                                 </Container>
                             </Navbar>
-                        </Fragment>
+                        </div>
                     )
                 }}
-            </Context.Consumer>
+            </FrontEndContext.Consumer>
         )
     }
 }

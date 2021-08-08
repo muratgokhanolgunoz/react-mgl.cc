@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap"
 
-import blogImageFirst from '../../../assets/images/blog/1/photo.png'
+import blogImageFirst from '../../../../assets/images/blog/1/photo.png'
 
 class BlogPopup extends Component {
 

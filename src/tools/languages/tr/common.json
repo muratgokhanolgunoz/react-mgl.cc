@@ -1,4 +1,14 @@
 {
+    "html": {
+        "HTML_PAGE_TITLE": "Midas Global Lojistik"
+    },
+    "template": {
+        "buttons": {
+            "TEMPLATE_CLOSE_BUTTON": "Kapat",
+            "TEMPLATE_NEXT_BUTTON": "İlerİ",
+            "TEMPLATE_PREVIOUS_BUTTON": "Gerİ"
+        }
+    },
     "navbar": {
         "NAVBAR_ITEM_SERVICES": "Servİslerİmİz",
         "NAVBAR_ITEM_ABOUT_US": "Hakkımızda",
@@ -15,24 +25,24 @@
                 "Ocak",
                 "Şubat",
                 "Mart",
-                "Nisan",
+                "Nİsan",
                 "Mayıs",
-                "Haziran",
+                "Hazİran",
                 "Temmuz",
                 "Ağustos",
                 "Eylül",
-                "Ekim",
+                "Ekİm",
                 "Kasım",
                 "Aralık"
             ],
             "CALENDAR_DAY_NAMES": [
                 "Pazar",
-                "Pazartesi",
+                "Pazartesİ",
                 "Salı",
                 "Çarşamba",
                 "Perşembe",
                 "Cuma",
-                "Cumartesi"
+                "Cumartesİ"
             ]
         },
         "widgets": {
@@ -45,7 +55,8 @@
                 "WIDGETS_PRICING_TITLE": "e-Navlun",
                 "WIDGETS_PRICING_BODY": "Nereden nereye seçin konteyner mi parsiyel mi karar verin ve navlunları anında görün",
                 "WIDGETS_PRICING_BUTTON_TEXT": "Navlun Al"
-            }
+            },
+            "WIDGETS_BILL_OF_LADING_NUMBER_MESSAGE": "Lütfen konşimento numaranızı girin"
         }
     },
     "services": {
@@ -103,7 +114,21 @@
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Tahmini Gemi Gelişi",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Beyanname Kapanış",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Yükleme Yeri",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CCONSOLE_CUTOFF": "Konsol Kapanış"
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Acenta",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Konsol Kapanış"
+            },
+            "clipboard": {
+                "body": {
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Varış Yeri : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Gemi Adı : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Yükleme Yeri : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Yükleme Tarihi : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Konsol Kapanış : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "Tahmini Gemi Gelişi : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Acenta : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Son Güncelleme : "
+                },
+                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Gemi bilgileri panoya kopyalandı"
             },
             "SCHEDULE_SECTION_EMPTY_MESSAGE": "Aktif bir gemi programı bulunamadı"
         }
@@ -115,9 +140,7 @@
             "BLOG_SECTION_DESCRIPTION": ""
         },
         "body": {
-            "buttons": {
-                "BLOG_SECTION_BUTTON": "Devamı . . ."
-            },
+            "BLOG_SECTION_BUTTON": "Devamı . . .",
             "items": [
                 {
                     "BLOG_SECTION_ITEMS_THUMBNAIL": "https://mgl.cc/gokhan/uploads/blog/1/thumbnail.jpg",
@@ -126,7 +149,8 @@
                     "BLOG_SECTION_ITEMS_SUMMARY": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı.",
                     "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı. \n  Ticaretin üç ana ögesi alıcı, satıcı ve üründür. Uluslararası ticarette onlarca farklı olgu; hizmet, altyapı, finans, devlet ve taşımacılık gibi, bu üç temel ögenin etrafında yer alır. Deniz yolu taşımalarında teslim anlaşması ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu ürün taşıma aracına yüklendiği zaman, taşıyıcı aldığı mala karşılık bir konşimento (taşıma senedi) düzenler ve bu konşimentoyu göndericiye verir. Son dönemlerde teslimat -eğer taşıma bir akreditif veya kiralama sözleşmesi altında gerçekleşmiyorsa- konşimento yerine deniz yolu irsaliyesi olarak Türkçeleştirebileceğimiz SWB (basılı bir konşimentoda ki bütün bilgileri içerir fakat matbu bir çıktısı yoktur) ile de yapılabilmekte. Uluslararası demek farklı çıkış ve varış ülkesi olması durumudur. Mal çıkış ülkesinden hareket ettiğinde, alıcı için şartlar geri dönülmez şekilde kesinleşmiştir (düzeltme hakkı saklı). İşte risk analizi bu saat itibariyle başlayabilir. Amerika’da ki uygulama ise gemi çıkış limanından hareket etmeden 48 saat öncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani taşıyıcıya, “bu malı gemine hiç yükleme” diyebilir. Şeffaflık tarafı; alıcının gümrükleme işlemini mal çıkış ülkesinden yola çıktıktan sonra yapabilmesi ve uluslararası rekabette elini güçlü tutması, liman, gümrük, gümrükçü, taşıyıcı ve depolama kurumlarının ise çekirdek işlerine yoğunlaşıp hizmet kalitesini artırabilmesidir. \n Sektörün duayenleri bilirler; 3. dünya ülkelerinde hep bir fazladan demuraj serbest süresi talebi vardır ama Avrupa ve Amerika’da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamasına rağmen. Amerikalı alıcılar bunu pek konu da etmezler, çünkü bilirler ki gümrükleme yapmak için her zaman yeterli süreleri vardır. Mal gemiden indiğinde mallarını limandan alıp giderler. Tabii risk analizi tespit yapmak için malı başka bir sahaya da çekebilirler. Bu arada bahsetmeden geçmemek gerek FMC (Federal Denizcilik Komisyonu) 2019 yılında; konteyner alıcının çekebileceği duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye başlamamalı diye yeni bir tavsiye karar aldı. Bu bir zorunluluk değil ancak FMC‘nin aldığı kararların ortak çıkarı temsil ettiği armatörler, liman işletmeleri ve dış ticaret firmaları tarafından bilinir. \n Peki fazladan verilen demuraj serbest süresi bu konuyu çözmüyor mu veya 3. dünya ülkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yapılan gümrüklemenin baskı altında verilen ifade gibi olduğunu söylemek yanlış olmaz. Ayrıca ardiye için de herhangi bir serbest süre yoktur. Ardiye; gemi limana yanaşınca başlar. Yedi günden (geminin limana yanaşmasına müteakip) daha kısa sürede malını çekebilen alıcı; eğer çok şanslı değilse, camia tarafından “mutlaka iyi bağlantıları olan bir gümrükçüsü vardır” diye bilinir. \n “Amerika’yı yeniden keşfetmeye gerek yok” sözü sanki bu durum için söylenmiş. İthalat gümrüklemesi için gerekli şartlar mal çıktığında kesindir. Serbest rekabet koşullarını yaratmak, dijitalleşmeye ve şeffaflaşmaya öncü olmak kural koyucu kurumun sorumluluğudur. Rekabet adil koşullarda yapılır ise ciddi oranda ardiye ve demuraj parası yurt dışına çıkmaz. Gereksiz döviz çıkışını önlemek döviz kazandırıcı hizmet sayılabilir mi sorusu da aklıma geliyor. Daha az önemli bir çıktısı da LPI'deki yerimiz 15-20 sıra iyiye doğru gelişir. \n *konteyner taşımacılığında yerel armatörlerimizin payı %10’dan daha az.",
                     "BLOG_SECTION_ITEMS_DATE": "04/08/2021",
-                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI"
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI",
+                    "BLOG_SECTION_ITEMS_PREFIX": "tarafından"
                 },
                 {
                     "BLOG_SECTION_ITEMS_THUMBNAIL": "https://mgl.cc/gokhan/uploads/blog/1/thumbnail.jpg",
@@ -135,7 +159,8 @@
                     "BLOG_SECTION_ITEMS_SUMMARY": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı.",
                     "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı. \n  Ticaretin üç ana ögesi alıcı, satıcı ve üründür. Uluslararası ticarette onlarca farklı olgu; hizmet, altyapı, finans, devlet ve taşımacılık gibi, bu üç temel ögenin etrafında yer alır. Deniz yolu taşımalarında teslim anlaşması ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu ürün taşıma aracına yüklendiği zaman, taşıyıcı aldığı mala karşılık bir konşimento (taşıma senedi) düzenler ve bu konşimentoyu göndericiye verir. Son dönemlerde teslimat -eğer taşıma bir akreditif veya kiralama sözleşmesi altında gerçekleşmiyorsa- konşimento yerine deniz yolu irsaliyesi olarak Türkçeleştirebileceğimiz SWB (basılı bir konşimentoda ki bütün bilgileri içerir fakat matbu bir çıktısı yoktur) ile de yapılabilmekte. Uluslararası demek farklı çıkış ve varış ülkesi olması durumudur. Mal çıkış ülkesinden hareket ettiğinde, alıcı için şartlar geri dönülmez şekilde kesinleşmiştir (düzeltme hakkı saklı). İşte risk analizi bu saat itibariyle başlayabilir. Amerika’da ki uygulama ise gemi çıkış limanından hareket etmeden 48 saat öncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani taşıyıcıya, “bu malı gemine hiç yükleme” diyebilir. Şeffaflık tarafı; alıcının gümrükleme işlemini mal çıkış ülkesinden yola çıktıktan sonra yapabilmesi ve uluslararası rekabette elini güçlü tutması, liman, gümrük, gümrükçü, taşıyıcı ve depolama kurumlarının ise çekirdek işlerine yoğunlaşıp hizmet kalitesini artırabilmesidir. \n Sektörün duayenleri bilirler; 3. dünya ülkelerinde hep bir fazladan demuraj serbest süresi talebi vardır ama Avrupa ve Amerika’da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamasına rağmen. Amerikalı alıcılar bunu pek konu da etmezler, çünkü bilirler ki gümrükleme yapmak için her zaman yeterli süreleri vardır. Mal gemiden indiğinde mallarını limandan alıp giderler. Tabii risk analizi tespit yapmak için malı başka bir sahaya da çekebilirler. Bu arada bahsetmeden geçmemek gerek FMC (Federal Denizcilik Komisyonu) 2019 yılında; konteyner alıcının çekebileceği duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye başlamamalı diye yeni bir tavsiye karar aldı. Bu bir zorunluluk değil ancak FMC‘nin aldığı kararların ortak çıkarı temsil ettiği armatörler, liman işletmeleri ve dış ticaret firmaları tarafından bilinir. \n Peki fazladan verilen demuraj serbest süresi bu konuyu çözmüyor mu veya 3. dünya ülkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yapılan gümrüklemenin baskı altında verilen ifade gibi olduğunu söylemek yanlış olmaz. Ayrıca ardiye için de herhangi bir serbest süre yoktur. Ardiye; gemi limana yanaşınca başlar. Yedi günden (geminin limana yanaşmasına müteakip) daha kısa sürede malını çekebilen alıcı; eğer çok şanslı değilse, camia tarafından “mutlaka iyi bağlantıları olan bir gümrükçüsü vardır” diye bilinir. \n “Amerika’yı yeniden keşfetmeye gerek yok” sözü sanki bu durum için söylenmiş. İthalat gümrüklemesi için gerekli şartlar mal çıktığında kesindir. Serbest rekabet koşullarını yaratmak, dijitalleşmeye ve şeffaflaşmaya öncü olmak kural koyucu kurumun sorumluluğudur. Rekabet adil koşullarda yapılır ise ciddi oranda ardiye ve demuraj parası yurt dışına çıkmaz. Gereksiz döviz çıkışını önlemek döviz kazandırıcı hizmet sayılabilir mi sorusu da aklıma geliyor. Daha az önemli bir çıktısı da LPI'deki yerimiz 15-20 sıra iyiye doğru gelişir. \n *konteyner taşımacılığında yerel armatörlerimizin payı %10’dan daha az.",
                     "BLOG_SECTION_ITEMS_DATE": "04/08/2021",
-                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI"
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI",
+                    "BLOG_SECTION_ITEMS_PREFIX": "tarafından"
                 },
                 {
                     "BLOG_SECTION_ITEMS_THUMBNAIL": "https://mgl.cc/gokhan/uploads/blog/1/thumbnail.jpg",
@@ -144,7 +169,8 @@
                     "BLOG_SECTION_ITEMS_SUMMARY": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı.",
                     "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı. \n  Ticaretin üç ana ögesi alıcı, satıcı ve üründür. Uluslararası ticarette onlarca farklı olgu; hizmet, altyapı, finans, devlet ve taşımacılık gibi, bu üç temel ögenin etrafında yer alır. Deniz yolu taşımalarında teslim anlaşması ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu ürün taşıma aracına yüklendiği zaman, taşıyıcı aldığı mala karşılık bir konşimento (taşıma senedi) düzenler ve bu konşimentoyu göndericiye verir. Son dönemlerde teslimat -eğer taşıma bir akreditif veya kiralama sözleşmesi altında gerçekleşmiyorsa- konşimento yerine deniz yolu irsaliyesi olarak Türkçeleştirebileceğimiz SWB (basılı bir konşimentoda ki bütün bilgileri içerir fakat matbu bir çıktısı yoktur) ile de yapılabilmekte. Uluslararası demek farklı çıkış ve varış ülkesi olması durumudur. Mal çıkış ülkesinden hareket ettiğinde, alıcı için şartlar geri dönülmez şekilde kesinleşmiştir (düzeltme hakkı saklı). İşte risk analizi bu saat itibariyle başlayabilir. Amerika’da ki uygulama ise gemi çıkış limanından hareket etmeden 48 saat öncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani taşıyıcıya, “bu malı gemine hiç yükleme” diyebilir. Şeffaflık tarafı; alıcının gümrükleme işlemini mal çıkış ülkesinden yola çıktıktan sonra yapabilmesi ve uluslararası rekabette elini güçlü tutması, liman, gümrük, gümrükçü, taşıyıcı ve depolama kurumlarının ise çekirdek işlerine yoğunlaşıp hizmet kalitesini artırabilmesidir. \n Sektörün duayenleri bilirler; 3. dünya ülkelerinde hep bir fazladan demuraj serbest süresi talebi vardır ama Avrupa ve Amerika’da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamasına rağmen. Amerikalı alıcılar bunu pek konu da etmezler, çünkü bilirler ki gümrükleme yapmak için her zaman yeterli süreleri vardır. Mal gemiden indiğinde mallarını limandan alıp giderler. Tabii risk analizi tespit yapmak için malı başka bir sahaya da çekebilirler. Bu arada bahsetmeden geçmemek gerek FMC (Federal Denizcilik Komisyonu) 2019 yılında; konteyner alıcının çekebileceği duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye başlamamalı diye yeni bir tavsiye karar aldı. Bu bir zorunluluk değil ancak FMC‘nin aldığı kararların ortak çıkarı temsil ettiği armatörler, liman işletmeleri ve dış ticaret firmaları tarafından bilinir. \n Peki fazladan verilen demuraj serbest süresi bu konuyu çözmüyor mu veya 3. dünya ülkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yapılan gümrüklemenin baskı altında verilen ifade gibi olduğunu söylemek yanlış olmaz. Ayrıca ardiye için de herhangi bir serbest süre yoktur. Ardiye; gemi limana yanaşınca başlar. Yedi günden (geminin limana yanaşmasına müteakip) daha kısa sürede malını çekebilen alıcı; eğer çok şanslı değilse, camia tarafından “mutlaka iyi bağlantıları olan bir gümrükçüsü vardır” diye bilinir. \n “Amerika’yı yeniden keşfetmeye gerek yok” sözü sanki bu durum için söylenmiş. İthalat gümrüklemesi için gerekli şartlar mal çıktığında kesindir. Serbest rekabet koşullarını yaratmak, dijitalleşmeye ve şeffaflaşmaya öncü olmak kural koyucu kurumun sorumluluğudur. Rekabet adil koşullarda yapılır ise ciddi oranda ardiye ve demuraj parası yurt dışına çıkmaz. Gereksiz döviz çıkışını önlemek döviz kazandırıcı hizmet sayılabilir mi sorusu da aklıma geliyor. Daha az önemli bir çıktısı da LPI'deki yerimiz 15-20 sıra iyiye doğru gelişir. \n *konteyner taşımacılığında yerel armatörlerimizin payı %10’dan daha az.",
                     "BLOG_SECTION_ITEMS_DATE": "04/08/2021",
-                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI"
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI",
+                    "BLOG_SECTION_ITEMS_PREFIX": "tarafından"
                 },
                 {
                     "BLOG_SECTION_ITEMS_THUMBNAIL": "https://mgl.cc/gokhan/uploads/blog/1/thumbnail.jpg",
@@ -153,7 +179,8 @@
                     "BLOG_SECTION_ITEMS_SUMMARY": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı.",
                     "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika’da AMS (Otomatik Manifesto Sistemi) uygulaması başlayalı 16 yıl oldu, ardından Avrupa da ENS uygulamasını hayata geçirdi. Türkiye’de ise benzer çıktıları almak için “varış bildirimi” uygulaması başlatıldı. Amerika’da hedeflenen temel sonuçlar: risk analizi (erken aşamada önlem almak) ve şeffaflıktı. \n  Ticaretin üç ana ögesi alıcı, satıcı ve üründür. Uluslararası ticarette onlarca farklı olgu; hizmet, altyapı, finans, devlet ve taşımacılık gibi, bu üç temel ögenin etrafında yer alır. Deniz yolu taşımalarında teslim anlaşması ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu ürün taşıma aracına yüklendiği zaman, taşıyıcı aldığı mala karşılık bir konşimento (taşıma senedi) düzenler ve bu konşimentoyu göndericiye verir. Son dönemlerde teslimat -eğer taşıma bir akreditif veya kiralama sözleşmesi altında gerçekleşmiyorsa- konşimento yerine deniz yolu irsaliyesi olarak Türkçeleştirebileceğimiz SWB (basılı bir konşimentoda ki bütün bilgileri içerir fakat matbu bir çıktısı yoktur) ile de yapılabilmekte. Uluslararası demek farklı çıkış ve varış ülkesi olması durumudur. Mal çıkış ülkesinden hareket ettiğinde, alıcı için şartlar geri dönülmez şekilde kesinleşmiştir (düzeltme hakkı saklı). İşte risk analizi bu saat itibariyle başlayabilir. Amerika’da ki uygulama ise gemi çıkış limanından hareket etmeden 48 saat öncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani taşıyıcıya, “bu malı gemine hiç yükleme” diyebilir. Şeffaflık tarafı; alıcının gümrükleme işlemini mal çıkış ülkesinden yola çıktıktan sonra yapabilmesi ve uluslararası rekabette elini güçlü tutması, liman, gümrük, gümrükçü, taşıyıcı ve depolama kurumlarının ise çekirdek işlerine yoğunlaşıp hizmet kalitesini artırabilmesidir. \n Sektörün duayenleri bilirler; 3. dünya ülkelerinde hep bir fazladan demuraj serbest süresi talebi vardır ama Avrupa ve Amerika’da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamasına rağmen. Amerikalı alıcılar bunu pek konu da etmezler, çünkü bilirler ki gümrükleme yapmak için her zaman yeterli süreleri vardır. Mal gemiden indiğinde mallarını limandan alıp giderler. Tabii risk analizi tespit yapmak için malı başka bir sahaya da çekebilirler. Bu arada bahsetmeden geçmemek gerek FMC (Federal Denizcilik Komisyonu) 2019 yılında; konteyner alıcının çekebileceği duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye başlamamalı diye yeni bir tavsiye karar aldı. Bu bir zorunluluk değil ancak FMC‘nin aldığı kararların ortak çıkarı temsil ettiği armatörler, liman işletmeleri ve dış ticaret firmaları tarafından bilinir. \n Peki fazladan verilen demuraj serbest süresi bu konuyu çözmüyor mu veya 3. dünya ülkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yapılan gümrüklemenin baskı altında verilen ifade gibi olduğunu söylemek yanlış olmaz. Ayrıca ardiye için de herhangi bir serbest süre yoktur. Ardiye; gemi limana yanaşınca başlar. Yedi günden (geminin limana yanaşmasına müteakip) daha kısa sürede malını çekebilen alıcı; eğer çok şanslı değilse, camia tarafından “mutlaka iyi bağlantıları olan bir gümrükçüsü vardır” diye bilinir. \n “Amerika’yı yeniden keşfetmeye gerek yok” sözü sanki bu durum için söylenmiş. İthalat gümrüklemesi için gerekli şartlar mal çıktığında kesindir. Serbest rekabet koşullarını yaratmak, dijitalleşmeye ve şeffaflaşmaya öncü olmak kural koyucu kurumun sorumluluğudur. Rekabet adil koşullarda yapılır ise ciddi oranda ardiye ve demuraj parası yurt dışına çıkmaz. Gereksiz döviz çıkışını önlemek döviz kazandırıcı hizmet sayılabilir mi sorusu da aklıma geliyor. Daha az önemli bir çıktısı da LPI'deki yerimiz 15-20 sıra iyiye doğru gelişir. \n *konteyner taşımacılığında yerel armatörlerimizin payı %10’dan daha az.",
                     "BLOG_SECTION_ITEMS_DATE": "04/08/2021",
-                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI"
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI",
+                    "BLOG_SECTION_ITEMS_PREFIX": "tarafından"
                 }
             ]
         }
@@ -200,12 +227,5 @@
     },
     "footer": {
         "FOOTER_TEXT": "Midas Global Lojistik"
-    },
-    "template": {
-        "buttons": {
-            "TEMPLATE_CLOSE_BUTTON": "Kapat",
-            "TEMPLATE_NEXT_BUTTON": "İlerİ",
-            "TEMPLATE_PREVIOUS_BUTTON": "Gerİ"
-        }
     }
 }

@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from "react";
-import Titles from "./titles/Titles";
-import ScheduleServices from "../../services/ScheduleServices";
 
+import Titles from "./titles/Titles";
+import ScheduleServices from "../../../services/ScheduleServices";
+
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import { Container, Row, Table } from "react-bootstrap";
-import scheduleBackground from "../../assets/images/schedule/schedule.jpg";
+import scheduleBackground from "../../../assets/images/schedule/schedule.jpg";
 
 class Schedule extends Component {
   state = {
@@ -18,17 +21,17 @@ class Schedule extends Component {
   }
 
   copyOfShipInformations = (shipInfo) => {
-    let copyText = "",
-      input
+    let copyText = ""
+    let input
 
-    copyText += "Destination : " + shipInfo.destination_name.toUpperCase() + "\n"
-    copyText += "Ship Name : " + shipInfo.ship_name.toUpperCase() + "\n"
-    copyText += "Load Place : " + shipInfo.load_place.toUpperCase() + "\n"
-    copyText += "Load Date : " + shipInfo.loading_date.toUpperCase() + "\n"
-    copyText += "Console Cutoff : " + shipInfo.cut_off_date.toUpperCase() + "\n"
-    copyText += "Estimated Ship Arrival : " + shipInfo.eta_date.toUpperCase() + "\n"
-    copyText += "Agency : " + shipInfo.lan_name.toUpperCase() + "\n"
-    copyText += "Last Update : " + shipInfo.last_updated.toUpperCase()
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION') + shipInfo.destination_name.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME') + shipInfo.ship_name.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE') + shipInfo.load_place.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE') + shipInfo.loading_date.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF') + shipInfo.cut_off_date.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL') + shipInfo.eta_date.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY') + shipInfo.lan_name.toUpperCase() + "\n"
+    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE') + shipInfo.last_updated.toUpperCase()
 
     document.getElementById("clipboard-area").value = copyText
     input = document.querySelector('#clipboard-area')
@@ -36,7 +39,16 @@ class Schedule extends Component {
     input.setSelectionRange(0, 99999)
     document.execCommand("copy")
 
-    alert("Ship informations copied to clipboard")
+    toast(this.props.language('schedule.body.clipboard.SCHEDULE_SECTION_CLIPBOARD_MESSAGE'), {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      type: "dark"
+    });
   }
 
   render() {
@@ -70,7 +82,8 @@ class Schedule extends Component {
                     <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL')}</span></th>
                     <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING')}</span></th>
                     <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE')}</span></th>
-                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CCONSOLE_CUTOFF')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY')}</span></th>
+                    <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF')}</span></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -82,7 +95,8 @@ class Schedule extends Component {
                         <td><span className="table-schedule-row-span">{schedule.ship_name}</span></td>
                         <td><span className="table-schedule-row-span">{schedule.eta_date}</span></td>
                         <td><span className="table-schedule-row-span">{schedule.cut_off_date}</span></td>
-                        <td><span className="table-schedule-row-span">{schedule.load_place}</span></td>
+                        <td><span className="table-schedule-row-span">{schedule.load_place.substr(0, 25)}</span></td>
+                        <td><span className="table-schedule-row-span">{schedule.lan_name.substr(0, 25)}</span></td>
                         <td><span className="table-schedule-row-span">{schedule.cutoff_date}</span></td>
                       </tr>
                     ))
@@ -97,6 +111,8 @@ class Schedule extends Component {
               </Table>
             </Row>
           </Container>
+
+          <ToastContainer />
         </div>
       </Fragment>
     );

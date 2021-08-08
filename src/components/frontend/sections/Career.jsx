@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import Titles from './titles/Titles'
 import { withStyles } from "@material-ui/core/styles";
+
 import { Container, Row, Col, Image, Form } from 'react-bootstrap'
 import TextField from '@material-ui/core/TextField';
 
-import careerBackgroundPhoto from '../../assets/images/career/career_background.jpg'
+import careerBackgroundPhoto from '../../../assets/images/career/career_background.jpg'
 
 import { Button } from 'react-bootstrap';
 import { VscCloudUpload, VscCheck } from "react-icons/vsc";
@@ -59,29 +60,29 @@ class Career extends Component {
                                 <Form>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_NAME')} defaultValue="" />
+                                            <StyledTextField id="career-input-name" className="career-input" variant="filled" fullWidth required label={this.props.language('career.body.form.CAREER_SECTION_INPUT_NAME')} defaultValue="" />
                                         </Col>
 
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_SURNAME')} defaultValue="" />
+                                            <StyledTextField id="career-input-surname" className="career-input" variant="filled" fullWidth required label={this.props.language('career.body.form.CAREER_SECTION_INPUT_SURNAME')} defaultValue="" />
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_EMAIL')} defaultValue="" />
+                                            <StyledTextField id="career-input-email" className="career-input" variant="filled" fullWidth required label={this.props.language('career.body.form.CAREER_SECTION_INPUT_EMAIL')} defaultValue="" />
                                         </Col>
 
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth required id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_PHONE')} defaultValue="" />
+                                            <StyledTextField id="career-input-phone" className="career-input" variant="filled" fullWidth required label={this.props.language('career.body.form.CAREER_SECTION_INPUT_PHONE')} defaultValue="" />
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col lg={12}>
-                                            <StyledTextField className="career-input" variant="filled" fullWidth multiline rows={5} id="standard-required" label={this.props.language('career.body.form.CAREER_SECTION_INPUT_MESSAGE')} defaultValue="" />
+                                            <StyledTextField id="career-input-message" className="career-input" variant="filled" fullWidth multiline rows={5}  label={this.props.language('career.body.form.CAREER_SECTION_INPUT_MESSAGE')} defaultValue="" />
                                         </Col>
                                     </Row>
                                     <Row>

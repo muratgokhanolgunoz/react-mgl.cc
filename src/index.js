@@ -1,34 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
+import App from './App'
 
 import { I18nextProvider } from "react-i18next"
 import i18next from "i18next"
 
 import common_tr from "./tools/languages/tr/common.json";
 import common_en from "./tools/languages/en/common.json";
-import common_zh from "./tools/languages/zh/common.json";
-import common_fa from "./tools/languages/fa/common.json";
-import common_ar from "./tools/languages/ar/common.json";
+
+const defaultLanguageIsSet = () => {
+    let browserLanguage = window.navigator.language
+
+    if (browserLanguage.indexOf("en") === 0) {
+        return "us"
+    } else if (browserLanguage.indexOf("tr") === 0) {
+        return "tr"
+    } else {
+        return "us"
+    }
+}
 
 i18next.init({
     interpolation: { escapeValue: false },
-    lng: 'us',
+    lng: defaultLanguageIsSet(),
     resources: {
         tr: {
             common: common_tr
         },
         us: {
             common: common_en
-        },
-        zh: {
-            common: common_zh
-        },
-        fa: {
-            common: common_fa
-        },
-        ar: {
-            common: common_ar
         }
     },
 })
