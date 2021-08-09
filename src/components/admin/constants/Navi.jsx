@@ -24,12 +24,12 @@ import AdminContext from '../../../context/AdminContext';
 
 const Navi = (props) => {
 
-    const theme = useTheme();   
+    const theme = useTheme();
 
     return (
         <AdminContext.Consumer>
             {(context) => {
-                return(
+                return (
                     <div>
                         <AppBar position="fixed" className={clsx(props.classes.appBar, { [props.classes.appBarShift]: context.state.sidebarOpen, })}>
                             <Toolbar>
@@ -50,29 +50,99 @@ const Navi = (props) => {
                             </div>
                             <Divider />
                             <List component="nav" aria-label="main mailbox folders">
-                                <ListItem button>
-                                    <ListItemIcon>
-                                        <VscArrowRight />
-                                    </ListItemIcon>
-                                    <ListItemText >
-                                        <Link className="admin-sidebar-link" to="/admin">Home</Link>
-                                    </ListItemText>
-                                </ListItem>
+                                <Link className="admin-sidebar-link" to="/admin/home">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Home
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
 
-                                <ListItem button>
-                                    <ListItemIcon>
-                                        <VscArrowRight />
-                                    </ListItemIcon>
-                                    <ListItemText >
-                                        <Link className="admin-sidebar-link" to="/admin/services">Services</Link>
-                                    </ListItemText>
-                                </ListItem>
+                                <Link className="admin-sidebar-link" to="/admin/services">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Services
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
+
+                                <Link className="admin-sidebar-link" to="/admin/about">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            About Us
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
+
+                                <Link className="admin-sidebar-link" to="/admin/gallery">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Gallery
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
+
+                                <Link className="admin-sidebar-link" to="/admin/schedule">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Schedule
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
+
+                                <Link className="admin-sidebar-link" to="/admin/blog">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Blog
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
+
+                                <Link className="admin-sidebar-link" to="/admin/career">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Career
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
+
+                                <Link className="admin-sidebar-link" to="/admin/contact">
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            <VscArrowRight />
+                                        </ListItemIcon>
+                                        <ListItemText >
+                                            Contact
+                                        </ListItemText>
+                                    </ListItem>
+                                </Link>
                             </List>
                         </Drawer>
                     </div>
-                )  
+                )
             }}
-        </AdminContext.Consumer>        
+        </AdminContext.Consumer>
     )
 }
 export default Navi

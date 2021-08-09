@@ -26,24 +26,134 @@ class Blog extends Component {
                     />
                 </Row>
                 <Row>
-                    <Col className="blog-box" lg={3} md={6}>
-                        <div className="blog-box-item">
+                    <Col className="blog-box" xl={3} md={6}>
+                        <div className="blog-box-item" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="150">
                             <Image className="blog-box-image" src={this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_THUMBNAIL')} fluid />
-                            <span>
+                            <span className="blog-box-item-author">
                                 {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_DATE')} | {' '}
                                 <small>
                                     {this.props.languageLibrary.language === "tr"
-                                        ? 
-                                            this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')                                        
-                                        : 
-                                        this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')
+                                        ?
+                                        (
+                                            <span>
+                                                <b>
+                                                    {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}{' '}
+                                                </b>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                            </span>
+                                        )
+                                        :
+                                        (
+                                            <span>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                                <b>
+                                                    {' '}{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}
+                                                </b>
+                                            </span>
+                                        )
                                     }
                                 </small></span>
                             <h6>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_TITLE')}</h6>
                             <p>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_SUMMARY')}</p>
                             <a className="template-button template-button-primary-2" href="#blog" onClick={() => this.handlePopupShow(true)}>{this.props.language('blog.body.BLOG_SECTION_BUTTON')}</a>
                         </div>
-                    </Col>
+                    </Col> 
+                    <Col className="blog-box" xl={3} md={6}>
+                        <div className="blog-box-item" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="300">
+                            <Image className="blog-box-image" src={this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_THUMBNAIL')} fluid />
+                            <span className="blog-box-item-author">
+                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_DATE')} | {' '}
+                                <small>
+                                    {this.props.languageLibrary.language === "tr"
+                                        ?
+                                        (
+                                            <span>
+                                                <b>
+                                                    {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}{' '}
+                                                </b>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                            </span>
+                                        )
+                                        :
+                                        (
+                                            <span>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                                <b>
+                                                    {' '}{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}
+                                                </b>
+                                            </span>
+                                        )
+                                    }
+                                </small></span>
+                            <h6>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_TITLE')}</h6>
+                            <p>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_SUMMARY')}</p>
+                            <a className="template-button template-button-primary-2" href="#blog" onClick={() => this.handlePopupShow(true)}>{this.props.language('blog.body.BLOG_SECTION_BUTTON')}</a>
+                        </div>
+                    </Col> 
+                    <Col className="blog-box" xl={3} md={6}>
+                        <div className="blog-box-item" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="450">
+                            <Image className="blog-box-image" src={this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_THUMBNAIL')} fluid />
+                            <span className="blog-box-item-author">
+                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_DATE')} | {' '}
+                                <small>
+                                    {this.props.languageLibrary.language === "tr"
+                                        ?
+                                        (
+                                            <span>
+                                                <b>
+                                                    {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}{' '}
+                                                </b>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                            </span>
+                                        )
+                                        :
+                                        (
+                                            <span>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                                <b>
+                                                    {' '}{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}
+                                                </b>
+                                            </span>
+                                        )
+                                    }
+                                </small></span>
+                            <h6>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_TITLE')}</h6>
+                            <p>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_SUMMARY')}</p>
+                            <a className="template-button template-button-primary-2" href="#blog" onClick={() => this.handlePopupShow(true)}>{this.props.language('blog.body.BLOG_SECTION_BUTTON')}</a>
+                        </div>
+                    </Col> 
+                    <Col className="blog-box" xl={3} md={6}>
+                        <div className="blog-box-item" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <Image className="blog-box-image" src={this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_THUMBNAIL')} fluid />
+                            <span className="blog-box-item-author">
+                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_DATE')} | {' '}
+                                <small>
+                                    {this.props.languageLibrary.language === "tr"
+                                        ?
+                                        (
+                                            <span>
+                                                <b>
+                                                    {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}{' '}
+                                                </b>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                            </span>
+                                        )
+                                        :
+                                        (
+                                            <span>
+                                                {this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR_PREFIX')}
+                                                <b>
+                                                    {' '}{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_AUTHOR')}
+                                                </b>
+                                            </span>
+                                        )
+                                    }
+                                </small></span>
+                            <h6>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_TITLE')}</h6>
+                            <p>{this.props.language('blog.body.items.0.BLOG_SECTION_ITEMS_SUMMARY')}</p>
+                            <a className="template-button template-button-primary-2" href="#blog" onClick={() => this.handlePopupShow(true)}>{this.props.language('blog.body.BLOG_SECTION_BUTTON')}</a>
+                        </div>
+                    </Col> 
                 </Row>
 
                 <BlogPopup

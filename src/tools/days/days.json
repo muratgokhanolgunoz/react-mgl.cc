@@ -1,35 +1,42 @@
 [
     {
+        "id": 0,
         "name": "Sunday",
         "photo": "https://mgl.cc/gokhan/uploads/home/sunday.png",
         "color": "#94386E"
     },
     {
+        "id": 1,
         "name": "Monday",
         "photo": "https://mgl.cc/gokhan/uploads/home/monday.png",
         "color": "#A33E79"
     },
     {
+        "id": 2,
         "name": "Tuesday",
         "photo": "https://mgl.cc/gokhan/uploads/home/tuesday.png",
         "color": "#B14384"
     },
     {
+        "id": 3,
         "name": "Wednesday",
         "photo": "https://mgl.cc/gokhan/uploads/home/wednesday.png",
         "color": "#BC4E8E"
     },
     {
+        "id": 4,
         "name": "Thursday",
         "photo": "https://mgl.cc/gokhan/uploads/home/thursday.png",
         "color": "#C15C97"
     },
     {
+        "id": 5,
         "name": "Friday",
         "photo": "https://mgl.cc/gokhan/uploads/home/friday.png",
         "color": "#C76BA1"
     },
     {
+        "id": 6,
         "name": "Saturday",
         "photo": "https://mgl.cc/gokhan/uploads/home/saturday.png",
         "color": "#CD7AAA"

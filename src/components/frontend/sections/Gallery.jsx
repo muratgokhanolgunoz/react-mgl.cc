@@ -109,7 +109,7 @@ class Gallery extends Component {
                                 fontSize="section-title-description-font-size"
                             />
                         </Row>
-                        <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                        <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                             <Slider ref={(c) => (this.slider = c)} {...settings} >
                                 {videosJson.map((video) => (
                                     // Ignoring the empty 0th index from the json file in order to set the video sequence number exactly
@@ -129,7 +129,7 @@ class Gallery extends Component {
                                 ))}
                             </Slider>
                             <br />
-                            <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="400">
                                 <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
                                     {this.props.language('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
                                 </Button>

@@ -8,7 +8,7 @@ import { Container, Row, Col, Button, Image, InputGroup, FormControl } from 'rea
 import { VscArrowRight } from 'react-icons/vsc'
 
 import iconLeftWidget from '../../../assets/icons/home/tracking.svg'
-import iconRightWidget from '../../../assets/icons/home/navlun.svg'
+import iconRightWidget from '../../../assets/icons/home/freight.svg'
 
 const currentDate = new Date()
 
@@ -27,11 +27,11 @@ class Home extends Component {
     componentDidMount() {
         // Get current date, month, day
         // Calculating instant week number;
-        this.setState({ 
+        this.setState({
             currentMonth: currentDate.getMonth(),
             currentDayNumber: currentDate.getDate(), // Current day number in current month
             currentDayInWeek: currentDate.getDay(), // Current day index in week for day names ( 0 => Sunday, 1 => Monday )
-            currentWeek: Math.floor(Math.floor((new Date() - new Date(currentDate.getFullYear(), 0, 1)) / (24 * 60 * 60 * 1000)) / 7) 
+            currentWeek: Math.ceil(Math.floor((new Date() - new Date(currentDate.getFullYear(), 0, 1)) / (24 * 60 * 60 * 1000)) / 7)
         })
     }
 
@@ -75,17 +75,17 @@ class Home extends Component {
         return (
             <div>
                 <div id="home" className="home" style={styles.photos}>
-                    <div className="home-calender">
-                        <div className="home-calender-item" style={styles.calendar} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
-                            <span>{this.props.language('home.calendar.CALENDAR_MONTH_NAMES.' + this.state.currentMonth)}</span>
-                            <h1>{this.state.currentDayNumber}</h1>
-                            <span>{this.props.language('home.calendar.CALENDAR_DAY_NAMES.' + this.state.currentDayInWeek)}</span>
-                        </div>
-                        <div className="home-calender-item" style={styles.calendar} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
-                            <span>{this.props.language('home.calendar.CALENDAR_WEEK_TEXT')} : {this.state.currentWeek}</span>
+                        <div className="home-calender">
+                            <div className="home-calender-item" style={styles.calendar} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                <span>{this.props.language('home.calendar.CALENDAR_MONTH_NAMES.' + this.state.currentMonth)}</span>
+                                <h1>{this.state.currentDayNumber}</h1>
+                                <span>{this.props.language('home.calendar.CALENDAR_DAY_NAMES.' + this.state.currentDayInWeek)}</span>
+                            </div>
+                            <div className="home-calender-item" style={styles.calendar} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                <span>{this.props.language('home.calendar.CALENDAR_WEEK_TEXT')} : {this.state.currentWeek}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 <div id="home-widgets">
                     <Container className="main margin-top--100">
@@ -119,7 +119,7 @@ class Home extends Component {
                                         <Col lg={8} md={12}>
                                             <h4>{this.props.language('home.widgets.pricing.WIDGETS_PRICING_TITLE')}</h4>
                                             <p>{this.props.language('home.widgets.pricing.WIDGETS_PRICING_BODY')}</p>
-                                            <Button className="template-button template-button-primary-2 letter-spacing-2 text-uppercase" style={{ marginBottom: "4px" }} onClick={() => this.price()}>{this.props.language('home.widgets.pricing.WIDGETS_PRICING_BUTTON_TEXT')}</Button>
+                                            <Button className="template-button template-button-primary-2 letter-spacing-2 text-uppercase mb-1" onClick={() => this.price()}>{this.props.language('home.widgets.pricing.WIDGETS_PRICING_BUTTON_TEXT')}</Button>
                                         </Col>
                                     </Row>
                                 </div>

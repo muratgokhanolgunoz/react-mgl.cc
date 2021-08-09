@@ -21,7 +21,7 @@ class Services extends Component {
                     </Row>
                     <Row>
                         <Col md={6}>
-                            <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                                 <div className="services-box">
                                     <h3>{this.props.language('services.body.first.SERVICES_SECTION_FIRST_TITLE')}</h3>
                                     <FontAwesomeIcon className="services-icon" icon={faShip} size="3x"></FontAwesomeIcon>
@@ -30,7 +30,7 @@ class Services extends Component {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div className="services-item" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <div className="services-item" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                                 <div className="services-box">
                                     <h3>{this.props.language('services.body.second.SERVICES_SECTION_SECOND_TITLE')}</h3>
                                     <FontAwesomeIcon className="services-icon" icon={faCubes} size="3x"></FontAwesomeIcon>
@@ -39,7 +39,7 @@ class Services extends Component {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <div className="services-item" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                                 <div className="services-box">
                                     <h3>{this.props.language('services.body.third.SERVICES_SECTION_THIRD_TITLE')}</h3>
                                     <FontAwesomeIcon className="services-icon" icon={faCube} size="3x"></FontAwesomeIcon>
@@ -48,7 +48,7 @@ class Services extends Component {
                             </div>
                         </Col>
                         <Col md={6}>
-                            <div className="services-item" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+                            <div className="services-item" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
                                 <div className="services-box">
                                     <h3>{this.props.language('services.body.fourth.SERVICES_SECTION_FOURTH_TITLE')}</h3>
                                     <FontAwesomeIcon className="services-icon" icon={faTruck} size="3x"></FontAwesomeIcon>

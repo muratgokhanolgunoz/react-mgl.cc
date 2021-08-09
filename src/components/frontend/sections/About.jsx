@@ -16,7 +16,7 @@ class About extends Component {
                                     fluid data-aos="flip-right"
                                     data-aos-offset="200"
                                     data-aos-easing="ease-in-sine"
-                                    data-aos-duration="600"
+                                    data-aos-duration="400"
                                 ></Image>
                             </Col>
                             <Col lg={6} md={12}>

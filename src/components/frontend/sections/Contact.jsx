@@ -21,10 +21,10 @@ class Contact extends Component {
                             />
                         </Row>
                         <Row>
-                            <Col className="contact-left" lg={8}>
+                            <Col className="contact-left" lg={8} data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="450">
                                 <Iframe className="contact-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.0578992644246!2d28.99093511564473!3d41.06772702371284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab657ea6a07d5%3A0x9079f26acc3cf03e!2sMidas%20Global%20Logistics%20LTD%20STI!5e0!3m2!1str!2str!4v1628061413047!5m2!1str!2str"></Iframe>
                             </Col>
-                            <Col className="contact-right" lg={4}>
+                            <Col className="contact-right" lg={4} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="450" >
                                 <div className="contact-info">
                                     <Row>
                                         <Col sm={2}>

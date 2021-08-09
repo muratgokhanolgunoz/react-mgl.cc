@@ -77,6 +77,21 @@ const Admin = () => {
                     <Route path="/admin/about">
 
                     </Route>
+                    <Route path="/admin/gallery">
+
+                    </Route>
+                    <Route path="/admin/schedule">
+
+                    </Route>
+                    <Route path="/admin/blog">
+
+                    </Route>
+                    <Route path="/admin/career">
+
+                    </Route>
+                    <Route path="/admin/contact">
+
+                    </Route>
                 </Switch>
             </AdminProvider>
         </div>

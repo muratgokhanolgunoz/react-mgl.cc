@@ -99,6 +99,10 @@ body {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
+.home-widget-item p {
+  min-height: 80px;
+}
+
 @media screen and (max-width: 1200px) {
   .home-widget-item {
     text-align: center;
@@ -109,7 +113,7 @@ body {
   }
 
   .home-widget-item-image {
-    width: 80px;
+    width: 90px;
     height: auto;
   }
 }
@@ -153,6 +157,7 @@ body {
   text-align: left;
   margin-top: 30px;
   font-size: 1.1em;
+  min-height: 150px;
 }
 
 /* ========== ABOUT SECTION STYLES ========== */
@@ -335,10 +340,15 @@ body {
   border: 1px solid lightgray;
   padding: 20px;
   padding-bottom: 35px;
+  overflow: hidden;
 }
 
 .blog-box .blog-box-image {
   margin-bottom: 30px;
+}
+
+.blog-box .blog-box-item .blog-box-item-author {
+  white-space: nowrap;  
 }
 
 .blog-box h6 {
