@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import FrontEndContext from '../../../context/FrontEndContext'
 import ReactFlagsSelect from 'react-flags-select'
 import { Container, Nav, Navbar, Image } from "react-bootstrap"
-import logo from "../../../assets/images/logo.png"
 
 class Navi extends Component {
     render() {
@@ -11,10 +10,10 @@ class Navi extends Component {
                 {(context) => {
                     return (
                         <div>
-                            <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                            <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
                                 <Container>
                                     <Navbar.Brand href="#home">
-                                        <Image className="navi-logo" src={logo} alt="Midas Global Logistic" fluid ></Image>
+                                        <Image className="navi-logo" src={context.state.baseUrl + "uploads/logo.png"} alt="Midas Global Logistic" fluid ></Image>
                                     </Navbar.Brand>
                                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -31,9 +30,14 @@ class Navi extends Component {
                                             <Nav.Link href="#schedule">
                                                 {this.props.language('navbar.NAVBAR_ITEM_SHIP_PROGRAM')}
                                             </Nav.Link>
-                                            <Nav.Link href="#blog">
-                                                {this.props.language('navbar.NAVBAR_ITEM_ARTICLES_FROM_US')}
-                                            </Nav.Link>
+                                            {this.props.articlesShowStatus
+                                                ?
+                                                <Nav.Link href="#blog">
+                                                    {this.props.language('navbar.NAVBAR_ITEM_ARTICLES_FROM_US')}
+                                                </Nav.Link>
+                                                :
+                                                null
+                                            }
                                             <Nav.Link href="#career">
                                                 {this.props.language('navbar.NAVBAR_ITEM_CAREER')}
                                             </Nav.Link>

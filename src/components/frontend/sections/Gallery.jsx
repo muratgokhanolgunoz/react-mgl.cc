@@ -1,70 +1,71 @@
-import React, { Component, Fragment } from "react";
-import queryString from "query-string";
-import Slider from "react-slick";
+import React, { Component } from "react"
+import FrontEndContext from '../../../context/FrontEndContext'
+import queryString from "query-string"
+import Slider from "react-slick"
 
-import Titles from "./titles/Titles";
-import GalleryPopup from "./popups/GalleryPopup";
-import videosJson from "../../../tools/videos/videos.json";
+import Titles from "./titles/Titles"
+import GalleryPopup from "./popups/GalleryPopup"
+import videosJson from "../../../tools/videos/videos.json"
 
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap"
 
-let urlParams;
+let urlParams
 
 class Gallery extends Component {
     constructor(props) {
-        super(props);
+        super(props)
 
         this.state = {
             previousButtonValue: undefined,
             currentVideo: undefined,
             nextButtonValue: undefined,
             popupShow: false
-        };
+        }
     }
 
     componentDidMount() {
         // eslint-disable-next-line no-restricted-globals
-        urlParams = queryString.parse(location.search);
-        this.showVideoFromUrl();
+        urlParams = queryString.parse(location.search)
+        this.showVideoFromUrl()
     }
 
     handlePopupShow = (_status) => this.setState({ popupShow: _status })
 
     showVideoFromUrl = () => {
         if (Object.keys(urlParams).length !== 0) {
-            this.showVideo(parseInt(urlParams.video));
+            this.showVideo(parseInt(urlParams.video))
         }
-    };
+    }
 
     showVideo = (videoId) => {
-        var temp = videoId;
+        var temp = videoId
 
-        this.setState(() => ({ currentVideo: videoId }));
-        this.setState(() => ({ nextButtonValue: videoId + 1 }));
-        this.setState(() => ({ previousButtonValue: videoId - 1 }));
+        this.setState(() => ({ currentVideo: videoId }))
+        this.setState(() => ({ nextButtonValue: videoId + 1 }))
+        this.setState(() => ({ previousButtonValue: videoId - 1 }))
 
         if (temp + 1 >= videosJson.length) {
-            this.setState(() => ({ nextButtonValue: undefined }));
+            this.setState(() => ({ nextButtonValue: undefined }))
         }
 
         if (temp - 1 <= 0) {
-            this.setState(() => ({ previousButtonValue: undefined }));
+            this.setState(() => ({ previousButtonValue: undefined }))
         }
 
         this.handlePopupShow(true)
-    };
+    }
 
     navigationVideo = (videoId) => {
-        this.showVideo(videoId);
-    };
+        this.showVideo(videoId)
+    }
 
     slickNext = () => {
-        this.slider.slickNext();
-    };
+        this.slider.slickNext()
+    }
 
     slickPrevious = () => {
-        this.slider.slickPrev();
-    };
+        this.slider.slickPrev()
+    }
 
     render() {
         const settings = {
@@ -93,66 +94,70 @@ class Gallery extends Component {
                     },
                 },
             ],
-        };
+        }
 
         return (
-            <Fragment>
-                <div id="gallery" className="section-padding">
-                    <Container fluid>
-                        <Row>
-                            <Titles
-                                title={this.props.language('gallery.header.GALLERY_SECTION_TITLE')}
-                                subtitle={this.props.language('gallery.header.GALLERY_SECTION_SUBTITLE')}
-                                description={this.props.language('gallery.header.GALLERY_SECTION_DESCRIPTION')}
-                                textAlign="text-center"
-                                color="text-dark"
-                                fontSize="section-title-description-font-size"
-                            />
-                        </Row>
-                        <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
-                            <Slider ref={(c) => (this.slider = c)} {...settings} >
-                                {videosJson.map((video) => (
-                                    // Ignoring the empty 0th index from the json file in order to set the video sequence number exactly
-                                    // Please see tools/videos/videos.json file
-                                    video.id !== 0
-                                        ?
-                                        (
-                                            <Col key={video.id} className="videos-body-items">
-                                                <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
-                                                <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
-                                                    {/* <VscSearch className="videos-body-images-icon" /> */}
-                                                </div>
-                                            </Col>
-                                        )
-                                        :
-                                        null
-                                ))}
-                            </Slider>
-                            <br />
-                            <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="400">
-                                <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
-                                    {this.props.language('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
-                                </Button>
-                                <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
-                                    {this.props.language('template.buttons.TEMPLATE_NEXT_BUTTON')}
-                                </Button>
-                            </div>
-                        </Row>
-                    </Container>
+            <FrontEndContext.Consumer>
+                {(context) => {
+                    return (
+                        <div id="gallery" className="section-padding">
+                            <Container fluid>
+                                <Row>
+                                    <Titles
+                                        title={this.props.language('gallery.header.GALLERY_SECTION_TITLE')}
+                                        subtitle={this.props.language('gallery.header.GALLERY_SECTION_SUBTITLE')}
+                                        description={this.props.language('gallery.header.GALLERY_SECTION_DESCRIPTION')}
+                                        textAlign="text-center"
+                                        color="text-dark"
+                                        fontSize="section-title-description-font-size"
+                                    />
+                                </Row>
+                                <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                    <Slider ref={(c) => (this.slider = c)} {...settings} >
+                                        {videosJson.map((video) => (
+                                            // Ignoring the empty 0th index from the json file in order to set the video sequence number exactly
+                                            // Please see tools/videos/videos.json file
+                                            video.id !== 0
+                                                ?
+                                                (
+                                                    <Col key={video.id} className="videos-body-items">
+                                                        <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
+                                                        <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
+                                                            {/* <VscSearch className="videos-body-images-icon" /> */}
+                                                        </div>
+                                                    </Col>
+                                                )
+                                                :
+                                                null
+                                        ))}
+                                    </Slider>
+                                    <br />
+                                    <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                        <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
+                                            {this.props.language('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
+                                        </Button>
+                                        <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
+                                            {this.props.language('template.buttons.TEMPLATE_NEXT_BUTTON')}
+                                        </Button>
+                                    </div>
+                                </Row>
+                            </Container>
 
-                    <GalleryPopup
-                        language={this.props.language}
-                        popupShow={this.state.popupShow}
-                        popupShowToggle={this.handlePopupShow}
-                        propsVideosJson={videosJson}
-                        propsPreviousButtonValue={this.state.previousButtonValue}
-                        propsNextButtonValue={this.state.nextButtonValue}
-                        propsCurrentVideo={this.state.currentVideo}
-                        propsNaviationVideo={this.navigationVideo}
-                    />
-                </div>
-            </Fragment>
-        );
+                            <GalleryPopup
+                                language={this.props.language}
+                                popupShow={this.state.popupShow}
+                                popupShowToggle={this.handlePopupShow}
+                                propsVideosJson={videosJson}
+                                propsPreviousButtonValue={this.state.previousButtonValue}
+                                propsNextButtonValue={this.state.nextButtonValue}
+                                propsCurrentVideo={this.state.currentVideo}
+                                propsNaviationVideo={this.navigationVideo}
+                            />
+                        </div>
+                    )
+                }}
+            </FrontEndContext.Consumer>
+        )
     }
 }
-export default Gallery;
+export default Gallery

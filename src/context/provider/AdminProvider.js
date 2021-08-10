@@ -16,7 +16,7 @@ class AdminProvider extends Component {
             }}>
                 {this.props.children}
             </AdminContext.Provider>
-        );
+        )
     }
 }
 export default AdminProvider

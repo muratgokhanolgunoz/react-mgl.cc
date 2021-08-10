@@ -48,11 +48,17 @@ tr {
   margin-right: auto;
 }
 
+.pin-to-center {
+  display: block;
+  margin: auto;
+}
+
 /* ========== BUTTON STYLES ========== */
 
 .template-button {
   width: 170px;
   height: 40px;
+  padding: 10px 20px;
   border-radius: 0;
   border: none;
   color: #fff;
@@ -64,6 +70,7 @@ tr {
   white-space: nowrap;
   font-family: 'Rubik', sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .template-button-danger {
@@ -83,6 +90,7 @@ tr {
 
 .template-button-primary-1:hover {
   background-color: var(--template-color-blue);
+  color: #fff;
   transition: all 0.5s;
 }
 
@@ -102,6 +110,7 @@ tr {
 
 .template-button-primary-2:hover {
   background-color: var(--template-color-orange);
+  color: #fff;
   transition: all 0.5s;
 }
 
@@ -118,6 +127,10 @@ tr {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.text-justify-center {
+  text-align: justify;
 }
 
 .section-title-description-font-size {

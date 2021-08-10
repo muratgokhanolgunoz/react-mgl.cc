@@ -3,6 +3,7 @@ import FrontEndContext from "../FrontEndContext"
 
 class Provider extends Component {
     state = {
+        baseUrl: "https://mgl.cc/gokhan/",
         language: "US"
     };
 
@@ -16,7 +17,7 @@ class Provider extends Component {
             }}>
                 {this.props.children}
             </FrontEndContext.Provider>
-        );
+        )
     }
 }
 export default Provider

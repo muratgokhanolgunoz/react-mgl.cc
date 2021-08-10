@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 import Iframe from "react-iframe"
 import { Row, Col, Modal, Button } from "react-bootstrap"
 
 class GalleryPopup extends Component {
   render() {
     return (
-      <Fragment>
+      <div>
         <Modal show={this.props.popupShow} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" centered>
           <Modal.Header>
             <p className="text-light"> {" "} {this.props.propsCurrentVideo} / {" "} {this.props.propsVideosJson.length - 1}{" "} </p>
@@ -37,8 +37,8 @@ class GalleryPopup extends Component {
             </div>
           </Modal.Body>
         </Modal>
-      </Fragment>
-    );
+      </div>
+    )
   }
 }
-export default GalleryPopup;
+export default GalleryPopup

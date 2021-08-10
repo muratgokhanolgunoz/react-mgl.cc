@@ -17,7 +17,7 @@ class TrackingPopup extends Component {
                     </Modal.Body>
                 </Modal>
             </Fragment>
-        );
+        )
     }
 }
 export default TrackingPopup
