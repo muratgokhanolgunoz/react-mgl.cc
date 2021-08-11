@@ -88,6 +88,29 @@ body {
   margin-bottom: -1px;
 }
 
+.cookie-banner {
+  background-color: #2f3337;
+  left: 25px;
+  bottom: 25px;
+  position: fixed;
+  width: 300px !important;
+  z-index: 999;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  text-align: left;
+  padding: 20px;
+  color: #fff;
+  font-size: .9em;
+  font-family: 'Rubik', sans-serif;
+}
+
+.cookie-banner .cookie_banner_button {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
 /* ========== HOME WIDGET SECTION STYLES ========== */
 
 .home-widget-item {
@@ -389,9 +412,17 @@ body {
   height: auto;;
   border-radius: 50%;
   display: block;
-  margin-right: 0;
+  margin-right: 10px;
   margin-left: auto;
-  margin-top: -100px;
+  margin-top: -80px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-blog-preview-body-thumbnail {
+    width: 100px;
+    height: auto;
+    margin-top: -50px;
+  }
 }
 
 /* ========== CAREER SECTION STYLES ========== */
@@ -440,7 +471,7 @@ body {
 /* ========== FOOTER SECTION STYLES ========== */
 
 .footer {
-  background-color: #011627;
+  background-color: #2f3337;
   padding-top: 45px;
   padding-bottom: 30px;
 }

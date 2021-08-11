@@ -1,9 +1,10 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Home from './pages/Home'
-
 import { BrowserRouter as Route, Switch } from 'react-router-dom'
 import AdminProvider from '../../context/provider/AdminProvider'
+import Blog from './pages/Blog'
+import Career from './pages/Career'
+
+import { makeStyles } from '@material-ui/core/styles'
 
 const drawerWidth = 240
 const useStyles = makeStyles((theme) => ({
@@ -68,29 +69,11 @@ const Admin = () => {
         <div>
             <AdminProvider>
                 <Switch>
-                    <Route exact path="/admin/home">
-                        <Home classes={classes} />
+                    <Route exact path="/sarici/blog">
+                        <Blog classes={classes} />
                     </Route>
-                    <Route path="/admin/services">
-
-                    </Route>
-                    <Route path="/admin/about">
-
-                    </Route>
-                    <Route path="/admin/gallery">
-
-                    </Route>
-                    <Route path="/admin/schedule">
-
-                    </Route>
-                    <Route path="/admin/blog">
-
-                    </Route>
-                    <Route path="/admin/career">
-
-                    </Route>
-                    <Route path="/admin/contact">
-
+                    <Route path="/sarici/career">
+                        <Career classes={classes}/>
                     </Route>
                 </Switch>
             </AdminProvider>

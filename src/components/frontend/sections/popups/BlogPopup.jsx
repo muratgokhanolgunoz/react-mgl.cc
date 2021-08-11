@@ -15,18 +15,17 @@ class BlogPopup extends Component {
                     <Modal.Body>
                         <Container>
                             <Row>
-                                <Col lg={2}></Col>
-                                <Col className="modal-blog-preview-body" lg={8}>
+                                <Col className="modal-blog-preview-body" lg={{ span: 8, offset: 2 }} md={12}>
                                     <Row>
                                         <Image className="modal-blog-preview-body-image" src={this.props.blogDetails.BLOG_SECTION_ITEMS_PHOTO} alt="" fluid />
                                         <Image className="modal-blog-preview-body-thumbnail" src={this.props.blogDetails.BLOG_SECTION_ITEMS_THUMBNAIL} alt="" fluid />
                                     </Row>
                                     <Row>
-                                        <Col xs={9}>
+                                        <Col md={9}>
                                             <h1>{this.props.blogDetails.BLOG_SECTION_ITEMS_TITLE}</h1>
                                         </Col>
-                                        <Col xs={3}>
-                                            <p><small>{this.props.blogDetails.BLOG_SECTION_ITEMS_DATE} | {this.props.blogDetails.BLOG_SECTION_ITEMS_AUTHOR}</small></p>
+                                        <Col md={3}>
+                                            <p style={{ textAlign: "right" }}><small>{this.props.blogDetails.BLOG_SECTION_ITEMS_DATE} | {this.props.blogDetails.BLOG_SECTION_ITEMS_AUTHOR}</small></p>
                                         </Col>
                                     </Row>
                                     <Row>

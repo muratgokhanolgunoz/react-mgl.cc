@@ -1,6 +1,6 @@
 {
   "name": "react-midas-global-logistic",
-  "homepage": "https://mgl.cc/gokhan/",
+  "homepage": "https://mgl.cc/gokhan",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "query-string": "^4.3.4",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
+    "react-cookie": "^4.1.0",
     "react-dom": "^17.0.2",
     "react-flags-select": "^2.1.2",
     "react-helmet": "^6.1.0",
@@ -31,7 +32,8 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "react-swipeable-views": "^0.14.0",
-    "react-toastify": "^7.0.4"
+    "react-toastify": "^7.0.4",
+    "universal-cookie": "^4.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

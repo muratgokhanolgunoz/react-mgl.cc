@@ -68,19 +68,19 @@
         "body": {
             "first": {
                 "SERVICES_SECTION_FIRST_TITLE": "Shipping",
-                "SERVICES_SECTION_FIRST_BODY": "Ocean Freight Shipping, Ocean Freight Forwarding and Full Container Shipping"
+                "SERVICES_SECTION_FIRST_BODY": "Our expert staff in maritime transport is as close as a phone call in matters such as pre-carriage, final carriage, port charges, competitive freight you may need for your shipments from and to Ambarlı, Izmit, Gemlik, Izmir Mersin, and Iskenderun. In addition, our personnel working in our vehicles in the field are integrated in real-time through the mobile application running in our company infrastructure."
             },
             "second": {
                 "SERVICES_SECTION_SECOND_TITLE": "Consolidation",
-                "SERVICES_SECTION_SECOND_BODY": "Freight Consolidation and Distribution"
+                "SERVICES_SECTION_SECOND_BODY": "The number of partial destinations we serve from Ambarlı is approximately 300. Some shipments need expert touch (Barrel, Liquid, Dangerous..) are combined with experience, it is possible to achieve more successful works. The data in our real-time ship program, which we publish below, is presented via API technology from our application server and can be followed instantly."
             },
             "third": {
                 "SERVICES_SECTION_THIRD_TITLE": "Handling Special Equipment ",
-                "SERVICES_SECTION_THIRD_BODY": "Experience in handling Special Equipments/DG cargoes/overweight cargoes/oversize cargoes"
+                "SERVICES_SECTION_THIRD_BODY": "Flat Rack Container, Open TOP container, Dangerous Goods Transportation (IMCO), and Refrigerated Container (Reefer) shipments require expertise, and small differences are hidden in the details. One of our customer representatives who will guide you correctly will do their best to deliver the goods you have produced with a lot of effort to your customer in the best condition."
             },
             "fourth": {
-                "SERVICES_SECTION_FOURTH_TITLE": "Local Door Delivery",
-                "SERVICES_SECTION_FOURTH_BODY": "Trucking and local door delivery (service by vans, flatbeds and specialized equipment)"
+                "SERVICES_SECTION_FOURTH_TITLE": "Door Delivery",
+                "SERVICES_SECTION_FOURTH_BODY": "With our experience of more than 25 years and our wide agency network, the expenses such as pre-carriage, load port charges, final transportation, and warehouse costs needed for your door-to-door shipments will be at your fingertips before being sent. All you have to do is to monitor whether the transport process is going as planned. The process was never so simple as online tracking."
             }
         }
     },
@@ -88,10 +88,10 @@
         "header": {
             "ABOUT_SECTION_TITLE": "About Us",
             "ABOUT_SECTION_SUBTITLE": "",
-            "ABOUT_SECTION_DESCRIPTION": "Midas Global Logistics has been operating in international forwarding for over 15 years and was originally founded in 1996 in Istanbul. Here in Turkey Midas Global Logistics’s activities cover all types of transports to and from any worldwide destination and we are able to intervene in all major Turkish cities and harbours servicing all specific transport needs thanks to our expert know-how in consolidation, intermodal shipments, exhibition, project and logistics with all documentation and operational control handled directly from Istanbul HQ and Bursa Branch Office."
+            "ABOUT_SECTION_DESCRIPTION": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul/Ambarli (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyeköy headquarters, Beylikdüzü, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization."
         },
         "body": {
-            "ABOUT_SECTION_BUTTON_PRESENTATION": "Presentation"
+            "ABOUT_SECTION_BUTTON_PRESENTATION": "Access Our Presentation File "
         }
     },
     "gallery": {
@@ -190,5 +190,10 @@
     },
     "footer": {
         "FOOTER_TEXT": "Midas Global Logistics"
+    },
+    "privacy": {
+        "PRIVACY_HEADER": "Your Privacy",
+        "PRIVACY_TEXT": "By clicking “Accept Cookies”, you agree Midas Global Logistics can store cookies on your device and disclose information in accordance with our Cookie Policy.",
+        "PRIVACY_BUTTON": "Accept Cookies"
     }
 }

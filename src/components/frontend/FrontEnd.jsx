@@ -1,6 +1,8 @@
-import React, { Component, Fragment } from "react"
+import React, { Component } from "react"
 import FrontEndContext from "../../context/FrontEndContext"
 import { withTranslation } from 'react-i18next'
+
+import { CookiesProvider } from 'react-cookie'
 
 import Navi from "./constants/Navi"
 import Home from "./sections/Home"
@@ -24,7 +26,6 @@ import "aos/dist/aos.css"
 let blogItems = []
 
 class FrontEnd extends Component {
-
     componentDidMount() {
         this.defaultLanguageIsSet()
     }
@@ -50,39 +51,41 @@ class FrontEnd extends Component {
         ))
 
         return (
-            <Fragment>
-                <Helmet>
-                    <title>{t('html.HTML_PAGE_TITLE')}</title>
-                </Helmet>
+            <CookiesProvider>
+                <div>
+                    <Helmet>
+                        <title>{t('html.HTML_PAGE_TITLE')}</title>
+                    </Helmet>
 
-                <Navi language={t} languageLibrary={i18n} articlesShowStatus={blogItems.length > 0 ? true : false} />
-                <Home language={t} />
+                    <Navi language={t} languageLibrary={i18n} articlesShowStatus={blogItems.length > 0 ? true : false} />
+                    <Home language={t} />
 
-                <Container className="main">
-                    <Services language={t} />
-                </Container>
-
-                <About language={t} />
-
-                <Container className="main">
-                    <Gallery language={t} />
-                </Container>
-
-                <Schedule language={t} />
-
-                { blogItems.length > 0
-                    ?
-                    <Container>
-                        <Blog language={t} languageLibrary={i18n} />
+                    <Container className="main">
+                        <Services language={t} />
                     </Container>
-                    :
-                    null
-                }
 
-                <Career language={t} />
-                <Contact language={t} />
-                <Footer language={t} />
-            </Fragment>
+                    <About language={t} />
+
+                    <Container className="main">
+                        <Gallery language={t} />
+                    </Container>
+
+                    <Schedule language={t} />
+
+                    {blogItems.length > 0
+                        ?
+                        <Container>
+                            <Blog language={t} languageLibrary={i18n} />
+                        </Container>
+                        :
+                        null
+                    }
+
+                    <Career language={t} />
+                    <Contact language={t} />
+                    <Footer language={t} />
+                </div>
+            </CookiesProvider>
         )
     }
 }

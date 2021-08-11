@@ -32,7 +32,7 @@ class About extends Component {
                                             fontSize="section-title-description-font-size"
                                         />
                                         <br />
-                                        <a href={context.state.baseUrl + "uploads/about/midas_presentation_2021.pdf"} rel="noreferrer" target="_blank" alt="" className="pin-to-center template-button template-button-primary-2">{this.props.language('about.body.ABOUT_SECTION_BUTTON_PRESENTATION')}</a>
+                                        <a href={context.state.baseUrl + "uploads/about/midas_presentation_2021.pdf"} rel="noreferrer" target="_blank" alt="" className="pin-to-center template-button template-button-primary-2" style={{ width: "auto" }}>{this.props.language('about.body.ABOUT_SECTION_BUTTON_PRESENTATION')}</a>
                                     </Col>
                                 </Row>
                             </Container>

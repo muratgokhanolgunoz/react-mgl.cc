@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Cookies from 'universal-cookie';
 import FrontEndContext from '../../../context/FrontEndContext'
 import TrackingPopup from "./popups/TrackingPopup"
 import days from '../../../tools/days/days.json'
@@ -10,9 +11,9 @@ import { Container, Row, Col, Button, Image, InputGroup, FormControl } from 'rea
 import { VscArrowRight } from 'react-icons/vsc'
 
 const currentDate = new Date()
+const cookies = new Cookies();
 
 class Home extends Component {
-
     state = {
         reservationNumber: "",
         iframeSrc: "",
@@ -20,7 +21,7 @@ class Home extends Component {
         currentMonth: 0,
         currentWeek: 0,
         currentDayNumber: 0,
-        currentDayInWeek: 0
+        currentDayInWeek: 0        
     }
 
     componentDidMount() {
@@ -67,6 +68,26 @@ class Home extends Component {
             return days.photos.weekdays[Math.floor(Math.random() * (days.photos.weekdays.length))].photo
     }
 
+    setCookie = () => {
+        var maxAge = new Date(Date.now() + (24 * 60 * 60 * 1000))
+        cookies.set('acceptLanguage', true, { path: '/', expires: maxAge })
+        cookies.set('language', window.navigator.language, { path: '/', expires: maxAge })
+
+        this.context.setCookie({
+            cookie: {
+                languageAccept: true,
+                language: window.navigator.language
+            }
+        })
+    }
+
+    getCookie = () => {
+        return {
+            languageAccept: cookies.get('languageAccept'),
+            language: cookies.get('language')
+        }
+    }
+
     render() {
         // Setting styles for elements
         const styles = {
@@ -85,7 +106,7 @@ class Home extends Component {
                         <div>
                             <div id="home" className="home" style={styles.photos}>
                                 <div className="home-calender">
-                                    <div className="home-calender-item" style={styles.calendar} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                    <div className="home-calender-item" style={styles.calendar} data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="200">
                                         <span>{this.props.language('home.calendar.CALENDAR_MONTH_NAMES.' + this.state.currentMonth)}</span>
                                         <h1>{this.state.currentDayNumber}</h1>
                                         <span>{this.props.language('home.calendar.CALENDAR_DAY_NAMES.' + this.state.currentDayInWeek)}</span>
@@ -147,6 +168,20 @@ class Home extends Component {
 
                                 <ToastContainer />
                             </div>
+
+                            {
+                                this.getCookie().language === undefined && this.context.state.cookie.language === undefined
+                                    ?
+                                    (
+                                        <div className="cookie-banner" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                            <h5>{this.props.language('privacy.PRIVACY_HEADER')}</h5>
+                                            <p>{this.props.language('privacy.PRIVACY_TEXT')}</p>
+                                            <Button className="cookie_banner_button template-button template-button-primary-1" onClick={() => this.setCookie()}>{this.props.language('privacy.PRIVACY_BUTTON')}</Button>
+                                        </div>
+                                    )
+                                    :
+                                    null
+                            }
                         </div>
                     )
                 }}
@@ -154,4 +189,5 @@ class Home extends Component {
         )
     }
 }
+Home.contextType = FrontEndContext
 export default Home

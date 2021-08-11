@@ -49,63 +49,8 @@ const Navi = (props) => {
                                 </IconButton>
                             </div>
                             <Divider />
-                            <List component="nav" aria-label="main mailbox folders">
-                                <Link className="admin-sidebar-link" to="/admin/home">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Home
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/admin/services">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Services
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/admin/about">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            About Us
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/admin/gallery">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Gallery
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/admin/schedule">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Schedule
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/admin/blog">
+                            <List component="nav" aria-label="main mailbox folders">                                
+                                <Link className="admin-sidebar-link" to="/sarici/blog">
                                     <ListItem button>
                                         <ListItemIcon>
                                             <VscArrowRight />
@@ -116,24 +61,13 @@ const Navi = (props) => {
                                     </ListItem>
                                 </Link>
 
-                                <Link className="admin-sidebar-link" to="/admin/career">
+                                <Link className="admin-sidebar-link" to="/sarici/career">
                                     <ListItem button>
                                         <ListItemIcon>
                                             <VscArrowRight />
                                         </ListItemIcon>
                                         <ListItemText >
                                             Career
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/admin/contact">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Contact
                                         </ListItemText>
                                     </ListItem>
                                 </Link>
