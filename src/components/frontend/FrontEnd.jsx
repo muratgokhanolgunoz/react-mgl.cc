@@ -23,16 +23,9 @@ import "../../assets/dist/css/template.css"
 import "../../assets/dist/css/style.css"
 import "aos/dist/aos.css"
 
-let blogItems = []
-
 class FrontEnd extends Component {
     componentDidMount() {
         this.defaultLanguageIsSet()
-    }
-
-    // Every render this component clear array
-    componentDidUpdate() {
-        blogItems = []
     }
 
     defaultLanguageIsSet() {
@@ -45,11 +38,6 @@ class FrontEnd extends Component {
         AOS.init()
         const { t, i18n } = this.props
 
-        // Check for blog items lenght pushing data in array
-        t('blog.body.items', { returnObjects: true }).map(blog => (
-            blogItems.push(blog)
-        ))
-
         return (
             <CookiesProvider>
                 <div>
@@ -57,8 +45,8 @@ class FrontEnd extends Component {
                         <title>{t('html.HTML_PAGE_TITLE')}</title>
                     </Helmet>
 
-                    <Navi language={t} languageLibrary={i18n} articlesShowStatus={blogItems.length > 0 ? true : false} />
-                    <Home language={t} />
+                    <Navi language={t} languageLibrary={i18n} />
+                    <Home language={t} languageLibrary={i18n}/>
 
                     <Container className="main">
                         <Services language={t} />
@@ -72,14 +60,9 @@ class FrontEnd extends Component {
 
                     <Schedule language={t} />
 
-                    {blogItems.length > 0
-                        ?
-                        <Container>
-                            <Blog language={t} languageLibrary={i18n} />
-                        </Container>
-                        :
-                        null
-                    }
+                    <Container>
+                        <Blog language={t} languageLibrary={i18n} />
+                    </Container>
 
                     <Career language={t} />
                     <Contact language={t} />

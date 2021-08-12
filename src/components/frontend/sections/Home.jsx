@@ -21,7 +21,7 @@ class Home extends Component {
         currentMonth: 0,
         currentWeek: 0,
         currentDayNumber: 0,
-        currentDayInWeek: 0        
+        currentDayInWeek: 0
     }
 
     componentDidMount() {
@@ -50,7 +50,10 @@ class Home extends Component {
                 type: "dark"
             })
         } else {
-            this.setState({ iframeSrc: "https://frigian.com/events/tracking-frame.php?dm=midas&ln=tr&ky=00&of=" + this.state.reservationNumber })
+            if (this.props.languageLibrary.language === 'tr')
+                this.setState({ iframeSrc: "https://frigian.com/events/tracking-frame.php?dm=midas&ln=tr&ky=00&of=" + this.state.reservationNumber })
+            else
+                this.setState({ iframeSrc: "https://frigian.com/events/tracking-frame.php?dm=midas&ln=en&ky=00&of=" + this.state.reservationNumber })
             this.handlePopupShow(true)
             this.setState({ reservationNumber: "" })
         }

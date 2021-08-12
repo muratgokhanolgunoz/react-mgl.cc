@@ -4,7 +4,7 @@ import FrontEndContext from "../FrontEndContext"
 class Provider extends Component {
     state = {
         baseUrl: "https://mgl.cc/gokhan/",
-        language: "US",
+        language: "TR",
         cookie: {
             languageAccept: false,
             language: undefined

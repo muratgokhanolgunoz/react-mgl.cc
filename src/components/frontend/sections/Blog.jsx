@@ -4,15 +4,39 @@ import Titles from './titles/Titles'
 import BlogPopup from './popups/BlogPopup'
 import { Row, Col, Image } from 'react-bootstrap'
 
-class Blog extends Component {
+import BlogService from '../../../services/BlogService'
 
+let blogService = new BlogService()
+
+class Blog extends Component {
     state = {
         popupShow: false,
-        selectedBlog: {}
+        selectedBlog: {},
+        blogSourceFromApi: [],
+        currentLanguage: this.context.state.language
+    }
+
+    componentDidMount() {        
+        this.blogs()
+    }
+
+    componentDidUpdate() {
+
+        if(this.state.currentLanguage !== this.context.state.language) {
+            this.setState({ currentLanguage: this.context.state.language })
+            this.setState({ blogSourceFromApi: [] })
+            this.blogs()
+        }
     }
 
     handlePopupShow = (_status) => this.setState({ popupShow: _status })
     sendBlogInformation = (_blog) => this.setState({ selectedBlog: _blog })
+
+    blogs = () => {
+        blogService.getBlogs(this.context.state.language.toLowerCase())
+            .then(response => { this.setState({ blogSourceFromApi: response.data.result }) })
+            .catch(() => console.warn("API Error: Unable to load blog section"))
+    }
 
     render() {
         return (
@@ -32,8 +56,8 @@ class Blog extends Component {
                             </Row>
                             <Row>
                                 {
-                                    this.props.language('blog.body.items', { returnObjects: true }).map((blog, index) => (
-                                        <Col className="blog-box" xl={3} md={6} key={index}>
+                                    this.state.blogSourceFromApi.map((blog) => (
+                                        <Col className="blog-box" xl={3} md={6} key={blog.BLOG_SECTION_ITEMS_ID}>
                                             <div className="blog-box-item" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="150">
                                                 <Image className="blog-box-image" src={blog.BLOG_SECTION_ITEMS_THUMBNAIL} fluid />
                                                 <span className="blog-box-item-author">
@@ -69,4 +93,5 @@ class Blog extends Component {
         )
     }
 }
+Blog.contextType = FrontEndContext
 export default Blog

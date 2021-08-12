@@ -30,14 +30,9 @@ class Navi extends Component {
                                             <Nav.Link href="#schedule">
                                                 {this.props.language('navbar.NAVBAR_ITEM_SHIP_PROGRAM')}
                                             </Nav.Link>
-                                            {this.props.articlesShowStatus
-                                                ?
-                                                <Nav.Link href="#blog">
-                                                    {this.props.language('navbar.NAVBAR_ITEM_ARTICLES_FROM_US')}
-                                                </Nav.Link>
-                                                :
-                                                null
-                                            }
+                                            <Nav.Link href="#blog">
+                                                {this.props.language('navbar.NAVBAR_ITEM_ARTICLES_FROM_US')}
+                                            </Nav.Link>
                                             <Nav.Link href="#career">
                                                 {this.props.language('navbar.NAVBAR_ITEM_CAREER')}
                                             </Nav.Link>
