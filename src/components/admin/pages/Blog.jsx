@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import AdminContext from '../../../context/AdminContext'
+import BlogService from '../../../services/BlogService'
+
 import Navi from '../constants/Navi'
 
 import clsx from 'clsx'
-
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableContainer from '@material-ui/core/TableContainer'
@@ -13,14 +14,13 @@ import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import ButtonGroup from '@material-ui/core/ButtonGroup'
-
-import languageTR from '../../../tools/languages/tr/common.json'
-import languageEN from '../../../tools/languages/en/common.json'
+import Grid from '@material-ui/core/Grid';
 
 import IconButton from '@material-ui/core/IconButton'
 import { VscTrash, VscEdit } from "react-icons/vsc"
 
-let blogItemList = []
+
+let blogService = new BlogService()
 
 class Blog extends Component {
 
@@ -28,7 +28,8 @@ class Blog extends Component {
         super(props)
 
         this.state = {
-            language: "tr"
+            language: "tr",
+            blogs: []
         }
     }
 
@@ -37,19 +38,10 @@ class Blog extends Component {
         this.forceUpdate()
     }
 
-    componentDidUpdate() {
-        this.list()
-    }
-
     list = () => {
-        blogItemList = []
-
-        if (this.state.language === "tr") {
-            languageTR.blog.body.items.map((item) => blogItemList.push(item))
-        }
-        else {
-            languageEN.blog.body.items.map((item) => blogItemList.push(item))
-        }
+        this.setState({ blogs: [] })
+        console.log(this.state.language)
+        blogService.getBlogs(this.state.language).then((response) => this.setState({ blogs: response.data.result }))
     }
 
     editItem = () => {
@@ -57,11 +49,16 @@ class Blog extends Component {
     }
 
     deleteItem = (_id) => {
-
+        const array = {
+            'language' : this.state.language,
+            'id': _id
+        }
+        blogService.deleteBlog(array).then((response) => console.log(response))
     }
 
     changeLanguageForFile = (_selection) => {
         this.setState({ language: _selection })
+        this.list()
     }
 
     render() {
@@ -73,10 +70,12 @@ class Blog extends Component {
                             <Navi classes={this.props.classes} />
                             <main className={clsx(this.props.classes.content, { [this.props.classes.contentShift]: context.state.sidebarOpen, })}>
                                 <div className={this.props.classes.drawerHeader} />
-                                <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-                                    <Button onClick={() => this.changeLanguageForFile("tr")}>TR</Button>
-                                    <Button onClick={() => this.changeLanguageForFile("en")}>EN</Button>
-                                </ButtonGroup>
+                                <Grid container spacing={2}>
+                                    <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
+                                        <Button onClick={() => this.changeLanguageForFile("tr")}>TR</Button>
+                                        <Button onClick={() => this.changeLanguageForFile("us")}>EN</Button>
+                                    </ButtonGroup>
+                                </Grid>
                                 <br /><br />
                                 <TableContainer component={Paper}>
                                     <Table aria-label="simple table">
@@ -91,8 +90,8 @@ class Blog extends Component {
                                         </TableHead>
                                         <TableBody>
                                             {
-                                                blogItemList.map((blogItem) => (
-                                                    <TableRow key={blogItem.BLOG_SECTION_ITEMS_ID}>
+                                                this.state.blogs.map((blogItem, index) => (
+                                                    <TableRow key={index}>
                                                         <TableCell>{blogItem.BLOG_SECTION_ITEMS_AUTHOR}</TableCell>
                                                         <TableCell>{blogItem.BLOG_SECTION_ITEMS_TITLE}</TableCell>
                                                         <TableCell>{blogItem.BLOG_SECTION_ITEMS_DATE}</TableCell>
@@ -102,7 +101,7 @@ class Blog extends Component {
                                                             </IconButton>
                                                         </TableCell>
                                                         <TableCell>
-                                                            <IconButton aria-label="Delete" onClick={() => this.deleteItem(blogItem.BLOG_SECTION_ITEMS_ID)}>
+                                                            <IconButton aria-label="Delete" onClick={() => this.deleteItem(index)}>
                                                                 <VscTrash />
                                                             </IconButton>
                                                         </TableCell>

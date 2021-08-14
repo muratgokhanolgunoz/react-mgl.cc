@@ -21,7 +21,6 @@ class Blog extends Component {
     }
 
     componentDidUpdate() {
-
         if(this.state.currentLanguage !== this.context.state.language) {
             this.setState({ currentLanguage: this.context.state.language })
             this.setState({ blogSourceFromApi: [] })

@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Fragment>
         <FrontEndProvider>
-          {/* <Router>
+          <Router>
             <Switch>
               <Route exact path="/">
                 <FrontEnd />
@@ -20,8 +20,7 @@ class App extends Component {
                 <Admin />
               </Route>
             </Switch>
-          </Router> */}
-          <FrontEnd />
+          </Router>
         </FrontEndProvider>
       </Fragment>
     )

@@ -1,4 +1,5 @@
 {
+    "timezone": "Europe/London",
     "html": {
         "HTML_PAGE_TITLE": "Midas Global Logistics"
     },
@@ -22,6 +23,7 @@
         "calendar": {
             "CALENDAR_WEEK_TEXT": "Week",
             "CALENDAR_MONTH_NAMES": [
+                "",
                 "January",
                 "February",
                 "March",
@@ -36,13 +38,14 @@
                 "December"
             ],
             "CALENDAR_DAY_NAMES": [
-                "Sunday",
+                "",                
                 "Monday",
                 "Tuesday",
                 "Wednesday",
                 "Thursday",
                 "Friday",
-                "Saturday"
+                "Saturday",
+                "Sunday"
             ]
         },
         "widgets": {
@@ -68,11 +71,11 @@
         "body": {
             "first": {
                 "SERVICES_SECTION_FIRST_TITLE": "Shipping",
-                "SERVICES_SECTION_FIRST_BODY": "Our expert staff in maritime transport is as close as a phone call in matters such as pre-carriage, final carriage, port charges, competitive freight you may need for your shipments from and to Ambarlı, Izmit, Gemlik, Izmir Mersin, and Iskenderun. In addition, our personnel working in our vehicles in the field are integrated in real-time through the mobile application running in our company infrastructure."
+                "SERVICES_SECTION_FIRST_BODY": "Our expert staff in maritime transport is as close as a phone call in matters such as pre-carriage, final carriage, port charges, competitive freight you may need for your shipments from and to Ambarl\u0131, Izmit, Gemlik, Izmir Mersin, and Iskenderun. In addition, our personnel working in our vehicles in the field are integrated in real-time through the mobile application running in our company infrastructure."
             },
             "second": {
                 "SERVICES_SECTION_SECOND_TITLE": "Consolidation",
-                "SERVICES_SECTION_SECOND_BODY": "The number of partial destinations we serve from Ambarlı is approximately 300. Some shipments need expert touch (Barrel, Liquid, Dangerous..) are combined with experience, it is possible to achieve more successful works. The data in our real-time ship program, which we publish below, is presented via API technology from our application server and can be followed instantly."
+                "SERVICES_SECTION_SECOND_BODY": "The number of partial destinations we serve from Ambarl\u0131 is approximately 300. Some shipments need expert touch (Barrel, Liquid, Dangerous..) are combined with experience, it is possible to achieve more successful works. The data in our real-time ship program, which we publish below, is presented via API technology from our application server and can be followed instantly."
             },
             "third": {
                 "SERVICES_SECTION_THIRD_TITLE": "Handling Special Equipment ",
@@ -88,7 +91,7 @@
         "header": {
             "ABOUT_SECTION_TITLE": "About Us",
             "ABOUT_SECTION_SUBTITLE": "",
-            "ABOUT_SECTION_DESCRIPTION": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul/Ambarli (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyeköy headquarters, Beylikdüzü, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization."
+            "ABOUT_SECTION_DESCRIPTION": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul\/Ambarli (Kumport, Marport, Marda\u015f), Kocaeli (Evyap, Derince, DP Port), Bursa\/Gemlik, Izmir (Alsancak, Alia\u011fa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyek\u00f6y headquarters, Beylikd\u00fcz\u00fc, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization."
         },
         "body": {
             "ABOUT_SECTION_BUTTON_PRESENTATION": "Access Our Presentation File "
@@ -143,9 +146,7 @@
             "BLOG_SECTION_BUTTON": "Read More . . .",
             "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "by",
             "BLOG_SECTION_NULL_WARNING": "We do not have a blog post suitable for your language choice",
-            "items": [
-               
-            ]
+            "items": []
         }
     },
     "career": {
@@ -155,7 +156,7 @@
             "CAREER_SECTION_DESCRIPTION": ""
         },
         "body": {
-            "CAREER_SECTION_PHOTO": "https://mgl.cc/gokhan/uploads/career/career_en.jpg",
+            "CAREER_SECTION_PHOTO": "https:\/\/mgl.cc\/gokhan\/uploads\/career\/career_en.jpg",
             "form": {
                 "CAREER_SECTION_INPUT_NAME": "Name",
                 "CAREER_SECTION_INPUT_SURNAME": "Surname",
@@ -175,12 +176,12 @@
         },
         "body": {
             "address_information": {
-                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Şişli, Istanbul, Turkey",
-                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy İş Merkezi"
+                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "\u015ei\u015fli, Istanbul, Turkey",
+                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyek\u00f6y Mahallesi \u015eehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyek\u00f6y \u0130\u015f Merkezi"
             },
             "phone_information": {
                 "CONTACT_SECTION_PHONE_INFORMATION_TITLE": "+90 (212) 438 18 18",
-                "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Monday - Friday / 09:00am - 18:00pm"
+                "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Monday - Friday \/ 09:00am - 18:00pm"
             },
             "email_information": {
                 "CONTACT_SECTION_EMAIL_INFORMATION_TITLE": "info@mgl.cc",
@@ -193,7 +194,7 @@
     },
     "privacy": {
         "PRIVACY_HEADER": "Your Privacy",
-        "PRIVACY_TEXT": "By clicking “Accept Cookies”, you agree Midas Global Logistics can store cookies on your device and disclose information in accordance with our Cookie Policy.",
+        "PRIVACY_TEXT": "By clicking \u201cAccept Cookies\u201d, you agree Midas Global Logistics can store cookies on your device and disclose information in accordance with our Cookie Policy.",
         "PRIVACY_BUTTON": "Accept Cookies"
     }
 }

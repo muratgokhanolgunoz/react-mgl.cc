@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Cookies from 'universal-cookie';
 import FrontEndContext from '../../../context/FrontEndContext'
 import TrackingPopup from "./popups/TrackingPopup"
-import days from '../../../tools/days/days.json'
 
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
@@ -10,11 +9,15 @@ import { Container, Row, Col, Button, Image, InputGroup, FormControl } from 'rea
 
 import { VscArrowRight } from 'react-icons/vsc'
 
-const currentDate = new Date()
+import HomeServise from "../../../services/HomeService";
+
+let homeService = new HomeServise()
 const cookies = new Cookies();
 
 class Home extends Component {
     state = {
+        homeBannerPhoto: "",
+        homeCalendarColor: "",
         reservationNumber: "",
         iframeSrc: "",
         popupShow: false,
@@ -24,15 +27,17 @@ class Home extends Component {
         currentDayInWeek: 0
     }
 
-    componentDidMount() {
-        // Get current date, month, day
-        // Calculating instant week number
-        this.setState({
-            currentMonth: currentDate.getMonth(),
-            currentDayNumber: currentDate.getDate(), // Current day number in current month
-            currentDayInWeek: currentDate.getDay(), // Current day index in week for day names ( 0 => Sunday, 1 => Monday )
-            currentWeek: Math.ceil(Math.floor((new Date() - new Date(currentDate.getFullYear(), 0, 1)) / (24 * 60 * 60 * 1000)) / 7)
-        })
+    componentDidMount() {   
+        homeService.getHome(this.props.languageLibrary.language.toString().toLowerCase())
+            .then((response) => this.setState({
+                homeBannerPhoto: response.data.result.photo,
+                homeCalendarColor: response.data.result.color,
+                currentMonth: response.data.result.currentMonth,
+                currentDayNumber: response.data.result.currentDayNumberInMonth, // Current day number in current month
+                currentDayInWeek: response.data.result.currentDayNumberInWeek, // Current day index in week for day names ( 0 => Sunday, 1 => Monday )
+                currentWeek: response.data.result.currentWeek
+            }))
+            .catch(() => console.warn("Error Occured : There was a problem on the api side while getting the home banner & home calendar requests"))
     }
 
     handlePopupShow = (_status) => this.setState({ popupShow: _status })
@@ -64,13 +69,6 @@ class Home extends Component {
         this.handlePopupShow(true)
     }
 
-    selectPhoto = () => {
-        if (currentDate.getDay() === 0 || currentDate.getDay() === 6) // Saturday (6) or Sunday (0)
-            return days.photos.weekends[Math.floor(Math.random() * (days.photos.weekends.length))].photo
-        else
-            return days.photos.weekdays[Math.floor(Math.random() * (days.photos.weekdays.length))].photo
-    }
-
     setCookie = () => {
         var maxAge = new Date(Date.now() + (24 * 60 * 60 * 1000))
         cookies.set('acceptLanguage', true, { path: '/', expires: maxAge })
@@ -95,10 +93,10 @@ class Home extends Component {
         // Setting styles for elements
         const styles = {
             photos: {
-                backgroundImage: `url("${this.selectPhoto()}")`
+                backgroundImage: `url("${this.state.homeBannerPhoto}")`
             },
             calendar: {
-                backgroundColor: days.colors[currentDate.getDay()].color
+                backgroundColor: this.state.homeCalendarColor
             }
         }
 

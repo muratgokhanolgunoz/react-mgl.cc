@@ -1,0 +1,251 @@
+{
+    "timezone": "Europe/Istanbul",
+    "html": {
+        "HTML_PAGE_TITLE": "Midas Global Lojistik"
+    },
+    "template": {
+        "buttons": {
+            "TEMPLATE_CLOSE_BUTTON": "Kapat",
+            "TEMPLATE_NEXT_BUTTON": "\u0130ler\u0130",
+            "TEMPLATE_PREVIOUS_BUTTON": "Ger\u0130"
+        }
+    },
+    "navbar": {
+        "NAVBAR_ITEM_SERVICES": "Serv\u0130sler\u0130m\u0130z",
+        "NAVBAR_ITEM_ABOUT_US": "Hakk\u0131m\u0131zda",
+        "NAVBAR_ITEM_VIDEO_GALLERY": "V\u0130deolar\u0131m\u0131z",
+        "NAVBAR_ITEM_SHIP_PROGRAM": "Gem\u0130 Program\u0131m\u0131z",
+        "NAVBAR_ITEM_ARTICLES_FROM_US": "B\u0130zden Yaz\u0131lar",
+        "NAVBAR_ITEM_CAREER": "Kar\u0130yer",
+        "NAVBAR_ITEM_CONTACT": "\u0130let\u0130\u015f\u0130n"
+    },
+    "home": {
+        "calendar": {
+            "CALENDAR_WEEK_TEXT": "Hafta",
+            "CALENDAR_MONTH_NAMES": [
+                "",
+                "Ocak",
+                "\u015eubat",
+                "Mart",
+                "N\u0130san",
+                "May\u0131s",
+                "Haz\u0130ran",
+                "Temmuz",
+                "A\u011fustos",
+                "Eyl\u00fcl",
+                "Ek\u0130m",
+                "Kas\u0131m",
+                "Aral\u0131k"
+            ],
+            "CALENDAR_DAY_NAMES": [
+                "",
+                "Pazartes\u0130",
+                "Sal\u0131",
+                "\u00c7ar\u015famba",
+                "Per\u015fembe",
+                "Cuma",
+                "Cumartes\u0130",
+                "Pazar"
+            ]
+        },
+        "widgets": {
+            "tracking": {
+                "WIDGETS_TRACKING_TITLE": "e-Takip",
+                "WIDGETS_TRACKING_BODY": "Kon\u015fimento, teklif veya referans numaran\u0131z ile y\u00fck\u00fcn\u00fcz\u00fc takip edin",
+                "WIDGETS_TRACKING_INPUT_PLACEHOLDER": "Kon\u015fimento Numaran\u0131z"
+            },
+            "pricing": {
+                "WIDGETS_PRICING_TITLE": "e-Navlun",
+                "WIDGETS_PRICING_BODY": "Nereden nereye se\u00e7in konteyner mi parsiyel mi karar verin ve navlunlar\u0131 an\u0131nda g\u00f6r\u00fcn",
+                "WIDGETS_PRICING_BUTTON_TEXT": "Navlun Al"
+            },
+            "WIDGETS_BILL_OF_LADING_NUMBER_MESSAGE": "L\u00fctfen kon\u015fimento numaran\u0131z\u0131 girin"
+        }
+    },
+    "services": {
+        "header": {
+            "SERVICES_SECTION_TITLE": "Servislerimiz",
+            "SERVICES_SECTION_SUBTITLE": "",
+            "SERVICES_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "first": {
+                "SERVICES_SECTION_FIRST_TITLE": "Y\u00fckleme",
+                "SERVICES_SECTION_FIRST_BODY": "Deniz yolu ta\u015f\u0131mac\u0131l\u0131\u011f\u0131nda uzman\u0131 kadromuz, Ambarl\u0131, \u0130zmit, Gemlik, \u0130zmir Mersin ve \u0130skenderun \u00e7\u0131k\u0131\u015f ve var\u0131\u015fl\u0131 y\u00fcklemelerinizde ihtiya\u00e7 duyaca\u011f\u0131n\u0131z \u00f6n ta\u015f\u0131ma, son ta\u015f\u0131ma, liman masraflar\u0131, uygun navlun gibi konularda bir telefon kadar yak\u0131nd\u0131r. Ayr\u0131ca sahadaki ara\u00e7lar\u0131m\u0131zda \u00e7al\u0131\u015fan personellerimiz \u015firket altyap\u0131m\u0131zda \u00e7al\u0131\u015fan mobil uygulama arac\u0131l\u0131\u011f\u0131 ile ger\u00e7ek zamanl\u0131 olarak entegre hareket etmekteler."
+            },
+            "second": {
+                "SERVICES_SECTION_SECOND_TITLE": "Parsiyel",
+                "SERVICES_SECTION_SECOND_BODY": "Ambarl\u0131 \u00e7\u0131k\u0131\u015f ile hizmet vermekte oldu\u011fumuz parsiyel destinasyon say\u0131m\u0131z yakla\u015f\u0131k 300 kadard\u0131r. Nitelikli y\u00fckler (Varilli, S\u0131v\u0131, Tehlikeli..), deneyim ile birle\u015fince daha ba\u015far\u0131l\u0131 i\u015flere imza atmak m\u00fcmk\u00fcn. A\u015fa\u011f\u0131da yay\u0131nlamakta oldu\u011fumuz ger\u00e7ek zamanl\u0131 gemi program\u0131m\u0131zdaki veriler uygulama sunucumuzdan API teknolojisi ile sunulmakta olup anl\u0131k olarak takip edilebilmektedir."
+            },
+            "third": {
+                "SERVICES_SECTION_THIRD_TITLE": "\u00d6zel Ekipman",
+                "SERVICES_SECTION_THIRD_BODY": "D\u00fcz Tava (Flat Rack) Konteyner, \u00dcst\u00fc A\u00e7\u0131k (Open TOP) konteyner, Tehlikeli Madde Ta\u015f\u0131mac\u0131l\u0131\u011f\u0131 (IMCO) ve So\u011futuculu Konteyner (Reefer) y\u00fcklemeleri uzmanl\u0131k isteyen ve k\u00fc\u00e7\u00fck farklar\u0131n ayr\u0131nt\u0131da gizli oldu\u011fu y\u00fcklerdir. Size do\u011fru rehberlik edecek bir m\u00fc\u015fteri temsilcilerimiz binbir emekle \u00fcretmi\u015f oldu\u011funuz mallar\u0131 en iyi ko\u015fulda m\u00fc\u015fterinize ula\u015ft\u0131rmak i\u00e7in ellerinden gelenden daha iyisine yapacakt\u0131r."
+            },
+            "fourth": {
+                "SERVICES_SECTION_FOURTH_TITLE": "Kap\u0131ya Teslim",
+                "SERVICES_SECTION_FOURTH_BODY": "25 y\u0131l\u0131 a\u015fk\u0131n tecrubemiz ve geni\u015f acente a\u011f\u0131m\u0131z ile kap\u0131dan kap\u0131ya teslim y\u00fckleriniz i\u00e7in ihtiya\u00e7 duyaca\u011f\u0131n\u0131z \u00f6n ta\u015f\u0131ma, y\u00fckleme liman\u0131 masraflar\u0131, son ta\u015f\u0131ma ve ardiye gibi masraflar siz mal\u0131n\u0131z\u0131 ma\u011fazan\u0131zdan \u00e7\u0131kartmadan elinizin alt\u0131nda olur. Size ise ta\u015f\u0131ma i\u015fleri s\u00fcrecinin planlanan gibi gidip gitmedi\u011fini takip etmek kal\u0131r. S\u00fcreci ise \u00e7evrimi\u00e7i takip ise hi\u00e7 bu kadar basit de\u011fildi. "
+            }
+        }
+    },
+    "about": {
+        "header": {
+            "ABOUT_SECTION_TITLE": "Hakk\u0131m\u0131zda",
+            "ABOUT_SECTION_SUBTITLE": "",
+            "ABOUT_SECTION_DESCRIPTION": "Midas Global Lojistik; k\u00f6kleri 1996 y\u0131l\u0131na kadar dayanan \u0130stanbul merkezli ve denizyolu parsiyel ta\u015f\u0131mac\u0131l\u0131\u011fu \u00fczerine uzmanla\u015fm\u0131\u015f bir lojistik firmas\u0131d\u0131r. T\u00fcrkiye ana limanlar\u0131ndan Istanbul\/Ambarl\u0131 (Kumport, Marport, Marda\u015f), Kocaeli (Evyap, Derince, DP Port), Bursa\/Gemlik, Izmir (Alsancak, Alia\u011fa), Mersin, Iskenderun, Antalya ve Trabzon limanlar\u0131ndan; Uzakdo\u011fu, Kuzey Amerika, G\u00fcney Amerika, Ortado\u011fu, Uzakdo\u011fu, Akdeniz ve Afrika limanlar\u0131na full konteyner servisi, Fas, Cezayir, Tunus, Libya, M\u0131s\u0131r, L\u00fcbnan, \u0130srail, Suudi Arabistan, Birle\u015fik Arap Emirlikleri, Sri Lanka, \u0130spanya, Amerika Birle\u015fik Devletleri ve Singapur\u2019a parsiyel servis hizmeti vermektedir. Proje ta\u015f\u0131mac\u0131l\u0131\u011f\u0131, fuar ta\u015f\u0131mac\u0131l\u0131\u011f\u0131, parsiyel, konteyner aktarma ve \u00e7apraz ta\u015f\u0131malar uzman oldu\u011fumuz alanlard\u0131r. Istanbul Mecidiyek\u00f6y merkez, Beylikd\u00fcz\u00fc, ve \u00c7in Zuhai de kendi ofislerimiz vard\u0131r. Midas Global Lojistik, e-Booking, e-Navlun gibi dijital altyap\u0131 gerektiren uygulamalar\u0131 hayata ge\u00e7iren T\u00fcrkiye\u2019nin ilk dijital freight forwarder\u0131d\u0131r, ve dijitalle\u015fmede T\u00fcrkiye'nin bayrak ta\u015f\u0131y\u0131c\u0131 yerel firmas\u0131d\u0131r. "
+        },
+        "body": {
+            "ABOUT_SECTION_BUTTON_PRESENTATION": "Sunum Dosyam\u0131za Er\u0130\u015f\u0130n"
+        }
+    },
+    "gallery": {
+        "header": {
+            "GALLERY_SECTION_TITLE": "Video Galerimiz",
+            "GALLERY_SECTION_SUBTITLE": "",
+            "GALLERY_SECTION_DESCRIPTION": ""
+        }
+    },
+    "schedule": {
+        "header": {
+            "SCHEDULE_SECTION_TITLE": "Ger\u00e7ek Zamanl\u0131 Gemi Program\u0131m\u0131z",
+            "SCHEDULE_SECTION_SUBTITLE": "",
+            "SCHEDULE_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "table": {
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Var\u0131\u015f Yeri",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Gemi Ad\u0131",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Tahmini Gemi Geli\u015fi",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Beyanname Kapan\u0131\u015f",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Y\u00fckleme Yeri",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Acenta",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Konsol Kapan\u0131\u015f"
+            },
+            "clipboard": {
+                "body": {
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Var\u0131\u015f Yeri : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Gemi Ad\u0131 : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Y\u00fckleme Yeri : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Y\u00fckleme Tarihi : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Konsol Kapan\u0131\u015f : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "Tahmini Gemi Geli\u015fi : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Acenta : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Son G\u00fcncelleme : "
+                },
+                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Gemi bilgileri panoya kopyaland\u0131"
+            },
+            "SCHEDULE_SECTION_EMPTY_MESSAGE": "Aktif bir gemi program\u0131 bulunamad\u0131"
+        }
+    },
+    "blog": {
+        "header": {
+            "BLOG_SECTION_TITLE": "Bizden Yaz\u0131lar",
+            "BLOG_SECTION_SUBTITLE": "",
+            "BLOG_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "BLOG_SECTION_BUTTON": "Devam\u0131 . . .",
+            "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "taraf\u0131ndan",
+            "BLOG_SECTION_NULL_WARNING": "Dil se\u00e7iminize uygun bir blog yaz\u0131m\u0131z bulunmamaktad\u0131r",
+            "items": [
+                {
+                    "BLOG_SECTION_ITEMS_ID": 20210813141713,
+                    "BLOG_SECTION_ITEMS_THUMBNAIL": "https:\/\/mgl.cc\/gokhan\/uploads\/blog\/1\/thumbnail.jpg",
+                    "BLOG_SECTION_ITEMS_PHOTO": "https:\/\/mgl.cc\/gokhan\/uploads\/blog\/1\/photo.jpg",
+                    "BLOG_SECTION_ITEMS_TITLE": "LPI (Lojistik Performans Endeksi)",
+                    "BLOG_SECTION_ITEMS_SUMMARY": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131.",
+                    "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131. \n  Ticaretin \u00fc\u00e7 ana \u00f6gesi al\u0131c\u0131, sat\u0131c\u0131 ve \u00fcr\u00fcnd\u00fcr. Uluslararas\u0131 ticarette onlarca farkl\u0131 olgu; hizmet, altyap\u0131, finans, devlet ve ta\u015f\u0131mac\u0131l\u0131k gibi, bu \u00fc\u00e7 temel \u00f6genin etraf\u0131nda yer al\u0131r. Deniz yolu ta\u015f\u0131malar\u0131nda teslim anla\u015fmas\u0131 ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu \u00fcr\u00fcn ta\u015f\u0131ma arac\u0131na y\u00fcklendi\u011fi zaman, ta\u015f\u0131y\u0131c\u0131 ald\u0131\u011f\u0131 mala kar\u015f\u0131l\u0131k bir kon\u015fimento (ta\u015f\u0131ma senedi) d\u00fczenler ve bu kon\u015fimentoyu g\u00f6ndericiye verir. Son d\u00f6nemlerde teslimat -e\u011fer ta\u015f\u0131ma bir akreditif veya kiralama s\u00f6zle\u015fmesi alt\u0131nda ger\u00e7ekle\u015fmiyorsa- kon\u015fimento yerine deniz yolu irsaliyesi olarak T\u00fcrk\u00e7ele\u015ftirebilece\u011fimiz SWB (bas\u0131l\u0131 bir kon\u015fimentoda ki b\u00fct\u00fcn bilgileri i\u00e7erir fakat matbu bir \u00e7\u0131kt\u0131s\u0131 yoktur) ile de yap\u0131labilmekte. Uluslararas\u0131 demek farkl\u0131 \u00e7\u0131k\u0131\u015f ve var\u0131\u015f \u00fclkesi olmas\u0131 durumudur. Mal \u00e7\u0131k\u0131\u015f \u00fclkesinden hareket etti\u011finde, al\u0131c\u0131 i\u00e7in \u015fartlar geri d\u00f6n\u00fclmez \u015fekilde kesinle\u015fmi\u015ftir (d\u00fczeltme hakk\u0131 sakl\u0131). \u0130\u015fte risk analizi bu saat itibariyle ba\u015flayabilir. Amerika\u2019da ki uygulama ise gemi \u00e7\u0131k\u0131\u015f liman\u0131ndan hareket etmeden 48 saat \u00f6ncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani ta\u015f\u0131y\u0131c\u0131ya, \u201cbu mal\u0131 gemine hi\u00e7 y\u00fckleme\u201d diyebilir. \u015eeffafl\u0131k taraf\u0131; al\u0131c\u0131n\u0131n g\u00fcmr\u00fckleme i\u015flemini mal \u00e7\u0131k\u0131\u015f \u00fclkesinden yola \u00e7\u0131kt\u0131ktan sonra yapabilmesi ve uluslararas\u0131 rekabette elini g\u00fc\u00e7l\u00fc tutmas\u0131, liman, g\u00fcmr\u00fck, g\u00fcmr\u00fck\u00e7\u00fc, ta\u015f\u0131y\u0131c\u0131 ve depolama kurumlar\u0131n\u0131n ise \u00e7ekirdek i\u015flerine yo\u011funla\u015f\u0131p hizmet kalitesini art\u0131rabilmesidir. \n Sekt\u00f6r\u00fcn duayenleri bilirler; 3. d\u00fcnya \u00fclkelerinde hep bir fazladan demuraj serbest s\u00fcresi talebi vard\u0131r ama Avrupa ve Amerika\u2019da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamas\u0131na ra\u011fmen. Amerikal\u0131 al\u0131c\u0131lar bunu pek konu da etmezler, \u00e7\u00fcnk\u00fc bilirler ki g\u00fcmr\u00fckleme yapmak i\u00e7in her zaman yeterli s\u00fcreleri vard\u0131r. Mal gemiden indi\u011finde mallar\u0131n\u0131 limandan al\u0131p giderler. Tabii risk analizi tespit yapmak i\u00e7in mal\u0131 ba\u015fka bir sahaya da \u00e7ekebilirler. Bu arada bahsetmeden ge\u00e7memek gerek FMC (Federal Denizcilik Komisyonu) 2019 y\u0131l\u0131nda; konteyner al\u0131c\u0131n\u0131n \u00e7ekebilece\u011fi duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye ba\u015flamamal\u0131 diye yeni bir tavsiye karar ald\u0131. Bu bir zorunluluk de\u011fil ancak FMC\u2018nin ald\u0131\u011f\u0131 kararlar\u0131n ortak \u00e7\u0131kar\u0131 temsil etti\u011fi armat\u00f6rler, liman i\u015fletmeleri ve d\u0131\u015f ticaret firmalar\u0131 taraf\u0131ndan bilinir. \n Peki fazladan verilen demuraj serbest s\u00fcresi bu konuyu \u00e7\u00f6zm\u00fcyor mu veya 3. d\u00fcnya \u00fclkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yap\u0131lan g\u00fcmr\u00fcklemenin bask\u0131 alt\u0131nda verilen ifade gibi oldu\u011funu s\u00f6ylemek yanl\u0131\u015f olmaz. Ayr\u0131ca ardiye i\u00e7in de herhangi bir serbest s\u00fcre yoktur. Ardiye; gemi limana yana\u015f\u0131nca ba\u015flar. Yedi g\u00fcnden (geminin limana yana\u015fmas\u0131na m\u00fcteakip) daha k\u0131sa s\u00fcrede mal\u0131n\u0131 \u00e7ekebilen al\u0131c\u0131; e\u011fer \u00e7ok \u015fansl\u0131 de\u011filse, camia taraf\u0131ndan \u201cmutlaka iyi ba\u011flant\u0131lar\u0131 olan bir g\u00fcmr\u00fck\u00e7\u00fcs\u00fc vard\u0131r\u201d diye bilinir. \n \u201cAmerika\u2019y\u0131 yeniden ke\u015ffetmeye gerek yok\u201d s\u00f6z\u00fc sanki bu durum i\u00e7in s\u00f6ylenmi\u015f. \u0130thalat g\u00fcmr\u00fcklemesi i\u00e7in gerekli \u015fartlar mal \u00e7\u0131kt\u0131\u011f\u0131nda kesindir. Serbest rekabet ko\u015fullar\u0131n\u0131 yaratmak, dijitalle\u015fmeye ve \u015feffafla\u015fmaya \u00f6nc\u00fc olmak kural koyucu kurumun sorumlulu\u011fudur. Rekabet adil ko\u015fullarda yap\u0131l\u0131r ise ciddi oranda ardiye ve demuraj paras\u0131 yurt d\u0131\u015f\u0131na \u00e7\u0131kmaz. Gereksiz d\u00f6viz \u00e7\u0131k\u0131\u015f\u0131n\u0131 \u00f6nlemek d\u00f6viz kazand\u0131r\u0131c\u0131 hizmet say\u0131labilir mi sorusu da akl\u0131ma geliyor. Daha az \u00f6nemli bir \u00e7\u0131kt\u0131s\u0131 da LPI'deki yerimiz 15-20 s\u0131ra iyiye do\u011fru geli\u015fir. \n *konteyner ta\u015f\u0131mac\u0131l\u0131\u011f\u0131nda yerel armat\u00f6rlerimizin pay\u0131 %10\u2019dan daha az.",
+                    "BLOG_SECTION_ITEMS_DATE": "2021-08-04",
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI"
+                },
+                {
+                    "BLOG_SECTION_ITEMS_ID": 20210813141724,
+                    "BLOG_SECTION_ITEMS_THUMBNAIL": "https:\/\/mgl.cc\/gokhan\/uploads\/blog\/2\/thumbnail.jpg",
+                    "BLOG_SECTION_ITEMS_PHOTO": "https:\/\/mgl.cc\/gokhan\/uploads\/blog\/2\/photo.jpg",
+                    "BLOG_SECTION_ITEMS_TITLE": "Parsiyelin G\u00fcc\u00fc",
+                    "BLOG_SECTION_ITEMS_SUMMARY": "Ta\u015f\u0131ma sekt\u00f6r\u00fcn\u00fcn de\u011fer katan firmalar\u0131; Parsiyelciler Denizyolu parsiyel ta\u015f\u0131y\u0131c\u0131lar\u0131.. \u00dcrettikleri hizmet ile T\u00fcrkiye\u2019nin ihracat\u0131na katk\u0131 sa\u011flayan g\u00f6n\u00fcll\u00fcler. Y\u00fckte hafif, pahada a\u011f\u0131r mallar\u0131n; hatta y\u00fckte hafif pahada da hafif y\u00fcklerin ta\u015f\u0131y\u0131c\u0131lar\u0131.",
+                    "BLOG_SECTION_ITEMS_FULL_TEXT": "Ta\u015f\u0131ma sekt\u00f6r\u00fcn\u00fcn de\u011fer katan firmalar\u0131; Parsiyelciler Denizyolu parsiyel ta\u015f\u0131y\u0131c\u0131lar\u0131.. \u00dcrettikleri hizmet ile T\u00fcrkiye\u2019nin ihracat\u0131na katk\u0131 sa\u011flayan g\u00f6n\u00fcll\u00fcler. Y\u00fckte hafif, pahada a\u011f\u0131r mallar\u0131n; hatta y\u00fckte hafif pahada da hafif y\u00fcklerin ta\u015f\u0131y\u0131c\u0131lar\u0131. \n T\u00fcrkiye\u2019nin ihracat\u0131n\u0131n \u00f6nemli bir k\u0131sm\u0131 KOB\u0130\u2019lerimiz taraf\u0131ndan ger\u00e7ekle\u015ftirilmektedir. KOB\u0130\u2019lerimiz mallar\u0131n\u0131 tan\u0131tmak, k\u00fc\u00e7\u00fck al\u0131c\u0131lara ula\u015fmak ve daha az sipari\u015f adetli talepleri kabul etmek zorundalar, Lakin s\u0131n\u0131r a\u015fan k\u00fc\u00e7\u00fck sipari\u015fler i\u00e7in iyi organize olmu\u015f ta\u015f\u0131ma rotalar\u0131na ihtiya\u00e7 vard\u0131r. \u00d6zellikle \u0130stanbul Ambarl\u0131 limanlar\u0131ndan hizmet veren parsiyelcilerimiz y\u00fckte hafif pahada hafif ta\u015f\u0131ma taleplerini yerine getirmek i\u00e7in canla ba\u015fla hizmet vermeye, T\u00fcrkiye\u2019nin ihracat\u0131na omuz vermeye devam etmekteler. Ambarl\u0131 g\u00fcmr\u00fc\u011f\u00fcne ba\u011fl\u0131 limanlar olan Kumport, Marport, Marda\u015f limanlar\u0131ndan d\u00fczenli ve haftal\u0131k olarak Kuzey Afrika \u00fclkelerinden Fas, Cezayir, Tunus, Libya, M\u0131s\u0131r\u2019a; Do\u011fu Akdeniz\u2019de M\u0131s\u0131r, L\u00fcbnan ve \u0130srail\u2019e; Ortado\u011fu\u2019da, Suudi Arabistan, Birle\u015fik Arap Emirlikleri* Katar\u2019a; G\u00fcney Asya\u2019da Sri Lanka\u2019ya* Uzakdo\u011fu\u2019da Singapur, \u00c7in, Kore ve Hong Kong\u2019a; Avrupa\u2019da \u0130ngiltere, Bel\u00e7ika, Almanya*, Hollanda* ve \u0130spanya\u2019ya*; Kuzey Amerika\u2019da Amerika Birle\u015fik Devletleri\u2019ne servis vermekteler. Mal\u0131n 100 Kg,\/0,5 m\u00b3 olmas\u0131 yada, 20 m\u00b3\/12 ton olmas\u0131 \u00e7ok \u00f6nemli de\u011fil, en fazla bir aktarma liman\u0131 kullanarak (Yukar\u0131da * sembol\u00fc ile i\u015faretlediklerim ayn\u0131 zamanda aktarma \u00fclkesidir. Ve umar\u0131m \u0130stanbul\u2019da aktarma noktas\u0131 olarak hak etti\u011fi yeri k\u0131sa s\u00fcrede al\u0131r.) 300 den fazla D\u00fcnya liman\u0131na mallar\u0131 g\u00fcven i\u00e7inde ula\u015ft\u0131rmaktalar. Bir pazara girmek genellikle k\u00fc\u00e7\u00fck oyuncular ile m\u00fcmk\u00fcn olur ve Parsiyelcilerimiz buruda iyi i\u015f \u00e7\u0131karmaktalar. Son d\u00f6nemlerde limandan limana servis vermenin d\u0131\u015f\u0131nda, Ex Works (Fabrikada Teslim), DAT\/DAP (Var\u0131\u015f terminalinde Teslim) ve DDP (G\u00fcmr\u00fck \u00d6denmi\u015f olarak Nihai adrese teslim) teslim \u015fekillerinde de T\u00fcrk ihracat\u00e7\u0131lar\u0131na mallar\u0131n\u0131n D\u00fcnya pazarlar\u0131na ula\u015ft\u0131rmada kataliz\u00f6r g\u00f6revi \u00fcstlenmekteler. Bu mallar genellikle k\u00fc\u00e7\u00fck mal bedeli ile sat\u0131lmakta ve deniz yolu ta\u015f\u0131ma, g\u00fcmr\u00fckleme, sigorta, \u00f6n ta\u015f\u0131ma hesaba kat\u0131l\u0131nca b\u00fcy\u00fck masraflar\u0131 kald\u0131rmazlar, Navlunlar ise m\u00b3 ba\u015f\u0131na 5us$ \u2013 50 us$ aras\u0131nda bir maliyeti ile sunulmaktad\u0131r. Son d\u00f6nemlerde baz\u0131 parsiyelcilerimiz hizmetde \u00e7e\u015fitlili\u011fe giderek \u00fcr\u00fcnlerini adresten var\u0131\u015f yerinde tek fiyat \u015feklinde kampanyalar ile de zenginle\u015ftirmekteler. \n Yak\u0131n zamanda Kartal\u2019dan Dubai\u2019ye, Dudullu\u2019dan New York\u2019a ve hatta Bursa\u2019dan Durban\u2019a Deniz yolu (All In) parsiyel servisler raflarda yerini alacak. Biz hizmet kalitemizi y\u00fckselttik\u00e7e \u00fclkemiz ve co\u011frafyam\u0131z kendisini daha iyi hissedecektir. Lokal parsiyelcilerimiz de yeni direkt sefer aray\u0131\u015flar\u0131n\u0131 art\u0131racak. En nihayetinde hepimizin ayn\u0131 gemide oldu\u011fu bilincindeyiz.",
+                    "BLOG_SECTION_ITEMS_DATE": "2021-08-10",
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Seyfi ARICI"
+                },
+                {
+                    "BLOG_SECTION_ITEMS_ID": "20210814191231",
+                    "BLOG_SECTION_ITEMS_THUMBNAIL": "C:\\Users\\murat\\Desktop\\Midas Global Logistic\\laravel-midas-global-logistic\\storage\/app\/public\/blog\/20210814191231\/20210814191231_thumbnail.jpg",
+                    "BLOG_SECTION_ITEMS_PHOTO": "C:\\Users\\murat\\Desktop\\Midas Global Logistic\\laravel-midas-global-logistic\\storage\/app\/public\/blog\/20210814191231\/20210814191231_photo.jpg",
+                    "BLOG_SECTION_ITEMS_TITLE": "LPI (Lojistik Performans Endeksi)",
+                    "BLOG_SECTION_ITEMS_SUMMARY": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131.",
+                    "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131. \\n  Ticaretin \u00fc\u00e7 ana \u00f6gesi al\u0131c\u0131, sat\u0131c\u0131 ve \u00fcr\u00fcnd\u00fcr. Uluslararas\u0131 ticarette onlarca farkl\u0131 olgu; hizmet, altyap\u0131, finans, devlet ve ta\u015f\u0131mac\u0131l\u0131k gibi, bu \u00fc\u00e7 temel \u00f6genin etraf\u0131nda yer al\u0131r. Deniz yolu ta\u015f\u0131malar\u0131nda teslim anla\u015fmas\u0131 ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu \u00fcr\u00fcn ta\u015f\u0131ma arac\u0131na y\u00fcklendi\u011fi zaman, ta\u015f\u0131y\u0131c\u0131 ald\u0131\u011f\u0131 mala kar\u015f\u0131l\u0131k bir kon\u015fimento (ta\u015f\u0131ma senedi) d\u00fczenler ve bu kon\u015fimentoyu g\u00f6ndericiye verir. Son d\u00f6nemlerde teslimat -e\u011fer ta\u015f\u0131ma bir akreditif veya kiralama s\u00f6zle\u015fmesi alt\u0131nda ger\u00e7ekle\u015fmiyorsa- kon\u015fimento yerine deniz yolu irsaliyesi olarak T\u00fcrk\u00e7ele\u015ftirebilece\u011fimiz SWB (bas\u0131l\u0131 bir kon\u015fimentoda ki b\u00fct\u00fcn bilgileri i\u00e7erir fakat matbu bir \u00e7\u0131kt\u0131s\u0131 yoktur) ile de yap\u0131labilmekte. Uluslararas\u0131 demek farkl\u0131 \u00e7\u0131k\u0131\u015f ve var\u0131\u015f \u00fclkesi olmas\u0131 durumudur. Mal \u00e7\u0131k\u0131\u015f \u00fclkesinden hareket etti\u011finde, al\u0131c\u0131 i\u00e7in \u015fartlar geri d\u00f6n\u00fclmez \u015fekilde kesinle\u015fmi\u015ftir (d\u00fczeltme hakk\u0131 sakl\u0131). \u0130\u015fte risk analizi bu saat itibariyle ba\u015flayabilir. Amerika\u2019da ki uygulama ise gemi \u00e7\u0131k\u0131\u015f liman\u0131ndan hareket etmeden 48 saat \u00f6ncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani ta\u015f\u0131y\u0131c\u0131ya, \u201cbu mal\u0131 gemine hi\u00e7 y\u00fckleme\u201d diyebilir. \u015eeffafl\u0131k taraf\u0131; al\u0131c\u0131n\u0131n g\u00fcmr\u00fckleme i\u015flemini mal \u00e7\u0131k\u0131\u015f \u00fclkesinden yola \u00e7\u0131kt\u0131ktan sonra yapabilmesi ve uluslararas\u0131 rekabette elini g\u00fc\u00e7l\u00fc tutmas\u0131, liman, g\u00fcmr\u00fck, g\u00fcmr\u00fck\u00e7\u00fc, ta\u015f\u0131y\u0131c\u0131 ve depolama kurumlar\u0131n\u0131n ise \u00e7ekirdek i\u015flerine yo\u011funla\u015f\u0131p hizmet kalitesini art\u0131rabilmesidir. \\n Sekt\u00f6r\u00fcn duayenleri bilirler; 3. d\u00fcnya \u00fclkelerinde hep bir fazladan demuraj serbest s\u00fcresi talebi vard\u0131r ama Avrupa ve Amerika\u2019da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamas\u0131na ra\u011fmen. Amerikal\u0131 al\u0131c\u0131lar bunu pek konu da etmezler, \u00e7\u00fcnk\u00fc bilirler ki g\u00fcmr\u00fckleme yapmak i\u00e7in her zaman yeterli s\u00fcreleri vard\u0131r. Mal gemiden indi\u011finde mallar\u0131n\u0131 limandan al\u0131p giderler. Tabii risk analizi tespit yapmak i\u00e7in mal\u0131 ba\u015fka bir sahaya da \u00e7ekebilirler. Bu arada bahsetmeden ge\u00e7memek gerek FMC (Federal Denizcilik Komisyonu) 2019 y\u0131l\u0131nda; konteyner al\u0131c\u0131n\u0131n \u00e7ekebilece\u011fi duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye ba\u015flamamal\u0131 diye yeni bir tavsiye karar ald\u0131. Bu bir zorunluluk de\u011fil ancak FMC\u2018nin ald\u0131\u011f\u0131 kararlar\u0131n ortak \u00e7\u0131kar\u0131 temsil etti\u011fi armat\u00f6rler, liman i\u015fletmeleri ve d\u0131\u015f ticaret firmalar\u0131 taraf\u0131ndan bilinir. \\n Peki fazladan verilen demuraj serbest s\u00fcresi bu konuyu \u00e7\u00f6zm\u00fcyor mu veya 3. d\u00fcnya \u00fclkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yap\u0131lan g\u00fcmr\u00fcklemenin bask\u0131 alt\u0131nda verilen ifade gibi oldu\u011funu s\u00f6ylemek yanl\u0131\u015f olmaz. Ayr\u0131ca ardiye i\u00e7in de herhangi bir serbest s\u00fcre yoktur. Ardiye; gemi limana yana\u015f\u0131nca ba\u015flar. Yedi g\u00fcnden (geminin limana yana\u015fmas\u0131na m\u00fcteakip) daha k\u0131sa s\u00fcrede mal\u0131n\u0131 \u00e7ekebilen al\u0131c\u0131; e\u011fer \u00e7ok \u015fansl\u0131 de\u011filse, camia taraf\u0131ndan \u201cmutlaka iyi ba\u011flant\u0131lar\u0131 olan bir g\u00fcmr\u00fck\u00e7\u00fcs\u00fc vard\u0131r\u201d diye bilinir. \\n \u201cAmerika\u2019y\u0131 yeniden ke\u015ffetmeye gerek yok\u201d s\u00f6z\u00fc sanki bu durum i\u00e7in s\u00f6ylenmi\u015f. \u0130thalat g\u00fcmr\u00fcklemesi i\u00e7in gerekli \u015fartlar mal \u00e7\u0131kt\u0131\u011f\u0131nda kesindir. Serbest rekabet ko\u015fullar\u0131n\u0131 yaratmak, dijitalle\u015fmeye ve \u015feffafla\u015fmaya \u00f6nc\u00fc olmak kural koyucu kurumun sorumlulu\u011fudur. Rekabet adil ko\u015fullarda yap\u0131l\u0131r ise ciddi oranda ardiye ve demuraj paras\u0131 yurt d\u0131\u015f\u0131na \u00e7\u0131kmaz. Gereksiz d\u00f6viz \u00e7\u0131k\u0131\u015f\u0131n\u0131 \u00f6nlemek d\u00f6viz kazand\u0131r\u0131c\u0131 hizmet say\u0131labilir mi sorusu da akl\u0131ma geliyor. Daha az \u00f6nemli bir \u00e7\u0131kt\u0131s\u0131 da LPI'deki yerimiz 15-20 s\u0131ra iyiye do\u011fru geli\u015fir. \\n *konteyner ta\u015f\u0131mac\u0131l\u0131\u011f\u0131nda yerel armat\u00f6rlerimizin pay\u0131 %10\u2019dan daha az.",
+                    "BLOG_SECTION_ITEMS_DATE": "2021-08-14",
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Tooraj Farsi"
+                },
+                {
+                    "BLOG_SECTION_ITEMS_ID": "20210814191313",
+                    "BLOG_SECTION_ITEMS_THUMBNAIL": "C:\\Users\\murat\\Desktop\\Midas Global Logistic\\laravel-midas-global-logistic\\storage\/app\/public\/blog\/20210814191313\/20210814191313_thumbnail.jpg",
+                    "BLOG_SECTION_ITEMS_PHOTO": "C:\\Users\\murat\\Desktop\\Midas Global Logistic\\laravel-midas-global-logistic\\storage\/app\/public\/blog\/20210814191313\/20210814191313_photo.jpg",
+                    "BLOG_SECTION_ITEMS_TITLE": "LPI (Lojistik Performans Endeksi)",
+                    "BLOG_SECTION_ITEMS_SUMMARY": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131.",
+                    "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131. \\n  Ticaretin \u00fc\u00e7 ana \u00f6gesi al\u0131c\u0131, sat\u0131c\u0131 ve \u00fcr\u00fcnd\u00fcr. Uluslararas\u0131 ticarette onlarca farkl\u0131 olgu; hizmet, altyap\u0131, finans, devlet ve ta\u015f\u0131mac\u0131l\u0131k gibi, bu \u00fc\u00e7 temel \u00f6genin etraf\u0131nda yer al\u0131r. Deniz yolu ta\u015f\u0131malar\u0131nda teslim anla\u015fmas\u0131 ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu \u00fcr\u00fcn ta\u015f\u0131ma arac\u0131na y\u00fcklendi\u011fi zaman, ta\u015f\u0131y\u0131c\u0131 ald\u0131\u011f\u0131 mala kar\u015f\u0131l\u0131k bir kon\u015fimento (ta\u015f\u0131ma senedi) d\u00fczenler ve bu kon\u015fimentoyu g\u00f6ndericiye verir. Son d\u00f6nemlerde teslimat -e\u011fer ta\u015f\u0131ma bir akreditif veya kiralama s\u00f6zle\u015fmesi alt\u0131nda ger\u00e7ekle\u015fmiyorsa- kon\u015fimento yerine deniz yolu irsaliyesi olarak T\u00fcrk\u00e7ele\u015ftirebilece\u011fimiz SWB (bas\u0131l\u0131 bir kon\u015fimentoda ki b\u00fct\u00fcn bilgileri i\u00e7erir fakat matbu bir \u00e7\u0131kt\u0131s\u0131 yoktur) ile de yap\u0131labilmekte. Uluslararas\u0131 demek farkl\u0131 \u00e7\u0131k\u0131\u015f ve var\u0131\u015f \u00fclkesi olmas\u0131 durumudur. Mal \u00e7\u0131k\u0131\u015f \u00fclkesinden hareket etti\u011finde, al\u0131c\u0131 i\u00e7in \u015fartlar geri d\u00f6n\u00fclmez \u015fekilde kesinle\u015fmi\u015ftir (d\u00fczeltme hakk\u0131 sakl\u0131). \u0130\u015fte risk analizi bu saat itibariyle ba\u015flayabilir. Amerika\u2019da ki uygulama ise gemi \u00e7\u0131k\u0131\u015f liman\u0131ndan hareket etmeden 48 saat \u00f6ncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani ta\u015f\u0131y\u0131c\u0131ya, \u201cbu mal\u0131 gemine hi\u00e7 y\u00fckleme\u201d diyebilir. \u015eeffafl\u0131k taraf\u0131; al\u0131c\u0131n\u0131n g\u00fcmr\u00fckleme i\u015flemini mal \u00e7\u0131k\u0131\u015f \u00fclkesinden yola \u00e7\u0131kt\u0131ktan sonra yapabilmesi ve uluslararas\u0131 rekabette elini g\u00fc\u00e7l\u00fc tutmas\u0131, liman, g\u00fcmr\u00fck, g\u00fcmr\u00fck\u00e7\u00fc, ta\u015f\u0131y\u0131c\u0131 ve depolama kurumlar\u0131n\u0131n ise \u00e7ekirdek i\u015flerine yo\u011funla\u015f\u0131p hizmet kalitesini art\u0131rabilmesidir. \\n Sekt\u00f6r\u00fcn duayenleri bilirler; 3. d\u00fcnya \u00fclkelerinde hep bir fazladan demuraj serbest s\u00fcresi talebi vard\u0131r ama Avrupa ve Amerika\u2019da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamas\u0131na ra\u011fmen. Amerikal\u0131 al\u0131c\u0131lar bunu pek konu da etmezler, \u00e7\u00fcnk\u00fc bilirler ki g\u00fcmr\u00fckleme yapmak i\u00e7in her zaman yeterli s\u00fcreleri vard\u0131r. Mal gemiden indi\u011finde mallar\u0131n\u0131 limandan al\u0131p giderler. Tabii risk analizi tespit yapmak i\u00e7in mal\u0131 ba\u015fka bir sahaya da \u00e7ekebilirler. Bu arada bahsetmeden ge\u00e7memek gerek FMC (Federal Denizcilik Komisyonu) 2019 y\u0131l\u0131nda; konteyner al\u0131c\u0131n\u0131n \u00e7ekebilece\u011fi duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye ba\u015flamamal\u0131 diye yeni bir tavsiye karar ald\u0131. Bu bir zorunluluk de\u011fil ancak FMC\u2018nin ald\u0131\u011f\u0131 kararlar\u0131n ortak \u00e7\u0131kar\u0131 temsil etti\u011fi armat\u00f6rler, liman i\u015fletmeleri ve d\u0131\u015f ticaret firmalar\u0131 taraf\u0131ndan bilinir. \\n Peki fazladan verilen demuraj serbest s\u00fcresi bu konuyu \u00e7\u00f6zm\u00fcyor mu veya 3. d\u00fcnya \u00fclkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yap\u0131lan g\u00fcmr\u00fcklemenin bask\u0131 alt\u0131nda verilen ifade gibi oldu\u011funu s\u00f6ylemek yanl\u0131\u015f olmaz. Ayr\u0131ca ardiye i\u00e7in de herhangi bir serbest s\u00fcre yoktur. Ardiye; gemi limana yana\u015f\u0131nca ba\u015flar. Yedi g\u00fcnden (geminin limana yana\u015fmas\u0131na m\u00fcteakip) daha k\u0131sa s\u00fcrede mal\u0131n\u0131 \u00e7ekebilen al\u0131c\u0131; e\u011fer \u00e7ok \u015fansl\u0131 de\u011filse, camia taraf\u0131ndan \u201cmutlaka iyi ba\u011flant\u0131lar\u0131 olan bir g\u00fcmr\u00fck\u00e7\u00fcs\u00fc vard\u0131r\u201d diye bilinir. \\n \u201cAmerika\u2019y\u0131 yeniden ke\u015ffetmeye gerek yok\u201d s\u00f6z\u00fc sanki bu durum i\u00e7in s\u00f6ylenmi\u015f. \u0130thalat g\u00fcmr\u00fcklemesi i\u00e7in gerekli \u015fartlar mal \u00e7\u0131kt\u0131\u011f\u0131nda kesindir. Serbest rekabet ko\u015fullar\u0131n\u0131 yaratmak, dijitalle\u015fmeye ve \u015feffafla\u015fmaya \u00f6nc\u00fc olmak kural koyucu kurumun sorumlulu\u011fudur. Rekabet adil ko\u015fullarda yap\u0131l\u0131r ise ciddi oranda ardiye ve demuraj paras\u0131 yurt d\u0131\u015f\u0131na \u00e7\u0131kmaz. Gereksiz d\u00f6viz \u00e7\u0131k\u0131\u015f\u0131n\u0131 \u00f6nlemek d\u00f6viz kazand\u0131r\u0131c\u0131 hizmet say\u0131labilir mi sorusu da akl\u0131ma geliyor. Daha az \u00f6nemli bir \u00e7\u0131kt\u0131s\u0131 da LPI'deki yerimiz 15-20 s\u0131ra iyiye do\u011fru geli\u015fir. \\n *konteyner ta\u015f\u0131mac\u0131l\u0131\u011f\u0131nda yerel armat\u00f6rlerimizin pay\u0131 %10\u2019dan daha az.",
+                    "BLOG_SECTION_ITEMS_DATE": "2021-08-14 19:13:13",
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Tooraj Farsi"
+                },
+                {
+                    "BLOG_SECTION_ITEMS_ID": "20210814194023",
+                    "BLOG_SECTION_ITEMS_THUMBNAIL": "C:\\Users\\murat\\Desktop\\Midas Global Logistic\\laravel-midas-global-logistic\\storage\/app\/public\/blog\/20210814194023\/20210814194023_thumbnail.jpg",
+                    "BLOG_SECTION_ITEMS_PHOTO": "C:\\Users\\murat\\Desktop\\Midas Global Logistic\\laravel-midas-global-logistic\\storage\/app\/public\/blog\/20210814194023\/20210814194023_photo.jpg",
+                    "BLOG_SECTION_ITEMS_TITLE": "LPI (Lojistik Performans Endeksi)",
+                    "BLOG_SECTION_ITEMS_SUMMARY": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131.",
+                    "BLOG_SECTION_ITEMS_FULL_TEXT": "Amerika\u2019da AMS (Otomatik Manifesto Sistemi) uygulamas\u0131 ba\u015flayal\u0131 16 y\u0131l oldu, ard\u0131ndan Avrupa da ENS uygulamas\u0131n\u0131 hayata ge\u00e7irdi. T\u00fcrkiye\u2019de ise benzer \u00e7\u0131kt\u0131lar\u0131 almak i\u00e7in \u201cvar\u0131\u015f bildirimi\u201d uygulamas\u0131 ba\u015flat\u0131ld\u0131. Amerika\u2019da hedeflenen temel sonu\u00e7lar: risk analizi (erken a\u015famada \u00f6nlem almak) ve \u015feffafl\u0131kt\u0131. \\n  Ticaretin \u00fc\u00e7 ana \u00f6gesi al\u0131c\u0131, sat\u0131c\u0131 ve \u00fcr\u00fcnd\u00fcr. Uluslararas\u0131 ticarette onlarca farkl\u0131 olgu; hizmet, altyap\u0131, finans, devlet ve ta\u015f\u0131mac\u0131l\u0131k gibi, bu \u00fc\u00e7 temel \u00f6genin etraf\u0131nda yer al\u0131r. Deniz yolu ta\u015f\u0131malar\u0131nda teslim anla\u015fmas\u0131 ne olursa olsun fabrika ya da liman teslim fark etmez, ticarete konu \u00fcr\u00fcn ta\u015f\u0131ma arac\u0131na y\u00fcklendi\u011fi zaman, ta\u015f\u0131y\u0131c\u0131 ald\u0131\u011f\u0131 mala kar\u015f\u0131l\u0131k bir kon\u015fimento (ta\u015f\u0131ma senedi) d\u00fczenler ve bu kon\u015fimentoyu g\u00f6ndericiye verir. Son d\u00f6nemlerde teslimat -e\u011fer ta\u015f\u0131ma bir akreditif veya kiralama s\u00f6zle\u015fmesi alt\u0131nda ger\u00e7ekle\u015fmiyorsa- kon\u015fimento yerine deniz yolu irsaliyesi olarak T\u00fcrk\u00e7ele\u015ftirebilece\u011fimiz SWB (bas\u0131l\u0131 bir kon\u015fimentoda ki b\u00fct\u00fcn bilgileri i\u00e7erir fakat matbu bir \u00e7\u0131kt\u0131s\u0131 yoktur) ile de yap\u0131labilmekte. Uluslararas\u0131 demek farkl\u0131 \u00e7\u0131k\u0131\u015f ve var\u0131\u015f \u00fclkesi olmas\u0131 durumudur. Mal \u00e7\u0131k\u0131\u015f \u00fclkesinden hareket etti\u011finde, al\u0131c\u0131 i\u00e7in \u015fartlar geri d\u00f6n\u00fclmez \u015fekilde kesinle\u015fmi\u015ftir (d\u00fczeltme hakk\u0131 sakl\u0131). \u0130\u015fte risk analizi bu saat itibariyle ba\u015flayabilir. Amerika\u2019da ki uygulama ise gemi \u00e7\u0131k\u0131\u015f liman\u0131ndan hareket etmeden 48 saat \u00f6ncesidir. Amerikan sisteminde mal gerekirse red edilebilir, yani ta\u015f\u0131y\u0131c\u0131ya, \u201cbu mal\u0131 gemine hi\u00e7 y\u00fckleme\u201d diyebilir. \u015eeffafl\u0131k taraf\u0131; al\u0131c\u0131n\u0131n g\u00fcmr\u00fckleme i\u015flemini mal \u00e7\u0131k\u0131\u015f \u00fclkesinden yola \u00e7\u0131kt\u0131ktan sonra yapabilmesi ve uluslararas\u0131 rekabette elini g\u00fc\u00e7l\u00fc tutmas\u0131, liman, g\u00fcmr\u00fck, g\u00fcmr\u00fck\u00e7\u00fc, ta\u015f\u0131y\u0131c\u0131 ve depolama kurumlar\u0131n\u0131n ise \u00e7ekirdek i\u015flerine yo\u011funla\u015f\u0131p hizmet kalitesini art\u0131rabilmesidir. \\n Sekt\u00f6r\u00fcn duayenleri bilirler; 3. d\u00fcnya \u00fclkelerinde hep bir fazladan demuraj serbest s\u00fcresi talebi vard\u0131r ama Avrupa ve Amerika\u2019da bu pek konu olmaz, hem de demuraj tarifelerinin masum olmamas\u0131na ra\u011fmen. Amerikal\u0131 al\u0131c\u0131lar bunu pek konu da etmezler, \u00e7\u00fcnk\u00fc bilirler ki g\u00fcmr\u00fckleme yapmak i\u00e7in her zaman yeterli s\u00fcreleri vard\u0131r. Mal gemiden indi\u011finde mallar\u0131n\u0131 limandan al\u0131p giderler. Tabii risk analizi tespit yapmak i\u00e7in mal\u0131 ba\u015fka bir sahaya da \u00e7ekebilirler. Bu arada bahsetmeden ge\u00e7memek gerek FMC (Federal Denizcilik Komisyonu) 2019 y\u0131l\u0131nda; konteyner al\u0131c\u0131n\u0131n \u00e7ekebilece\u011fi duruma gelmeden (hafta sonu ve bayram tatilleri dahil) demuraj ve ardiye ba\u015flamamal\u0131 diye yeni bir tavsiye karar ald\u0131. Bu bir zorunluluk de\u011fil ancak FMC\u2018nin ald\u0131\u011f\u0131 kararlar\u0131n ortak \u00e7\u0131kar\u0131 temsil etti\u011fi armat\u00f6rler, liman i\u015fletmeleri ve d\u0131\u015f ticaret firmalar\u0131 taraf\u0131ndan bilinir. \\n Peki fazladan verilen demuraj serbest s\u00fcresi bu konuyu \u00e7\u00f6zm\u00fcyor mu veya 3. d\u00fcnya \u00fclkelerinde rekabet yok mu diye sorabilirsiniz. Tabii var, ama mal geldikten sonra yap\u0131lan g\u00fcmr\u00fcklemenin bask\u0131 alt\u0131nda verilen ifade gibi oldu\u011funu s\u00f6ylemek yanl\u0131\u015f olmaz. Ayr\u0131ca ardiye i\u00e7in de herhangi bir serbest s\u00fcre yoktur. Ardiye; gemi limana yana\u015f\u0131nca ba\u015flar. Yedi g\u00fcnden (geminin limana yana\u015fmas\u0131na m\u00fcteakip) daha k\u0131sa s\u00fcrede mal\u0131n\u0131 \u00e7ekebilen al\u0131c\u0131; e\u011fer \u00e7ok \u015fansl\u0131 de\u011filse, camia taraf\u0131ndan \u201cmutlaka iyi ba\u011flant\u0131lar\u0131 olan bir g\u00fcmr\u00fck\u00e7\u00fcs\u00fc vard\u0131r\u201d diye bilinir. \\n \u201cAmerika\u2019y\u0131 yeniden ke\u015ffetmeye gerek yok\u201d s\u00f6z\u00fc sanki bu durum i\u00e7in s\u00f6ylenmi\u015f. \u0130thalat g\u00fcmr\u00fcklemesi i\u00e7in gerekli \u015fartlar mal \u00e7\u0131kt\u0131\u011f\u0131nda kesindir. Serbest rekabet ko\u015fullar\u0131n\u0131 yaratmak, dijitalle\u015fmeye ve \u015feffafla\u015fmaya \u00f6nc\u00fc olmak kural koyucu kurumun sorumlulu\u011fudur. Rekabet adil ko\u015fullarda yap\u0131l\u0131r ise ciddi oranda ardiye ve demuraj paras\u0131 yurt d\u0131\u015f\u0131na \u00e7\u0131kmaz. Gereksiz d\u00f6viz \u00e7\u0131k\u0131\u015f\u0131n\u0131 \u00f6nlemek d\u00f6viz kazand\u0131r\u0131c\u0131 hizmet say\u0131labilir mi sorusu da akl\u0131ma geliyor. Daha az \u00f6nemli bir \u00e7\u0131kt\u0131s\u0131 da LPI'deki yerimiz 15-20 s\u0131ra iyiye do\u011fru geli\u015fir. \\n *konteyner ta\u015f\u0131mac\u0131l\u0131\u011f\u0131nda yerel armat\u00f6rlerimizin pay\u0131 %10\u2019dan daha az.",
+                    "BLOG_SECTION_ITEMS_DATE": "2021-08-14 19:40:23",
+                    "BLOG_SECTION_ITEMS_AUTHOR": "Tooraj Farsi"
+                }
+            ]
+        }
+    },
+    "career": {
+        "header": {
+            "CAREER_SECTION_TITLE": "",
+            "CAREER_SECTION_SUBTITLE": "",
+            "CAREER_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "CAREER_SECTION_PHOTO": "https:\/\/mgl.cc\/gokhan\/uploads\/career\/career_tr.jpg",
+            "form": {
+                "CAREER_SECTION_INPUT_NAME": "Ad\u0131n\u0131z",
+                "CAREER_SECTION_INPUT_SURNAME": "Soyad\u0131n\u0131z",
+                "CAREER_SECTION_INPUT_EMAIL": "Email Adresiniz",
+                "CAREER_SECTION_INPUT_PHONE": "Telefon Numaran\u0131z",
+                "CAREER_SECTION_INPUT_MESSAGE": "Bize Mesaj\u0131n\u0131z",
+                "CAREER_SECTION_BUTTON_UPLOAD_FILE": "Cv Y\u00fckle",
+                "CAREER_SECTION_BUTTON_SEND": "G\u00f6nder"
+            }
+        }
+    },
+    "contact": {
+        "header": {
+            "CONTACT_SECTION_TITLE": "\u0130leti\u015fin",
+            "CONTACT_SECTION_SUBTITLE": "",
+            "CONTACT_SECTION_DESCRIPTION": ""
+        },
+        "body": {
+            "address_information": {
+                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "\u015ei\u015fli, \u0130stanbul, T\u00fcrkiye",
+                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyek\u00f6y Mahallesi \u015eehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyek\u00f6y \u0130\u015f Merkezi"
+            },
+            "phone_information": {
+                "CONTACT_SECTION_PHONE_INFORMATION_TITLE": "+90 (212) 438 18 18",
+                "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Pazartesi - Cuma \/ 09:00 - 18:00"
+            },
+            "email_information": {
+                "CONTACT_SECTION_EMAIL_INFORMATION_TITLE": "info@mgl.cc",
+                "CONTACT_SECTION_EMAIL_INFORMATION_BODY": "Bize yaz\u0131n"
+            }
+        }
+    },
+    "footer": {
+        "FOOTER_TEXT": "Midas Global Lojistik"
+    },
+    "privacy": {
+        "PRIVACY_HEADER": "Gizlili\u011finiz",
+        "PRIVACY_TEXT": "\u201c\u00c7erezleri Kabul Et\u201d butonuna t\u0131klad\u0131\u011f\u0131n\u0131zda, Midas Global Lojistik'in cihaz\u0131n\u0131zda tan\u0131mlama bilgileri depolayabilece\u011fini ve \u00c7erez Politikas\u0131'na uygun olarak bilgileri if\u015fa edebilece\u011fini kabul etmi\u015f olursunuz.",
+        "PRIVACY_BUTTON": "\u00c7erezler\u0130 kabul et"
+    }
+}
