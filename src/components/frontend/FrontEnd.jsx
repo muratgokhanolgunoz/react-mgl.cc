@@ -2,8 +2,6 @@ import React, { Component } from "react"
 import FrontEndContext from "../../context/FrontEndContext"
 import { withTranslation } from 'react-i18next'
 
-import { CookiesProvider } from 'react-cookie'
-
 import Navi from "./constants/Navi"
 import Home from "./sections/Home"
 import Services from "./sections/Services"
@@ -39,7 +37,6 @@ class FrontEnd extends Component {
         const { t, i18n } = this.props
 
         return (
-            <CookiesProvider>
                 <div>
                     <Helmet>
                         <title>{t('html.HTML_PAGE_TITLE')}</title>
@@ -68,7 +65,6 @@ class FrontEnd extends Component {
                     <Contact language={t} />
                     <Footer language={t} />
                 </div>
-            </CookiesProvider>
         )
     }
 }

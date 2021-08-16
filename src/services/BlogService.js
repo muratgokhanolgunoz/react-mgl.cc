@@ -7,8 +7,12 @@ class BlogService {
         return axios.get(this.API_URL + "blog/" + _language)
     }
 
-    deleteBlog(_array) {
-        return axios.post(this.API_URL + "blog/delete", _array)
+    addBlog(_language, _data) {
+        return axios.post(this.API_URL + "blog/" + _language + "/add", _data)
+    }
+
+    deleteBlog(_language, _data) {
+        return axios.post(this.API_URL + "blog/" + _language + "/delete", _data)
     }
 }
 export default BlogService

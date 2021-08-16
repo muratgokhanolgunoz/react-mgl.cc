@@ -1,5 +1,5 @@
 {
-    "timezone": "Europe/London",
+    "timezone": "Europe/Istanbul",
     "html": {
         "HTML_PAGE_TITLE": "Midas Global Logistics"
     },
@@ -157,6 +157,20 @@
         },
         "body": {
             "CAREER_SECTION_PHOTO": "https:\/\/mgl.cc\/gokhan\/uploads\/career\/career_en.jpg",
+            "notification": {
+                "CAREER_SECTION_NOTIFICATION_SUCCESS_MESSAGE": "Successful",
+                "CAREER_SECTION_NOTIFICATION_ERROR_MESSAGE": "An error has occurred",
+                "form_validation": {
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_NAME": "Name cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_SURNAME": "Surname cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL": "Email cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL_FORMAT": "Email must be entered in the correct format",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_PHONE": "Phone cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE": "File cannot be left blank",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE_SIZE": "File can be up to 5 MB in size",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_CAPTCHA": "Please verify captcha"
+                }
+            },
             "form": {
                 "CAREER_SECTION_INPUT_NAME": "Name",
                 "CAREER_SECTION_INPUT_SURNAME": "Surname",
@@ -164,7 +178,10 @@
                 "CAREER_SECTION_INPUT_PHONE": "Phone",
                 "CAREER_SECTION_INPUT_MESSAGE": "Message",
                 "CAREER_SECTION_BUTTON_UPLOAD_FILE": "Upload CV",
-                "CAREER_SECTION_BUTTON_SEND": "Send"
+                "CAREER_SECTION_CAPTCHA": "Enter captcha",
+                "CAREER_SECTION_BUTTON_SEND": "Send",
+                "CAREER_SECTION_INPUT_FILE_HELP_FILE_TYPE": "File Type",
+                "CAREER_SECTION_INPUT_FILE_HELP_FILE_SIZE": "Maximum Size"
             }
         }
     },

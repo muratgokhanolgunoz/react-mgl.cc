@@ -12,7 +12,7 @@ class AdminProvider extends Component {
                 state: this.state,
                 setSidebarShowStatus: (_show) => {
                     this.setState({ sidebarOpen: _show })
-                },
+                }
             }}>
                 {this.props.children}
             </AdminContext.Provider>

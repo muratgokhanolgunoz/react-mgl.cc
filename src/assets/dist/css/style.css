@@ -427,8 +427,34 @@ body {
 
 /* ========== CAREER SECTION STYLES ========== */
 
+.career {
+  font-family: 'Rubik', sans-serif;
+}
+
 .career-input {
-  margin: 5px !important;
+  margin: 5px !important;  
+}
+
+.file-uploader {
+  width: 100% !important
+}
+
+#input-upload {
+  background-color: rgba(232, 232, 232, .3);
+  border: none;
+  border-radius: 0;
+  margin-left: 6px;
+  margin-top: 5px;
+  font-family: "Rubik", sans-serif;
+  border-bottom: 1px solid #111;
+}
+
+#input-captcha {
+  width: 150px;
+  text-align: center;
+  border-radius: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
 }
 
 /* ========== CONTACT SECTION STYLES ========== */
@@ -511,5 +537,17 @@ body {
 .admin-sidebar-link {
   margin-top: 20px !important;
   text-decoration: none;
+  color: #000;
+}
+
+.admin-table {
+  text-align: center !important;
+}
+
+.admin-table-cell {
+  color: #FFF !important;
+}
+
+.admin-table-link {
   color: #000;
 }

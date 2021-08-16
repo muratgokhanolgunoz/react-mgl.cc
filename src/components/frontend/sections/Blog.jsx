@@ -60,7 +60,7 @@ class Blog extends Component {
                                             <div className="blog-box-item" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="150">
                                                 <Image className="blog-box-image" src={blog.BLOG_SECTION_ITEMS_THUMBNAIL} fluid />
                                                 <span className="blog-box-item-author">
-                                                    <span>{blog.BLOG_SECTION_ITEMS_DATE} | {' '}</span>
+                                                    <span>{blog.BLOG_SECTION_ITEMS_DATE.substr(0, 10)} | {' '}</span>
                                                     <span>
                                                         <small>
                                                             {this.props.languageLibrary.language === 'tr'
