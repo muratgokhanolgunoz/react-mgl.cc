@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import AdminContext from '../../../context/AdminContext'
+import CareerService from '../../../services/CareerService'
 import Navi from '../constants/Navi'
 
-import clsx from 'clsx'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import TableContainer from '@material-ui/core/TableContainer'
-import TableHead from '@material-ui/core/TableHead'
-import TableCell from '@material-ui/core/TableCell'
-import TableRow from '@material-ui/core/TableRow'
-import Paper from '@material-ui/core/Paper'
-import CareerService from '../../../services/CareerService'
+import { Container, Row, Col, Table } from 'react-bootstrap'
+import CareerMessagePopup from './popups/CareerMessagePopup'
 
 let careerService = new CareerService()
 
-const Career = (props) => {
+const Career = () => {
 
     const [careerList, setCareerList] = useState([])
+    const [selectedCareerItem, setSelectedCareerItem] = useState(undefined)
 
     useEffect(() => {
         careerService.getCareerList()
@@ -28,47 +23,64 @@ const Career = (props) => {
         <AdminContext.Consumer>
             {(context) => {
                 return (
-                    <div className={props.classes.root}>
-                        <Navi classes={props.classes} />
-                        <main className={clsx(props.classes.content, { [props.classes.contentShift]: context.state.sidebarOpen, })}>
-                            <div className={props.classes.drawerHeader} />
-                            <TableContainer component={Paper}>
-                                <Table className="admin-table">
-                                    <TableHead style={{ backgroundColor: "#000" }}>
-                                        <TableRow>
-                                            <TableCell className="admin-table-cell">Name</TableCell>
-                                            <TableCell className="admin-table-cell">Surname</TableCell>
-                                            <TableCell className="admin-table-cell">Email</TableCell>
-                                            <TableCell className="admin-table-cell">Phone</TableCell>
-                                            <TableCell className="admin-table-cell">Message</TableCell>
-                                            <TableCell className="admin-table-cell">File</TableCell>
-                                            <TableCell className="admin-table-cell">Date</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        {
-                                            careerList.map((careerItem, index) => (
-                                                <TableRow key={index}>
-                                                    <TableCell>{careerItem.name}</TableCell>                                         
-                                                    <TableCell>{careerItem.surname}</TableCell>                                         
-                                                    <TableCell>
-                                                        <a className="admin-table-link" href={"mailto:" + careerItem.email}>{careerItem.email}</a>    
-                                                    </TableCell>                                         
-                                                    <TableCell>
-                                                        <a className="admin-table-link" href={"tel:" + careerItem.phone}>{careerItem.phone}</a>    
-                                                    </TableCell>                                         
-                                                    <TableCell>{careerItem.message}</TableCell>                                         
-                                                    <TableCell>
-                                                        <a className="admin-table-link" href={careerItem.file} target="_blank" rel="noreferrer">CV File</a>    
-                                                    </TableCell>                                         
-                                                    <TableCell>{careerItem.date}</TableCell>                                         
-                                                </TableRow>
-                                            ))
-                                        }
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
-                        </main>
+                    <div style={{ padding: "50px" }}>
+                        <Row>
+                            <Navi />
+                        </Row>
+                        <br />
+                        <Container fluid className="admin-container">
+                            <Row>
+                                <Col>
+                                    <h2>Career | Midas Global Logistic</h2>
+                                </Col>
+                            </Row>
+                            <br />
+                            <Row>
+                                <Col>
+                                    <Table striped responsive>
+                                        <thead className="table-dark">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Surname</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Message</th>
+                                                <th>File</th>
+                                                <th>Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {
+                                                careerList.map((careerItem, index) => (
+                                                    <tr key={index}>
+                                                        <td>{careerItem.name}</td>
+                                                        <td>{careerItem.surname}</td>
+                                                        <td>
+                                                            <a href={"mailto:" + careerItem.email}>{careerItem.email}</a>
+                                                        </td>
+                                                        <td>
+                                                            <a href={"tel:" + careerItem.phone}>{careerItem.phone}</a>
+                                                        </td>
+                                                        <td>
+                                                            {careerItem.message !== null
+                                                                ? <span className="text-primary" style={{ textDecoration: "underline", cursor: "pointer" }} onClick={() => { context.setCareerPopupStatus(true); setSelectedCareerItem(careerItem) }}>View</span>
+                                                                : "null"
+                                                            }
+                                                        </td>
+                                                        <td>
+                                                            <a href={careerItem.file} target="_blank" rel="noreferrer">CV File</a>
+                                                        </td>
+                                                        <td>{careerItem.date}</td>
+                                                    </tr>
+                                                ))
+                                            }
+                                        </tbody>
+                                    </Table>
+                                </Col>
+                            </Row>
+                        </Container>
+
+                        <CareerMessagePopup selectedCareerItem={selectedCareerItem} />
                     </div>
                 )
             }}

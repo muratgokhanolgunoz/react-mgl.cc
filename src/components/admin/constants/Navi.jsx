@@ -1,78 +1,28 @@
 import React from 'react'
-import { useTheme } from '@material-ui/core/styles';
+import { Container, Nav, Navbar, Image } from 'react-bootstrap'
+import AdminContext from '../../../context/AdminContext'
 
-import clsx from 'clsx';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-
-import { VscArrowRight } from "react-icons/vsc";
-
-import { Link } from 'react-router-dom'
-import AdminContext from '../../../context/AdminContext';
-
-const Navi = (props) => {
-
-    const theme = useTheme();
-
+const Navi = () => {
     return (
         <AdminContext.Consumer>
             {(context) => {
                 return (
                     <div>
-                        <AppBar position="fixed" className={clsx(props.classes.appBar, { [props.classes.appBarShift]: context.state.sidebarOpen, })}>
-                            <Toolbar>
-                                <IconButton color="inherit" aria-label="open drawer" onClick={() => context.setSidebarShowStatus(true)} edge="start" className={clsx(props.classes.menuButton, { [props.classes.hide]: context.state.sidebarOpen, })}>
-                                    <MenuIcon />
-                                </IconButton>
-                                <Typography variant="h6" noWrap>
-                                    Admin | Midas Global Logistics
-                                </Typography>
-                            </Toolbar>
-                        </AppBar>
-
-                        <Drawer className={props.classes.drawer} variant="persistent" anchor="left" open={context.state.sidebarOpen} classes={{ paper: props.classes.drawerPaper, }}>
-                            <div className={props.classes.drawerHeader}>
-                                <IconButton onClick={() => context.setSidebarShowStatus(false)}>
-                                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                                </IconButton>
-                            </div>
-                            <Divider />
-                            <List component="nav" aria-label="main mailbox folders">                                
-                                <Link className="admin-sidebar-link" to="/sarici/blog">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Blog
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-
-                                <Link className="admin-sidebar-link" to="/sarici/career">
-                                    <ListItem button>
-                                        <ListItemIcon>
-                                            <VscArrowRight />
-                                        </ListItemIcon>
-                                        <ListItemText >
-                                            Career
-                                        </ListItemText>
-                                    </ListItem>
-                                </Link>
-                            </List>
-                        </Drawer>
+                        <Navbar bg="light" expand="sm">
+                            <Container>
+                                <Navbar.Brand href="/sarici">
+                                    <Image className="navi-logo" src={context.state.baseUrl + "uploads/logo.png"} alt="Midas Global Logistic" fluid ></Image>
+                                </Navbar.Brand>
+                                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                                <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="me-auto">
+                                        <Nav.Link href="/sarici/blog">Blog</Nav.Link>
+                                        <Nav.Link href="/sarici/career">Career</Nav.Link>
+                                        <Nav.Link href="/">Frontend</Nav.Link>
+                                    </Nav>
+                                </Navbar.Collapse>
+                            </Container>
+                        </Navbar>
                     </div>
                 )
             }}

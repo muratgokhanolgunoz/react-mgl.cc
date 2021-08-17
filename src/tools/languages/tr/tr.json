@@ -1,23 +1,23 @@
 {
-    "timezone": "Europe\/Istanbul",
+    "timezone": "Europe/Istanbul",
     "html": {
         "HTML_PAGE_TITLE": "Midas Global Lojistik"
     },
     "template": {
         "buttons": {
             "TEMPLATE_CLOSE_BUTTON": "Kapat",
-            "TEMPLATE_NEXT_BUTTON": "\u0130ler\u0130",
-            "TEMPLATE_PREVIOUS_BUTTON": "Ger\u0130"
+            "TEMPLATE_NEXT_BUTTON": "İlerİ",
+            "TEMPLATE_PREVIOUS_BUTTON": "Gerİ"
         }
     },
     "navbar": {
-        "NAVBAR_ITEM_SERVICES": "Serv\u0130sler\u0130m\u0130z",
-        "NAVBAR_ITEM_ABOUT_US": "Hakk\u0131m\u0131zda",
-        "NAVBAR_ITEM_VIDEO_GALLERY": "V\u0130deolar\u0131m\u0131z",
-        "NAVBAR_ITEM_SHIP_PROGRAM": "Gem\u0130 Program\u0131m\u0131z",
-        "NAVBAR_ITEM_ARTICLES_FROM_US": "B\u0130zden Yaz\u0131lar",
-        "NAVBAR_ITEM_CAREER": "Kar\u0130yer",
-        "NAVBAR_ITEM_CONTACT": "\u0130let\u0130\u015f\u0130n"
+        "NAVBAR_ITEM_SERVICES": "Servİslerİmİz",
+        "NAVBAR_ITEM_ABOUT_US": "Hakkımızda",
+        "NAVBAR_ITEM_VIDEO_GALLERY": "Vİdeolarımız",
+        "NAVBAR_ITEM_SHIP_PROGRAM": "Gemİ Programımız",
+        "NAVBAR_ITEM_ARTICLES_FROM_US": "Bİzden Yazılar",
+        "NAVBAR_ITEM_CAREER": "Karİyer",
+        "NAVBAR_ITEM_CONTACT": "İletİşİn"
     },
     "home": {
         "calendar": {
@@ -25,41 +25,41 @@
             "CALENDAR_MONTH_NAMES": [
                 "",
                 "Ocak",
-                "\u015eubat",
+                "Şubat",
                 "Mart",
-                "N\u0130san",
-                "May\u0131s",
-                "Haz\u0130ran",
+                "Nİsan",
+                "Mayıs",
+                "Hazİran",
                 "Temmuz",
-                "A\u011fustos",
-                "Eyl\u00fcl",
-                "Ek\u0130m",
-                "Kas\u0131m",
-                "Aral\u0131k"
+                "Ağustos",
+                "Eylül",
+                "Ekİm",
+                "Kasım",
+                "Aralık"
             ],
             "CALENDAR_DAY_NAMES": [
                 "",
-                "Pazartes\u0130",
-                "Sal\u0131",
-                "\u00c7ar\u015famba",
-                "Per\u015fembe",
+                "Pazartesİ",
+                "Salı",
+                "Çarşamba",
+                "Perşembe",
                 "Cuma",
-                "Cumartes\u0130",
+                "Cumartesİ",
                 "Pazar"
             ]
         },
         "widgets": {
             "tracking": {
                 "WIDGETS_TRACKING_TITLE": "e-Takip",
-                "WIDGETS_TRACKING_BODY": "Kon\u015fimento, teklif veya referans numaran\u0131z ile y\u00fck\u00fcn\u00fcz\u00fc takip edin",
-                "WIDGETS_TRACKING_INPUT_PLACEHOLDER": "Kon\u015fimento Numaran\u0131z"
+                "WIDGETS_TRACKING_BODY": "Konşimento, teklif veya referans numaranız ile yükünüzü takip edin",
+                "WIDGETS_TRACKING_INPUT_PLACEHOLDER": "Konşimento Numaranız"
             },
             "pricing": {
                 "WIDGETS_PRICING_TITLE": "e-Navlun",
-                "WIDGETS_PRICING_BODY": "Nereden nereye se\u00e7in konteyner mi parsiyel mi karar verin ve navlunlar\u0131 an\u0131nda g\u00f6r\u00fcn",
+                "WIDGETS_PRICING_BODY": "Nereden nereye seçin konteyner mi parsiyel mi karar verin ve navlunları anında görün",
                 "WIDGETS_PRICING_BUTTON_TEXT": "Navlun Al"
             },
-            "WIDGETS_BILL_OF_LADING_NUMBER_MESSAGE": "L\u00fctfen kon\u015fimento numaran\u0131z\u0131 girin"
+            "WIDGETS_BILL_OF_LADING_NUMBER_MESSAGE": "Lütfen konşimento numaranızı girin"
         }
     },
     "services": {
@@ -70,31 +70,31 @@
         },
         "body": {
             "first": {
-                "SERVICES_SECTION_FIRST_TITLE": "Y\u00fckleme",
-                "SERVICES_SECTION_FIRST_BODY": "Deniz yolu ta\u015f\u0131mac\u0131l\u0131\u011f\u0131nda uzman\u0131 kadromuz, Ambarl\u0131, \u0130zmit, Gemlik, \u0130zmir Mersin ve \u0130skenderun \u00e7\u0131k\u0131\u015f ve var\u0131\u015fl\u0131 y\u00fcklemelerinizde ihtiya\u00e7 duyaca\u011f\u0131n\u0131z \u00f6n ta\u015f\u0131ma, son ta\u015f\u0131ma, liman masraflar\u0131, uygun navlun gibi konularda bir telefon kadar yak\u0131nd\u0131r. Ayr\u0131ca sahadaki ara\u00e7lar\u0131m\u0131zda \u00e7al\u0131\u015fan personellerimiz \u015firket altyap\u0131m\u0131zda \u00e7al\u0131\u015fan mobil uygulama arac\u0131l\u0131\u011f\u0131 ile ger\u00e7ek zamanl\u0131 olarak entegre hareket etmekteler."
+                "SERVICES_SECTION_FIRST_TITLE": "Yükleme",
+                "SERVICES_SECTION_FIRST_BODY": "Deniz yolu taşımacılığında uzmanı kadromuz, Ambarlı, izmit, Gemlik, izmir Mersin ve iskenderun çıkış ve varışlı yüklemelerinizde ihtiyaç duyacağınız ön taşıma, son taşıma, liman masrafları, uygun navlun gibi konularda bir telefon kadar yakındır. Ayrıca sahadaki araçlarımızda çalışan personellerimiz şirket altyapımızda çalışan mobil uygulama aracılığı ile gerçek zamanlı olarak entegre hareket etmekteler."
             },
             "second": {
                 "SERVICES_SECTION_SECOND_TITLE": "Parsiyel",
-                "SERVICES_SECTION_SECOND_BODY": "Ambarl\u0131 \u00e7\u0131k\u0131\u015f ile hizmet vermekte oldu\u011fumuz parsiyel destinasyon say\u0131m\u0131z yakla\u015f\u0131k 300 kadard\u0131r. Nitelikli y\u00fckler (Varilli, S\u0131v\u0131, Tehlikeli..), deneyim ile birle\u015fince daha ba\u015far\u0131l\u0131 i\u015flere imza atmak m\u00fcmk\u00fcn. A\u015fa\u011f\u0131da yay\u0131nlamakta oldu\u011fumuz ger\u00e7ek zamanl\u0131 gemi program\u0131m\u0131zdaki veriler uygulama sunucumuzdan API teknolojisi ile sunulmakta olup anl\u0131k olarak takip edilebilmektedir."
+                "SERVICES_SECTION_SECOND_BODY": "Ambarlı çıkış ile hizmet vermekte olduğumuz parsiyel destinasyon sayımız yaklaşık 300 kadardır. Nitelikli yükler (Varilli, Sıvı, Tehlikeli..), deneyim ile birleşince daha başarılı işlere imza atmak mümkün. Aşağıda yayınlamakta olduğumuz gerçek zamanlı gemi programımızdaki veriler uygulama sunucumuzdan API teknolojisi ile sunulmakta olup anlık olarak takip edilebilmektedir."
             },
             "third": {
-                "SERVICES_SECTION_THIRD_TITLE": "\u00d6zel Ekipman",
-                "SERVICES_SECTION_THIRD_BODY": "D\u00fcz Tava (Flat Rack) Konteyner, \u00dcst\u00fc A\u00e7\u0131k (Open TOP) konteyner, Tehlikeli Madde Ta\u015f\u0131mac\u0131l\u0131\u011f\u0131 (IMCO) ve So\u011futuculu Konteyner (Reefer) y\u00fcklemeleri uzmanl\u0131k isteyen ve k\u00fc\u00e7\u00fck farklar\u0131n ayr\u0131nt\u0131da gizli oldu\u011fu y\u00fcklerdir. Size do\u011fru rehberlik edecek bir m\u00fc\u015fteri temsilcilerimiz binbir emekle \u00fcretmi\u015f oldu\u011funuz mallar\u0131 en iyi ko\u015fulda m\u00fc\u015fterinize ula\u015ft\u0131rmak i\u00e7in ellerinden gelenden daha iyisine yapacakt\u0131r."
+                "SERVICES_SECTION_THIRD_TITLE": "Özel Ekipman",
+                "SERVICES_SECTION_THIRD_BODY": "Düz Tava (Flat Rack) Konteyner, Üstü Açık (Open TOP) konteyner, Tehlikeli Madde Taşımacılığı (IMCO) ve Soğutuculu Konteyner (Reefer) yüklemeleri uzmanlık isteyen ve küçük farkların ayrıntıda gizli olduğu yüklerdir. Size doğru rehberlik edecek bir müşteri temsilcilerimiz binbir emekle üretmiş olduğunuz malları en iyi koşulda müşterinize ulaştırmak için ellerinden gelenden daha iyisine yapacaktır."
             },
             "fourth": {
-                "SERVICES_SECTION_FOURTH_TITLE": "Kap\u0131ya Teslim",
-                "SERVICES_SECTION_FOURTH_BODY": "25 y\u0131l\u0131 a\u015fk\u0131n tecrubemiz ve geni\u015f acente a\u011f\u0131m\u0131z ile kap\u0131dan kap\u0131ya teslim y\u00fckleriniz i\u00e7in ihtiya\u00e7 duyaca\u011f\u0131n\u0131z \u00f6n ta\u015f\u0131ma, y\u00fckleme liman\u0131 masraflar\u0131, son ta\u015f\u0131ma ve ardiye gibi masraflar siz mal\u0131n\u0131z\u0131 ma\u011fazan\u0131zdan \u00e7\u0131kartmadan elinizin alt\u0131nda olur. Size ise ta\u015f\u0131ma i\u015fleri s\u00fcrecinin planlanan gibi gidip gitmedi\u011fini takip etmek kal\u0131r. S\u00fcreci ise \u00e7evrimi\u00e7i takip ise hi\u00e7 bu kadar basit de\u011fildi. "
+                "SERVICES_SECTION_FOURTH_TITLE": "Kapıya Teslim",
+                "SERVICES_SECTION_FOURTH_BODY": "25 yılı aşkın tecrubemiz ve geniş acente ağımız ile kapıdan kapıya teslim yükleriniz için ihtiyaç duyacağınız ön taşıma, yükleme limanı masrafları, son taşıma ve ardiye gibi masraflar siz malınızı mağazanızdan çıkartmadan elinizin altında olur. Size ise taşıma işleri sürecinin planlanan gibi gidip gitmediğini takip etmek kalır. Süreci ise çevrimiçi takip ise hiç bu kadar basit değildi. "
             }
         }
     },
     "about": {
         "header": {
-            "ABOUT_SECTION_TITLE": "Hakk\u0131m\u0131zda",
+            "ABOUT_SECTION_TITLE": "Hakkımızda",
             "ABOUT_SECTION_SUBTITLE": "",
-            "ABOUT_SECTION_DESCRIPTION": "Midas Global Lojistik; k\u00f6kleri 1996 y\u0131l\u0131na kadar dayanan \u0130stanbul merkezli ve denizyolu parsiyel ta\u015f\u0131mac\u0131l\u0131\u011fu \u00fczerine uzmanla\u015fm\u0131\u015f bir lojistik firmas\u0131d\u0131r. T\u00fcrkiye ana limanlar\u0131ndan Istanbul\/Ambarl\u0131 (Kumport, Marport, Marda\u015f), Kocaeli (Evyap, Derince, DP Port), Bursa\/Gemlik, Izmir (Alsancak, Alia\u011fa), Mersin, Iskenderun, Antalya ve Trabzon limanlar\u0131ndan; Uzakdo\u011fu, Kuzey Amerika, G\u00fcney Amerika, Ortado\u011fu, Uzakdo\u011fu, Akdeniz ve Afrika limanlar\u0131na full konteyner servisi, Fas, Cezayir, Tunus, Libya, M\u0131s\u0131r, L\u00fcbnan, \u0130srail, Suudi Arabistan, Birle\u015fik Arap Emirlikleri, Sri Lanka, \u0130spanya, Amerika Birle\u015fik Devletleri ve Singapur\u2019a parsiyel servis hizmeti vermektedir. Proje ta\u015f\u0131mac\u0131l\u0131\u011f\u0131, fuar ta\u015f\u0131mac\u0131l\u0131\u011f\u0131, parsiyel, konteyner aktarma ve \u00e7apraz ta\u015f\u0131malar uzman oldu\u011fumuz alanlard\u0131r. Istanbul Mecidiyek\u00f6y merkez, Beylikd\u00fcz\u00fc, ve \u00c7in Zuhai de kendi ofislerimiz vard\u0131r. Midas Global Lojistik, e-Booking, e-Navlun gibi dijital altyap\u0131 gerektiren uygulamalar\u0131 hayata ge\u00e7iren T\u00fcrkiye\u2019nin ilk dijital freight forwarder\u0131d\u0131r, ve dijitalle\u015fmede T\u00fcrkiye'nin bayrak ta\u015f\u0131y\u0131c\u0131 yerel firmas\u0131d\u0131r. "
+            "ABOUT_SECTION_DESCRIPTION": "Midas Global Lojistik; kökleri 1996 yılına kadar dayanan istanbul merkezli ve denizyolu parsiyel taşımacılığu üzerine uzmanlaşmış bir lojistik firmasıdır. Türkiye ana limanlarından Istanbul/Ambarlı (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya ve Trabzon limanlarından; Uzakdoğu, Kuzey Amerika, Güney Amerika, Ortadoğu, Uzakdoğu, Akdeniz ve Afrika limanlarına full konteyner servisi, Fas, Cezayir, Tunus, Libya, Mısır, Lübnan, israil, Suudi Arabistan, Birleşik Arap Emirlikleri, Sri Lanka, ispanya, Amerika Birleşik Devletleri ve Singapur'a parsiyel servis hizmeti vermektedir. Proje taşımacılığı, fuar taşımacılığı, parsiyel, konteyner aktarma ve çapraz taşımalar uzman olduğumuz alanlardır. Istanbul Mecidiyeköy merkez, Beylikdüzü, ve Çin Zuhai de kendi ofislerimiz vardır. Midas Global Lojistik, e-Booking, e-Navlun gibi dijital altyapı gerektiren uygulamaları hayata geçiren Türkiye'nin ilk dijital freight forwarderıdır, ve dijitalleşmede Türkiye'nin bayrak taşıyıcı yerel firmasıdır. "
         },
         "body": {
-            "ABOUT_SECTION_BUTTON_PRESENTATION": "Sunum Dosyam\u0131za Er\u0130\u015f\u0130n"
+            "ABOUT_SECTION_BUTTON_PRESENTATION": "Sunum Dosyamıza Erişin"
         }
     },
     "gallery": {
@@ -106,47 +106,45 @@
     },
     "schedule": {
         "header": {
-            "SCHEDULE_SECTION_TITLE": "Ger\u00e7ek Zamanl\u0131 Gemi Program\u0131m\u0131z",
+            "SCHEDULE_SECTION_TITLE": "Gerçek Zamanlı Gemi Programımız",
             "SCHEDULE_SECTION_SUBTITLE": "",
             "SCHEDULE_SECTION_DESCRIPTION": ""
         },
         "body": {
             "table": {
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Var\u0131\u015f Yeri",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Gemi Ad\u0131",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Tahmini Gemi Geli\u015fi",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Beyanname Kapan\u0131\u015f",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Y\u00fckleme Yeri",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Varış Yeri",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Gemi Adı",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Tahmini Gemi Gelişi",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Beyanname Kapanış",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Yükleme Yeri",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Acenta",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Konsol Kapan\u0131\u015f"
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Konsol Kapanış"
             },
             "clipboard": {
                 "body": {
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Var\u0131\u015f Yeri : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Gemi Ad\u0131 : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Y\u00fckleme Yeri : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Y\u00fckleme Tarihi : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Konsol Kapan\u0131\u015f : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "Tahmini Gemi Geli\u015fi : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Varış Yeri : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Gemi Adı : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Yükleme Yeri : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Yükleme Tarihi : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Konsol Kapanış : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "Tahmini Gemi Gelişi : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Acenta : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Son G\u00fcncelleme : "
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Son Güncelleme : "
                 },
-                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Gemi bilgileri panoya kopyaland\u0131"
+                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Gemi bilgileri panoya kopyalandı"
             },
-            "SCHEDULE_SECTION_EMPTY_MESSAGE": "Aktif bir gemi program\u0131 bulunamad\u0131"
+            "SCHEDULE_SECTION_EMPTY_MESSAGE": "Aktif bir gemi programı bulunamadı"
         }
     },
     "blog": {
         "header": {
-            "BLOG_SECTION_TITLE": "Bizden Yaz\u0131lar",
+            "BLOG_SECTION_TITLE": "Bizden Yazılar",
             "BLOG_SECTION_SUBTITLE": "",
             "BLOG_SECTION_DESCRIPTION": ""
         },
         "body": {
-            "BLOG_SECTION_BUTTON": "Devam\u0131 . . .",
-            "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "taraf\u0131ndan",
-            "BLOG_SECTION_NULL_WARNING": "Dil se\u00e7iminize uygun bir blog yaz\u0131m\u0131z bulunmamaktad\u0131r",
-            "items": []
+            "BLOG_SECTION_BUTTON": "Devamı . . .",
+            "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "tarafından"
         }
     },
     "career": {
@@ -156,30 +154,30 @@
             "CAREER_SECTION_DESCRIPTION": ""
         },
         "body": {
-            "CAREER_SECTION_PHOTO": "https:\/\/mgl.cc\/gokhan\/uploads\/career\/career_tr.jpg",
+            "CAREER_SECTION_PHOTO": "https://mgl.cc/gokhan/uploads/career/career_tr.jpg",
             "notification": {
-                "CAREER_SECTION_NOTIFICATION_SUCCESS_MESSAGE": "Ba\u015far\u0131l\u0131",
-                "CAREER_SECTION_NOTIFICATION_ERROR_MESSAGE": "Bir hata olu\u015ftu",
+                "CAREER_SECTION_NOTIFICATION_SUCCESS_MESSAGE": "Başarılı",
+                "CAREER_SECTION_NOTIFICATION_ERROR_MESSAGE": "Bir hata oluştu",
                 "form_validation": {
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_NAME": "Ad bo\u015f b\u0131rak\u0131lamaz",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_SURNAME": "Soyad bo\u015f b\u0131rak\u0131lamaz",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL": "Email bo\u015f b\u0131rak\u0131lamaz",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL_FORMAT": "Email do\u011fru formatta girilmelidir",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_PHONE": "Telefon bo\u015f b\u0131rak\u0131lamaz",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE": "Dosya bo\u015f b\u0131rak\u0131lamaz",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE_SIZE": "Dosya maksimum 5 MB b\u00fcy\u00fckl\u00fc\u011f\u00fcnde olabilir",
-                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_CAPTCHA": "L\u00fctfen captcha' y\u0131 do\u011frulay\u0131n"
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_NAME": "Ad boş bırakılamaz",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_SURNAME": "Soyad boş bırakılamaz",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL": "Email boş bırakılamaz",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_EMAIL_FORMAT": "Email doğru formatta girilmelidir",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_PHONE": "Telefon boş bırakılamaz",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE": "Dosya boş bırakılamaz",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_FILE_SIZE": "Dosya maksimum 5 MB büyüklüğünde olabilir",
+                    "CAREER_SECTION_NOTIFICATION_FORM_VALIDATION_ERROR_CAPTCHA": "Lütfen captcha' yı doğrulayın"
                 }
             },
             "form": {
-                "CAREER_SECTION_INPUT_NAME": "Ad\u0131n\u0131z",
-                "CAREER_SECTION_INPUT_SURNAME": "Soyad\u0131n\u0131z",
+                "CAREER_SECTION_INPUT_NAME": "Adınız",
+                "CAREER_SECTION_INPUT_SURNAME": "Soyadınız",
                 "CAREER_SECTION_INPUT_EMAIL": "Email Adresiniz",
-                "CAREER_SECTION_INPUT_PHONE": "Telefon Numaran\u0131z",
-                "CAREER_SECTION_INPUT_MESSAGE": "Bize Mesaj\u0131n\u0131z",
-                "CAREER_SECTION_BUTTON_UPLOAD_FILE": "Cv Y\u00fckle",
-                "CAREER_SECTION_CAPTCHA": "Captcha'y\u0131 girin",
-                "CAREER_SECTION_BUTTON_SEND": "G\u00f6nder",
+                "CAREER_SECTION_INPUT_PHONE": "Telefon Numaranız",
+                "CAREER_SECTION_INPUT_MESSAGE": "Bize Mesajınız",
+                "CAREER_SECTION_BUTTON_UPLOAD_FILE": "Cv Yükle",
+                "CAREER_SECTION_CAPTCHA": "Captcha'yı girin",
+                "CAREER_SECTION_BUTTON_SEND": "Gönder",
                 "CAREER_SECTION_INPUT_FILE_HELP_FILE_TYPE": "Dosya Türü",
                 "CAREER_SECTION_INPUT_FILE_HELP_FILE_SIZE": "Maksimum Boyut"
             }
@@ -187,22 +185,22 @@
     },
     "contact": {
         "header": {
-            "CONTACT_SECTION_TITLE": "\u0130leti\u015fin",
+            "CONTACT_SECTION_TITLE": "iletişin",
             "CONTACT_SECTION_SUBTITLE": "",
             "CONTACT_SECTION_DESCRIPTION": ""
         },
         "body": {
             "address_information": {
-                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "\u015ei\u015fli, \u0130stanbul, T\u00fcrkiye",
-                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyek\u00f6y Mahallesi \u015eehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyek\u00f6y \u0130\u015f Merkezi"
+                "CONTACT_SECTION_ADDRESS_INFORMATION_TITLE": "Şişli, istanbul, Türkiye",
+                "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy iş Merkezi"
             },
             "phone_information": {
                 "CONTACT_SECTION_PHONE_INFORMATION_TITLE": "+90 (212) 438 18 18",
-                "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Pazartesi - Cuma \/ 09:00 - 18:00"
+                "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Pazartesi - Cuma / 09:00 - 18:00"
             },
             "email_information": {
                 "CONTACT_SECTION_EMAIL_INFORMATION_TITLE": "info@mgl.cc",
-                "CONTACT_SECTION_EMAIL_INFORMATION_BODY": "Bize yaz\u0131n"
+                "CONTACT_SECTION_EMAIL_INFORMATION_BODY": "Bize yazın"
             }
         }
     },
@@ -210,8 +208,8 @@
         "FOOTER_TEXT": "Midas Global Lojistik"
     },
     "privacy": {
-        "PRIVACY_HEADER": "Gizlili\u011finiz",
-        "PRIVACY_TEXT": "\u201c\u00c7erezleri Kabul Et\u201d butonuna t\u0131klad\u0131\u011f\u0131n\u0131zda, Midas Global Lojistik'in cihaz\u0131n\u0131zda tan\u0131mlama bilgileri depolayabilece\u011fini ve \u00c7erez Politikas\u0131'na uygun olarak bilgileri if\u015fa edebilece\u011fini kabul etmi\u015f olursunuz.",
-        "PRIVACY_BUTTON": "\u00c7erezler\u0130 kabul et"
+        "PRIVACY_HEADER": "Gizliliğiniz",
+        "PRIVACY_TEXT": "Çerezleri Kabul Et butonuna tıkladığınızda, Midas Global Lojistik'in cihazınızda tanımlama bilgileri depolayabileceğini ve Çerez Politikası'na uygun olarak bilgileri ifşa edebileceğini kabul etmiş olursunuz.",
+        "PRIVACY_BUTTON": "Çerezleri kabul et"
     }
 }

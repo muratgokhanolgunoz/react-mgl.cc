@@ -5,19 +5,23 @@ import Admin from './components/admin/Admin'
 import FrontEnd from "./components/frontend/FrontEnd"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
 
 class App extends Component {
   render() {
     return (
       <Fragment>
         <FrontEndProvider>
-          <Router>
+          <Router basename="/">
             <Switch>
               <Route exact path="/">
                 <FrontEnd />
               </Route>
               <Route path="/sarici">
                 <Admin />
+              </Route>
+              <Route>
+                <NotFound />
               </Route>
             </Switch>
           </Router>

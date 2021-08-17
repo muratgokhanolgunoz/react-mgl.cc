@@ -1,58 +1,35 @@
-import React, { Component } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import AdminContext from '../../../context/AdminContext'
 import BlogService from '../../../services/BlogService'
-
 import Navi from '../constants/Navi'
 
-import clsx from 'clsx'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import TableContainer from '@material-ui/core/TableContainer'
-import TableHead from '@material-ui/core/TableHead'
-import TableCell from '@material-ui/core/TableCell'
-import TableRow from '@material-ui/core/TableRow'
-import Paper from '@material-ui/core/Paper'
-import { Button } from 'react-bootstrap'
-import ButtonGroup from '@material-ui/core/ButtonGroup'
-import Grid from '@material-ui/core/Grid'
-
-import IconButton from '@material-ui/core/IconButton'
-import { VscTrash } from "react-icons/vsc"
+import { Container, Row, Col, Table, Button, ButtonGroup } from 'react-bootstrap'
 
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 
-let blogService = new BlogService()
+const Blog = () => {
+    let blogService = new BlogService()
 
-class Blog extends Component {
+    const [language, setLanguage] = useState("tr")
+    const [blogs, setBlogs] = useState([])
+    const [title, setTitle] = useState("")
+    const [thumbnail, setThumbnail] = useState("")
+    const [photo, setPhoto] = useState("")
+    const [summary, setSummary] = useState("")
+    const [article, setArticle] = useState("")
+    const [author, setAuthor] = useState("")
 
-    constructor(props) {
-        super(props)
+    useEffect(() => {
+        listBlogs()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [language])
 
-        this.state = {
-            language: "tr",
-            blogs: [],
-            title: "",
-            thumbnail: "",
-            photo: "",
-            summary: "",
-            article: "",
-            author: ""
-        }
+    const listBlogs = () => {
+        blogService.getBlogs(language).then((response) => setBlogs(response.data.result))
     }
 
-    componentDidMount() {
-        this.list()
-        this.forceUpdate()
-    }
-
-    list = () => {
-        this.setState({ blogs: [] })
-        console.log(this.state.language)
-        blogService.getBlogs(this.state.language).then((response) => this.setState({ blogs: response.data.result }))
-    }
-
-    showToast = (_position, _text, _type) => {
+    const showToast = (_position, _text, _type) => {
         toast(_text, {
             position: _position,
             autoClose: 2000,
@@ -65,217 +42,227 @@ class Blog extends Component {
         })
     }
 
-    add = () => {
+    const addBlog = () => {
         const payload = new FormData()
-        payload.append('title', this.state.title)
-        payload.append('thumbnail', this.state.thumbnail)
-        payload.append('photo', this.state.photo)
-        payload.append('summary', this.state.summary)
-        payload.append('article', this.state.article)
-        payload.append('author', this.state.author)
+        payload.append('title', title)
+        payload.append('thumbnail', thumbnail)
+        payload.append('photo', photo)
+        payload.append('summary', summary)
+        payload.append('article', article)
+        payload.append('author', author)
 
-        blogService.addBlog(this.state.language.toString().toLocaleLowerCase(), payload)
+        blogService.addBlog(language, payload)
             .then((response) => {
                 response.data.result === true
                     ?
-                    this.showToast("bottom-right", "Success", "success")
+                    showToast("bottom-right", "Success", "success")
                     :
-                    this.showToast("bottom-right", "Failed", "error")
+                    showToast("bottom-right", "Failed", "error")
 
-                this.setState({
-                    title: "",
-                    thumbnail: "",
-                    photo: "",
-                    summary: "",
-                    article: "",
-                    author: ""
-                })
-                this.forceUpdate()
+                setTitle("")
+                setThumbnail("")
+                setPhoto("")
+                setSummary("")
+                setArticle("")
+                setAuthor("")
             })
             .catch(() => (
-                this.showToast("bottom-right", "Server error", "error")
+                showToast("bottom-right", "Server error", "error")
             ))
 
         setTimeout(function () { window.location.reload() }, 2000);
     }
 
-    delete = (_id) => {
-        const array = {
-            'id': _id
-        }
+    const deleteBlog = (_id) => {
+        const payload = new FormData()
+        payload.append("id", _id)
 
-        blogService.deleteBlog(array, this.state.language).then((response) => console.log(response))
-        this.list()
+        blogService.deleteBlog(language, payload)
+            .then((response) => {
+                if (response.data.result === true) {
+                    showToast("bottom-right", "Success", "success")
+                } else {
+                    showToast("bottom-right", "An error occured", "error")
+                }
+            })
+            .catch(() => showToast("bottom-right", "Server error", "error"))
+        listBlogs()
     }
 
-    changeLanguageForFile = (_selection) => {
-        this.setState({ language: _selection })
-        this.list()
-    }
+    return (
+        <AdminContext.Consumer>
+            {(context) => {
+                return (
+                    <div style={{ padding: "50px" }}>
+                        <Navi />
+                        <br />
+                        <Container fluid className="admin-container">
+                            <Row>
+                                <Col>
+                                    <h2>Blog | Midas Global Logistic</h2>
+                                </Col>
+                            </Row>
+                            <br />
+                            <Row>
+                                <Col xs={6}>
+                                    <ButtonGroup size="sm">
+                                        {language === 'tr'
+                                            ?
+                                            (
+                                                <Fragment>
+                                                    <Button className="bg-dark text-light" onClick={() => setLanguage("tr")}>TR</Button>
+                                                    <Button className="bg-primary text-light" onClick={() => setLanguage("us")}>EN</Button>
+                                                </Fragment>
+                                            )
+                                            :
+                                            (
+                                                <Fragment>
+                                                    <Button className="bg-primary text-light" onClick={() => setLanguage("tr")}>TR</Button>
+                                                    <Button className="bg-dark text-light" onClick={() => setLanguage("us")}>EN</Button>
+                                                </Fragment>
+                                            )
+                                        }
+                                    </ButtonGroup>
+                                </Col>
+                                <Col xs={6} style={{ textAlign: "right" }}>
+                                    <h5>Selected Language : <b>{language === "us" ? "EN" : "TR"}</b></h5>
+                                </Col>
+                            </Row>
 
-    thumbnailHandleChange = (e) => {
-        this.setState({
-            thumbnail: e.target.files[0]
-        })
-    }
+                            <br /><br />
 
-    photoHandleChange = (e) => {
-        this.setState({
-            photo: e.target.files[0]
-        })
-    }
+                            <Row>
+                                <Col lg={4} sm={12} style={{ backgroundColor: "#f5f5f5", padding: "25px" }}>
+                                    <Col xs={12}>
+                                        <label><b>Title : </b></label>
+                                        <input
+                                            id="input-title"
+                                            type="text"
+                                            name="title"
+                                            value={title}
+                                            className="form-control"
+                                            onChange={(e) => setTitle(e.target.value)}
+                                        />
+                                    </Col>
+                                    <br />
+                                    <Col xs={12}>
+                                        <label><b>Thumbnail : </b></label>
+                                        <input
+                                            id="input-upload-thumbnail"
+                                            type="file"
+                                            name="thumbnail"
+                                            accept=".jpg"
+                                            onChange={(e) => setThumbnail(e.target.files[0])}
+                                            className="form-control"
+                                        />
+                                        <label>File Extension : <b>.jpg</b></label>
+                                    </Col>
+                                    <br />
+                                    <Col xs={12}>
+                                        <label><b>Photo : </b></label>
+                                        <input
+                                            id="input-upload-photo"
+                                            type="file"
+                                            name="photo"
+                                            accept=".jpg"
+                                            onChange={(e) => setPhoto(e.target.files[0])}
+                                            className="form-control"
+                                        />
+                                        <label>File Extension : <b>.jpg</b></label>
+                                    </Col>
+                                    <br />
+                                    <Col xs={12}>
+                                        <label><b>Summary : </b></label>
+                                        <input
+                                            id="input-upload-summary"
+                                            type="file"
+                                            name="summary"
+                                            accept=".rtf"
+                                            onChange={(e) => setSummary(e.target.files[0])}
+                                            className="form-control"
+                                        />
+                                        <label>File Extension : <b>.rtf</b></label>
+                                    </Col>
+                                    <br />
+                                    <Col xs={12}>
+                                        <label><b>Article : </b></label>
+                                        <input
+                                            id="input-upload-article"
+                                            type="file"
+                                            name="article"
+                                            accept=".rtf"
+                                            onChange={(e) => setArticle(e.target.files[0])}
+                                            className="form-control"
+                                        />
+                                        <label>File Extension : <b>.rtf</b></label>
+                                    </Col>
+                                    <br />
+                                    <Col xs={12}>
+                                        <label><b>Author : </b></label>
+                                        <input
+                                            id="input-author"
+                                            type="text"
+                                            name="author"
+                                            value={author}
+                                            className="form-control"
+                                            onChange={(e) => setAuthor(e.target.value)}
+                                        />
+                                    </Col>
+                                    <br />
+                                    <Col xs={12}>
+                                        <Button onClick={() => addBlog()}>Save</Button>
+                                    </Col>
+                                </Col>
+                                <Col lg={8} sm={12}>
+                                    <Table striped responsive>
+                                        <thead className="table-dark">
+                                            <tr>
+                                                <th>Author</th>
+                                                <th>Title</th>
+                                                <th>Date</th>
+                                                <th>Thumbnail (.jpg)</th>
+                                                <th>Photo (.jpg)</th>
+                                                <th>Summary (.rtf)</th>
+                                                <th>Article (.rtf)</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {
+                                                blogs.map((blogItem, index) => (
+                                                    <tr key={index}>
+                                                        <td>{blogItem.BLOG_SECTION_ITEMS_AUTHOR}</td>
+                                                        <td>{blogItem.BLOG_SECTION_ITEMS_TITLE}</td>
+                                                        <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>
+                                                        <td>
+                                                            <a href={blogItem.BLOG_SECTION_ITEMS_THUMBNAIL}>View</a>
+                                                        </td>
+                                                        <td>
+                                                            <a href={blogItem.BLOG_SECTION_ITEMS_PHOTO}>View</a>
+                                                        </td>
+                                                        <td>
+                                                            <a href={blogItem.BLOG_SECTION_ITEMS_SUMMARY}>Download</a>
+                                                        </td>
+                                                        <td>
+                                                            <a href={blogItem.BLOG_SECTION_ITEMS_ARTICLE}>Download</a>
+                                                        </td>
+                                                        <td>
+                                                            <span className="text-primary" style={{ textDecoration: "underline", cursor: "pointer" }} onClick={() => deleteBlog(blogItem.BLOG_SECTION_ITEMS_ID)}>Delete</span>
+                                                        </td>
+                                                    </tr>
+                                                ))
+                                            }
+                                        </tbody>
+                                    </Table>
+                                </Col>
+                            </Row>
+                        </Container>
 
-    summaryHandleChange = (e) => {
-        this.setState({
-            summary: e.target.files[0]
-        })
-    }
-
-    articleHandleChange = (e) => {
-        this.setState({
-            article: e.target.files[0]
-        })
-    }
-
-    render() {
-        return (
-            <AdminContext.Consumer>
-                {(context) => {
-                    return (
-                        <div className={this.props.classes.root}>
-                            <Navi classes={this.props.classes} />
-                            <main className={clsx(this.props.classes.content, { [this.props.classes.contentShift]: context.state.sidebarOpen, })}>
-                                <div className={this.props.classes.drawerHeader} />
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-                                            <Button onClick={() => this.changeLanguageForFile("tr")}>TR</Button>
-                                            <Button onClick={() => this.changeLanguageForFile("us")}>EN</Button>
-                                        </ButtonGroup>
-                                    </Grid>
-                                </Grid>
-
-                                <br /><br />
-
-                                <Grid container spacing={2}>
-                                    <Grid item lg={4} sm={12} style={{ backgroundColor: "#f5f5f5", padding: "30px" }}>
-                                        <Grid xs={12}>
-                                            <label>Title : </label>
-                                            <input
-                                                id="input-title"
-                                                type="text"
-                                                name="title"
-                                                value={this.state.title}
-                                                className="form-control"
-                                                onChange={(e) => this.setState({ title: e.target.value })}
-                                            />
-                                        </Grid>
-                                        <br />
-                                        <Grid xs={12}>
-                                            <label>Thumbnail : </label>
-                                            <input
-                                                id="input-upload-thumbnail"
-                                                type="file"
-                                                name="thumbnail"
-                                                accept=".jpg"
-                                                onChange={this.thumbnailHandleChange}
-                                                className="form-control"
-                                            />
-                                        </Grid>
-                                        <br />
-                                        <Grid xs={12}>
-                                            <label>Photo : </label>
-                                            <input
-                                                id="input-upload-photo"
-                                                type="file"
-                                                name="photo"
-                                                accept=".jpg"
-                                                onChange={this.photoHandleChange}
-                                                className="form-control"
-                                            />
-                                        </Grid>
-                                        <br />
-                                        <Grid xs={12}>
-                                            <label>Summary : </label>
-                                            <input
-                                                id="input-upload-summary"
-                                                type="file"
-                                                name="summary"
-                                                accept=".rtf"
-                                                onChange={this.summaryHandleChange}
-                                                className="form-control"
-                                            />
-                                        </Grid>
-                                        <br />
-                                        <Grid xs={12}>
-                                            <label>Full Text : </label>
-                                            <input
-                                                id="input-upload-article"
-                                                type="file"
-                                                name="article"
-                                                accept=".rtf"
-                                                onChange={this.articleHandleChange}
-                                                className="form-control"
-                                            />
-                                        </Grid>
-                                        <br />
-                                        <Grid xs={12}>
-                                            <label>Author : </label>
-                                            <input
-                                                id="input-author"
-                                                type="text"
-                                                name="author"
-                                                value={this.state.author}
-                                                className="form-control"
-                                                onChange={(e) => this.setState({ author: e.target.value })}
-                                            />
-                                        </Grid>
-                                        <br />
-                                        <Grid xs={12}>
-                                            <Button onClick={() => this.add()}>S A V E</Button>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid item lg={8} sm={12}>
-                                        <TableContainer component={Paper}>
-                                            <Table aria-label="simple table">
-                                                <TableHead style={{ backgroundColor: "#000" }}>
-                                                    <TableRow>
-                                                        <TableCell className="admin-table-cell">Author</TableCell>
-                                                        <TableCell className="admin-table-cell">Title</TableCell>
-                                                        <TableCell className="admin-table-cell">Date</TableCell>
-                                                        <TableCell className="admin-table-cell">Delete</TableCell>
-                                                    </TableRow>
-                                                </TableHead>
-                                                <TableBody>
-                                                    {
-                                                        this.state.blogs.map((blogItem, index) => (
-                                                            <TableRow key={index}>
-                                                                <TableCell>{blogItem.BLOG_SECTION_ITEMS_AUTHOR}</TableCell>
-                                                                <TableCell>{blogItem.BLOG_SECTION_ITEMS_TITLE}</TableCell>
-                                                                <TableCell>{blogItem.BLOG_SECTION_ITEMS_DATE}</TableCell>
-                                                                <TableCell>
-                                                                    <IconButton aria-label="Delete" onClick={() => this.delete(blogItem.BLOG_SECTION_ITEMS_ID)}>
-                                                                        <VscTrash />
-                                                                    </IconButton>
-                                                                </TableCell>
-                                                            </TableRow>
-                                                        ))
-                                                    }
-                                                </TableBody>
-                                            </Table>
-                                        </TableContainer>
-                                    </Grid>
-                                </Grid>
-
-                                <ToastContainer />
-                            </main>
-                        </div>
-                    )
-                }}
-            </AdminContext.Consumer>
-        )
-    }
+                        <ToastContainer />
+                    </div>
+                )
+            }}
+        </AdminContext.Consumer>
+    )
 }
 export default Blog
-
-

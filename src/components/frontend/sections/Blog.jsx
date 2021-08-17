@@ -71,7 +71,7 @@ class Blog extends Component {
                                                     </span>
                                                 </span>
                                                 <h6>{blog.BLOG_SECTION_ITEMS_TITLE}</h6>
-                                                <p>{blog.BLOG_SECTION_ITEMS_SUMMARY}</p>
+                                                <embed src={blog.BLOG_SECTION_ITEMS_SUMMARY} />
                                                 <a className="template-button template-button-primary-2" href="#blog" onClick={() => { this.handlePopupShow(true); this.sendBlogInformation(blog) }}>{this.props.language('blog.body.BLOG_SECTION_BUTTON')}</a>
                                             </div>
                                         </Col>

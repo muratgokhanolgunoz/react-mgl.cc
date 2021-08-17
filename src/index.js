@@ -5,8 +5,8 @@ import App from './App'
 import { I18nextProvider } from "react-i18next"
 import i18next from "i18next"
 
-import common_tr from "./tools/languages/tr/tr.json"
-import common_en from "./tools/languages/us/us.json"
+import language_tr from "./tools/languages/tr/tr.json"
+import language_en from "./tools/languages/us/us.json"
 
 const defaultLanguageIsSet = () => {
     let browserLanguage = window.navigator.language
@@ -25,10 +25,10 @@ i18next.init({
     lng: defaultLanguageIsSet(),
     resources: {
         tr: {
-            common: common_tr
+            common: language_tr
         },
         us: {
-            common: common_en
+            common: language_en
         }
     },
 })

@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React, { useEffect, useContext } from "react"
 import FrontEndContext from "../../context/FrontEndContext"
-import { withTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
 import Navi from "./constants/Navi"
 import Home from "./sections/Home"
@@ -21,52 +21,56 @@ import "../../assets/dist/css/template.css"
 import "../../assets/dist/css/style.css"
 import "aos/dist/aos.css"
 
-class FrontEnd extends Component {
-    componentDidMount() {
-        this.defaultLanguageIsSet()
+const FrontEnd = () => {
+
+    AOS.init()
+    const { t, i18n } = useTranslation('common')
+    const context = useContext(FrontEndContext)
+
+    useEffect(() => {
+        defaultLanguageIsSet()
+    }, [])
+
+    const defaultLanguageIsSet = () => {
+        let browserLanguage = i18n.language
+        context.setLanguage(browserLanguage.toString().toUpperCase())
     }
 
-    defaultLanguageIsSet() {
-        let browserLanguage = this.props.i18n.language
-        this.context.setLanguage(browserLanguage.toString().toUpperCase())
-    }
+    return (
+        <FrontEndContext.Consumer>
+            {(context) => {
+                return (
+                    <div>
+                        <Helmet>
+                            <title>{t('html.HTML_PAGE_TITLE')}</title>
+                        </Helmet>
 
-    render() {
+                        <Navi language={t} languageLibrary={i18n} />
+                        <Home language={t} languageLibrary={i18n} />
 
-        AOS.init()
-        const { t, i18n } = this.props
+                        <Container className="main">
+                            <Services language={t} />
+                        </Container>
 
-        return (
-                <div>
-                    <Helmet>
-                        <title>{t('html.HTML_PAGE_TITLE')}</title>
-                    </Helmet>
+                        <About language={t} />
 
-                    <Navi language={t} languageLibrary={i18n} />
-                    <Home language={t} languageLibrary={i18n}/>
+                        <Container className="main">
+                            <Gallery language={t} />
+                        </Container>
 
-                    <Container className="main">
-                        <Services language={t} />
-                    </Container>
+                        <Schedule language={t} />
 
-                    <About language={t} />
+                        <Container>
+                            <Blog language={t} languageLibrary={i18n} />
+                        </Container>
 
-                    <Container className="main">
-                        <Gallery language={t} />
-                    </Container>
-
-                    <Schedule language={t} />
-
-                    <Container>
-                        <Blog language={t} languageLibrary={i18n} />
-                    </Container>
-
-                    <Career language={t} />
-                    <Contact language={t} />
-                    <Footer language={t} />
-                </div>
-        )
-    }
+                        <Career language={t} />
+                        <Contact language={t} />
+                        <Footer language={t} />
+                    </div>
+                )
+            }}
+        </FrontEndContext.Consumer>
+    )
 }
-FrontEnd.contextType = FrontEndContext
-export default withTranslation('common')(FrontEnd)
+export default FrontEnd

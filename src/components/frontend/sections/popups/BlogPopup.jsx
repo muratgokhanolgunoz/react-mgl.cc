@@ -29,7 +29,7 @@ class BlogPopup extends Component {
                                         </Col>
                                     </Row>
                                     <Row>
-                                        <p>{this.props.blogDetails.BLOG_SECTION_ITEMS_FULL_TEXT}</p>
+                                        <embed src={this.props.blogDetails.BLOG_SECTION_ITEMS_ARTICLE} />
                                     </Row>
                                 </Col>
                             </Row>

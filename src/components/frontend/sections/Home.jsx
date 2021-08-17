@@ -178,6 +178,7 @@ class Home extends Component {
                                             <h5>{this.props.language('privacy.PRIVACY_HEADER')}</h5>
                                             <p>{this.props.language('privacy.PRIVACY_TEXT')}</p>
                                             <Button className="cookie_banner_button template-button template-button-primary-1" onClick={() => this.setCookie()}>{this.props.language('privacy.PRIVACY_BUTTON')}</Button>
+                                            <h6 onClick={() => this.context.setCookie({ language: null })}>Kapat</h6>
                                         </div>
                                     )
                                     :

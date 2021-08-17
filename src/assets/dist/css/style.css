@@ -98,19 +98,28 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
-  text-align: left;
   padding: 20px;
   color: #fff;
-  font-size: .9em;
-  font-family: 'Rubik', sans-serif;
+  font-size: 0.9em;
+  font-family: "Rubik", sans-serif;
 }
 
 .cookie-banner .cookie_banner_button {
   width: 100%;
   display: block;
   margin: auto;
+  margin-bottom: 10px;
 }
 
+.cookie-banner h6 {
+  width: 100% !important;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cookie-banner h6:hover {
+  text-decoration: underline;
+}
 /* ========== HOME WIDGET SECTION STYLES ========== */
 
 .home-widget-item {
@@ -225,7 +234,6 @@ body {
 
   .videos-body-carousel .slick-slide {
     transform: scale(0.8);
-    
   }
 }
 
@@ -370,7 +378,7 @@ body {
 }
 
 .blog-box .blog-box-item .blog-box-item-author {
-  white-space: nowrap;  
+  white-space: nowrap;
 }
 
 .blog-box h6 {
@@ -388,7 +396,7 @@ body {
 }
 
 .blog-box a {
-  margin-top: 20px; 
+  margin-top: 20px;
   -webkit-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
@@ -409,7 +417,7 @@ body {
 
 .modal-blog-preview-body-thumbnail {
   width: 150px;
-  height: auto;;
+  height: auto;
   border-radius: 50%;
   display: block;
   margin-right: 10px;
@@ -428,19 +436,19 @@ body {
 /* ========== CAREER SECTION STYLES ========== */
 
 .career {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .career-input {
-  margin: 5px !important;  
+  margin: 5px !important;
 }
 
 .file-uploader {
-  width: 100% !important
+  width: 100% !important;
 }
 
 #input-upload {
-  background-color: rgba(232, 232, 232, .3);
+  background-color: rgba(232, 232, 232, 0.3);
   border: none;
   border-radius: 0;
   margin-left: 6px;
@@ -531,23 +539,9 @@ body {
   text-decoration: underline;
 }
 
-/* ========================================================= */
-/* ================= ADMIN DASHBOARD STYLES ================ */
-
-.admin-sidebar-link {
-  margin-top: 20px !important;
-  text-decoration: none;
-  color: #000;
-}
-
-.admin-table {
-  text-align: center !important;
-}
-
-.admin-table-cell {
-  color: #FFF !important;
-}
-
-.admin-table-link {
-  color: #000;
+.admin-container {
+  -webkit-box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
+  -moz-box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
+  box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
+  padding: 30px;
 }

@@ -3,15 +3,16 @@ import AdminContext from "../AdminContext"
 
 class AdminProvider extends Component {
     state = {
-        sidebarOpen: false
+        baseUrl: "https://mgl.cc/gokhan/",
+        careerPopupStatus: false
     };
 
     render() {
         return (
             <AdminContext.Provider value={{
                 state: this.state,
-                setSidebarShowStatus: (_show) => {
-                    this.setState({ sidebarOpen: _show })
+                setCareerPopupStatus: (_show) => {
+                    this.setState({ careerPopupStatus: _show })
                 }
             }}>
                 {this.props.children}
