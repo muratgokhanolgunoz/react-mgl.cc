@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container, Nav, Navbar, Image } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import AdminContext from '../../../context/AdminContext'
+import { Link } from 'react-router-dom'
 
 const Navi = () => {
     return (
@@ -10,14 +11,16 @@ const Navi = () => {
                     <div>
                         <Navbar bg="light" expand="sm">
                             <Container>
-                                <Navbar.Brand href="/sarici">
-                                    <Image className="navi-logo" src={context.state.baseUrl + "uploads/logo.png"} alt="Midas Global Logistic" fluid ></Image>
+                                <Navbar.Brand>
+                                    <Link to="/sarici">
+                                        <img src="https://mgl.cc/assets/img/logo.png" alt=""></img>
+                                    </Link>
                                 </Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="me-auto">
-                                        <Nav.Link href="/sarici/blog">Blog</Nav.Link>
-                                        <Nav.Link href="/sarici/career">Career</Nav.Link>
+                                        <Link to="/sarici/blog" style={{ margin: "7px", textDecoration: "none", color: "gray" }}>Blog</Link>
+                                        <Link to="/sarici/career"  style={{ margin: "7px", textDecoration: "none", color: "gray" }}>Career</Link>
                                         <Nav.Link href="/">Frontend</Nav.Link>
                                     </Nav>
                                 </Navbar.Collapse>

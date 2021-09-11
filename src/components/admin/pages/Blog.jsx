@@ -1,12 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import AdminContext from '../../../context/AdminContext'
 import BlogService from '../../../services/BlogService'
+import { showToast } from '../../../core/functions'
 import Navi from '../constants/Navi'
-
+import { ToastContainer } from 'react-toastify'
 import { Container, Row, Col, Table, Button, ButtonGroup } from 'react-bootstrap'
-
-import { ToastContainer, toast } from 'react-toastify'
-import "react-toastify/dist/ReactToastify.css"
 
 const Blog = () => {
     let blogService = new BlogService()
@@ -27,19 +25,6 @@ const Blog = () => {
 
     const listBlogs = () => {
         blogService.getBlogs(language).then((response) => setBlogs(response.data.result))
-    }
-
-    const showToast = (_position, _text, _type) => {
-        toast(_text, {
-            position: _position,
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            type: _type
-        })
     }
 
     const addBlog = () => {
@@ -173,28 +158,26 @@ const Blog = () => {
                                     <br />
                                     <Col xs={12}>
                                         <label><b>Summary : </b></label>
-                                        <input
-                                            id="input-upload-summary"
-                                            type="file"
+                                        <textarea
+                                            id="textarea-summary"
                                             name="summary"
-                                            accept=".rtf"
-                                            onChange={(e) => setSummary(e.target.files[0])}
+                                            value={summary}
                                             className="form-control"
-                                        />
-                                        <label>File Extension : <b>.rtf</b></label>
+                                            rows="10"
+                                            onChange={(e) => setSummary(e.target.value)}
+                                        ></textarea>
                                     </Col>
                                     <br />
                                     <Col xs={12}>
                                         <label><b>Article : </b></label>
-                                        <input
-                                            id="input-upload-article"
-                                            type="file"
+                                        <textarea
+                                            id="textarea-article"
                                             name="article"
-                                            accept=".rtf"
-                                            onChange={(e) => setArticle(e.target.files[0])}
+                                            value={article}
                                             className="form-control"
-                                        />
-                                        <label>File Extension : <b>.rtf</b></label>
+                                            rows="10"
+                                            onChange={(e) => setArticle(e.target.value)}
+                                        ></textarea>
                                     </Col>
                                     <br />
                                     <Col xs={12}>
@@ -217,13 +200,10 @@ const Blog = () => {
                                     <Table striped responsive>
                                         <thead className="table-dark">
                                             <tr>
+                                                <th>#</th>
                                                 <th>Author</th>
                                                 <th>Title</th>
                                                 <th>Date</th>
-                                                <th>Thumbnail (.jpg)</th>
-                                                <th>Photo (.jpg)</th>
-                                                <th>Summary (.rtf)</th>
-                                                <th>Article (.rtf)</th>
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
@@ -231,21 +211,10 @@ const Blog = () => {
                                             {
                                                 blogs.map((blogItem, index) => (
                                                     <tr key={index}>
+                                                        <td>{index + 1}</td>
                                                         <td>{blogItem.BLOG_SECTION_ITEMS_AUTHOR}</td>
                                                         <td>{blogItem.BLOG_SECTION_ITEMS_TITLE}</td>
-                                                        <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>
-                                                        <td>
-                                                            <a href={blogItem.BLOG_SECTION_ITEMS_THUMBNAIL}>View</a>
-                                                        </td>
-                                                        <td>
-                                                            <a href={blogItem.BLOG_SECTION_ITEMS_PHOTO}>View</a>
-                                                        </td>
-                                                        <td>
-                                                            <a href={blogItem.BLOG_SECTION_ITEMS_SUMMARY}>Download</a>
-                                                        </td>
-                                                        <td>
-                                                            <a href={blogItem.BLOG_SECTION_ITEMS_ARTICLE}>Download</a>
-                                                        </td>
+                                                        <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>                                                        
                                                         <td>
                                                             <span className="text-primary" style={{ textDecoration: "underline", cursor: "pointer" }} onClick={() => deleteBlog(blogItem.BLOG_SECTION_ITEMS_ID)}>Delete</span>
                                                         </td>

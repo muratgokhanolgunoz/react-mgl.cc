@@ -1,6 +1,7 @@
-import React, { useEffect, useContext } from "react"
+import React, { Component } from "react"
 import FrontEndContext from "../../context/FrontEndContext"
-import { useTranslation } from "react-i18next";
+import { withTranslation } from "react-i18next"
+import HomeServices from "../../services/HomeService"
 
 import Navi from "./constants/Navi"
 import Home from "./sections/Home"
@@ -15,62 +16,57 @@ import Footer from './constants/Footer'
 
 import { Helmet } from "react-helmet"
 import { Container } from "react-bootstrap"
-import AOS from "aos"
 
 import "../../assets/dist/css/template.css"
 import "../../assets/dist/css/style.css"
-import "aos/dist/aos.css"
+import "react-toastify/dist/ReactToastify.css"
 
-const FrontEnd = () => {
+class FrontEnd extends Component {
 
-    AOS.init()
-    const { t, i18n } = useTranslation('common')
-    const context = useContext(FrontEndContext)
-
-    useEffect(() => {
-        defaultLanguageIsSet()
-    }, [])
-
-    const defaultLanguageIsSet = () => {
-        let browserLanguage = i18n.language
-        context.setLanguage(browserLanguage.toString().toUpperCase())
+    componentDidMount() {
+        let homeServices = new HomeServices()
+        homeServices.userLog()
     }
 
-    return (
-        <FrontEndContext.Consumer>
-            {(context) => {
-                return (
-                    <div>
-                        <Helmet>
-                            <title>{t('html.HTML_PAGE_TITLE')}</title>
-                        </Helmet>
+    render() {
+        return (
+            <div>
+                <FrontEndContext.Consumer>
+                    {(context) => {
+                        return (
+                            <div>
+                                <Helmet>
+                                    <title>{this.props.t('html.HTML_PAGE_TITLE')}</title>
+                                </Helmet>
 
-                        <Navi language={t} languageLibrary={i18n} />
-                        <Home language={t} languageLibrary={i18n} />
+                                <Navi />
+                                <Home />
 
-                        <Container className="main">
-                            <Services language={t} />
-                        </Container>
+                                <Container>
+                                    <Services />
+                                </Container>
 
-                        <About language={t} />
+                                <About />
 
-                        <Container className="main">
-                            <Gallery language={t} />
-                        </Container>
+                                <Container>
+                                    <Gallery />
+                                </Container>
 
-                        <Schedule language={t} />
+                                <Schedule />
 
-                        <Container>
-                            <Blog language={t} languageLibrary={i18n} />
-                        </Container>
+                                <Container>
+                                    <Blog />
+                                </Container>
 
-                        <Career language={t} />
-                        <Contact language={t} />
-                        <Footer language={t} />
-                    </div>
-                )
-            }}
-        </FrontEndContext.Consumer>
-    )
+                                <Career />
+                                <Contact />
+                                <Footer />
+                            </div>
+                        )
+                    }}
+                </FrontEndContext.Consumer>
+            </div>
+        )
+    }
 }
-export default FrontEnd
+export default withTranslation('translation')(FrontEnd)

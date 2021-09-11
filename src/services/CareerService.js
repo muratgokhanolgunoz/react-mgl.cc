@@ -1,10 +1,9 @@
 import axios from 'axios'
+import Services from './Services'
 
-class CareerService {
-    API_URL = "http://localhost:8000/api/"
-    
+class CareerService extends Services {
     getCareerList() {
-        return axios.get(this.API_URL + "career")
+        return this.getList("career")
     }
 
     uploadCareer(_data) {

@@ -1,21 +1,24 @@
 import React, { Component } from "react"
+import GalleryServices from '../../../services/GalleryServices'
 import FrontEndContext from '../../../context/FrontEndContext'
 import queryString from "query-string"
 import Slider from "react-slick"
+import { withTranslation } from "react-i18next"
 
 import Titles from "./titles/Titles"
 import GalleryPopup from "./popups/GalleryPopup"
-import videosJson from "../../../tools/videos/videos.json"
 
 import { Container, Row, Col, Image, Button } from "react-bootstrap"
 
 let urlParams
+let galleryService = new GalleryServices()
 
 class Gallery extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+            videos: [],
             previousButtonValue: undefined,
             currentVideo: undefined,
             nextButtonValue: undefined,
@@ -24,9 +27,18 @@ class Gallery extends Component {
     }
 
     componentDidMount() {
-        // eslint-disable-next-line no-restricted-globals
-        urlParams = queryString.parse(location.search)
-        this.showVideoFromUrl()
+        galleryService.getVideos()
+            .then((response) => {
+                this.setState({
+                    videos: response.data.result
+                })
+            })
+            .then(() => {
+                // eslint-disable-next-line no-restricted-globals
+                urlParams = queryString.parse(location.search)
+                this.showVideoFromUrl()
+            })
+            .catch(() => console.warn("Error : An error occured when fething videos"))
     }
 
     handlePopupShow = (_status) => this.setState({ popupShow: _status })
@@ -44,7 +56,7 @@ class Gallery extends Component {
         this.setState(() => ({ nextButtonValue: videoId + 1 }))
         this.setState(() => ({ previousButtonValue: videoId - 1 }))
 
-        if (temp + 1 >= videosJson.length) {
+        if (temp + 1 >= this.state.videos.length) {
             this.setState(() => ({ nextButtonValue: undefined }))
         }
 
@@ -104,17 +116,17 @@ class Gallery extends Component {
                             <Container fluid>
                                 <Row>
                                     <Titles
-                                        title={this.props.language('gallery.header.GALLERY_SECTION_TITLE')}
-                                        subtitle={this.props.language('gallery.header.GALLERY_SECTION_SUBTITLE')}
-                                        description={this.props.language('gallery.header.GALLERY_SECTION_DESCRIPTION')}
+                                        title={this.props.t('gallery.header.GALLERY_SECTION_TITLE')}
+                                        subtitle={this.props.t('gallery.header.GALLERY_SECTION_SUBTITLE')}
+                                        description={this.props.t('gallery.header.GALLERY_SECTION_DESCRIPTION')}
                                         textAlign="text-center"
                                         color="text-dark"
                                         fontSize="section-title-description-font-size"
                                     />
                                 </Row>
-                                <Row className="videos-body" data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                <Row className="videos-body">
                                     <Slider ref={(c) => (this.slider = c)} {...settings} >
-                                        {videosJson.map((video) => (
+                                        {this.state.videos.map((video) => (
                                             // Ignoring the empty 0th index from the json file in order to set the video sequence number exactly
                                             // Please see tools/videos/videos.json file
                                             video.id !== 0
@@ -132,22 +144,22 @@ class Gallery extends Component {
                                         ))}
                                     </Slider>
                                     <br />
-                                    <div className="videos-body-carousel-button text-center" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                                    <div className="videos-body-carousel-button text-center">
                                         <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
-                                            {this.props.language('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
+                                            {this.props.t('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
                                         </Button>
                                         <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
-                                            {this.props.language('template.buttons.TEMPLATE_NEXT_BUTTON')}
+                                            {this.props.t('template.buttons.TEMPLATE_NEXT_BUTTON')}
                                         </Button>
                                     </div>
                                 </Row>
                             </Container>
 
                             <GalleryPopup
-                                language={this.props.language}
+                                language={this.props.t}
                                 popupShow={this.state.popupShow}
                                 popupShowToggle={this.handlePopupShow}
-                                propsVideosJson={videosJson}
+                                propsVideosJson={this.state.videos}
                                 propsPreviousButtonValue={this.state.previousButtonValue}
                                 propsNextButtonValue={this.state.nextButtonValue}
                                 propsCurrentVideo={this.state.currentVideo}
@@ -160,4 +172,4 @@ class Gallery extends Component {
         )
     }
 }
-export default Gallery
+export default withTranslation('translation')(Gallery)

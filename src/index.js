@@ -25,10 +25,10 @@ i18next.init({
     lng: defaultLanguageIsSet(),
     resources: {
         tr: {
-            common: language_tr
+            translation: language_tr
         },
         us: {
-            common: language_en
+            translation: language_en
         }
     },
 })

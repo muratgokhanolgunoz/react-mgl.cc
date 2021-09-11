@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { withTranslation } from "react-i18next"
 import Iframe from "react-iframe"
 import { Row, Col, Modal, Button } from "react-bootstrap"
 
@@ -10,7 +11,7 @@ class GalleryPopup extends Component {
           <Modal.Header>
             <p className="text-light"> {" "} {this.props.propsCurrentVideo} / {" "} {this.props.propsVideosJson.length - 1}{" "} </p>
             <Button className="template-button template-button-danger border-0 pin-to-right" onClick={() => this.props.popupShowToggle(false)}>
-              {this.props.language('template.buttons.TEMPLATE_CLOSE_BUTTON')}
+              {this.props.t('template.buttons.TEMPLATE_CLOSE_BUTTON')}
             </Button>
           </Modal.Header>
           <Modal.Body>
@@ -21,7 +22,7 @@ class GalleryPopup extends Component {
                 <Col>
                   {this.props.propsPreviousButtonValue !== undefined ? (
                     <Button className="template-button template-button-primary-2 pin-to-left" onClick={() => this.props.propsNaviationVideo(this.props.propsPreviousButtonValue)}>
-                      {this.props.language('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
+                      {this.props.t('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
                     </Button>
                   ) : null}
                 </Col>
@@ -29,7 +30,7 @@ class GalleryPopup extends Component {
                 <Col>
                   {this.props.propsNextButtonValue !== undefined ? (
                     <Button className="template-button template-button-primary-2 pin-to-right" onClick={() => this.props.propsNaviationVideo(this.props.propsNextButtonValue)}>
-                      {this.props.language('template.buttons.TEMPLATE_NEXT_BUTTON')}
+                      {this.props.t('template.buttons.TEMPLATE_NEXT_BUTTON')}
                     </Button>
                   ) : null}
                 </Col>
@@ -41,4 +42,4 @@ class GalleryPopup extends Component {
     )
   }
 }
-export default GalleryPopup
+export default withTranslation('translation')(GalleryPopup)

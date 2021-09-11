@@ -19,7 +19,7 @@ class App extends Component {
               </Route>
               <Route path="/sarici">
                 <Admin />
-              </Route>
+              </Route>              
               <Route>
                 <NotFound />
               </Route>

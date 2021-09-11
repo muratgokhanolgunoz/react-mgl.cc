@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react"
+import { withTranslation } from "react-i18next"
 import { Modal, Button } from "react-bootstrap"
 import Iframe from "react-iframe"
 
@@ -9,7 +10,7 @@ class TrackingPopup extends Component {
                 <Modal show={this.props.popupShow} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" centered>
                     <Modal.Header>
                         <Button className="template-button template-button-danger pin-to-right" onClick={() => this.props.popupShowToggle(false)}>
-                            {this.props.language('template.buttons.TEMPLATE_CLOSE_BUTTON')}
+                            {this.props.t('template.buttons.TEMPLATE_CLOSE_BUTTON')}
                         </Button>
                     </Modal.Header>
                     <Modal.Body>
@@ -20,4 +21,4 @@ class TrackingPopup extends Component {
         )
     }
 }
-export default TrackingPopup
+export default withTranslation('translation')(TrackingPopup)

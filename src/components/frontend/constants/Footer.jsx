@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { withTranslation } from 'react-i18next'
 
 class Footer extends Component {
     render() {
@@ -10,7 +11,7 @@ class Footer extends Component {
             <div id="footer" className="footer">
                 <Container className="footer-inner">
                     <Row>
-                        <Col lg={6} md={6}><p>&copy;{' '}{currentDate.getFullYear()} {' '} {this.props.language('footer.FOOTER_TEXT')} </p></Col>
+                        <Col lg={6} md={6}><p>&copy;{' '}{currentDate.getFullYear()} {' '} {this.props.t('footer.FOOTER_TEXT')} </p></Col>
                         <Col className="social-media-links" lg={6} md={6}>
                             <ul>                               
                                 <li><a href="https://www.linkedin.com/company/midasgloballojistik/" target="_blank" rel="noreferrer">Linkedin</a></li>
@@ -24,4 +25,4 @@ class Footer extends Component {
         )
     }
 }
-export default Footer
+export default withTranslation('translation')(Footer)

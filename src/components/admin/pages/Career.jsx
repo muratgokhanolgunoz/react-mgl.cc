@@ -15,7 +15,7 @@ const Career = () => {
 
     useEffect(() => {
         careerService.getCareerList()
-            .then((response) => setCareerList(response.data.result))
+            .then((response) => setCareerList(response.data.result.reverse()))
             .catch(() => console.warn("Has error occured when fetching list from api"))
     }, [])
 

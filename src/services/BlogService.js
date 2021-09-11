@@ -1,10 +1,9 @@
 import axios from 'axios'
+import Services from './Services'
 
-class BlogService {
-    API_URL = "http://localhost:8000/api/"
-
+class BlogService extends Services {
     getBlogs(_language) {
-        return axios.get(this.API_URL + "blog/" + _language)
+        return this.getList("blog/" + _language)
     }
 
     addBlog(_language, _data) {

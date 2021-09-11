@@ -1,11 +1,13 @@
 import axios from 'axios'
+import Services from './Services'
 
-class HomeServise {
+class HomeServise extends Services {
+    userLog() {
+        return axios.post(this.API_URL + "log")
+    }
 
-    API_URL = "http://localhost:8000/api/"
-
-    getHome(language_) {
-        return axios.get(this.API_URL + language_ + "/home")
+    getHome(_language) {
+        return this.getList(_language + "/home")
     }
 }
 export default HomeServise

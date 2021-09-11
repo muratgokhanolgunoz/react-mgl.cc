@@ -3,29 +3,30 @@ import FrontEndContext from "../FrontEndContext"
 
 class Provider extends Component {
     state = {
-        baseUrl: "https://mgl.cc/gokhan/",
-        language: "TR",
         cookie: {
             languageAccept: false,
             language: undefined
-        }
+        },
+        blogs: []
     };
 
     render() {
         return (
             <FrontEndContext.Provider value={{
                 state: this.state,
-                setLanguage: (_language) => {
-                    this.setState({ language: _language })
-                },
-                setCookie: (_cookie) => [
+                setCookie: (_cookie) => {
                     this.setState({
                         cookie: {
                             languageAccept: _cookie.languageAccept,
                             language: _cookie.language
                         }
                     })
-                ]
+                },
+                setBlogs: (_blogs) => {
+                    this.setState({
+                        blogs: _blogs
+                    })
+                }
             }}>
                 {this.props.children}
             </FrontEndContext.Provider>

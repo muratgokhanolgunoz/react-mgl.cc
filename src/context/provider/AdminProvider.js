@@ -3,7 +3,6 @@ import AdminContext from "../AdminContext"
 
 class AdminProvider extends Component {
     state = {
-        baseUrl: "https://mgl.cc/gokhan/",
         careerPopupStatus: false
     };
 

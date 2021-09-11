@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import FrontEndContext from '../../../context/FrontEndContext'
+import { withTranslation } from "react-i18next"
 
 import Titles from "./titles/Titles"
 import ScheduleServices from "../../../services/ScheduleServices"
+import { showToast } from "../../../core/functions"
 
-import { ToastContainer, toast } from 'react-toastify'
-import "react-toastify/dist/ReactToastify.css"
+import { ToastContainer } from 'react-toastify'
 import { Container, Row, Table } from "react-bootstrap"
 
 class Schedule extends Component {
@@ -24,14 +25,13 @@ class Schedule extends Component {
     let copyText = ""
     let input
 
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION') + shipInfo.destination_name.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME') + shipInfo.ship_name.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE') + shipInfo.load_place.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE') + shipInfo.loading_date.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF') + shipInfo.cut_off_date.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL') + shipInfo.eta_date.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY') + shipInfo.lan_name.toUpperCase() + "\n"
-    copyText += this.props.language('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE') + shipInfo.last_updated.toUpperCase()
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION') + shipInfo.destination_name.toUpperCase() + "\n"
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME') + shipInfo.ship_name.toUpperCase() + "\n"
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE') + shipInfo.load_place.toUpperCase() + "\n"
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE') + shipInfo.loading_date.toUpperCase() + " / " + shipInfo.cut_off_date.toUpperCase() + "\n"
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL') + shipInfo.eta_date.toUpperCase() + "\n"
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY') + shipInfo.lan_name.toUpperCase() + "\n"
+    copyText += this.props.t('schedule.body.clipboard.body.SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE') + shipInfo.last_updated.toUpperCase()
 
     document.getElementById("clipboard-area").value = copyText
     input = document.querySelector('#clipboard-area')
@@ -39,16 +39,7 @@ class Schedule extends Component {
     input.setSelectionRange(0, 99999)
     document.execCommand("copy")
 
-    toast(this.props.language('schedule.body.clipboard.SCHEDULE_SECTION_CLIPBOARD_MESSAGE'), {
-      position: "bottom-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      type: "dark"
-    })
+    showToast("bottom-center", this.props.t('schedule.body.clipboard.SCHEDULE_SECTION_CLIPBOARD_MESSAGE'), "dark")
   }
 
   render() {
@@ -56,13 +47,13 @@ class Schedule extends Component {
       <FrontEndContext.Consumer>
         {(context) => {
           return (
-            <div id="schedule" className="schedule section-padding" style={{ backgroundImage: `url("${context.state.baseUrl}uploads/schedule/schedule.jpg")`, backgroundSize: "cover", backgroundPosition: "center center", backgroundAttachment: "fixed"}}>
+            <div id="schedule" className="schedule section-padding" style={{ backgroundImage: `url("./assets/uploads/schedule/schedule.jpg")`, backgroundSize: "cover", backgroundPosition: "center center", backgroundAttachment: "fixed"}}>
               <Container className="main" fluid>
                 <Row>
                   <Titles
-                    title={this.props.language('schedule.header.SCHEDULE_SECTION_TITLE')}
-                    subtitle={this.props.language('schedule.header.SCHEDULE_SECTION_SUBTITLE')}
-                    description={this.props.language('schedule.header.SCHEDULE_SECTION_DESCRIPTION')}
+                    title={this.props.t('schedule.header.SCHEDULE_SECTION_TITLE')}
+                    subtitle={this.props.t('schedule.header.SCHEDULE_SECTION_SUBTITLE')}
+                    description={this.props.t('schedule.header.SCHEDULE_SECTION_DESCRIPTION')}
                     textAlign="text-center"
                     color="text-light"
                     fontSize="section-title-description-font-size"
@@ -73,13 +64,13 @@ class Schedule extends Component {
                   <Table className="table-schedule" hover responsive>
                     <thead>
                       <tr>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.language('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY')}</span></th>
+                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF')}</span></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -97,9 +88,9 @@ class Schedule extends Component {
                           </tr>
                         ))
                         :
-                        <tr data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                        <tr>
                           <td colSpan="6">
-                            <p className="schedule-null-message">{this.props.language('schedule.body.SCHEDULE_SECTION_EMPTY_MESSAGE')}</p>
+                            <p className="schedule-null-message">{this.props.t('schedule.body.SCHEDULE_SECTION_EMPTY_MESSAGE')}</p>
                           </td>
                         </tr>
                       }
@@ -116,4 +107,4 @@ class Schedule extends Component {
     )
   }
 }
-export default Schedule
+export default withTranslation('translation')(Schedule)

@@ -18,10 +18,6 @@ tr {
 
 /* ========== LAYOUT STYLES ========== */
 
-.main {
-  padding: 0 5em;
-}
-
 @media screen and (max-width: 768px) {
     .main {
       padding: 0 2em;

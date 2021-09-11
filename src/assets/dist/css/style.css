@@ -15,15 +15,17 @@ body {
 /* ========== NAVI STYLES ========== */
 
 .navbar {
-  -webkit-box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
-  -moz-box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
-  box-shadow: 0px 3px 18px 0px rgba(130, 130, 130, 1);
+  -webkit-box-shadow: 0px -1px 12px 0px rgba(153,153,153,1);
+  -moz-box-shadow: 0px -1px 12px 0px rgba(153,153,153,1);
+  box-shadow: 0px -1px 12px 0px rgba(153,153,153,1);
 }
 
-.navi {
-  text-transform: uppercase;
+.navi a {
+  margin: 10px;
   font-size: 1em;
+  text-transform: uppercase;  
   color: #000;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1400px) {
@@ -46,6 +48,31 @@ body {
   }
 }
 
+#navbar-select-language button {
+  border: none !important;
+  width: 50px;
+  color: #000;
+}
+
+#navbar-select-language ul {
+  width: 100px;
+  font-weight: lighter;
+}
+
+.ReactFlagsSelect-module_selectBtn__19wW7:after {
+  border-top: 5px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 0;
+}
+
+.ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+  border-top: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #000;
+}
+
 /* ========== HOME SECTION STYLES ========== */
 
 .home {
@@ -54,7 +81,7 @@ body {
   background-size: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
   .home {
     height: 450px;
   }
@@ -132,7 +159,7 @@ body {
 }
 
 .home-widget-item p {
-  min-height: 80px;
+  min-height: 100px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -199,6 +226,12 @@ body {
 }
 
 /* ========== VIDEO GALLERY STYLES ========== */
+
+@media screen and (min-width: 1400px) {
+    .videos-body {
+      margin-top: -40px;
+    } 
+}
 
 .videos-body-items {
   padding: 18px;
@@ -311,6 +344,12 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+@media screen and (max-width: 1400px) {
+    .table-schedule {
+      font-size: .8em;
+    }
+}
+
 .table-schedule thead {
   background-color: rgba(0, 0, 0, 0.4);
   border-color: transparent;
@@ -322,8 +361,8 @@ body {
 
 .table-schedule thead tr,
 .table-schedule tbody tr {
-  height: 70px;
-  line-height: 50px;
+  height: 50px;
+  line-height: 60px;
   text-align: center;
   border-color: transparent;
   color: #fff;
@@ -454,7 +493,7 @@ body {
   margin-left: 6px;
   margin-top: 5px;
   font-family: "Rubik", sans-serif;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #909090;
 }
 
 #input-captcha {

@@ -1,5 +1,4 @@
 {
-    "timezone": "Europe/Istanbul",
     "html": {
         "HTML_PAGE_TITLE": "Midas Global Logistics"
     },
@@ -10,7 +9,11 @@
             "TEMPLATE_PREVIOUS_BUTTON": "Previous"
         }
     },
+    "404": {
+        "404_PAGE_TEXT": "Requested Page Not Found"
+    },
     "navbar": {
+        "NAVBAR_ITEM_HOME": "Home",
         "NAVBAR_ITEM_SERVICES": "Services",
         "NAVBAR_ITEM_ABOUT_US": "About Us",
         "NAVBAR_ITEM_VIDEO_GALLERY": "Videos",
@@ -71,19 +74,19 @@
         "body": {
             "first": {
                 "SERVICES_SECTION_FIRST_TITLE": "Shipping",
-                "SERVICES_SECTION_FIRST_BODY": "Our expert staff in maritime transport is as close as a phone call in matters such as pre-carriage, final carriage, port charges, competitive freight you may need for your shipments from and to Ambarlı, Izmit, Gemlik, Izmir Mersin, and Iskenderun. In addition, our personnel working in our vehicles in the field are integrated in real-time through the mobile application running in our company infrastructure."
+                "SERVICES_SECTION_FIRST_BODY": "Our expert staff in sea transport is as close as a phone call for your shipments from Ambarlı, Izmit, Gemlik, Izmir, Mersin and Iskenderun to the issues such as pre-transport, final transport, port costs, suitable freight. Furthermore our personnel working with vehicles on the field are integrated in real time through the mobile application running in our company substructure."
             },
             "second": {
                 "SERVICES_SECTION_SECOND_TITLE": "Consolidation",
-                "SERVICES_SECTION_SECOND_BODY": "The number of partial destinations we serve from Ambarlı is approximately 300. Some shipments need expert touch (Barrel, Liquid, Dangerous..) are combined with experience, it is possible to achieve more successful works. The data in our real-time ship program, which we publish below, is presented via API technology from our application server and can be followed instantly."
+                "SERVICES_SECTION_SECOND_BODY": "The number of partial destinations wich we serve from the port of Ambarlı is approximately 300. When qualified loads (Barrel, Liquid, Dangerous..) are combined with experience, it is possible to achieve more successful jobs. The data in our real-time ship program, which we are publishing below, is presented via API technology from our application server and can be followed moment by moment."
             },
             "third": {
                 "SERVICES_SECTION_THIRD_TITLE": "Handling Special Equipment ",
-                "SERVICES_SECTION_THIRD_BODY": "Flat Rack Container, Open TOP container, Dangerous Goods Transportation (IMCO), and Refrigerated Container (Reefer) shipments require expertise, and small differences are hidden in the details. One of our customer representatives who will guide you correctly will do their best to deliver the goods you have produced with a lot of effort to your customer in the best condition."
+                "SERVICES_SECTION_THIRD_BODY": "Flat Rack Container, Open TOP container, Dangerous Goods Transportation (IMCO) and Refrigerated Container (reefer) shipments require expertise and what makes difference is paying attention to minor details.One of our customer representatives who will guide you correctly will do their best to deliver the goods to your customer in the best condition."
             },
             "fourth": {
                 "SERVICES_SECTION_FOURTH_TITLE": "Door Delivery",
-                "SERVICES_SECTION_FOURTH_BODY": "With our experience of more than 25 years and our wide agency network, the expenses such as pre-carriage, load port charges, final transportation, and warehouse costs needed for your door-to-door shipments will be at your fingertips before being sent. All you have to do is to monitor whether the transport process is going as planned. The process was never so simple as online tracking."
+                "SERVICES_SECTION_FOURTH_BODY": "With our experience of more than 25 years and our wide agency network, the expenses such as pre-transportation, loading port costs, final transportation and warehouse that you will need for your door-to-door deliveries will be at your fingertips before you take your goods out of your store. All that's left for you to do is to monitor whether the transportation process is going as planned. Tracking the process online had never been easier."
             }
         }
     },
@@ -94,7 +97,7 @@
             "ABOUT_SECTION_DESCRIPTION": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul/Ambarli (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyeköy headquarters, Beylikdüzü, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization."
         },
         "body": {
-            "ABOUT_SECTION_BUTTON_PRESENTATION": "Access Our Presentation File "
+            "ABOUT_SECTION_BUTTON_PRESENTATION": "Access Our Presentation File"
         }
     },
     "gallery": {
@@ -106,34 +109,35 @@
     },
     "schedule": {
         "header": {
-            "SCHEDULE_SECTION_TITLE": "Realtime Ship Program",
+            "SCHEDULE_SECTION_TITLE": "Realtime Vessel Schedules",
             "SCHEDULE_SECTION_SUBTITLE": "",
             "SCHEDULE_SECTION_DESCRIPTION": ""
         },
         "body": {
             "table": {
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION": "Destination",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Ship Name",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "Estimated Time Of Arrival",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Declaration Closing",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME": "Vessel Name",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL": "ETA to POL",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING": "Declaration Cut off",
                 "SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE": "Load Place",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Agency",
-                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Cutoff"
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY": "Line",
+                "SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF": "Vessel Cut off"
             },
             "clipboard": {
                 "body": {
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION": "Destination : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Ship Name : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Load Place : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_SHIP_NAME": "Vessel Name : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_PLACE": "Load Place : ",                    
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_ACCEPTANCE_RANGE": "Load Acceptance Range : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LOAD_DATE": "Load Date : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Console Cutoff : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "Estimated Ship Arrival : ",
-                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Agency : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_CONSOLE_CUTOFF": "Vessel Cutoff : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_ESTIMATED_SHIP_ARRIVAL": "ETA to POL : ",
+                    "SCHEDULE_SECTION_CLIPBOARD_TITLE_DESTINATION_AGENCY": "Line : ",
                     "SCHEDULE_SECTION_CLIPBOARD_TITLE_LAST_UPDATE": "Last Update : "
                 },
-                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Ship information copied to clipboard "
+                "SCHEDULE_SECTION_CLIPBOARD_MESSAGE": "Vessel information copied to clipboard "
             },
-            "SCHEDULE_SECTION_EMPTY_MESSAGE": "No active ship program found"
+            "SCHEDULE_SECTION_EMPTY_MESSAGE": "No active vessel schedule found"
         }
     },
     "blog": {
@@ -154,7 +158,6 @@
             "CAREER_SECTION_DESCRIPTION": ""
         },
         "body": {
-            "CAREER_SECTION_PHOTO": "https://mgl.cc/gokhan/uploads/career/career_en.jpg",
             "notification": {
                 "CAREER_SECTION_NOTIFICATION_SUCCESS_MESSAGE": "Successful",
                 "CAREER_SECTION_NOTIFICATION_ERROR_MESSAGE": "An error has occurred",
@@ -209,7 +212,7 @@
     },
     "privacy": {
         "PRIVACY_HEADER": "Your Privacy",
-        "PRIVACY_TEXT": "By clicking \"Accept Cookies\", you agree Midas Global Logistics can store cookies on your device and disclose information in accordance with our Cookie Policy.",
+        "PRIVACY_TEXT": "Clicking on the \"Accept Cookies\" button will help Midas Global Logistics remember the language selection on your device.",
         "PRIVACY_BUTTON": "Accept Cookies"
     }
 }
