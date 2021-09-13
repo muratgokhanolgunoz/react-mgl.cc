@@ -1,19 +1,15 @@
 import React, { Component } from "react"
-import Cookies from 'universal-cookie';
 import FrontEndContext from '../../../context/FrontEndContext'
+import HomeServise from "../../../services/HomeService"
+import PropTypes from "prop-types"
 import TrackingPopup from "./popups/TrackingPopup"
 import { withTranslation } from "react-i18next"
-
 import { showToast } from '../../../core/functions'
 import { ToastContainer } from 'react-toastify'
 import { Container, Row, Col, Button, Image, InputGroup, FormControl } from 'react-bootstrap'
-
 import { VscArrowRight } from 'react-icons/vsc'
 
-import HomeServise from "../../../services/HomeService";
-
 let homeService = new HomeServise()
-const cookies = new Cookies();
 
 class Home extends Component {
     state = {
@@ -59,26 +55,6 @@ class Home extends Component {
     price = () => {
         this.setState({ iframeSrc: "https://frigian.com/#/home/midas/yVqEw1Pj9ijUJIP6TCpj1BYj11Ctjr9J" })
         this.handlePopupShow(true)
-    }
-
-    setCookie = () => {
-        var maxAge = new Date(Date.now() + (24 * 60 * 60 * 1000))
-        cookies.set('acceptLanguage', true, { path: '/', expires: maxAge })
-        cookies.set('language', window.navigator.language, { path: '/', expires: maxAge })
-
-        this.context.setCookie({
-            cookie: {
-                languageAccept: true,
-                language: window.navigator.language
-            }
-        })
-    }
-
-    getCookie = () => {
-        return {
-            languageAccept: cookies.get('languageAccept'),
-            language: cookies.get('language')
-        }
     }
 
     render() {
@@ -142,7 +118,7 @@ class Home extends Component {
                                                     <Col lg={8} md={12}>
                                                         <h4>{this.props.t('home.widgets.pricing.WIDGETS_PRICING_TITLE')}</h4>
                                                         <p>{this.props.t('home.widgets.pricing.WIDGETS_PRICING_BODY')}</p>
-                                                        <Button className="template-button template-button-primary-2 letter-spacing-2 text-uppercase mb-1" onClick={() => this.price()}>
+                                                        <Button className="template-button template-button-primary-2 letter-spacing-2 template-button-box-shadow text-uppercase mb-1" onClick={() => this.price()}>
                                                             <small>{this.props.t('home.widgets.pricing.WIDGETS_PRICING_BUTTON_TEXT')}</small>
                                                         </Button>
                                                     </Col>
@@ -163,13 +139,13 @@ class Home extends Component {
                             </div>
 
                             {
-                                this.getCookie().language === undefined && this.context.state.cookie.language === undefined
+                                this.props.funcGetCookie().language === undefined && this.context.state.cookie.language === undefined
                                     ?
                                     (
                                         <div className="cookie-banner">
                                             <h5>{this.props.t('privacy.PRIVACY_HEADER')}</h5>
                                             <p>{this.props.t('privacy.PRIVACY_TEXT')}</p>
-                                            <Button className="cookie_banner_button template-button template-button-primary-1" onClick={() => this.setCookie()}>{this.props.t('privacy.PRIVACY_BUTTON')}</Button>
+                                            <Button className="cookie_banner_button template-button template-button-primary-1" onClick={() => this.props.funcSetCookie(window.navigator.language.substr(0, 2).toLowerCase().toString())}>{this.props.t('privacy.PRIVACY_BUTTON')}</Button>
                                             <h6 onClick={() => this.context.setCookie({ language: null })}>Kapat</h6>
                                         </div>
                                     )
@@ -183,5 +159,11 @@ class Home extends Component {
         )
     }
 }
+
 Home.contextType = FrontEndContext
+Home.propTypes = {
+    funcSetCookie: PropTypes.func.isRequired,
+    funcGetCookie: PropTypes.func.isRequired
+}
+
 export default withTranslation('translation')(Home)

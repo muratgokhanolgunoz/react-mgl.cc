@@ -1,16 +1,18 @@
 import React, { Component } from "react"
-import GalleryServices from '../../../services/GalleryServices'
 import FrontEndContext from '../../../context/FrontEndContext'
+import GalleryServices from '../../../services/GalleryServices'
+import PropTypes from "prop-types"
 import queryString from "query-string"
 import Slider from "react-slick"
 import { withTranslation } from "react-i18next"
 
-import Titles from "./titles/Titles"
+import Titles from "../layouts/SectionTitles"
 import GalleryPopup from "./popups/GalleryPopup"
 
 import { Container, Row, Col, Image, Button } from "react-bootstrap"
 
 let urlParams
+let language
 let galleryService = new GalleryServices()
 
 class Gallery extends Component {
@@ -27,7 +29,19 @@ class Gallery extends Component {
     }
 
     componentDidMount() {
-        galleryService.getVideos()
+        language = this.props.funcGetCookie().language === undefined ? "us" : this.props.funcGetCookie().language
+        this.getVideos()
+    }
+
+    componentDidUpdate() {
+        if (language !== this.props.i18n.language) {
+            language = this.props.i18n.language
+            this.getVideos()
+        }
+    }
+
+    getVideos = () => {
+        galleryService.getVideos(language)
             .then((response) => {
                 this.setState({
                     videos: response.data.result
@@ -120,10 +134,11 @@ class Gallery extends Component {
                                         subtitle={this.props.t('gallery.header.GALLERY_SECTION_SUBTITLE')}
                                         description={this.props.t('gallery.header.GALLERY_SECTION_DESCRIPTION')}
                                         textAlign="text-center"
-                                        color="text-dark"
+                                        color="text-primary-2"
                                         fontSize="section-title-description-font-size"
                                     />
                                 </Row>
+                                <br />
                                 <Row className="videos-body">
                                     <Slider ref={(c) => (this.slider = c)} {...settings} >
                                         {this.state.videos.map((video) => (
@@ -133,9 +148,9 @@ class Gallery extends Component {
                                                 ?
                                                 (
                                                     <Col key={video.id} className="videos-body-items">
-                                                        <Image className="videos-body-images" src={video.thumbnail} alt="" fluid></Image>
+                                                        <Image className="videos-body-images" src={video.thumbnail} alt="" fluid onClick={() => this.showVideo(video.id)}></Image>
                                                         <div className="videos-body-images-overlay" onClick={() => this.showVideo(video.id)}>
-                                                            {/* <VscSearch className="videos-body-images-icon" /> */}
+                                                            <p>{video.title}</p>
                                                         </div>
                                                     </Col>
                                                 )
@@ -145,10 +160,10 @@ class Gallery extends Component {
                                     </Slider>
                                     <br />
                                     <div className="videos-body-carousel-button text-center">
-                                        <Button className="m-2 template-button template-button-primary-1" onClick={this.slickPrevious}>
+                                        <Button className="m-2 template-button template-button-primary-1 template-button-box-shadow" onClick={this.slickPrevious}>
                                             {this.props.t('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
                                         </Button>
-                                        <Button className="m-2 template-button template-button-primary-1" onClick={this.slickNext}>
+                                        <Button className="m-2 template-button template-button-primary-1 template-button-box-shadow" onClick={this.slickNext}>
                                             {this.props.t('template.buttons.TEMPLATE_NEXT_BUTTON')}
                                         </Button>
                                     </div>
@@ -172,4 +187,9 @@ class Gallery extends Component {
         )
     }
 }
+
+Gallery.propTypes = {
+    funcGetCookie: PropTypes.func.isRequired
+}
+
 export default withTranslation('translation')(Gallery)

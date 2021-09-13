@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import FrontEndContext from '../../../context/FrontEndContext'
 import { withTranslation } from "react-i18next"
 
-import Titles from "./titles/Titles"
+import Titles from "../layouts/SectionTitles"
 import ScheduleServices from "../../../services/ScheduleServices"
 import { showToast } from "../../../core/functions"
 
@@ -54,11 +54,11 @@ class Schedule extends Component {
                     title={this.props.t('schedule.header.SCHEDULE_SECTION_TITLE')}
                     subtitle={this.props.t('schedule.header.SCHEDULE_SECTION_SUBTITLE')}
                     description={this.props.t('schedule.header.SCHEDULE_SECTION_DESCRIPTION')}
-                    textAlign="text-center"
                     color="text-light"
-                    fontSize="section-title-description-font-size"
+                    lineStatus={true}
                   />
                 </Row>
+                <br />
                 <Row>
                   <textarea type="hidden" id="clipboard-area" />
                   <Table className="table-schedule" hover responsive>

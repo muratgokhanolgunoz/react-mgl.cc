@@ -73,6 +73,21 @@ body {
   border-bottom: 5px solid #000;
 }
 
+#button-scroll-to-top svg {
+  padding: 10px;
+  background-color: var(--template-color-blue);
+  color: #fff;
+  margin-left: -50px;
+  font-size: 3em;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+#button-scroll-to-top svg:hover { 
+  background-color: var(--template-color-orange);
+  transition: background-color .5s
+}
+
 /* ========== HOME SECTION STYLES ========== */
 
 .home {
@@ -151,7 +166,6 @@ body {
 
 .home-widget-item {
   background-color: #fff;
-  border-radius: 5px;
   padding: 20px;
   margin-top: 30px;
   -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
@@ -193,7 +207,7 @@ body {
 
 .services-box {
   background-color: #fff;
-  padding: 15px;
+  padding: 30px;
   -webkit-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
   -moz-box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
   box-shadow: 0px 0px 24px 0px rgba(224, 224, 224, 1);
@@ -205,24 +219,44 @@ body {
   display: block;
   margin-left: auto;
   margin-right: 0;
+  font-size: 5em;
 }
 
 .services-box h3 {
-  margin: 20px 0;
+  margin: 40px 0;
   position: absolute;
 }
 
 .services-box p {
   text-align: left;
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 1.1em;
-  min-height: 150px;
+  min-height: 155px;
+  text-align: justify;
 }
 
 /* ========== ABOUT SECTION STYLES ========== */
 
 .about {
   background-color: #f9f9f9;
+}
+
+.about p {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 992px) {
+  .about-text {
+    margin-top: 50px
+  }
+}
+
+#about-image {
+  -webkit-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+  -moz-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+  box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+  border: 10px solid lightgray;
+  padding: 20px
 }
 
 /* ========== VIDEO GALLERY STYLES ========== */
@@ -242,27 +276,28 @@ body {
 }
 
 .videos-body-carousel-button {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .videos-body-images {
   display: block;
   width: 100%;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+  -moz-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+  box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+}
+
+.videos-body .slick-slider,
+.videos-body .slick-list,
+.videos-body .slick-track {
+  padding: 40px 0;
+  height: 400px !important;
 }
 
 @media screen and (min-width: 1366px) {
   .videos-body-items {
-    padding: 0px;
-    -webkit-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
-    -moz-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
-    box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
-  }
-
-  .videos-body .slick-slider,
-  .videos-body .slick-list,
-  .videos-body .slick-track {
-    padding: 40px 0;
-    height: 350px !important;
+    padding: 0px;    
   }
 
   .videos-body-carousel .slick-slide {
@@ -281,16 +316,16 @@ body {
 }
 
 .videos-body-images-overlay {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  width: 0;
-  height: 0;
+  background-color: var(--template-color-blue);  
+  color: lightgray;
+  padding: 15px 15px 1px 15px;
   cursor: pointer;
-  width: 75%;
-  height: 100%;
-  z-index: 1;
-  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.videos-body-images-overlay p {
+  font-weight: bold
 }
 
 .videos-body-images-icon {
@@ -336,6 +371,7 @@ body {
 #clipboard-area {
   position: absolute;
   z-index: -1;
+  width: 1px;
 }
 
 .table-schedule {
@@ -401,7 +437,6 @@ body {
 /* ========== BLOG SECTION STYLES ========== */
 
 .blog-box {
-  font-family: "Rubik", sans-serif;
   margin-top: 25px;
 }
 
@@ -410,6 +445,10 @@ body {
   padding: 20px;
   padding-bottom: 35px;
   overflow: hidden;
+}
+
+.blog-box-item a {
+  cursor: pointer;
 }
 
 .blog-box .blog-box-image {
@@ -425,7 +464,6 @@ body {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  min-height: 40px;
 }
 
 .blog-box p {
@@ -436,9 +474,6 @@ body {
 
 .blog-box a {
   margin-top: 20px;
-  -webkit-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 22px -13px rgba(0, 0, 0, 0.75);
 }
 
 /* ========== MODAL BLOG STYLES ========== */

@@ -17,7 +17,7 @@ class App extends Component {
               <Route exact path="/">
                 <FrontEnd />
               </Route>
-              <Route path="/sarici">
+              <Route path="/sarici2021">
                 <Admin />
               </Route>              
               <Route>

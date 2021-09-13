@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import FrontEndContext from '../../../context/FrontEndContext'
 import CareerService from '../../../services/CareerService'
 import { withTranslation } from 'react-i18next'
-import Titles from './titles/Titles'
 import { showToast, validateEmail } from '../../../core/functions'
 import { Container, Row, Col, Image, Form } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
@@ -143,16 +142,6 @@ class Career extends Component {
                         <div id="career" className="career section-padding" style={{ backgroundImage: `url("./assets/uploads/career/images/career_background.jpg")`, backgroundSize: "cover", backgroundPosition: "center center" }}>
                             <Container className="main">
                                 <Row>
-                                    <Titles
-                                        title={this.props.t('career.header.CAREER_SECTION_TITLE')}
-                                        subtitle={this.props.t('career.header.CAREER_SECTION_SUBTITLE')}
-                                        description={this.props.t('career.header.CAREER_SECTION_DESCRIPTION')}
-                                        textAlign="text-center"
-                                        color="text-dark"
-                                        ontSize="section-title-description-font-size"
-                                    />
-                                </Row>
-                                <Row>
                                     <Col lg={6}>
                                         <Image src={"./assets/uploads/career/images/career_" + this.props.i18n.language + ".jpg"} alt="" fluid />
                                     </Col>
@@ -268,7 +257,7 @@ class Career extends Component {
                                                 </Col>
 
                                                 <Col xs={6}>
-                                                    <Button className="pin-to-right template-button template-button-primary-2" onClick={() => this.upload()} >
+                                                    <Button className="pin-to-right template-button template-button-primary-2 template-button-box-shadow" onClick={() => this.upload()} >
                                                         <VscCheck size={14} /> &emsp; {this.props.t('career.body.form.CAREER_SECTION_BUTTON_SEND')}
                                                     </Button>
                                                 </Col>

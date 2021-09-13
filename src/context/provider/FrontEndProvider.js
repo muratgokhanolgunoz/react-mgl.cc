@@ -4,7 +4,6 @@ import FrontEndContext from "../FrontEndContext"
 class Provider extends Component {
     state = {
         cookie: {
-            languageAccept: false,
             language: undefined
         },
         blogs: []
@@ -17,7 +16,6 @@ class Provider extends Component {
                 setCookie: (_cookie) => {
                     this.setState({
                         cookie: {
-                            languageAccept: _cookie.languageAccept,
                             language: _cookie.language
                         }
                     })

@@ -1,8 +1,8 @@
 import Services from './Services'
 
 class GalleryServices extends Services {
-    getVideos() {
-        return this.getList('getVideos')
+    getVideos(_language) {
+        return this.getList(_language + '/getVideos')
     }
 }
 

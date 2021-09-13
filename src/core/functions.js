@@ -3,7 +3,7 @@ import { toast } from 'react-toastify'
 export const showToast = (_position, _text, _type) => {
     toast(_text, {
         position: _position,
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

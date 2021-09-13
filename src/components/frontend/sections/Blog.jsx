@@ -4,7 +4,7 @@ import FrontEndContext from '../../../context/FrontEndContext'
 import BlogService from '../../../services/BlogService'
 import { withTranslation } from 'react-i18next'
 
-import Titles from './titles/Titles'
+import Titles from '../layouts/SectionTitles'
 import BlogPopup from './popups/BlogPopup'
 import { Row, Col, Image } from 'react-bootstrap'
 
@@ -50,12 +50,7 @@ class Blog extends Component {
                                 <div id="blog" className="blog section-padding">
                                     <Row>
                                         <Titles
-                                            title={this.props.t('blog.header.BLOG_SECTION_TITLE')}
-                                            subtitle=""
-                                            description=""
-                                            textAlign="text-center"
-                                            color="text-dark"
-                                            fontSize="section-title-description-font-size"
+                                            title={this.props.t('blog.header.BLOG_SECTION_TITLE')}                                            
                                         />
                                     </Row>
                                     <Row>
@@ -77,7 +72,7 @@ class Blog extends Component {
                                                         </span>
                                                         <h6>{blog.BLOG_SECTION_ITEMS_TITLE}</h6>
                                                         <p>{blog.BLOG_SECTION_ITEMS_SUMMARY}</p>
-                                                        <a className="template-button template-button-primary-2" onClick={() => { this.handlePopupShow(true); this.sendBlogInformation(blog) }}>{this.props.t('blog.body.BLOG_SECTION_BUTTON')}</a>
+                                                        <a className="template-button template-button-primary-2 template-button-box-shadow" onClick={() => { this.handlePopupShow(true); this.sendBlogInformation(blog) }}>{this.props.t('blog.body.BLOG_SECTION_BUTTON')}</a>
                                                     </div>
                                                 </Col>
                                             ))

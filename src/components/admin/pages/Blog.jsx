@@ -28,34 +28,38 @@ const Blog = () => {
     }
 
     const addBlog = () => {
-        const payload = new FormData()
-        payload.append('title', title)
-        payload.append('thumbnail', thumbnail)
-        payload.append('photo', photo)
-        payload.append('summary', summary)
-        payload.append('article', article)
-        payload.append('author', author)
+        if (title === "" || thumbnail === "" || photo === "" || summary === "" || article === "" || author === "") {
+            showToast("bottom-right", "Please fill in all fields", "error")
+        } else {
+            const payload = new FormData()
+            payload.append('title', title)
+            payload.append('thumbnail', thumbnail)
+            payload.append('photo', photo)
+            payload.append('summary', summary)
+            payload.append('article', article)
+            payload.append('author', author)
 
-        blogService.addBlog(language, payload)
-            .then((response) => {
-                response.data.result === true
-                    ?
-                    showToast("bottom-right", "Success", "success")
-                    :
-                    showToast("bottom-right", "Failed", "error")
+            blogService.addBlog(language, payload)
+                .then((response) => {
+                    response.data.result === true
+                        ?
+                        showToast("bottom-right", "Success", "success")
+                        :
+                        showToast("bottom-right", "Failed", "error")
 
-                setTitle("")
-                setThumbnail("")
-                setPhoto("")
-                setSummary("")
-                setArticle("")
-                setAuthor("")
-            })
-            .catch(() => (
-                showToast("bottom-right", "Server error", "error")
-            ))
+                    setTitle("")
+                    setThumbnail("")
+                    setPhoto("")
+                    setSummary("")
+                    setArticle("")
+                    setAuthor("")
+                })
+                .catch(() => (
+                    showToast("bottom-right", "Server error", "error")
+                ))
 
-        setTimeout(function () { window.location.reload() }, 2000);
+            setTimeout(function () { window.location.reload() }, 2000);
+        }
     }
 
     const deleteBlog = (_id) => {
@@ -214,7 +218,7 @@ const Blog = () => {
                                                         <td>{index + 1}</td>
                                                         <td>{blogItem.BLOG_SECTION_ITEMS_AUTHOR}</td>
                                                         <td>{blogItem.BLOG_SECTION_ITEMS_TITLE}</td>
-                                                        <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>                                                        
+                                                        <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>
                                                         <td>
                                                             <span className="text-primary" style={{ textDecoration: "underline", cursor: "pointer" }} onClick={() => deleteBlog(blogItem.BLOG_SECTION_ITEMS_ID)}>Delete</span>
                                                         </td>

@@ -12,13 +12,13 @@ const Admin = () => {
             <AdminProvider>
                 <Router>
                     <Switch>
-                        <Route exact path="/sarici">
+                        <Route exact path="/sarici2021">
                             <Home />
                         </Route>
-                        <Route path="/sarici/blog">
+                        <Route path="/sarici2021/blog">
                             <Blog />
                         </Route>
-                        <Route path="/sarici/career">
+                        <Route path="/sarici2021/career">
                             <Career />
                         </Route>
                         <Route>

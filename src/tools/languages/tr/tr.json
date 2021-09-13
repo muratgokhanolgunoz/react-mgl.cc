@@ -94,9 +94,10 @@
         "header": {
             "ABOUT_SECTION_TITLE": "Hakkımızda",
             "ABOUT_SECTION_SUBTITLE": "",
-            "ABOUT_SECTION_DESCRIPTION": "Midas Global Lojistik; kökleri 1996 yılına kadar dayanan istanbul merkezli ve denizyolu parsiyel taşımacılığu üzerine uzmanlaşmış bir lojistik firmasıdır. Türkiye ana limanlarından Istanbul/Ambarlı (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, İskenderun, Antalya ve Trabzon limanlarından; Uzakdoğu, Kuzey Amerika, Güney Amerika, Ortadoğu, Uzakdoğu, Akdeniz ve Afrika limanlarına full konteyner servisi, Fas, Cezayir, Tunus, Libya, Mısır, Lübnan, İsrail, Suudi Arabistan, Birleşik Arap Emirlikleri, Sri Lanka, ispanya, Amerika Birleşik Devletleri ve Singapur'a parsiyel servis hizmeti vermektedir. Proje taşımacılığı, fuar taşımacılığı, parsiyel, konteyner aktarma ve çapraz taşımalar uzman olduğumuz alanlardır. İstanbul Mecidiyeköy Merkez, Beylikdüzü, ve Çin Zuhai de kendi ofislerimiz vardır. Midas Global Lojistik, e-Booking, e-Navlun gibi dijital altyapı gerektiren uygulamaları hayata geçiren Türkiye'nin ilk dijital freight forwarderıdır, ve dijitalleşmede Türkiye'nin bayrak taşıyıcı yerel firmasıdır. "
+            "ABOUT_SECTION_DESCRIPTION": ""
         },
         "body": {
+            "ABOUT_SECTION_TEXT": "Midas Global Lojistik; kökleri 1996 yılına kadar dayanan İstanbul merkezli ve denizyolu parsiyel taşımacılığu üzerine uzmanlaşmış bir lojistik firmasıdır. Türkiye ana limanlarından Istanbul/Ambarlı (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, İskenderun, Antalya ve Trabzon limanlarından; Uzakdoğu, Kuzey Amerika, Güney Amerika, Ortadoğu, Uzakdoğu, Akdeniz ve Afrika limanlarına full konteyner servisi, Fas, Cezayir, Tunus, Libya, Mısır, Lübnan, İsrail, Suudi Arabistan, Birleşik Arap Emirlikleri, Sri Lanka, ispanya, Amerika Birleşik Devletleri ve Singapur'a parsiyel servis hizmeti vermektedir. Proje taşımacılığı, fuar taşımacılığı, parsiyel, konteyner aktarma ve çapraz taşımalar uzman olduğumuz alanlardır. İstanbul Mecidiyeköy Merkez, Beylikdüzü, ve Çin Zuhai de kendi ofislerimiz vardır. Midas Global Lojistik, e-Booking, e-Navlun gibi dijital altyapı gerektiren uygulamaları hayata geçiren Türkiye'nin ilk dijital freight forwarderıdır, ve dijitalleşmede Türkiye'nin bayrak taşıyıcı yerel firmasıdır.",
             "ABOUT_SECTION_BUTTON_PRESENTATION": "Sunum Dosyamıza Erİşİn"
         }
     },
@@ -198,11 +199,9 @@
                 "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy iş Merkezi"
             },
             "phone_information": {
-                "CONTACT_SECTION_PHONE_INFORMATION_TITLE": "+90 (212) 438 18 18",
                 "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Pazartesi - Cuma / 09:00 - 18:00"
             },
             "email_information": {
-                "CONTACT_SECTION_EMAIL_INFORMATION_TITLE": "info@mgl.cc",
                 "CONTACT_SECTION_EMAIL_INFORMATION_BODY": "Bize yazın"
             }
         }
@@ -212,7 +211,7 @@
     },
     "privacy": {
         "PRIVACY_HEADER": "Gizliliğiniz",
-        "PRIVACY_TEXT": "\"Çerezleri Kabul Et\" butonuna tıklamanız, Midas Global Lojistik'in cihazınızdaki dil seçimini hatırlamasına yardımcı olacaktır",
+        "PRIVACY_TEXT": "\"Çerezleri Kabul Et\" butonuna tıklamanız, Midas Global Lojistik' in cihazınızdaki dil seçimini hatırlamasına yardımcı olacaktır",
         "PRIVACY_BUTTON": "Çerezleri kabul et"
     }
 }

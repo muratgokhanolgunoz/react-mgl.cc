@@ -4,7 +4,7 @@ import Navi from '../constants/Navi'
 
 const Home = () => {
     return (
-        <div>
+        <div style={{ padding: "50px" }}>
             <Row>
                 <Navi />
             </Row>

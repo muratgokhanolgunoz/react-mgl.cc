@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { withTranslation } from 'react-i18next'
 import Iframe from 'react-iframe'
 
-import Titles from './titles/Titles'
+import Titles from '../layouts/SectionTitles'
 import { Container, Row, Col } from 'react-bootstrap'
 import { BiHome, BiMobileAlt, BiEnvelope } from "react-icons/bi";
 
@@ -16,10 +16,7 @@ class Contact extends Component {
                             <Titles
                                 title={this.props.t('contact.header.CONTACT_SECTION_TITLE')}
                                 subtitle={this.props.t('contact.header.CONTACT_SECTION_SUBTITLE')}
-                                description={this.props.t('contact.header.CONTACT_SECTION_DESCRIPTION')}
-                                textAlign="text-center"
-                                color="text-dark"
-                                fontSize="section-title-description-font-size"
+                                description={this.props.t('contact.header.CONTACT_SECTION_DESCRIPTION')}                                
                             />
                         </Row>
                         <Row>
@@ -52,7 +49,9 @@ class Contact extends Component {
                                         </Col>
                                         <Col col={10}>
                                             <div className="contact-info-body">
-                                                <h4><a href={"tel:" + this.props.t('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_TITLE')}>{this.props.t('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_TITLE')}</a></h4>
+                                                <h4>
+                                                    <a href="tel:+902124381818">+90 (212) 438 18 18</a>
+                                                </h4>
                                                 <p>{this.props.t('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_BODY')}</p>
                                             </div>
                                         </Col>
@@ -68,7 +67,7 @@ class Contact extends Component {
                                         </Col>
                                         <Col sm={10}>
                                             <div className="contact-info-body">
-                                                <h4><a href="mailto:info@mgl.cc">{this.props.t('contact.body.email_information.CONTACT_SECTION_EMAIL_INFORMATION_TITLE')}</a></h4>
+                                                <h4><a href="mailto:info@mgl.cc">info@mgl.cc</a></h4>
                                                 <p>{this.props.t('contact.body.email_information.CONTACT_SECTION_EMAIL_INFORMATION_BODY')}</p>
                                             </div>
                                         </Col>

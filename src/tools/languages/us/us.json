@@ -94,9 +94,10 @@
         "header": {
             "ABOUT_SECTION_TITLE": "About Us",
             "ABOUT_SECTION_SUBTITLE": "",
-            "ABOUT_SECTION_DESCRIPTION": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul/Ambarli (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyeköy headquarters, Beylikdüzü, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization."
+            "ABOUT_SECTION_DESCRIPTION": ""
         },
         "body": {
+            "ABOUT_SECTION_TEXT": "Midas Global Logistics is a logistics company based in Istanbul, which was established in 1996, and specialized in maritime partial transportation. From the main ports of Turkey, Istanbul/Ambarli (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, Iskenderun, Antalya, and Trabzon; Full container service to the Far East, North America, South America, Middle East, Far East, Mediterranean and African ports.  Morocco, Algeria, Tunisia, Libya, Egypt, Lebanon, Israel, Saudi Arabia, United Arab Emirates, Sri Lanka, Spain, United States, and It provides partial service to Singapore. Project transportation, fair transportation, partial, container transfer, and cross transportation are our areas of expertise. We have our own offices in Istanbul Mecidiyeköy headquarters, Beylikdüzü, and Zhuhai, China. Midas Global Logistics is Turkey's first digital freight forwarder that implements applications that require digital infrastructures such as e-Booking and e-Navlun, and it is Turkey's flag carrier local company in digitalization.",
             "ABOUT_SECTION_BUTTON_PRESENTATION": "Access Our Presentation File"
         }
     },
@@ -198,11 +199,9 @@
                 "CONTACT_SECTION_ADDRESS_INFORMATION_BODY": "Mecidiyeköy Mahallesi Şehit Ahmet Sokak No: 4 Kat: 6 Daire: 85 Mecidiyeköy İş Merkezi"
             },
             "phone_information": {
-                "CONTACT_SECTION_PHONE_INFORMATION_TITLE": "+90 (212) 438 18 18",
                 "CONTACT_SECTION_PHONE_INFORMATION_BODY": "Monday - Friday / 09:00am - 18:00pm"
             },
             "email_information": {
-                "CONTACT_SECTION_EMAIL_INFORMATION_TITLE": "info@mgl.cc",
                 "CONTACT_SECTION_EMAIL_INFORMATION_BODY": "Get in Touch"
             }
         }

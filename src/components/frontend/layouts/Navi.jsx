@@ -1,9 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react"
 import FrontEndContext from '../../../context/FrontEndContext'
+import PropTypes from 'prop-types'
+import Cookies from 'universal-cookie'
 import ReactFlagsSelect from 'react-flags-select'
 import { withTranslation } from "react-i18next"
 import { Container, Nav, Navbar, Image } from "react-bootstrap"
+import ScrollToTop from "./ScrollToTop"
+
+const cookies = new Cookies()
 
 class Navi extends Component {
 
@@ -12,13 +17,22 @@ class Navi extends Component {
         const elementToView = document.getElementById(id)
         elementToView.scrollIntoView()
     }
+
+    handleLanguage = (_language) => {
+        this.props.i18n.changeLanguage(_language)
+
+        if (cookies.get("language") !== undefined) {
+            this.props.funcSetCookie(_language)
+        }
+    }
+
     render() {
         return (
             <FrontEndContext.Consumer>
                 {(context) => {
                     return (
                         <div>
-                            <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="400">
+                            <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
                                 <Container>
                                     <Navbar.Brand>
                                         <Image className="navi-logo" src="./assets/img/logo.png" alt="Midas Global Logistic" fluid ></Image>
@@ -67,7 +81,7 @@ class Navi extends Component {
                                         </Nav>
                                         <Nav>
                                             <div className="navi-phone">
-                                                <a href={"tel:" + this.props.t('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_TITLE')}>{this.props.t('contact.body.phone_information.CONTACT_SECTION_PHONE_INFORMATION_TITLE')}</a>
+                                                <a href="tel:+902124381818">+90 (212) 438 18 18</a>
                                             </div>
                                         </Nav>
                                         <Nav className="navi">
@@ -79,7 +93,7 @@ class Navi extends Component {
                                                     "US": "EN"
                                                 }}
                                                 selected={this.props.i18n.language.toUpperCase()}
-                                                onSelect={code => this.props.i18n.changeLanguage(code.toLowerCase().toString())}
+                                                onSelect={_language => this.handleLanguage(_language.toLowerCase().toString())}
                                                 optionsSize={13}
                                                 selectedSize={15}
                                             />
@@ -87,6 +101,7 @@ class Navi extends Component {
                                     </Navbar.Collapse>
                                 </Container>
                             </Navbar>
+                            <ScrollToTop funcNavigate={this.navigate} />
                         </div>
                     )
                 }}
@@ -94,4 +109,9 @@ class Navi extends Component {
         )
     }
 }
+
+Navi.propTypes = {
+    funcSetCookie: PropTypes.func.isRequired,
+}
+
 export default withTranslation('translation')(Navi)

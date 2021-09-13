@@ -3,11 +3,11 @@ import Services from './Services'
 
 class HomeServise extends Services {
     userLog() {
-        return axios.post(this.API_URL + "log")
+        return axios.post(this.API_URL + "mglLog")
     }
 
-    getHome(_language) {
-        return this.getList(_language + "/home")
+    getHome() {
+        return this.getList("mglHome")
     }
 }
 export default HomeServise
