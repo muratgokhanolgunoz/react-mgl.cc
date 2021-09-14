@@ -6,6 +6,10 @@ class BlogService extends Services {
         return this.getList("blog/" + _language)
     }
 
+    getSelectedBlog(_language, _id) {
+        return this.getList("blog/" + _language + "/" + _id)
+    }
+
     addBlog(_language, _data) {
         return axios.post(this.API_URL + "blog/" + _language + "/add", _data)
     }

@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
-
-:root {
-  --template-color-orange: #fa6f2a;
-  --template-color-blue: #002f78;
-  --template-font-family: "Caladea", serif;
-}
+@import url("./template.css");
 
 body {
   font-family: var(--template-font-family);
@@ -235,6 +228,24 @@ body {
   text-align: justify;
 }
 
+@media screen and (max-width: 1380px) {
+  .services-box p {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .services-box p {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-box p {
+    max-height: 175px;
+  }
+}
+
 /* ========== ABOUT SECTION STYLES ========== */
 
 .about {
@@ -271,10 +282,6 @@ body {
   padding: 18px;
 }
 
-.videos-body-items:hover .videos-body-images-overlay {
-  display: block;
-}
-
 .videos-body-carousel-button {
   margin-top: 60px;
 }
@@ -282,10 +289,7 @@ body {
 .videos-body-images {
   display: block;
   width: 100%;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
-  -moz-box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
-  box-shadow: 0px 25px 29px -22px rgba(120, 120, 120, 1);
+  cursor: pointer;  
 }
 
 .videos-body .slick-slider,
@@ -322,6 +326,7 @@ body {
   cursor: pointer;
   width: 100%;
   text-align: center;
+  box-shadow: 0px 15px 20px -15px rgb(99, 99, 99);
 }
 
 .videos-body-images-overlay p {

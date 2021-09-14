@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import { withTranslation } from "react-i18next"
+import PropTypes from "prop-types"
 import Iframe from "react-iframe"
+import { withTranslation } from "react-i18next"
 import { Row, Col, Modal, Button } from "react-bootstrap"
 
 class GalleryPopup extends Component {
@@ -15,21 +16,21 @@ class GalleryPopup extends Component {
             </Button>
           </Modal.Header>
           <Modal.Body>
-            <Iframe className="modal-videos-body-iframe" url={this.props.propsCurrentVideo !== undefined ? this.props.propsVideosJson[this.props.propsCurrentVideo].src : ""} allowFullScreen={true} />
+            <Iframe className="modal-videos-body-iframe" url={this.props.propsCurrentVideo !== 0 ? this.props.propsVideosJson[this.props.propsCurrentVideo].src : ""} allowFullScreen={true} title="Gallery" />
             <br />
             <div>
               <Row>
                 <Col>
-                  {this.props.propsPreviousButtonValue !== undefined ? (
-                    <Button className="template-button template-button-primary-2 pin-to-left" onClick={() => this.props.propsNaviationVideo(this.props.propsPreviousButtonValue)}>
+                  {this.props.propsPreviousButtonValue !== 0 ? (
+                    <Button className="template-button template-button-primary-2 pin-to-left" onClick={() => this.props.propsNavigationVideo(this.props.propsPreviousButtonValue)}>
                       {this.props.t('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
                     </Button>
                   ) : null}
                 </Col>
 
                 <Col>
-                  {this.props.propsNextButtonValue !== undefined ? (
-                    <Button className="template-button template-button-primary-2 pin-to-right" onClick={() => this.props.propsNaviationVideo(this.props.propsNextButtonValue)}>
+                  {this.props.propsNextButtonValue !== 0 ? (
+                    <Button className="template-button template-button-primary-2 pin-to-right" onClick={() => this.props.propsNavigationVideo(this.props.propsNextButtonValue)}>
                       {this.props.t('template.buttons.TEMPLATE_NEXT_BUTTON')}
                     </Button>
                   ) : null}
@@ -42,4 +43,15 @@ class GalleryPopup extends Component {
     )
   }
 }
+
+GalleryPopup.propTypes = {
+  popupShow: PropTypes.bool.isRequired,
+  popupShowToggle: PropTypes.func.isRequired,
+  propsVideosJson: PropTypes.array.isRequired,
+  propsPreviousButtonValue: PropTypes.number.isRequired,
+  propsNextButtonValue: PropTypes.number.isRequired,
+  propsCurrentVideo: PropTypes.number.isRequired,
+  propsNavigationVideo: PropTypes.func.isRequired
+}
+
 export default withTranslation('translation')(GalleryPopup)

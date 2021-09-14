@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import FrontEndContext from "../FrontEndContext"
+import Context from "./Context"
 
 class Provider extends Component {
     state = {
@@ -11,7 +11,7 @@ class Provider extends Component {
 
     render() {
         return (
-            <FrontEndContext.Provider value={{
+            <Context.Provider value={{
                 state: this.state,
                 setCookie: (_cookie) => {
                     this.setState({
@@ -27,7 +27,7 @@ class Provider extends Component {
                 }
             }}>
                 {this.props.children}
-            </FrontEndContext.Provider>
+            </Context.Provider>
         )
     }
 }

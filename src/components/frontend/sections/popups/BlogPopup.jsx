@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import PropTypes from 'prop-types'
 import { withTranslation } from "react-i18next"
 import { Container, Row, Col, Modal, Button, Image } from "react-bootstrap"
 
@@ -41,4 +42,11 @@ class BlogPopup extends Component {
         )
     }
 }
+
+BlogPopup.propTypes = {
+    popupShow: PropTypes.bool.isRequired,
+    popupShowToggle: PropTypes.func.isRequired,
+    blogDetails: PropTypes.object.isRequired
+}
+
 export default withTranslation('translation')(BlogPopup)

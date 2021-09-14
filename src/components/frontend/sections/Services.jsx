@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import FrontEndContext from '../../../context/FrontEndContext'
+import Context from '../../../context/Context'
 import { withTranslation } from "react-i18next"
 import Titles from "../layouts/SectionTitles"
 
@@ -9,7 +9,7 @@ import { GiCargoShip, GiTruck, GiCubeforce, GiTrophyCup } from "react-icons/gi"
 class Services extends Component {
     render() {
         return (
-            <FrontEndContext.Consumer>
+            <Context.Consumer>
                 {(context) => {
                     return (
                         <div id="services" className="services section-padding">
@@ -63,7 +63,7 @@ class Services extends Component {
                         </div>
                     )
                 }}
-            </FrontEndContext.Consumer>
+            </Context.Consumer>
         )
     }
 }

@@ -1,8 +1,7 @@
 import React, { Component } from "react"
-import FrontEndContext from '../../../context/FrontEndContext'
+import Context from '../../../context/Context'
 import HomeServise from "../../../services/HomeService"
-import PropTypes from "prop-types"
-import TrackingPopup from "./popups/TrackingPopup"
+import WidgetPopup from "./popups/WidgetPopup"
 import { withTranslation } from "react-i18next"
 import { showToast } from '../../../core/functions'
 import { ToastContainer } from 'react-toastify'
@@ -69,7 +68,7 @@ class Home extends Component {
         }
 
         return (
-            <FrontEndContext.Consumer>
+            <Context.Consumer>
                 {(context) => {
                     return (
                         <div>
@@ -128,8 +127,7 @@ class Home extends Component {
                                     </Row>
                                 </Container>
 
-                                <TrackingPopup
-                                    language={this.props.t}
+                                <WidgetPopup
                                     popupShow={this.state.popupShow}
                                     iframeSrc={this.state.iframeSrc}
                                     popupShowToggle={this.handlePopupShow}
@@ -137,33 +135,13 @@ class Home extends Component {
 
                                 <ToastContainer />
                             </div>
-
-                            {
-                                this.props.funcGetCookie().language === undefined && this.context.state.cookie.language === undefined
-                                    ?
-                                    (
-                                        <div className="cookie-banner">
-                                            <h5>{this.props.t('privacy.PRIVACY_HEADER')}</h5>
-                                            <p>{this.props.t('privacy.PRIVACY_TEXT')}</p>
-                                            <Button className="cookie_banner_button template-button template-button-primary-1" onClick={() => this.props.funcSetCookie(window.navigator.language.substr(0, 2).toLowerCase().toString())}>{this.props.t('privacy.PRIVACY_BUTTON')}</Button>
-                                            <h6 onClick={() => this.context.setCookie({ language: null })}>Kapat</h6>
-                                        </div>
-                                    )
-                                    :
-                                    null
-                            }
                         </div>
                     )
                 }}
-            </FrontEndContext.Consumer>
+            </Context.Consumer>
         )
     }
 }
 
-Home.contextType = FrontEndContext
-Home.propTypes = {
-    funcSetCookie: PropTypes.func.isRequired,
-    funcGetCookie: PropTypes.func.isRequired
-}
-
+Home.contextType = Context
 export default withTranslation('translation')(Home)

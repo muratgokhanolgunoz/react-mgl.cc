@@ -1,13 +1,11 @@
 import React, { Component } from "react"
-import FrontEndContext from '../../../context/FrontEndContext'
 import { withTranslation } from "react-i18next"
-
 import Titles from "../layouts/SectionTitles"
 import ScheduleServices from "../../../services/ScheduleServices"
 import { showToast } from "../../../core/functions"
-
 import { ToastContainer } from 'react-toastify'
 import { Container, Row, Table } from "react-bootstrap"
+import ScheduleRow from "./ScheduleRow"
 
 class Schedule extends Component {
   state = {
@@ -44,66 +42,52 @@ class Schedule extends Component {
 
   render() {
     return (
-      <FrontEndContext.Consumer>
-        {(context) => {
-          return (
-            <div id="schedule" className="schedule section-padding" style={{ backgroundImage: `url("./assets/uploads/schedule/schedule.jpg")`, backgroundSize: "cover", backgroundPosition: "center center", backgroundAttachment: "fixed"}}>
-              <Container className="main" fluid>
-                <Row>
-                  <Titles
-                    title={this.props.t('schedule.header.SCHEDULE_SECTION_TITLE')}
-                    subtitle={this.props.t('schedule.header.SCHEDULE_SECTION_SUBTITLE')}
-                    description={this.props.t('schedule.header.SCHEDULE_SECTION_DESCRIPTION')}
-                    color="text-light"
-                    lineStatus={true}
-                  />
-                </Row>
-                <br />
-                <Row>
-                  <textarea type="hidden" id="clipboard-area" />
-                  <Table className="table-schedule" hover responsive>
-                    <thead>
-                      <tr>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY')}</span></th>
-                        <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF')}</span></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {this.state.scheduleList.length
-                        ?
-                        this.state.scheduleList.map((schedule, index) => (
-                          <tr className="cursor-pointer" key={index} onClick={() => this.copyOfShipInformations(schedule)}>
-                            <td><span className="table-schedule-row-span"><b>{schedule.destination_name}</b></span></td>
-                            <td><span className="table-schedule-row-span">{schedule.ship_name}</span></td>
-                            <td><span className="table-schedule-row-span">{schedule.eta_date}</span></td>
-                            <td><span className="table-schedule-row-span">{schedule.cut_off_date}</span></td>
-                            <td><span className="table-schedule-row-span">{schedule.load_place.substr(0, 25)}</span></td>
-                            <td><span className="table-schedule-row-span">{schedule.lan_name.substr(0, 25)}</span></td>
-                            <td><span className="table-schedule-row-span">{schedule.cutoff_date}</span></td>
-                          </tr>
-                        ))
-                        :
-                        <tr>
-                          <td colSpan="6">
-                            <p className="schedule-null-message">{this.props.t('schedule.body.SCHEDULE_SECTION_EMPTY_MESSAGE')}</p>
-                          </td>
-                        </tr>
-                      }
-                    </tbody>
-                  </Table>
-                </Row>
-              </Container>
+      <div id="schedule" className="schedule section-padding" style={{ backgroundImage: `url("./assets/uploads/schedule/schedule.jpg")`, backgroundSize: "cover", backgroundPosition: "center center", backgroundAttachment: "fixed" }}>
+        <Container className="main" fluid>
+          <Row>
+            <Titles
+              title={this.props.t('schedule.header.SCHEDULE_SECTION_TITLE')}
+              subtitle={this.props.t('schedule.header.SCHEDULE_SECTION_SUBTITLE')}
+              description={this.props.t('schedule.header.SCHEDULE_SECTION_DESCRIPTION')}
+              color="text-light"
+              lineStatus={true}
+            />
+          </Row>
+          <br />
+          <Row>
+            <textarea type="hidden" id="clipboard-area" />
+            <Table className="table-schedule" hover responsive>
+              <thead>
+                <tr>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DESTINATION')}</span></th>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_SHIP_NAME')}</span></th>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_ESTIMATED_TIME_OF_ARRIVAL')}</span></th>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_DECLARATION_CLOSING')}</span></th>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_LOAD_PLACE')}</span></th>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_AGENCY')}</span></th>
+                  <th><span className="table-schedule-row-span">{this.props.t('schedule.body.table.SCHEDULE_SECTION_TABLE_HEADER_CELL_CONSOLE_CUTOFF')}</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.scheduleList.length
+                  ?
+                  this.state.scheduleList.map((schedule, index) => (
+                    <ScheduleRow key={index} scheduleRowItem={schedule} funcCopyOfShipInformations={this.copyOfShipInformations} />
+                  ))
+                  :
+                  <tr>
+                    <td colSpan="6">
+                      <p className="schedule-null-message">{this.props.t('schedule.body.SCHEDULE_SECTION_EMPTY_MESSAGE')}</p>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </Table>
+          </Row>
+        </Container>
 
-              <ToastContainer />
-            </div>
-          )
-        }}
-      </FrontEndContext.Consumer>
+        <ToastContainer />
+      </div>
     )
   }
 }

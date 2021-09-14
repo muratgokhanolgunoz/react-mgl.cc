@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react"
-import FrontEndContext from '../../../context/FrontEndContext'
+import Context from '../../../context/Context'
 import PropTypes from 'prop-types'
 import Cookies from 'universal-cookie'
 import ReactFlagsSelect from 'react-flags-select'
@@ -28,7 +28,7 @@ class Navi extends Component {
 
     render() {
         return (
-            <FrontEndContext.Consumer>
+            <Context.Consumer>
                 {(context) => {
                     return (
                         <div>
@@ -105,7 +105,7 @@ class Navi extends Component {
                         </div>
                     )
                 }}
-            </FrontEndContext.Consumer>
+            </Context.Consumer>
         )
     }
 }

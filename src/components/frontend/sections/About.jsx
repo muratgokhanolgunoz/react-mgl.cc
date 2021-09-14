@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import FrontEndContext from "../../../context/FrontEndContext"
+import Context from "../../../context/Context"
 import { withTranslation } from 'react-i18next'
 import Titles from "../layouts/SectionTitles"
 
@@ -8,7 +8,7 @@ import { Container, Row, Col, Image } from "react-bootstrap"
 class About extends Component {
     render() {
         return (
-            <FrontEndContext.Consumer>
+            <Context.Consumer>
                 {(context) => {
                     return (
                         <div id="about" className="about section-padding">
@@ -45,7 +45,7 @@ class About extends Component {
                         </div>
                     )
                 }}
-            </FrontEndContext.Consumer>
+            </Context.Consumer>
         )
     }
 }

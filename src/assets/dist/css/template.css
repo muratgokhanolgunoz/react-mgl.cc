@@ -1,8 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caladea&display=swap");
+
+:root {
+  --template-color-orange: #fa6f2a;
+  --template-color-blue: #002f78;
+  --template-font-family: "Caladea", serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
   list-style: none;
+}
+
+::-moz-selection { 
+  background: var(--template-color-blue); 
+  color: #fff;
+}
+::selection { 
+  background: var(--template-color-blue);
+  color: #fff;
 }
 
 tbody,
@@ -201,7 +219,7 @@ tr {
   left: 50%;
   line-height: 0;
   margin: auto;
-  margin-top: -6px
+  margin-top: -5px
 }
 
 .title-line-white {
@@ -224,5 +242,61 @@ tr {
   left: 50%;
   line-height: 0;
   margin: auto;
-  margin-top: -6px
+  margin-top: -5px;
+}
+
+.section-title-primary-2 {
+  margin: auto;
+  color: var(--template-color-blue);
+  position: relative;
+  max-width: 350px;
+}
+
+.section-title-primary-2:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: var(--template-color-blue);
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+.section-title-primary-2:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: var(--template-color-blue);
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.section-title-white {
+  margin: auto;
+  color: #fff;
+  position: relative;
+  max-width: 600px;
+}
+
+.section-title-white:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+.section-title-white:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  right: 0;
+  top: 50%;
+  position: absolute;
 }

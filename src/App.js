@@ -1,17 +1,15 @@
 import React, { Component, Fragment } from "react"
-import FrontEndProvider from "./context/provider/FrontEndProvider"
-
-import Admin from './components/admin/Admin'
-import FrontEnd from "./components/frontend/FrontEnd"
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NotFound from "./components/NotFound";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Provider from "./context/Provider"
+import Admin from './components/admin/layouts/Main'
+import FrontEnd from "./components/frontend/layouts/Main"
+import NotFound from "./components/errors/NotFound"
 
 class App extends Component {
   render() {
     return (
       <Fragment>
-        <FrontEndProvider>
+        <Provider>
           <Router basename="/">
             <Switch>
               <Route exact path="/">
@@ -25,7 +23,7 @@ class App extends Component {
               </Route>
             </Switch>
           </Router>
-        </FrontEndProvider>
+        </Provider>
       </Fragment>
     )
   }

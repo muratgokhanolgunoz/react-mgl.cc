@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FrontEndContext from '../../../context/FrontEndContext'
+import Context from '../../../context/Context'
 import CareerService from '../../../services/CareerService'
 import { withTranslation } from 'react-i18next'
 import { showToast, validateEmail } from '../../../core/functions'
@@ -100,6 +100,7 @@ class Career extends Component {
                 payload.append('phone', this.state.phone)
                 payload.append('message', this.state.message)
                 payload.append('file', this.state.file)
+                payload.append('language', this.props.i18n.language)
 
                 careerService.uploadCareer(payload)
                     .then((response) => {
@@ -136,7 +137,7 @@ class Career extends Component {
 
     render() {
         return (
-            <FrontEndContext.Consumer>
+            <Context.Consumer>
                 {(context) => {
                     return (
                         <div id="career" className="career section-padding" style={{ backgroundImage: `url("./assets/uploads/career/images/career_background.jpg")`, backgroundSize: "cover", backgroundPosition: "center center" }}>
@@ -271,7 +272,7 @@ class Career extends Component {
                         </div>
                     )
                 }}
-            </FrontEndContext.Consumer>
+            </Context.Consumer>
         )
     }
 }

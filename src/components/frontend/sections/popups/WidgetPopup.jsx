@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from "react"
+import PropTypes from "prop-types"
+import Iframe from "react-iframe"
 import { withTranslation } from "react-i18next"
 import { Modal, Button } from "react-bootstrap"
-import Iframe from "react-iframe"
 
-class TrackingPopup extends Component {
+class WidgetPopup extends Component {
     render() {
         return (
             <Fragment>
@@ -21,4 +22,11 @@ class TrackingPopup extends Component {
         )
     }
 }
-export default withTranslation('translation')(TrackingPopup)
+
+WidgetPopup.propTypes = {
+    iframeSrc: PropTypes.string.isRequired,
+    popupShow: PropTypes.bool.isRequired,
+    popupShowToggle: PropTypes.func.isRequired,
+}
+
+export default withTranslation('translation')(WidgetPopup)

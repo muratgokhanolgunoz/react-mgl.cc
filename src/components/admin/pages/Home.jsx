@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
-import Navi from '../constants/Navi'
+import Navi from '../layouts/Navi'
 
 const Home = () => {
     return (

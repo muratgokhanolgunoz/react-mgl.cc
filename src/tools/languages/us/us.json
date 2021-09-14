@@ -17,7 +17,7 @@
         "NAVBAR_ITEM_SERVICES": "Services",
         "NAVBAR_ITEM_ABOUT_US": "About Us",
         "NAVBAR_ITEM_VIDEO_GALLERY": "Videos",
-        "NAVBAR_ITEM_SHIP_PROGRAM": "Ship Program",
+        "NAVBAR_ITEM_SHIP_PROGRAM": "Vessel Schedule",
         "NAVBAR_ITEM_ARTICLES_FROM_US": "Articles From Us",
         "NAVBAR_ITEM_CAREER": "Career",
         "NAVBAR_ITEM_CONTACT": "Contact Us"
@@ -150,6 +150,9 @@
         "body": {
             "BLOG_SECTION_BUTTON": "Read More . . .",
             "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "by"            
+        }, 
+        "error": {
+            "BLOG_SECTION_ERROR_BLOG_NOT_FOUND": "The article was not found. Please check the link and try again"
         }
     },
     "career": {

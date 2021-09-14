@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-
 import { I18nextProvider } from "react-i18next"
 import i18next from "i18next"
 
-import language_tr from "./tools/languages/tr/tr.json"
-import language_en from "./tools/languages/us/us.json"
+import language_tr from './tools/languages/tr/tr.json'
+import language_en from './tools/languages/us/us.json'
 
 const defaultLanguageIsSet = () => {
     let browserLanguage = window.navigator.language
