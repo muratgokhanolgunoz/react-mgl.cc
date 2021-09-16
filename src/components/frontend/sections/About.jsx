@@ -20,7 +20,6 @@ class About extends Component {
                                         description={this.props.t('about.header.ABOUT_SECTION_DESCRIPTION')}
                                     />
                                 </Row>
-                                <br /><br />
                                 <Row>
                                     <Col lg={6} md={12}>
                                         <Image

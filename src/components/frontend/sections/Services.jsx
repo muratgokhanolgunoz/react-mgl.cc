@@ -20,7 +20,6 @@ class Services extends Component {
                                     description={this.props.t('services.header.SERVICES_SECTION_DESCRIPTION')}
                                 />
                             </Row>
-                            <br /><br />
                             <Row>
                                 <Col md={6}>
                                     <div className="services-item">

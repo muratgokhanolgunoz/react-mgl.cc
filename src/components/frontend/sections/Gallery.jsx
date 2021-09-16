@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { Component } from "react"
 import GalleryServices from '../../../services/GalleryServices'
 import queryString from "query-string"
@@ -43,8 +44,7 @@ class Gallery extends Component {
                     videos: response.data.result
                 })
             })
-            .then(() => {
-                // eslint-disable-next-line no-restricted-globals
+            .then(() => {               
                 urlParams = queryString.parse(location.search)
                 this.showVideoFromUrl()
             })
@@ -67,11 +67,11 @@ class Gallery extends Component {
         this.setState(() => ({ previousButtonValue: videoId - 1 }))
 
         if (temp + 1 >= this.state.videos.length) {
-            this.setState(() => ({ nextButtonValue: undefined }))
+            this.setState(() => ({ nextButtonValue: 0 }))
         }
 
         if (temp - 1 <= 0) {
-            this.setState(() => ({ previousButtonValue: undefined }))
+            this.setState(() => ({ previousButtonValue: 0 }))
         }
 
         this.handlePopupShow(true)
@@ -98,10 +98,10 @@ class Gallery extends Component {
             slidesToShow: 3,
             speed: 100,
             dots: false,
-            adaptiveHeight: true,
+            adaptiveHeight: false,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1366,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
@@ -109,7 +109,7 @@ class Gallery extends Component {
                     },
                 },
                 {
-                    breakpoint: 900,
+                    breakpoint: 1000,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -131,7 +131,6 @@ class Gallery extends Component {
                             fontSize="section-title-description-font-size"
                         />
                     </Row>
-                    <br />
                     <Row className="videos-body">
                         <Slider ref={(c) => (this.slider = c)} {...settings} >
                             {this.state.videos.map((video) => (
@@ -148,7 +147,6 @@ class Gallery extends Component {
                                     null
                             ))}
                         </Slider>
-                        <br />
                         <div className="videos-body-carousel-button text-center">
                             <Button className="m-2 template-button template-button-primary-1 template-button-box-shadow" onClick={this.slickPrevious}>
                                 {this.props.t('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}

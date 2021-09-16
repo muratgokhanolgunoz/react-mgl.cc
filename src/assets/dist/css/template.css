@@ -14,6 +14,10 @@
   list-style: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 ::-moz-selection { 
   background: var(--template-color-blue); 
   color: #fff;
@@ -46,8 +50,16 @@ tr {
   margin-top: -100px;
 }
 
-.section-padding {
-  padding: 3em 0;
+@media screen and (min-width: 768px) {
+  .section-padding {
+    padding: 3em 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-padding {
+    padding: 1em 0;
+  }
 }
 
 .pin-to-right {
@@ -277,7 +289,7 @@ tr {
   margin: auto;
   color: #fff;
   position: relative;
-  max-width: 600px;
+  max-width: 475px;
 }
 
 .section-title-white:before {

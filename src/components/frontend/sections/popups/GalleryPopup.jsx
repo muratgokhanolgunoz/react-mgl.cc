@@ -22,7 +22,7 @@ class GalleryPopup extends Component {
               <Row>
                 <Col>
                   {this.props.propsPreviousButtonValue !== 0 ? (
-                    <Button className="template-button template-button-primary-2 pin-to-left" onClick={() => this.props.propsNavigationVideo(this.props.propsPreviousButtonValue)}>
+                    <Button className="template-button template-button-primary-2 pin-to-left gallery-popup-button" onClick={() => this.props.propsNavigationVideo(this.props.propsPreviousButtonValue)}>
                       {this.props.t('template.buttons.TEMPLATE_PREVIOUS_BUTTON')}
                     </Button>
                   ) : null}
@@ -30,7 +30,7 @@ class GalleryPopup extends Component {
 
                 <Col>
                   {this.props.propsNextButtonValue !== 0 ? (
-                    <Button className="template-button template-button-primary-2 pin-to-right" onClick={() => this.props.propsNavigationVideo(this.props.propsNextButtonValue)}>
+                    <Button className="template-button template-button-primary-2 pin-to-right gallery-popup-button" onClick={() => this.props.propsNavigationVideo(this.props.propsNextButtonValue)}>
                       {this.props.t('template.buttons.TEMPLATE_NEXT_BUTTON')}
                     </Button>
                   ) : null}

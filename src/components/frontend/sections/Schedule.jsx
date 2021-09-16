@@ -53,7 +53,6 @@ class Schedule extends Component {
               lineStatus={true}
             />
           </Row>
-          <br />
           <Row>
             <textarea type="hidden" id="clipboard-area" />
             <Table className="table-schedule" hover responsive>
@@ -85,7 +84,6 @@ class Schedule extends Component {
             </Table>
           </Row>
         </Container>
-
         <ToastContainer />
       </div>
     )

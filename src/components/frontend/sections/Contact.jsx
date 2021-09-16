@@ -26,12 +26,12 @@ class Contact extends Component {
                             <Col className="contact-right" lg={4}>
                                 <div className="contact-info">
                                     <Row>
-                                        <Col sm={2}>
+                                        <Col xs={2}>
                                             <span className="contact-info-icon-upper">
                                                 <BiHome className="contact-info-icon" />
                                             </span>
                                         </Col>
-                                        <Col sm={10}>
+                                        <Col xs={10}>
                                             <div className="contact-info-body">
                                                 <h4>{this.props.t('contact.body.address_information.CONTACT_SECTION_ADDRESS_INFORMATION_TITLE')}</h4>
                                                 <p>{this.props.t('contact.body.address_information.CONTACT_SECTION_ADDRESS_INFORMATION_BODY')}</p>
@@ -42,12 +42,12 @@ class Contact extends Component {
 
                                 <div className="contact-info">
                                     <Row>
-                                        <Col sm={2}>
+                                        <Col xs={2}>
                                             <span className="contact-info-icon-upper">
                                                 <BiMobileAlt className="contact-info-icon" />
                                             </span>
                                         </Col>
-                                        <Col col={10}>
+                                        <Col xs={10}>
                                             <div className="contact-info-body">
                                                 <h4>
                                                     <a href="tel:+902124381818">+90 (212) 438 18 18</a>
@@ -60,12 +60,12 @@ class Contact extends Component {
 
                                 <div className="contact-info">
                                     <Row>
-                                        <Col sm={2}>
+                                        <Col xs={2}>
                                             <span className="contact-info-icon-upper">
                                                 <BiEnvelope className="contact-info-icon" />
                                             </span>
                                         </Col>
-                                        <Col sm={10}>
+                                        <Col xs={10}>
                                             <div className="contact-info-body">
                                                 <h4><a href="mailto:info@mgl.cc">info@mgl.cc</a></h4>
                                                 <p>{this.props.t('contact.body.email_information.CONTACT_SECTION_EMAIL_INFORMATION_BODY')}</p>

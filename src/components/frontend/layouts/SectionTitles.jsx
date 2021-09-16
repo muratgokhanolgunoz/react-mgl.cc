@@ -8,9 +8,9 @@ class Titles extends Component {
                 <p className={`${this.props.textAlign} ${this.props.color} `}>{this.props.subtitle}</p>
                 <h2 className={`${/*this.props.color === "text-light" ? "section-title-white" : "section-title-primary-2"*/""} ${this.props.textAlign} ${this.props.color}`}>{this.props.title}</h2>
                 <p className={`${this.props.textAlign} ${this.props.fontSize} ${this.props.color} `}>{this.props.description}</p>
-                {
+                {/* {
                     this.props.lineStatus === true ? <span className={this.props.color === "text-light" ? "title-line-white" : "title-line-primary-2"}></span> : null
-                }
+                } */}
             </Fragment>
         );
     }
