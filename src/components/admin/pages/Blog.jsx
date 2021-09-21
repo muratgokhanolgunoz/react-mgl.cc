@@ -142,11 +142,11 @@ const Blog = () => {
                                 id="input-upload-thumbnail"
                                 type="file"
                                 name="thumbnail"
-                                accept=".jpg"
+                                accept=".jpg,.jpeg,.png"
                                 onChange={(e) => setThumbnail(e.target.files[0])}
                                 className="form-control"
                             />
-                            <label>File Extension : <b>.jpg</b></label>
+                            <label>File Extension : <b>. jpg , . png</b></label>
                         </Col>
                         <br />
                         <Col xs={12}>
@@ -155,11 +155,11 @@ const Blog = () => {
                                 id="input-upload-photo"
                                 type="file"
                                 name="photo"
-                                accept=".jpg"
+                                accept=".jpg,.jpeg,.png"
                                 onChange={(e) => setPhoto(e.target.files[0])}
                                 className="form-control"
                             />
-                            <label>File Extension : <b>.jpg</b></label>
+                            <label>File Extension : <b>. jpg , . png</b></label>
                         </Col>
                         <br />
                         <Col xs={12}>
@@ -176,6 +176,9 @@ const Blog = () => {
                         <br />
                         <Col xs={12}>
                             <label><b>Article : </b></label>
+                            <label>
+                                <b>Supported Tags :</b> <br /> <small>[ br ] [ b ] [ u ] [ em ] [ mark ] [ h1 ] [ h2 ] [ h3 ] [ h4 ] [ h5 ] [ h6 ] [ pre ] [ small ] [ big ]</small>
+                            </label>
                             <textarea
                                 id="textarea-article"
                                 name="article"
@@ -206,7 +209,7 @@ const Blog = () => {
                         <Table striped responsive>
                             <thead className="table-dark">
                                 <tr>
-                                    <th>#</th>                                    
+                                    <th>#</th>
                                     <th>Author</th>
                                     <th>Title</th>
                                     <th>Date</th>
@@ -223,7 +226,7 @@ const Blog = () => {
                                             <td>{blogItem.BLOG_SECTION_ITEMS_TITLE}</td>
                                             <td>{blogItem.BLOG_SECTION_ITEMS_DATE}</td>
                                             <td>
-                                                <a href={"https://mgl.cc?language=" + language + "&blog=" + index} target="_blank">{"https://mgl.cc?language=" + language + "&blog=" + index}</a>
+                                                <a href={"https://mgl.cc?language=" + language + "&key=" + index} target="_blank">{"https://mgl.cc?language=" + language + "&key=" + index}</a>
                                             </td>
                                             <td>
                                                 <span className="text-primary" style={{ textDecoration: "underline", cursor: "pointer" }} onClick={() => deleteBlog(blogItem.BLOG_SECTION_ITEMS_ID)}>Delete</span>

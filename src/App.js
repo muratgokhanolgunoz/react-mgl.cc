@@ -17,7 +17,7 @@ class App extends Component {
               </Route>
               <Route path="/sarici2021">
                 <Admin />
-              </Route>              
+              </Route>
               <Route>
                 <NotFound />
               </Route>
@@ -28,4 +28,5 @@ class App extends Component {
     )
   }
 }
+
 export default App

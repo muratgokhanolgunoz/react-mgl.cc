@@ -14,7 +14,6 @@ import Blog from "../sections/Blog"
 import Career from "../sections/Career"
 import Contact from "../sections/Contact"
 import Footer from './Footer'
-import { Helmet } from "react-helmet"
 import { Container } from "react-bootstrap"
 
 import "../../../assets/dist/css/style.css"
@@ -54,10 +53,6 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <Helmet>
-                    <title>{this.props.t('html.HTML_PAGE_TITLE')}</title>
-                </Helmet>
-
                 <Navi funcSetCookie={this.setCookie} />
                 <Home />
 

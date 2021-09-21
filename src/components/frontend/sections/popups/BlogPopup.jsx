@@ -14,7 +14,15 @@ let tempObject = {},
 
 class BlogPopup extends Component {
 
+    componentDidMount() {
+        this.parseTextToHMTL()
+    }
+
     componentDidUpdate() {
+        this.parseTextToHMTL()
+    }
+
+    parseTextToHMTL = () => {
         if (this.props.popupShow) {
             arrayFindElements = []
             elements.map((e) => (

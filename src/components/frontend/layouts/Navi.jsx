@@ -35,7 +35,9 @@ class Navi extends Component {
                             <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
                                 <Container>
                                     <Navbar.Brand>
-                                        <Image className="navi-logo" src="./assets/img/logo.png" alt="Midas Global Logistic" fluid ></Image>
+                                        <a onClick={(e => this.navigate(e, 'home'))} className="cursor-pointer">
+                                            <Image className="navi-logo" src="./assets/img/logo.png" alt="Midas Global Logistic" fluid ></Image>
+                                        </a>
                                     </Navbar.Brand>
                                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                                     <Navbar.Collapse id="responsive-navbar-nav">

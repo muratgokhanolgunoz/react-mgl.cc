@@ -18,7 +18,7 @@
         "NAVBAR_ITEM_ABOUT_US": "About Us",
         "NAVBAR_ITEM_VIDEO_GALLERY": "Videos",
         "NAVBAR_ITEM_SHIP_PROGRAM": "Vessel Schedule",
-        "NAVBAR_ITEM_ARTICLES_FROM_US": "Articles From Us",
+        "NAVBAR_ITEM_ARTICLES_FROM_US": "Our Articles",
         "NAVBAR_ITEM_CAREER": "Career",
         "NAVBAR_ITEM_CONTACT": "Contact Us"
     },
@@ -143,7 +143,7 @@
     },
     "blog": {
         "header": {
-            "BLOG_SECTION_TITLE": "Articles From Us",
+            "BLOG_SECTION_TITLE": "Our Articles",
             "BLOG_SECTION_SUBTITLE": "",
             "BLOG_SECTION_DESCRIPTION": ""
         },

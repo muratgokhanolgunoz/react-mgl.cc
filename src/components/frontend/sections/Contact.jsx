@@ -4,7 +4,7 @@ import Iframe from 'react-iframe'
 
 import Titles from '../layouts/SectionTitles'
 import { Container, Row, Col } from 'react-bootstrap'
-import { BiHome, BiMobileAlt, BiEnvelope } from "react-icons/bi";
+import { BiHome, BiPhoneCall, BiEnvelope } from "react-icons/bi"
 
 class Contact extends Component {
     render() {
@@ -44,7 +44,7 @@ class Contact extends Component {
                                     <Row>
                                         <Col xs={2}>
                                             <span className="contact-info-icon-upper">
-                                                <BiMobileAlt className="contact-info-icon" />
+                                                <BiPhoneCall className="contact-info-icon" />
                                             </span>
                                         </Col>
                                         <Col xs={10}>
