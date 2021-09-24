@@ -25,7 +25,7 @@ class About extends Component {
                                         <Image
                                             id="about-image"
                                             className="about-item"
-                                            src="./assets/uploads/about/about.jpg"
+                                            src="./assets/mglUploads/about/about.jpg"
                                             alt=""
                                             fluid
                                         ></Image>
@@ -37,7 +37,7 @@ class About extends Component {
                                 <br />
                                 <Row>
                                     <Col lg={{ offset: 4, span: 4 }}>
-                                        <a href="./assets/uploads/about/midas_presentation_2021.pdf" rel="nopenner noreferrer" target="_blank" alt="" className="pin-to-center template-button template-button-primary-2 template-button-box-shadow" style={{ width: "auto" }}>{this.props.t('about.body.ABOUT_SECTION_BUTTON_PRESENTATION')}</a>
+                                        <a href="./assets/mglUploads/about/midas_presentation_2021.pdf" rel="nopenner noreferrer" target="_blank" alt="" className="pin-to-center template-button template-button-primary-2 template-button-box-shadow" style={{ width: "auto" }}>{this.props.t('about.body.ABOUT_SECTION_BUTTON_PRESENTATION')}</a>
                                     </Col>
                                 </Row>
                             </Container>

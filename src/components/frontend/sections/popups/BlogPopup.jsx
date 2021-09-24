@@ -123,40 +123,10 @@ class BlogPopup extends Component {
         document.getElementById("blog-popup-article").append(createParagraph)
     }
 
-    // showArticle = (_article, _elements) => {
-    //     let elementId = 0,
-    //         j = 0,
-    //         createSpan,
-    //         createElement,
-    //         paragraph = document.createElement("p")
-
-    //     for (let i = 0; i < _article.length; i++) {
-    //         paragraph.innerHTML += _article[i]
-    //         if (elementId < _elements.length && (i + 1) === _elements[elementId].open) {
-    //             createSpan = document.createElement("span")
-    //             createElement = document.createElement(_elements[elementId].tag.tagOpen.substr(1, _elements[elementId].tag.tagOpen.length - 2))
-    //             console.log(elementId, i)
-    //             console.log(createElement)
-    //             if (_elements[elementId].tag.tagClose !== null) {
-    //                 for (j = i + _elements[elementId].tag.tagOpen.length + 1; j < _elements[elementId].close; j++) {
-    //                     createElement.innerHTML += _article[j]
-    //                     // i = j + _elements[elementId].tag.tagClose.length
-    //                     i++
-    //                 }
-    //             }
-    //             createSpan.append(createElement)
-    //             paragraph.append(createSpan)
-    //             elementId++
-    //         }
-    //     }
-
-    //     document.getElementById("blog-popup-article").append(paragraph)
-    // }
-
     render() {        
         return (
             <div>
-                <Modal show={this.props.popupShow} fullscreen={true} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" centered>
+                <Modal show={this.props.popupShow} fullscreen={true} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" backdrop="static" keyboard={false}>
                     <Modal.Header>
                         <Button className="template-button template-button-danger pin-to-right" onClick={() => this.props.popupShowToggle(false)}>
                             {this.props.t('template.buttons.TEMPLATE_CLOSE_BUTTON')}

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Context from "../../../context/Context"
 import { withTranslation } from "react-i18next"
+import Helmet from 'react-helmet'
 import HomeServices from "../../../services/HomeService"
 import Cookies from 'universal-cookie'
 import CookieBanner from "./CookieBanner"
@@ -15,7 +16,6 @@ import Career from "../sections/Career"
 import Contact from "../sections/Contact"
 import Footer from './Footer'
 import { Container } from "react-bootstrap"
-
 import "../../../assets/dist/css/style.css"
 import "react-toastify/dist/ReactToastify.css"
 
@@ -53,6 +53,14 @@ class Main extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <title>{this.props.t('template.HTML_PAGE_TITLE')}</title>
+                    <meta name="description" content={this.props.t('about.body.ABOUT_SECTION_TEXT')} />
+                    <meta property="og:title" content={this.props.t('template.HTML_PAGE_TITLE')} />
+                    <meta property="og:description" content={this.props.t('about.body.ABOUT_SECTION_TEXT')} />
+                    <meta property="og:image" content="https://mgl.cc/assets/img/apple-touch-icon.png" />
+                </Helmet>
+
                 <Navi funcSetCookie={this.setCookie} />
                 <Home />
 

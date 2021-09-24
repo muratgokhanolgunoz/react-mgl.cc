@@ -6,7 +6,7 @@ class NotFound extends Component {
         return (
             <div>
                 <h5 style={{ width: "100%", textAlign: "center", top: "40%", position: "absolute" }}>
-                    <span style={{ fontSize: "60px" }}>404</span> <br /> {this.props.t('404.404_PAGE_TEXT')}
+                    <span style={{ fontSize: "60px" }}>404</span> <br /> {this.props.t('template.notification.errors.404')}
                 </h5>
             </div>
         )

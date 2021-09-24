@@ -62,9 +62,15 @@ class Blog extends Component {
     handlePopupShow = (_status) => this.setState({ popupShow: _status })
     sendBlogInformation = (_blog) => this.setState({ selectedBlog: _blog })
 
+    sortArray = (_array, _key) => {
+        return _array.sort((i, j) => {
+            return  j.BLOG_SECTION_ITEMS_ID - i.BLOG_SECTION_ITEMS_ID
+        })
+    }
+
     blogs = (_language) => {
         blogService.getBlogs(_language)
-            .then(response => { this.context.setBlogs(response.data.result) })
+            .then(response => { this.context.setBlogs(this.sortArray(response.data.result)) })
             .catch(() => console.warn("API Error: Unable to load blog section"))
     }
 

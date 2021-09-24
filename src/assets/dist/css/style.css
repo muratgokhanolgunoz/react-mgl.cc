@@ -310,8 +310,6 @@ body {
   transform: scale(1);
 }
 
-
-
 .videos-body-images-overlay p {
   font-weight: bold
 }
@@ -442,14 +440,44 @@ body {
 .blog-box h6 {
   margin-top: 15px;
   margin-bottom: 20px;
-  text-transform: uppercase;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .blog-box p {
   margin-bottom: 30px;
   text-align: justify;
-  min-height: 230px;
+  height: 230px;
+}
+
+@media screen and (max-width: 1400px) {
+  .blog-box p {
+    height: 300px
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .blog-box p {
+    height: 140px
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .blog-box p {
+    height: 220px
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-box p {
+    height: 120px
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .blog-box p {
+    height: 150px
+  }
 }
 
 .blog-box a {

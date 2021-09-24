@@ -1,8 +1,9 @@
 {
   "name": "react-midas-global-logistic",
-  "homepage": "https://mgl.cc/",
+  "homepage": "https://mgl.cc",
   "version": "1.0.0",
-  "main": "index.js",
+  "proxy": "http://localhost:3000",
+  "main": "server.js",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -15,6 +16,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "express": "^4.17.1",
     "i18next": "^20.3.5",
     "jquery": "^3.6.0",
     "node-sass": "^6.0.1",
@@ -36,7 +38,7 @@
     "universal-cookie": "^4.0.4"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

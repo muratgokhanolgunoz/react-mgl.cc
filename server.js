@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -12,29 +13,29 @@ let result;
 const meta = {
     "home": {
         "title": {
-            "key": /\$OG_TITLE/g,
+            "key": /\__META_OG_TITLE__/g,
             "value": "Midas Global Lojistik - Türkiye' nin Dijital Nakliyecisi"
         },
         "description": {
-            "key": /\$OG_DESCRIPTION/g,
+            "key": /\__META_OG_DESCRIPTION__/g,
             "value": "Midas Global Lojistik; kökleri 1996 yılına kadar dayanan İstanbul merkezli ve denizyolu parsiyel taşımacılığu üzerine uzmanlaşmış bir lojistik firmasıdır. Türkiye ana limanlarından Istanbul/Ambarlı (Kumport, Marport, Mardaş), Kocaeli (Evyap, Derince, DP Port), Bursa/Gemlik, Izmir (Alsancak, Aliağa), Mersin, İskenderun, Antalya ve Trabzon limanlarından; Uzakdoğu, Kuzey Amerika, Güney Amerika, Ortadoğu, Uzakdoğu, Akdeniz ve Afrika limanlarına full konteyner servisi, Fas, Cezayir, Tunus, Libya, Mısır, Lübnan, İsrail, Suudi Arabistan, Birleşik Arap Emirlikleri, Sri Lanka, ispanya, Amerika Birleşik Devletleri ve Singapur'a parsiyel servis hizmeti vermektedir. Proje taşımacılığı, fuar taşımacılığı, parsiyel, konteyner aktarma ve çapraz taşımalar uzman olduğumuz alanlardır. İstanbul Mecidiyeköy Merkez, Beylikdüzü, ve Çin Zuhai de kendi ofislerimiz vardır. Midas Global Lojistik, e-Booking, e-Navlun gibi dijital altyapı gerektiren uygulamaları hayata geçiren Türkiye'nin ilk dijital freight forwarderıdır, ve dijitalleşmede Türkiye'nin bayrak taşıyıcı yerel firmasıdır."
         },
         "image": {
-            "key": /\$OG_IMAGE/g,
+            "key": /\__META_OG_IMAGE__/g,
             "value": rootUrl + "/assets/img/apple-touch-icon.png"
         }
     },
     "admin": {
         "title": {
-            "key": /\$OG_TITLE/g,
+            "key": /\__META_OG_TITLE__/g,
             "value": "Midas Global Lojistic - Admin Dashboard"
         },
         "description": {
-            "key": /\$OG_DESCRIPTION/g,
+            "key": /\__META_OG_DESCRIPTION__/g,
             "value": "Midas Global Logistic - Admin Dashboard"
         },
         "image": {
-            "key": /\$OG_IMAGE/g,
+            "key": /\__META_OG_IMAGE__/g,
             "value": rootUrl + "/assets/img/apple-touch-icon.png"
         }
     }
@@ -70,9 +71,9 @@ app.get('/', function (request, response) {
                     }
 
                     if (jsonResponse.length > 0 && jsonResponse.length > request.query.key) {
-                        data = data.replace(/\$OG_TITLE/g, jsonResponse[request.query.key].BLOG_SECTION_ITEMS_TITLE);
-                        data = data.replace(/\$OG_DESCRIPTION/g, jsonResponse[request.query.key].BLOG_SECTION_ITEMS_SUMMARY);
-                        result = data.replace(/\$OG_IMAGE/g, jsonResponse[request.query.key].BLOG_SECTION_ITEMS_PHOTO);
+                        data = data.replace(/\__META_OG_TITLE__/g, jsonResponse[request.query.key].BLOG_SECTION_ITEMS_TITLE);
+                        data = data.replace(/\__META_OG_DESCRIPTION__/g, jsonResponse[request.query.key].BLOG_SECTION_ITEMS_SUMMARY);
+                        result = data.replace(/\__META_OG_IMAGE__/g, jsonResponse[request.query.key].BLOG_SECTION_ITEMS_PHOTO);
                         response.send(result);
                     } else {
                         data = data.replace(meta.home.title.key, meta.home.title.value);

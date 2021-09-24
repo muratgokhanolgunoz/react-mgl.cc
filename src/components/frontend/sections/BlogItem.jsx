@@ -26,7 +26,7 @@ class BlogItem extends Component {
                             </span>
                         </span>
                         <h6>{blog.BLOG_SECTION_ITEMS_TITLE}</h6>
-                        <p>{blog.BLOG_SECTION_ITEMS_SUMMARY}</p>
+                        <p>{blog.BLOG_SECTION_ITEMS_SUMMARY} . . .</p>
                         <a className="template-button template-button-primary-2 template-button-box-shadow" onClick={() => { handlePopupShow(true); sendBlogInformation(blog) }}>{t('blog.body.BLOG_SECTION_BUTTON')}</a>
                     </div>
                 </Col>

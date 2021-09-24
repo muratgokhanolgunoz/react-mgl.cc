@@ -51,6 +51,12 @@ class Home extends Component {
         }
     }
 
+    keyPressEnter = (_e) => {
+        if(_e.keyCode === 13) {
+            this.search()
+        }
+    }
+
     price = () => {
         this.setState({ iframeSrc: "https://frigian.com/#/home/midas/yVqEw1Pj9ijUJIP6TCpj1BYj11Ctjr9J" })
         this.handlePopupShow(true)
@@ -92,13 +98,13 @@ class Home extends Component {
                                             <div className="home-widget-item">
                                                 <Row>
                                                     <Col lg={4} md={12} className="text-center">
-                                                        <Image className="home-widget-item-image" src="./assets/uploads/home/icons/tracking.svg" alt="" fluid />
+                                                        <Image className="home-widget-item-image" src="./assets/mglUploads/home/icons/tracking.svg" alt="" fluid />
                                                     </Col>
                                                     <Col lg={8} md={12}>
                                                         <h4>{this.props.t('home.widgets.tracking.WIDGETS_TRACKING_TITLE')}</h4>
                                                         <p>{this.props.t('home.widgets.tracking.WIDGETS_TRACKING_BODY')}</p>
                                                         <InputGroup className="mb-2">
-                                                            <FormControl id="home-widget-item-reservation-number" value={this.state.reservationNumber} placeholder={this.props.t('home.widgets.tracking.WIDGETS_TRACKING_INPUT_PLACEHOLDER')} maxLength={15} onChange={(e) => this.setState({ reservationNumber: e.target.value })} />
+                                                            <FormControl id="home-widget-item-reservation-number" onKeyUp={(e) => this.keyPressEnter(e)} value={this.state.reservationNumber} placeholder={this.props.t('home.widgets.tracking.WIDGETS_TRACKING_INPUT_PLACEHOLDER')} maxLength={15} onChange={(e) => this.setState({ reservationNumber: e.target.value })} />
                                                             <InputGroup.Text className="cursor-pointer" onClick={() => this.search()}>
                                                                 <VscArrowRight />
                                                             </InputGroup.Text>
@@ -112,7 +118,7 @@ class Home extends Component {
                                             <div className="home-widget-item">
                                                 <Row>
                                                     <Col lg={4} md={12} className="text-center">
-                                                        <Image className="home-widget-item-image" src="./assets/uploads/home/icons/freight.svg" alt="" fluid />
+                                                        <Image className="home-widget-item-image" src="./assets/mglUploads/home/icons/freight.svg" alt="" fluid />
                                                     </Col>
                                                     <Col lg={8} md={12}>
                                                         <h4>{this.props.t('home.widgets.pricing.WIDGETS_PRICING_TITLE')}</h4>

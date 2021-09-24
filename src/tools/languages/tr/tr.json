@@ -1,16 +1,19 @@
 {
-    "html": {
-        "HTML_PAGE_TITLE": "Midas Global Lojistik"
-    },
     "template": {
+        "HTML_PAGE_TITLE": "Midas Global Lojistik",
         "buttons": {
             "TEMPLATE_CLOSE_BUTTON": "Kapat",
             "TEMPLATE_NEXT_BUTTON": "İlerİ",
             "TEMPLATE_PREVIOUS_BUTTON": "Gerİ"
+        },
+        "notification": {
+            "errors": {
+                "404": "Aradığınız sayfa bulunamadı"
+            },
+            "warnings": {
+                "FILE_SIZE": "Lütfen belirlenen dosya boyutu aralıklarında yükleme yapın"
+            }
         }
-    },
-    "404": {
-        "404_PAGE_TEXT" : "Aradığınız sayfa bulunamadı"
     },
     "navbar": {
         "NAVBAR_ITEM_HOME": "Anasayfa",
@@ -150,7 +153,7 @@
         "body": {
             "BLOG_SECTION_BUTTON": "Devamı . . .",
             "BLOG_SECTION_ITEMS_AUTHOR_PREFIX": "tarafından"
-        }, 
+        },
         "error": {
             "BLOG_SECTION_ERROR_BLOG_NOT_FOUND": "Yazı bulunamadı. Lütfen linki kontrol edip tekrar deneyin."
         }
