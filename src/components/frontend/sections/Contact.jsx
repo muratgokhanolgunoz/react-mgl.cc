@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component, Fragment } from 'react'
 import { withTranslation } from 'react-i18next'
 import Iframe from 'react-iframe'
@@ -16,7 +17,7 @@ class Contact extends Component {
                             <Titles
                                 title={this.props.t('contact.header.CONTACT_SECTION_TITLE')}
                                 subtitle={this.props.t('contact.header.CONTACT_SECTION_SUBTITLE')}
-                                description={this.props.t('contact.header.CONTACT_SECTION_DESCRIPTION')}                                
+                                description={this.props.t('contact.header.CONTACT_SECTION_DESCRIPTION')}
                             />
                         </Row>
                         <Row>
@@ -67,7 +68,7 @@ class Contact extends Component {
                                         </Col>
                                         <Col xs={10}>
                                             <div className="contact-info-body">
-                                                <h4><a href="mailto:info@mgl.cc">info@mgl.cc</a></h4>
+                                                <h4><a>info[@]mgl.cc</a></h4>
                                                 <p>{this.props.t('contact.body.email_information.CONTACT_SECTION_EMAIL_INFORMATION_BODY')}</p>
                                             </div>
                                         </Col>

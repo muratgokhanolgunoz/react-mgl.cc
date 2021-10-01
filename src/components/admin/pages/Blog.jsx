@@ -211,7 +211,7 @@ const Blog = () => {
                 <Row>
                     <Col lg={5} sm={12} style={{ backgroundColor: "#f5f5f5", padding: "25px" }}>
                         <Col lg={12}>
-                            <Button onClick={() => this.clearForm()} style={{ float: "right" }}>Clear Form</Button>
+                            <Button onClick={() => clearForm()} style={{ float: "right" }}>Clear Form</Button>
                         </Col>
                         <br /><br />
                         <Col xs={12}>

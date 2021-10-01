@@ -11,6 +11,7 @@ body {
   -webkit-box-shadow: 0px -1px 12px 0px rgba(153,153,153,1);
   -moz-box-shadow: 0px -1px 12px 0px rgba(153,153,153,1);
   box-shadow: 0px -1px 12px 0px rgba(153,153,153,1);
+  
 }
 
 .navi a {
@@ -100,7 +101,7 @@ body {
   height: 100px;
   float: right;
   margin-right: 20px;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .home-calender-item {

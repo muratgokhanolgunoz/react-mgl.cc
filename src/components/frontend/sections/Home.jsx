@@ -66,7 +66,8 @@ class Home extends Component {
         // Setting styles for elements
         const styles = {
             photos: {
-                backgroundImage: `url("${this.state.homeBannerPhoto}")`
+                backgroundImage: `url("${this.state.homeBannerPhoto}")`,
+                marginTop: "50px"
             },
             calendar: {
                 backgroundColor: this.state.homeCalendarColor
