@@ -126,7 +126,7 @@ class BlogPopup extends Component {
     render() {        
         return (
             <div>
-                <Modal show={this.props.popupShow} fullscreen={true} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" backdrop="static" keyboard={false}>
+                <Modal show={this.props.popupShow} fullscreen={true} onHide={() => this.props.popupShowToggle(false)} animation={false} size="lg" backdrop={true}>
                     <Modal.Header>
                         <Button className="template-button template-button-danger pin-to-right" onClick={() => this.props.popupShowToggle(false)}>
                             {this.props.t('template.buttons.TEMPLATE_CLOSE_BUTTON')}

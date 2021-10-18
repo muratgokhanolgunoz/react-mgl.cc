@@ -2,7 +2,6 @@
 
 body {
   font-family: var(--template-font-family);
-  overflow-x: hidden;
 }
 
 /* ========== NAVI STYLES ========== */
@@ -65,6 +64,10 @@ body {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid #000;
+}
+
+#home-scroll-to-top-lower {
+  width: 60px !important;
 }
 
 #button-scroll-to-top svg {
@@ -322,7 +325,7 @@ body {
 /* ----- MODAL VIDEOS STYLES ----- */
 
 .modal-content {
-  background: rgba(0, 0, 0, 0.8) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
   border-radius: 0;
   -webkit-box-shadow: 0px 0px 21px 7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 21px 7px rgba(0, 0, 0, 0.75);
@@ -397,36 +400,22 @@ body {
   padding-top: 15px;
 }
 
-/* ========== MODAL SCEHEDULE STYLES ========== */
-
-.schedule-form {
-  background-color: #fff;
-  padding: 15px;
-}
-
-.schedule-form-rows {
-  padding: 0 30px;
-}
-
-.schedule-form-inputs {
-  width: 100% !important;
-  margin-top: 15px !important;
-}
-
 /* ========== BLOG SECTION STYLES ========== */
 
 .blog-box {
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .blog-box-item {
   border: 1px solid lightgray;
   padding: 20px;
-  padding-bottom: 35px;
-  overflow: hidden;
+  height: 100% !important;
 }
 
-.blog-box-item a {
+.blog-box-item:hover {
+  border: 1px solid var(--template-color-blue);
+  transition: background-color .5s;
   cursor: pointer;
 }
 
@@ -439,62 +428,28 @@ body {
 }
 
 .blog-box h6 {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
-  white-space: nowrap;
 }
 
 .blog-box p {
-  margin-bottom: 30px;
   text-align: justify;
-  height: 230px;
 }
 
-@media screen and (max-width: 1400px) {
-  .blog-box p {
-    height: 300px
-  }
+.blog-box-item a {
+  position: absolute;
 }
-
-@media screen and (max-width: 1200px) {
-  .blog-box p {
-    height: 140px
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .blog-box p {
-    height: 220px
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .blog-box p {
-    height: 120px
-  }
-}
-
-@media screen and (max-width: 556px) {
-  .blog-box p {
-    height: 150px
-  }
-}
-
-.blog-box a {
-  margin-top: 20px;
-}
-
 /* ========== MODAL BLOG STYLES ========== */
 
 .modal-blog-preview-body h1,
 .modal-blog-preview-body p {
   color: #bbb;
-  text-align: justify;
   margin-top: 30px;
 }
 
 .modal-blog-preview-body p {
+  text-align: justify;
   font-size: 1.2em;
 }
 

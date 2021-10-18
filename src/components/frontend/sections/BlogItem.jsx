@@ -12,7 +12,7 @@ class BlogItem extends Component {
         return (
             <Fragment>
                 <Col className="blog-box" xl={3} md={6} key={blog.BLOG_SECTION_ITEMS_ID}>
-                    <div className="blog-box-item">
+                    <div className="blog-box-item" onClick={() => { handlePopupShow(true); sendBlogInformation(blog) }}>
                         <Image className="blog-box-image" src={blog.BLOG_SECTION_ITEMS_THUMBNAIL} fluid />
                         <span className="blog-box-item-author">
                             <span>{blog.BLOG_SECTION_ITEMS_DATE.substr(0, 10)} | {' '}</span>
@@ -27,7 +27,6 @@ class BlogItem extends Component {
                         </span>
                         <h6>{blog.BLOG_SECTION_ITEMS_TITLE}</h6>
                         <p>{blog.BLOG_SECTION_ITEMS_SUMMARY} . . .</p>
-                        <a className="template-button template-button-primary-2 template-button-box-shadow" onClick={() => { handlePopupShow(true); sendBlogInformation(blog) }}>{t('blog.body.BLOG_SECTION_BUTTON')}</a>
                     </div>
                 </Col>
             </Fragment>

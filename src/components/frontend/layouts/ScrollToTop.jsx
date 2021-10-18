@@ -22,7 +22,7 @@ class ScrollToTop extends Component {
     render() {
         return (
             <div id="home-scroll-to-top">
-                <Navbar fixed="bottom" style={{ boxShadow: "none" }}>
+                <Navbar id="home-scroll-to-top-lower" fixed="bottom" style={{ boxShadow: "none" }}>
                     <a id="button-scroll-to-top" onClick={(e => this.props.funcNavigate(e, 'home'))}>
                         <BsChevronDoubleUp />
                     </a>
