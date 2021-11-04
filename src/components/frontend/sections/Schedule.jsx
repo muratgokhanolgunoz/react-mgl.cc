@@ -42,7 +42,7 @@ class Schedule extends Component {
 
   render() {
     return (
-      <div id="schedule" className="schedule section-padding" style={{ backgroundImage: `url("./assets/mglUploads/schedule/schedule.jpg")`, backgroundSize: "cover", backgroundPosition: "center center", backgroundAttachment: "fixed" }}>
+      <div id="schedule" className="schedule section-padding" style={{ backgroundImage: `url("./assets/mglUploads/schedule/schedule.webp")`, backgroundSize: "cover", backgroundPosition: "center center", backgroundAttachment: "fixed" }}>
         <Container className="main" fluid>
           <Row>
             <Titles

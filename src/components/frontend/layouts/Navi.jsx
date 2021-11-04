@@ -1,30 +1,29 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Component } from "react"
-import Context from '../../../context/Context'
-import PropTypes from 'prop-types'
-import Cookies from 'universal-cookie'
-import ReactFlagsSelect from 'react-flags-select'
-import { withTranslation } from "react-i18next"
-import { Container, Nav, Navbar, Image } from "react-bootstrap"
-import ScrollToTop from "./ScrollToTop"
+import React, { Component } from "react";
+import Context from "../../../context/Context";
+import PropTypes from "prop-types";
+import Cookies from "universal-cookie";
+import ReactFlagsSelect from "react-flags-select";
+import { withTranslation } from "react-i18next";
+import { Container, Nav, Navbar, Image } from "react-bootstrap";
+import ScrollToTop from "./ScrollToTop";
 
-const cookies = new Cookies()
+const cookies = new Cookies();
 
 class Navi extends Component {
-
     navigate = (e, id) => {
-        e && e.preventDefault()
-        const elementToView = document.getElementById(id)
-        elementToView.scrollIntoView()
-    }
+        e && e.preventDefault();
+        const elementToView = document.getElementById(id);
+        elementToView.scrollIntoView();
+    };
 
     handleLanguage = (_language) => {
-        this.props.i18n.changeLanguage(_language)
+        this.props.i18n.changeLanguage(_language);
 
         if (cookies.get("language") !== undefined) {
-            this.props.funcSetCookie(_language)
+            this.props.funcSetCookie(_language);
         }
-    }
+    };
 
     render() {
         return (
@@ -32,11 +31,27 @@ class Navi extends Component {
                 {(context) => {
                     return (
                         <div>
-                            <Navbar id="navbar" className="navbar" collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
+                            <Navbar
+                                id="navbar"
+                                className="navbar"
+                                collapseOnSelect
+                                expand="lg"
+                                bg="light"
+                                variant="light"
+                                fixed="top"
+                            >
                                 <Container>
                                     <Navbar.Brand>
-                                        <a onClick={(e => this.navigate(e, 'home'))} className="cursor-pointer">
-                                            <Image className="navi-logo" src="./assets/img/logo.png" alt="Midas Global Logistic" fluid ></Image>
+                                        <a
+                                            onClick={(e) => this.navigate(e, "home")}
+                                            className="cursor-pointer"
+                                        >
+                                            <Image
+                                                className="navi-logo"
+                                                src="./assets/img/logo.png"
+                                                alt="Midas Global Logistic"
+                                                fluid
+                                            ></Image>
                                         </a>
                                     </Navbar.Brand>
                                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -46,39 +61,36 @@ class Navi extends Component {
                                                 {this.props.t('navbar.NAVBAR_ITEM_HOME')}
                                             </a> */}
 
-                                            <a onClick={(e => this.navigate(e, 'services'))}>
-                                                {this.props.t('navbar.NAVBAR_ITEM_SERVICES')}
+                                            <a onClick={(e) => this.navigate(e, "services")}>
+                                                {this.props.t("navbar.NAVBAR_ITEM_SERVICES")}
                                             </a>
 
-                                            <a onClick={(e => this.navigate(e, 'about'))}>
-                                                {this.props.t('navbar.NAVBAR_ITEM_ABOUT_US')}
+                                            <a onClick={(e) => this.navigate(e, "about")}>
+                                                {this.props.t("navbar.NAVBAR_ITEM_ABOUT_US")}
                                             </a>
 
-                                            <a onClick={(e => this.navigate(e, 'gallery'))}>
-                                                {this.props.t('navbar.NAVBAR_ITEM_VIDEO_GALLERY')}
+                                            <a onClick={(e) => this.navigate(e, "gallery")}>
+                                                {this.props.t("navbar.NAVBAR_ITEM_VIDEO_GALLERY")}
                                             </a>
 
-                                            <a onClick={(e => this.navigate(e, 'schedule'))}>
-                                                {this.props.t('navbar.NAVBAR_ITEM_SHIP_PROGRAM')}
+                                            <a onClick={(e) => this.navigate(e, "schedule")}>
+                                                {this.props.t("navbar.NAVBAR_ITEM_SHIP_PROGRAM")}
                                             </a>
 
-                                            {
-                                                context.state.blogs.length > 0
-                                                    ?
-                                                    (
-                                                        <a onClick={(e => this.navigate(e, 'blog'))}>
-                                                            {this.props.t('navbar.NAVBAR_ITEM_ARTICLES_FROM_US')}
-                                                        </a>
-                                                    )
-                                                    : null
-                                            }
+                                            {context.state.blogs.length > 0 ? (
+                                                <a onClick={(e) => this.navigate(e, "blog")}>
+                                                    {this.props.t(
+                                                        "navbar.NAVBAR_ITEM_ARTICLES_FROM_US"
+                                                    )}
+                                                </a>
+                                            ) : null}
 
-                                            <a onClick={(e => this.navigate(e, 'career'))}>
-                                                {this.props.t('navbar.NAVBAR_ITEM_CAREER')}
+                                            <a onClick={(e) => this.navigate(e, "career")}>
+                                                {this.props.t("navbar.NAVBAR_ITEM_CAREER")}
                                             </a>
 
-                                            <a onClick={(e => this.navigate(e, 'contact'))}>
-                                                {this.props.t('navbar.NAVBAR_ITEM_CONTACT')}
+                                            <a onClick={(e) => this.navigate(e, "contact")}>
+                                                {this.props.t("navbar.NAVBAR_ITEM_CONTACT")}
                                             </a>
                                         </Nav>
                                         <Nav>
@@ -91,11 +103,17 @@ class Navi extends Component {
                                                 id="navbar-select-language"
                                                 countries={["TR", "US"]}
                                                 customLabels={{
-                                                    "TR": "TR",
-                                                    "US": "EN"
+                                                    TR: "TR",
+                                                    US: "EN",
                                                 }}
-                                                selected={this.props.i18n.language.toUpperCase()}
-                                                onSelect={_language => this.handleLanguage(_language.toLowerCase().toString())}
+                                                selected={this.props.i18n.language.toUpperCase() === "TR" ? "TR" : "US"}
+                                                onSelect={(_language) =>
+                                                    this.handleLanguage(
+                                                        _language.toLowerCase() === "tr"
+                                                            ? "tr"
+                                                            : "en"
+                                                    )
+                                                }
                                                 optionsSize={13}
                                                 selectedSize={15}
                                             />
@@ -105,15 +123,15 @@ class Navi extends Component {
                             </Navbar>
                             <ScrollToTop funcNavigate={this.navigate} />
                         </div>
-                    )
+                    );
                 }}
             </Context.Consumer>
-        )
+        );
     }
 }
 
 Navi.propTypes = {
     funcSetCookie: PropTypes.func.isRequired,
-}
+};
 
-export default withTranslation('translation')(Navi)
+export default withTranslation("translation")(Navi);

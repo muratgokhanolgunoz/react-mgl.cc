@@ -25,7 +25,7 @@ class About extends Component {
                                         <Image
                                             id="about-image"
                                             className="about-item"
-                                            src="./assets/mglUploads/about/about.jpg"
+                                            src="./assets/mglUploads/about/about.webp"
                                             alt=""
                                             fluid
                                         ></Image>

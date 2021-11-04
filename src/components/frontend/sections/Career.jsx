@@ -140,11 +140,11 @@ class Career extends Component {
             <Context.Consumer>
                 {(context) => {
                     return (
-                        <div id="career" className="career section-padding" style={{ backgroundImage: `url("./assets/mglUploads/career/images/career_background.jpg")`, backgroundSize: "cover", backgroundPosition: "center center" }}>
+                        <div id="career" className="career section-padding" style={{ backgroundImage: `url("./assets/mglUploads/career/images/career_background.webp")`, backgroundSize: "cover", backgroundPosition: "center center" }}>
                             <Container className="main">
                                 <Row>
                                     <Col lg={6}>
-                                        <Image src={"./assets/mglUploads/career/images/career_" + this.props.i18n.language + ".jpg"} alt="" fluid />
+                                        <Image src={"./assets/mglUploads/career/images/career_" + this.props.i18n.language + ".webp"} alt="" fluid />
                                     </Col>
                                     <Col lg={6}>
                                         <form onSubmit={this.submitHandler} encType="multipart/form-data">
